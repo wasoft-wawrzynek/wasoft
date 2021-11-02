@@ -1,8 +1,8 @@
 import React from "react";
-import Particles from "react-particles-js";
 import "./Hero.scss";
 import { particlesConfig } from "../particlesjs-config";
 import logo from "../icons/wasoft-light.svg";
+import Particles from "react-tsparticles";
 
 const Hero: React.FC = () => {
   return (

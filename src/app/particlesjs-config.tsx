@@ -1,6 +1,6 @@
-import { IParticlesParams } from "react-particles-js";
+import { ISourceOptions } from "tsparticles";
 
-export const particlesConfig: IParticlesParams = {
+export const particlesConfig: ISourceOptions = {
   particles: {
     number: {
       value: 120,
