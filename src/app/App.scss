@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Teko:wght@500;600;700&display=swap");
+@import "variables";
+
+html,
+body {
+  overflow-x: hidden;
+  background: $dark-color;
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Teko", sans-serif;
+  }
+
+  h4,
+  p,
+  a,
+  input,
+  textarea {
+    font-family: "Montserrat", sans-serif;
+  }
+}
