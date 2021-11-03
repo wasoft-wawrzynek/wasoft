@@ -103,4 +103,5 @@ export const particlesConfig: ISourceOptions = {
     },
   },
   retina_detect: true,
+  fpsLimit: 45
 };

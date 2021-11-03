@@ -14,6 +14,14 @@ body {
 
   h1,
   h2,
+  h3,
+  h4,
+  p {
+    color: $light-color;
+  }
+
+  h1,
+  h2,
   h3 {
     font-family: "Teko", sans-serif;
   }
@@ -25,4 +33,43 @@ body {
   textarea {
     font-family: "Montserrat", sans-serif;
   }
+  
+  h1 {
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 3rem;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 3.5rem;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  h4 {
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-weight: 300;
+  }
+
+  a {
+    text-decoration: none;
+    color: $primary-color;
+  }
+}
+
+.container {
+  max-width: $content-width;
+  margin: auto;
+  padding: 1.5rem;
+  height: 100%;
+  width: 100%;
 }

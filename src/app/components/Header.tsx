@@ -1,13 +1,13 @@
 import React from "react";
-import "./Hero.scss";
 import { particlesConfig } from "../particlesjs-config";
 import logo from "../icons/wasoft-light.svg";
 import Particles from "react-tsparticles";
+import "./Header.scss";
 
-const Hero: React.FC = () => {
+const Header: React.FC = () => {
   return (
     <div id="header">
-      <Particles params={particlesConfig} />
+      <Particles style={{ position: "unset" }} params={particlesConfig} />
       <div className="header-content">
         <img src={logo} alt="logo" />
         <h3>Developer / Team Leader / Brewer</h3>
@@ -16,4 +16,4 @@ const Hero: React.FC = () => {
   );
 };
 
-export default Hero;
+export default Header;

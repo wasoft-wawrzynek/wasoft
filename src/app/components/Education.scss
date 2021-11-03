@@ -1,0 +1,17 @@
+@import "../variables";
+
+#education {
+  height: 100vh;
+  background: $medium-light-color;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      color: black;
+    }
+  }
+}
