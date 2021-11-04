@@ -1,11 +1,14 @@
 import React from "react";
+import { FormattedMessage } from "react-intl";
 import "./Experience.scss";
 
 const Experience: React.FC = () => {
   return (
     <div id="experience">
       <div className="container">
-        <h2>Tutaj będzie sekcja doświadczenia</h2>
+        <h2>
+          <FormattedMessage id="experience.title" />
+        </h2>
       </div>
     </div>
   );

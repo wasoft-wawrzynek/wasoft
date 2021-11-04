@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Container, Menu } from "semantic-ui-react";
 import Scroll from "react-scroll";
 import "./NavBar.scss";
+import { FormattedMessage } from "react-intl";
 const ScrollLink = Scroll.Link;
 
 const NavBar: React.FC<{ className: string }> = (props) => {
@@ -28,21 +29,15 @@ const NavBar: React.FC<{ className: string }> = (props) => {
           <Menu.Item as={ScrollLink} smooth spy to="header">
             WaSoft
           </Menu.Item>
-          <Menu.Item name="skills" as={ScrollLink} smooth spy to="skills" />
-          <Menu.Item
-            name="experience"
-            as={ScrollLink}
-            smooth
-            spy
-            to="experience"
-          />
-          <Menu.Item
-            name="education"
-            as={ScrollLink}
-            smooth
-            spy
-            to="education"
-          />
+          <Menu.Item as={ScrollLink} smooth spy to="skills">
+            <FormattedMessage id="navbar.skills" />
+          </Menu.Item>
+          <Menu.Item as={ScrollLink} smooth spy to="experience">
+            <FormattedMessage id="navbar.experience" />
+          </Menu.Item>
+          <Menu.Item as={ScrollLink} smooth spy to="education">
+            <FormattedMessage id="navbar.education" />
+          </Menu.Item>
         </div>
         <div id="mobile-nav">
           <input
@@ -66,13 +61,14 @@ const NavBar: React.FC<{ className: string }> = (props) => {
             WaSoft
           </Menu.Item>
           <Menu.Item
-            name="skills"
             as={ScrollLink}
             smooth
             spy
             to="skills"
             onClick={() => setShowPanel(false)}
-          />
+          >
+            <FormattedMessage id="navbar.skills" />
+          </Menu.Item>
           <Menu.Item
             name="Experience"
             as={ScrollLink}
@@ -80,16 +76,17 @@ const NavBar: React.FC<{ className: string }> = (props) => {
             spy
             to="experience"
             onClick={() => setShowPanel(false)}
-          />
+          >
+            <FormattedMessage id="navbar.experience" />
+          </Menu.Item>
           <Menu.Item
-            name="education"
             as={ScrollLink}
             smooth
             spy
             to="education"
             onClick={() => setShowPanel(false)}
           >
-            Daj znać
+            <FormattedMessage id="navbar.education" />
           </Menu.Item>
         </div>
       </Container>

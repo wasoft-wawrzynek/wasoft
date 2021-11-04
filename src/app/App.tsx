@@ -6,22 +6,27 @@ import { Waypoint } from "react-waypoint";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
+import { IntlProvider } from "react-intl";
+import translations from "./translations";
 
 const App: React.FC = () => {
+  const [locale, setLocale] = useState("en");
   const [onTop, setOnTop] = useState(true);
 
   return (
-    <Fragment>
-      <NavBar className={`fixed ${onTop ? "hidden" : ""}`} />
-      <Waypoint
-        onEnter={() => setOnTop(true)}
-        onLeave={() => setOnTop(false)}
-      ></Waypoint>
-      <Header />
-      <Skills />
-      <Experience />
-      <Education />
-    </Fragment>
+    <IntlProvider locale={locale} messages={translations[locale]}>
+      <Fragment>
+        <NavBar className={`fixed ${onTop ? "hidden" : ""}`} />
+        <Waypoint
+          onEnter={() => setOnTop(true)}
+          onLeave={() => setOnTop(false)}
+        ></Waypoint>
+        <Header />
+        <Skills />
+        <Experience />
+        <Education />
+      </Fragment>
+    </IntlProvider>
   );
 };
 

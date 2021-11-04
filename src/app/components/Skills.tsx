@@ -1,11 +1,14 @@
 import React from "react";
+import { FormattedMessage } from "react-intl";
 import "./Skills.scss";
 
 const Skills: React.FC = () => {
   return (
     <div id="skills">
       <div className="container">
-        <h2>Tutaj będzie sekcja umiejętności</h2>
+        <h2>
+          <FormattedMessage id="skills.title" />
+        </h2>
       </div>
     </div>
   );
