@@ -10,13 +10,17 @@ import { IntlProvider } from "react-intl";
 import translations from "./translations";
 
 const App: React.FC = () => {
-  const [locale, setLocale] = useState("en");
+  const [locale, setLocale] = useState("pl");
   const [onTop, setOnTop] = useState(true);
 
   return (
     <IntlProvider locale={locale} messages={translations[locale]}>
       <Fragment>
-        <NavBar className={`fixed ${onTop ? "hidden" : ""}`} />
+        <NavBar
+          className={`fixed ${onTop ? "hidden" : ""}`}
+          language={locale}
+          setLanguage={setLocale}
+        />
         <Waypoint
           onEnter={() => setOnTop(true)}
           onLeave={() => setOnTop(false)}
