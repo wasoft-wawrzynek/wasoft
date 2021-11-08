@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import "./App.scss";
 import { Fragment, useState } from "react";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/navbar/NavBar";
 import { Waypoint } from "react-waypoint";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
@@ -17,7 +17,7 @@ const App: React.FC = () => {
     <IntlProvider locale={locale} messages={translations[locale]}>
       <Fragment>
         <NavBar
-          className={`fixed ${onTop ? "hidden" : ""}`}
+          isHidden={onTop}
           language={locale}
           setLanguage={setLocale}
         />

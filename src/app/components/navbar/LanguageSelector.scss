@@ -1,4 +1,4 @@
-@import "../variables";
+@import "../../variables";
 
 #lang {
   align-self: flex-start;
@@ -14,6 +14,7 @@
     .menu {
       height: unset;
       display: none;
+      position: relative;
       &.visible {
         display: block;
       }

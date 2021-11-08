@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Dropdown, DropdownProps } from "semantic-ui-react";
 import "./LanguageSelector.scss";
 
@@ -23,15 +23,11 @@ const LanguageSelector: React.FC<{
   language: string;
   setLanguage: (language: string) => void;
 }> = ({ setLanguage, language }) => {
-  const [selection, setSelection] = useState(language);
-
   const onChange = (
     event: React.SyntheticEvent<HTMLElement>,
     data: DropdownProps
   ) => {
-    console.log(data.value);
     if (data.value) {
-      setSelection(data.value.toString());
       setLanguage(data.value.toString());
     }
   };
@@ -44,7 +40,7 @@ const LanguageSelector: React.FC<{
         selection
         onChange={onChange}
         options={options}
-        value={selection}
+        value={language}
       />
     </div>
   );
