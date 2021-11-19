@@ -2,9 +2,13 @@
     "navbar.skills": "Skills",
     "navbar.experience": "Experience",
     "navbar.education": "Education",
+    "navbar.hobby": "Spare time",
+    "navbar.contact": "Contact",
 
     "header.message": "Developer / Team Leader / Brewer",
     "education.title": "Section for EDUCATION will come here.",
     "experience.title": "Section for EXPERIENCE will come here",
-    "skills.title": "Section for SKILLS will come here"
+    "skills.title": "Section for SKILLS will come here",
+    "hobby.title": "Section for HOBBY will come here",
+    "contact.title": "Section for CONTACT will come here"
 }

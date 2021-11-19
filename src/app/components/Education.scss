@@ -2,7 +2,7 @@
 
 #education {
   height: 100vh;
-  background: $medium-light-color;
+  background: $dark-color;
 
   .container {
     display: flex;
@@ -10,8 +10,21 @@
     align-items: center;
     justify-content: center;
 
-    h2 {
-      color: black;
+    .title {
+      display: flex;
+      justify-content: space-between;
+
+      h3 {
+        color: $primary-color;
+        font-weight: bold;
+      }
+    }
+    p {
+      color: $medium-light-color;
+    }
+
+    h4 {
+      margin-top: 1em;
     }
   }
 }

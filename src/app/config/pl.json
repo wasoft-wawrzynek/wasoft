@@ -2,9 +2,13 @@
     "navbar.skills": "Umiejętności",
     "navbar.experience": "Doświadczenie",
     "navbar.education": "Edukacja",
+    "navbar.hobby": "Po pracy",
+    "navbar.contact": "Kontakt",
 
     "header.message": "Developer / Team Leader / Brewer",
     "education.title": "Tutaj będzie sekcja edukacji",
     "experience.title": "Tutaj będzie sekcja edukacji",
-    "skills.title": "Tutaj będzie sekcja edukacji"
+    "skills.title": "Tutaj będzie sekcja edukacji",
+    "hobby.title": "Tutaj będzie sekcja hobby",
+    "contact.title": "Tutaj będzie sekcja kontaktu"
 }

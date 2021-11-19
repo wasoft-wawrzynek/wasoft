@@ -7,7 +7,7 @@ import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
 import { IntlProvider } from "react-intl";
-import translations from "./translations";
+import translations from "./config/translations";
 
 const App: React.FC = () => {
   const [locale, setLocale] = useState("pl");
@@ -26,9 +26,9 @@ const App: React.FC = () => {
           onLeave={() => setOnTop(false)}
         ></Waypoint>
         <Header />
+        <Education />
         <Skills />
         <Experience />
-        <Education />
       </Fragment>
     </IntlProvider>
   );

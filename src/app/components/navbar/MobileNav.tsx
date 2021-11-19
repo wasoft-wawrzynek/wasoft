@@ -59,6 +59,24 @@ const MobileNav: React.FC<{
         >
           <FormattedMessage id="navbar.education" />
         </Menu.Item>
+        <Menu.Item
+          as={Scroll.Link}
+          smooth
+          spy
+          to="hobby"
+          onClick={() => setShowPanel(false)}
+        >
+          <FormattedMessage id="navbar.hobby" />
+        </Menu.Item>
+        <Menu.Item
+          as={Scroll.Link}
+          smooth
+          spy
+          to="contact"
+          onClick={() => setShowPanel(false)}
+        >
+          <FormattedMessage id="navbar.contact" />
+        </Menu.Item>
         <div className="lang">
           <img
             src="/img/pl.svg"
