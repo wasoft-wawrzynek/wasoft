@@ -13,8 +13,7 @@ const Header: React.FC = () => {
     return [
       intl.messages["header.developer"].toString(),
       intl.messages["header.team-leader"].toString(),
-      intl.messages["header.brewer"].toString(),
-      intl.messages["header.traveler"].toString(),
+      intl.messages["header.brewer"].toString()
     ];
   }
 
@@ -24,11 +23,11 @@ const Header: React.FC = () => {
       <div className="header-content">
         <div className="logo-content">
           <div className="img-container">
-            <div className="img-bubble wasoft">
-              <img src={logo} alt="logo" />
-            </div>
             <div className="img-bubble profile">
               <img src=".\img\profile.jpg" alt="logo" />
+            </div>
+            <div className="img-bubble wasoft">
+              <img src={logo} alt="logo" />
             </div>
           </div>
         </div>
