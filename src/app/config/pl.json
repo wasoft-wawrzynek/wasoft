@@ -5,10 +5,16 @@
     "navbar.hobby": "Po pracy",
     "navbar.contact": "Kontakt",
 
-    "header.message": "Developer / Team Leader / Brewer",
+    "header.introduction-start": "Nazywam się ",
+    "header.introduction-end": " i jestem",
+    "header.developer": "programistą",
+    "header.team-leader": "team leaderem",
+    "header.brewer": "piwowarem",
+    "header.traveler": "podróżnikiem",
+
     "education.title": "Tutaj będzie sekcja edukacji",
-    "experience.title": "Tutaj będzie sekcja edukacji",
-    "skills.title": "Tutaj będzie sekcja edukacji",
+    "experience.title": "Tutaj będzie sekcja doświadczenia",
+    "skills.title": "Tutaj będzie sekcja umiejętności",
     "hobby.title": "Tutaj będzie sekcja hobby",
     "contact.title": "Tutaj będzie sekcja kontaktu"
 }

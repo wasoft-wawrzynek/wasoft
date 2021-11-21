@@ -5,7 +5,13 @@
     "navbar.hobby": "Spare time",
     "navbar.contact": "Contact",
 
-    "header.message": "Developer / Team Leader / Brewer",
+    "header.introduction-start": "My name is ",
+    "header.introduction-end": ", I'm a",
+    "header.developer": "developer",
+    "header.team-leader": "team leader",
+    "header.brewer": "brewer",
+    "header.traveler": "voyager",
+
     "education.title": "Section for EDUCATION will come here.",
     "experience.title": "Section for EXPERIENCE will come here",
     "skills.title": "Section for SKILLS will come here",

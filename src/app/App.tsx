@@ -25,7 +25,7 @@ const App: React.FC = () => {
           onEnter={() => setOnTop(true)}
           onLeave={() => setOnTop(false)}
         ></Waypoint>
-        <Header />
+        <Header locale={locale}/>
         <Education />
         <Skills />
         <Experience />
