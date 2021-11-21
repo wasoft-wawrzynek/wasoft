@@ -1,39 +1,22 @@
 import "./Header.scss";
-import React, { useEffect, useState } from "react";
-import { particlesConfig } from "../config/particlesjs-config";
-import logo from "../icons/wasoft-light-full.svg";
+import React from "react";
 import Particles from "react-tsparticles";
-import { FormattedMessage } from "react-intl";
-import translations from "../config/translations";
-import { init } from "ityped";
+import { FormattedMessage, useIntl } from "react-intl";
+import Typed from "react-typed";
+import logo from "../icons/wasoft-light-full.svg";
+import { particlesConfig } from "../config/particlesjs-config";
 
-const Header: React.FC<{ locale: string }> = ({ locale }) => {
-  function getWords(locale: string) {
+const Header: React.FC = () => {
+  const intl = useIntl();
+
+  function getWords() {
     return [
-      translations[locale]["header.developer"].toString(),
-      translations[locale]["header.team-leader"].toString(),
-      translations[locale]["header.brewer"].toString(),
-      translations[locale]["header.traveler"].toString(),
+      intl.messages["header.developer"].toString(),
+      intl.messages["header.team-leader"].toString(),
+      intl.messages["header.brewer"].toString(),
+      intl.messages["header.traveler"].toString(),
     ];
   }
-  function initTypingControl(selector: string, locale: string) {
-    const typingElement = document.querySelector(selector);
-    if (!typingElement) return;
-
-    const typingConfig = {
-      showCursor: true,
-      cursorChar: "_",
-      typeSpeed: 150,
-      backSpeed: 100,
-      strings: getWords(locale),
-    };
-
-    init(typingElement, typingConfig);
-  }
-
-  useEffect(() => {
-    initTypingControl("#typing", locale);
-  }, []);
 
   return (
     <div id="header">
@@ -56,7 +39,14 @@ const Header: React.FC<{ locale: string }> = ({ locale }) => {
             <FormattedMessage id="header.introduction-end" />
           </h3>
           <h2>
-            <span id="typing" />
+            <Typed
+              strings={getWords()}
+              typeSpeed={80}
+              backSpeed={50}
+              backDelay={3000}
+              cursorChar="_"
+              loop
+            />
           </h2>
         </div>
       </div>
