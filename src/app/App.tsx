@@ -22,9 +22,9 @@ const App: React.FC = () => {
           onLeave={() => setOnTop(false)}
         ></Waypoint>
         <Header />
-        <Education />
         <Skills />
         <Experience />
+        <Education />
       </Fragment>
     </IntlProvider>
   );

@@ -24,17 +24,17 @@
     padding: 2rem;
     gap: 5em;
     z-index: 1;
+    width: 100%;
 
     .logo-content {
       display: flex;
       justify-content: flex-end;
+      align-items: center;
 
       .img-container {
         position: relative;
         height: 40vh;
         width: 40vh;
-        max-height: 50vh;
-        max-width: 50vh;
         margin-right: 10%;
 
         .img-bubble {
@@ -72,11 +72,16 @@
     .info-content {
       display: flex;
       flex-direction: column;
-      width: 100%;
       text-align: center;
-      justify-self: start;
       justify-content: center;
-      align-content: center;
+      margin: 0 3rem;
+      max-width: 100%;
+      min-width: 270px;
+
+      h2 {
+        line-height: 2.5rem;
+        margin-top: 1.5rem;
+      }
 
       span {
         color: $primary-color;
@@ -91,7 +96,7 @@
     grid-template-columns: unset;
     grid-template-rows: repeat(2, 1fr);
     width: 100%;
-    gap: 5em;
+    padding: 0;
 
     .logo-content {
       justify-content: center;
@@ -101,5 +106,16 @@
         width: 60vw;
       }
     }
+    .info-content {
+      margin: 0;
+      min-width: unset;
+    }
+  }
+}
+
+@media (max-width: 1080px) and (orientation: landscape) {
+  #header .header-content .logo-content .img-container {
+    height: 50vh;
+    width: 50vh;
   }
 }
