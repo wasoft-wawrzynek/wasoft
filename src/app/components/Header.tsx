@@ -4,7 +4,7 @@ import Particles from "react-tsparticles";
 import { FormattedMessage, useIntl } from "react-intl";
 import Typed from "react-typed";
 import logo from "../icons/wasoft-light-full.svg";
-import { particlesConfig } from "../config/particlesjs-config";
+import { particlesConfig } from "../config/particlesConfig";
 
 const Header: React.FC = () => {
   const intl = useIntl();

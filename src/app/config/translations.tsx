@@ -1,6 +1,6 @@
 import { MessageFormatElement } from "react-intl";
-import en from "./en.json";
-import pl from "./pl.json";
+import en from "../lang/en.json";
+import pl from "../lang/pl.json";
 
 const translations: {
   [key: string]:
