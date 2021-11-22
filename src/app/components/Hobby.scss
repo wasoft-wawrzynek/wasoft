@@ -1,0 +1,17 @@
+@import "../variables";
+
+#hobby {
+  height: 100vh;
+  background: $medium-dark-color;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      color: $primary-color;
+    }
+  }
+}

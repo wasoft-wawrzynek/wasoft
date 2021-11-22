@@ -1,0 +1,30 @@
+@import "../variables";
+
+#education {
+  height: 100vh;
+  background: $dark-color;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+
+      h3 {
+        color: $primary-color;
+        font-weight: bold;
+      }
+    }
+    p {
+      color: $medium-light-color;
+    }
+
+    h4 {
+      margin-top: 1em;
+    }
+  }
+}

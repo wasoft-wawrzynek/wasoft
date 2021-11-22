@@ -1,0 +1,33 @@
+@import "../variables";
+
+.floating-card {
+  position: relative;
+  border: 2px solid rgba($primary-color, 0.3);
+  margin: 1em;
+  padding: 1em;
+
+  .corner {
+    background: $primary-color;
+    height: 6px;
+    width: 6px;
+    border-radius: 30%;
+    position: absolute;
+
+    &.lt {
+      top: -3px;
+      left: -3px;
+    }
+    &.rt {
+      top: -3px;
+      right: -3px;
+    }
+    &.lb {
+      bottom: -3px;
+      left: -3px;
+    }
+    &.rb {
+      bottom: -3px;
+      right: -3px;
+    }
+  }
+}
