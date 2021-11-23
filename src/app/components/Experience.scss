@@ -1,7 +1,6 @@
 @import "../variables";
 
 #experience {
-  // background: $medium-dark-color;
   background-color: $dark-color;
 
   .container {
@@ -12,6 +11,8 @@
     .section-title {
       color: $light-color;
       align-self: flex-start;
+      margin: 2rem;
+
       &:after {
         content: "_";
         color: $primary-color;
@@ -65,6 +66,42 @@
           align-items: center;
           h3 {
             color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #experience .container {
+    .section-title {
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+    }
+
+    .timeline {
+      margin-left: 3rem;
+      margin-top: 1rem;
+
+      &::after {
+        left: 0;
+      }
+
+      .job-card {
+        width: 90%;
+        left: 1rem;
+
+        &::after {
+          right: 0;
+          left: calc(-1rem - 16px);
+        }
+
+        &:nth-of-type(2) {
+          left: 1rem;
+          &::after {
+            right: 0;
+            left: calc(-1rem - 16px);
           }
         }
       }
