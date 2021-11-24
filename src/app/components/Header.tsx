@@ -24,7 +24,7 @@ const Header: React.FC = () => {
         <div className="logo-content">
           <div className="img-container">
             <div className="img-bubble profile">
-              <img src=".\img\profile.jpg" alt="logo" />
+              <img src=".\img\profile.png" alt="logo" />
             </div>
             <div className="img-bubble wasoft">
               <img src={logo} alt="logo" />
