@@ -1,7 +1,6 @@
 @import "../variables";
 
 #education {
-  height: 100vh;
   background: $dark-color;
 
   .container {
@@ -19,11 +18,10 @@
         font-weight: bold;
       }
     }
-    p {
+    h5 {
       color: $medium-light-color;
     }
-
-    h4 {
+    p {
       margin-top: 1em;
     }
   }

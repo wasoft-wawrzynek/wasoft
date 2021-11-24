@@ -12,9 +12,15 @@
     "header.brewer": "brewer",
     "header.traveler": "voyager",
 
-    "education.title": "Section for EDUCATION will come here.",
     "experience.title": "My professional experience",
-    "skills.title": "Section for SKILLS will come here",
-    "hobby.title": "Section for HOBBY will come here",
-    "contact.title": "Section for CONTACT will come here"
+    "experience.eqtek.description": "Maintaining and preparing new solutions built on a case management system, targeting multiple customers in a public sector and financial industry.",
+    "experience.vsoft.description": "TODO",
+    "experience.flightscope.pm-description": "Evaluating, planning and designing architecture for multiple software projects. Coordinating communication between offices (Poland, South Africa and USA) and synchronizing co-operation of teams (project owners, UI designers, engineers, etc.). Prioritizing tasks and projects in regard to the available resources and the market demand. Managing a few small software teams on all levels.",
+    "experience.flightscope.leader-description": "Designing, developing and maintaining applications used by golfers (both professional and amateur) to improve their skills by analysing ball flight data provided by multiple sport radars. Designing software architecture, planning project development and overseeing the process as well as managing a team of a few developers.",
+    "experience.flightscope.dev-description": "Designing, developing and maintaining applications used by golfers (both professional and amateur) to improve their skills by analysing ball flight data provided by multiple sport radars.",
+
+    "education.title": "My education",
+    "skills.title": "My skills",
+    "hobby.title": "Outside work",
+    "contact.title": "Contact me"
 }

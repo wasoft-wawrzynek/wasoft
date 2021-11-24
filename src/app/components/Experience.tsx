@@ -5,6 +5,10 @@ import FloatingCard from "./FloatingCard";
 import personalData from "../config/personalData";
 
 const Experience: React.FC = () => {
+  const technologiesToString = (technologies: string[]) => {
+    return technologies.toString().replaceAll(",", " | ");
+  };
+
   return (
     <div id="experience">
       <div className="container">
@@ -20,14 +24,37 @@ const Experience: React.FC = () => {
                 intervalMs={2000}
                 maxMove={[20, 20]}
               >
-                <div className="title">
+                <div className="job-header">
                   <h3>{job.company}</h3>
                   <p>
                     {job.startDate} - {job.endDate ? job.endDate : "now"}
                   </p>
                 </div>
-                <p>{job.roles[0]?.title}</p>
-                <h4>{job.roles[0]?.description}</h4>
+                <div className="job-roles">
+                  {job.roles.map((role) => {
+                    return (
+                      <div className="role">
+                        <div className="role-header">
+                          <h3>{role.title}</h3>
+                          <p>
+                            {role.startDate} -{" "}
+                            {role.endDate ? role.endDate : "now"}
+                          </p>
+                        </div>
+                        {role.technologies.length > 0 && (
+                          <p className="technologies">
+                            <span>[ </span>
+                            {technologiesToString(role.technologies)}
+                            <span> ]</span>
+                          </p>
+                        )}
+                        <p>
+                          <FormattedMessage id={role.descriptionId} />
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
               </FloatingCard>
             );
           })}

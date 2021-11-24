@@ -12,9 +12,15 @@
     "header.brewer": "piwowarem",
     "header.traveler": "podróżnikiem",
 
-    "education.title": "Tutaj będzie sekcja edukacji",
     "experience.title": "Moje doświadczenie",
-    "skills.title": "Tutaj będzie sekcja umiejętności",
-    "hobby.title": "Tutaj będzie sekcja hobby",
-    "contact.title": "Tutaj będzie sekcja kontaktu"
+    "experience.eqtek.description": "TODO",
+    "experience.vsoft.description": "TODO",
+    "experience.flightscope.pm-description": "TODO",
+    "experience.flightscope.leader-description": "TODO",
+    "experience.flightscope.dev-description": "TODO",
+
+    "education.title": "Moje wykształcenie",
+    "skills.title": "Moje umiejętności",
+    "hobby.title": "Poza pracą",
+    "contact.title": "Kontakt"
 }

@@ -1,6 +1,6 @@
+import "./Education.scss";
 import React from "react";
 import { FormattedMessage } from "react-intl";
-import "./Education.scss";
 import personalData from "../config/personalData";
 import FloatingCard from "./FloatingCard";
 
@@ -8,7 +8,7 @@ const Education: React.FC = () => {
   return (
     <div id="education">
       <div className="container">
-        <h2>
+        <h2 className="section-title">
           <FormattedMessage id="education.title" />
         </h2>
         <div className="degrees">
@@ -25,10 +25,10 @@ const Education: React.FC = () => {
                     {step.startDate} - {step.endDate}
                   </p>
                 </div>
-                <p>
+                <h5>
                   {step.school} ({step.location})
-                </p>
-                <h4>{step.description}</h4>
+                </h5>
+                <p>{step.description}</p>
               </FloatingCard>
             );
           })}
