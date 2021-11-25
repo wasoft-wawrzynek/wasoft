@@ -13,11 +13,11 @@
     "header.traveler": "voyager",
 
     "experience.title": "My professional experience",
-    "experience.eqtek.description": "Maintaining and preparing new solutions built on a case management system, targeting multiple customers in a public sector and financial industry.",
-    "experience.vsoft.description": "TODO",
+    "experience.eqtek.description": "Developing and maintaining case management system platform. Desigining and implementing short-term tailored projects for multiple clients from the British public sector and banking. Line management for a team of around ten devs and QAs, supporting communication with business and helping improving software development process.",
+    "experience.vsoft.description": "Maintaining web application used by sales representatives to valuate complex insurance configurations.",
     "experience.flightscope.pm-description": "Evaluating, planning and designing architecture for multiple software projects. Coordinating communication between offices (Poland, South Africa and USA) and synchronizing co-operation of teams (project owners, UI designers, engineers, etc.). Prioritizing tasks and projects in regard to the available resources and the market demand. Managing a few small software teams on all levels.",
-    "experience.flightscope.leader-description": "Designing, developing and maintaining applications used by golfers (both professional and amateur) to improve their skills by analysing ball flight data provided by multiple sport radars. Designing software architecture, planning project development and overseeing the process as well as managing a team of a few developers.",
-    "experience.flightscope.dev-description": "Designing, developing and maintaining applications used by golfers (both professional and amateur) to improve their skills by analysing ball flight data provided by multiple sport radars.",
+    "experience.flightscope.leader-description": "On top of the current duties, designing software architecture, planning project development and overseeing the process as well as managing a team of a few developers.",
+    "experience.flightscope.dev-description": "Developing and maintaining applications used by golfers (both professional and amateur) to improve their skills by analysing ball flight data provided by multiple sport radars.",
 
     "education.title": "My education",
     "skills.title": "My skills",

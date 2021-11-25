@@ -13,11 +13,11 @@
     "header.traveler": "podróżnikiem",
 
     "experience.title": "Moje doświadczenie",
-    "experience.eqtek.description": "TODO",
-    "experience.vsoft.description": "TODO",
-    "experience.flightscope.pm-description": "TODO",
-    "experience.flightscope.leader-description": "TODO",
-    "experience.flightscope.dev-description": "TODO",
+    "experience.eqtek.description": "Rozwijanie i utrzymywanie plaftormy służacej do konfigurowania i projektowania formularzy i procesów. Projektowanie i dostarczanie rozwiązań dopasowanych do potrzeb indywidualnych klientów - brytyjskich instytucji państwowych i banków. Zarządzanie zespołem około dziesięciorga programistów i testerów, wspomaganie komunikacji z biznesem i usprawnianie procesu wytwarzania oprogramowania.",
+    "experience.vsoft.description": "Utrzymywanie aplikacji webowej do obsługi sprzedaży złożonych konfiguracji ubezpieczeń komunikacyjnych (OC/AC), dostarczanej dla ogólnopolskich towarzystw ubezpieczeniowych.",
+    "experience.flightscope.pm-description": "Ocena, planowanie i projektowanie architektury kilku równoległych projektów technicznych. Wspomaganie komunikacji pomiędzy oddziałami (Polska, RPA i USA) oraz wspomaganie współpracy między zespołami zadaniowymi (grafikami, inżynierami, sprzedawcami, itd.). Priorytetyzowanie zadań i projektów z uwzględnieniem aktualnych zasobów i zapotrzebowania klientów. Zarządzanie kilkoma niewielkimi zespołami programistów.",
+    "experience.flightscope.leader-description": "Ponad dotychczasowe obowiązki, projektowanie architektury nowych rozwiązań, planowanie rozwoju projektu i przewodzenie niewielkiemu zespołowi programistów.",
+    "experience.flightscope.dev-description": "Rozwój i utrzymanie aplikacji desktopowej, używanej przez golfistów (profesjonalistów i amatorów) do doskonalenia swoich umiejętności, na podstawie danych analitycznych dotyczących lotu piłki, dostarczonych przez radar sportowy.",
 
     "education.title": "Moje wykształcenie",
     "skills.title": "Moje umiejętności",

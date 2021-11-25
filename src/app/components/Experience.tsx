@@ -9,6 +9,34 @@ const Experience: React.FC = () => {
     return technologies.toString().replaceAll(",", " | ");
   };
 
+  const getDateRangeString = (startDate?: Date, endDate?: Date): string => {
+    var startDateFormatted = startDate?.toLocaleDateString("en-GB", {
+      year: "numeric",
+      month: "2-digit"
+    });
+    var endDateFormatted = endDate
+      ? endDate.toLocaleDateString("en-GB", {
+          year: "numeric",
+          month: "2-digit",
+        })
+      : "now";
+
+    return `${startDateFormatted} - ${endDateFormatted}`;
+  };
+  const getPeriodSting = (startDate: Date, endDate?: Date): string => {
+    if (!endDate) endDate = new Date();
+
+    var monthsDiff =
+      endDate.getMonth() -
+      startDate.getMonth() +
+      12 * (endDate.getFullYear() - startDate.getFullYear());
+
+    var diff = { years: Math.floor(monthsDiff / 12), months: monthsDiff % 12 };
+    return diff.years > 0
+      ? `${diff.years}l, ${diff.months}m`
+      : `${diff.months}m`;
+  };
+
   return (
     <div id="experience">
       <div className="container">
@@ -27,19 +55,19 @@ const Experience: React.FC = () => {
                 <div className="job-header">
                   <h3>{job.company}</h3>
                   <p>
-                    {job.startDate} - {job.endDate ? job.endDate : "now"}
+                    {getDateRangeString(
+                      job.roles.at(-1)?.startDate,
+                      job.roles[0].endDate
+                    )}
                   </p>
                 </div>
                 <div className="job-roles">
                   {job.roles.map((role) => {
                     return (
-                      <div className="role">
+                      <div className="role" key={role.title}>
                         <div className="role-header">
                           <h3>{role.title}</h3>
-                          <p>
-                            {role.startDate} -{" "}
-                            {role.endDate ? role.endDate : "now"}
-                          </p>
+                          <p>{getPeriodSting(role.startDate, role.endDate)}</p>
                         </div>
                         {role.technologies.length > 0 && (
                           <p className="technologies">
