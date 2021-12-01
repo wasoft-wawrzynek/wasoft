@@ -20,7 +20,18 @@
     "experience.flightscope.dev-description": "Developing and maintaining applications used by golfers (both professional and amateur) to improve their skills by analysing ball flight data provided by multiple sport radars.",
 
     "education.title": "My education",
+    "education.school": "Silesian University of Technology",
+    "education.faculty": "Automatic Control and Robotics",
+    "education.masters-title": "Master's Degree",
+    "education.masters-desc": "A diploma thesis on the subject \"System for decoding Morse code with the use of software-defined radio\" realized in the form of an application that performs real-time digital audio signal processing, written in C ++.",
+    "education.bachelor-title": "Bachelor's Degree",
+    "eductaion.bachelor-desc": " ",
+
     "skills.title": "My skills",
     "hobby.title": "Outside work",
-    "contact.title": "Contact me"
+    "contact.title": "Contact me",
+
+    "gliwice": "Gliwice, Poland",
+    "krakow": "Kraków, Poland",
+    "year": "y"
 }

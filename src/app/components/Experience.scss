@@ -57,6 +57,11 @@
 
           h3 {
             color: $primary-color;
+            span {
+              color: $medium-light-color;
+              font-size: 1.5rem;
+              line-height: 1rem;
+            }
           }
         }
 
@@ -84,7 +89,7 @@
               }
             }
 
-            .technologies {
+            .tech {
               color: $primary-color;
               margin-bottom: 0.5rem;
 

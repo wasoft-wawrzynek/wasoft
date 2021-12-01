@@ -27,20 +27,30 @@ const Education: React.FC = () => {
         <div className="degrees">
           {personalData.education.map((step) => {
             return (
-              <FloatingCard
-                key={step.title}
-                intervalMs={2000}
-                maxMove={[20, 20]}
-              >
-                <div className="title">
-                  <h3>{step.title}</h3>
-                  <p>{getDateRangeString(step.startDate, step.endDate)}</p>
-                </div>
-                <h5>
-                  {step.school} ({step.location})
-                </h5>
-                <p>{step.description}</p>
-              </FloatingCard>
+              <div className="degree" key={step.titleId}>
+                <h3 className="degree-title">
+                  <FormattedMessage id={step.titleId} />
+                </h3>
+                <FloatingCard
+                  intervalMs={2000}
+                  maxMove={[20, 20]}
+                  className="degree-content"
+                >
+                  <h3>
+                    <FormattedMessage id={step.facultyId} />
+                  </h3>
+                  <h4>
+                    <FormattedMessage id={step.schoolId} />
+                  </h4>
+                  <h5>
+                    {getDateRangeString(step.startDate, step.endDate) + ", "}
+                    <FormattedMessage id={step.locationId} />
+                  </h5>
+                  <p>
+                    <FormattedMessage id={step.descriptionId} />
+                  </p>
+                </FloatingCard>
+              </div>
             );
           })}
         </div>

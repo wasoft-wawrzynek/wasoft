@@ -1,10 +1,14 @@
 import "./Experience.scss";
 import React from "react";
-import { FormattedMessage } from "react-intl";
+import {
+  FormattedMessage,
+  injectIntl,
+  WrappedComponentProps,
+} from "react-intl";
 import FloatingCard from "./FloatingCard";
 import personalData from "../config/personalData";
 
-const Experience: React.FC = () => {
+const Experience: React.FC<WrappedComponentProps> = (props) => {
   const technologiesToString = (technologies: string[]) => {
     return technologies.toString().replaceAll(",", " | ");
   };
@@ -12,7 +16,7 @@ const Experience: React.FC = () => {
   const getDateRangeString = (startDate?: Date, endDate?: Date): string => {
     var startDateFormatted = startDate?.toLocaleDateString("en-GB", {
       year: "numeric",
-      month: "2-digit"
+      month: "2-digit",
     });
     var endDateFormatted = endDate
       ? endDate.toLocaleDateString("en-GB", {
@@ -33,7 +37,7 @@ const Experience: React.FC = () => {
 
     var diff = { years: Math.floor(monthsDiff / 12), months: monthsDiff % 12 };
     return diff.years > 0
-      ? `${diff.years}l, ${diff.months}m`
+      ? `${diff.years}${props.intl.messages["year"]}, ${diff.months}m`
       : `${diff.months}m`;
   };
 
@@ -53,7 +57,9 @@ const Experience: React.FC = () => {
                 maxMove={[20, 20]}
               >
                 <div className="job-header">
-                  <h3>{job.company}</h3>
+                  <h3>
+                    {job.company} <span>(<FormattedMessage id={job.locationId}/>)</span>
+                  </h3>
                   <p>
                     {getDateRangeString(
                       job.roles.at(-1)?.startDate,
@@ -70,13 +76,13 @@ const Experience: React.FC = () => {
                           <p>{getPeriodSting(role.startDate, role.endDate)}</p>
                         </div>
                         {role.technologies.length > 0 && (
-                          <p className="technologies">
+                          <p className="tech">
                             <span>[ </span>
                             {technologiesToString(role.technologies)}
                             <span> ]</span>
                           </p>
                         )}
-                        <p>
+                        <p className="desc">
                           <FormattedMessage id={role.descriptionId} />
                         </p>
                       </div>
@@ -92,4 +98,4 @@ const Experience: React.FC = () => {
   );
 };
 
-export default Experience;
+export default injectIntl(Experience);

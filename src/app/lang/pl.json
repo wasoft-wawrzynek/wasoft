@@ -20,7 +20,18 @@
     "experience.flightscope.dev-description": "Rozwój i utrzymanie aplikacji desktopowej, używanej przez golfistów (profesjonalistów i amatorów) do doskonalenia swoich umiejętności, na podstawie danych analitycznych dotyczących lotu piłki, dostarczonych przez radar sportowy.",
 
     "education.title": "Moje wykształcenie",
+    "education.school": "Politechnika Śląska",
+    "education.faculty": "Automatyka i Robotyka",
+    "education.masters-title": "studia magisterskie",
+    "education.masters-desc": "Praca dyplowmowa pod tytułem \"System do dekodowania kodu Morse'a z użyciem programowo definiowanego radia\" zrealizowany w postaci aplikacji dokonującej przetwarzania cyfrowego sygnału dźwiękowego w czasie rzeczywistym, napisanej w języku C++.",
+    "education.bachelor-title": "studia inżynierskie",
+    "eductaion.bachelor-desc": " ",
+
     "skills.title": "Moje umiejętności",
     "hobby.title": "Poza pracą",
-    "contact.title": "Kontakt"
+    "contact.title": "Kontakt",
+
+    "gliwice": "Gliwice, Polska",
+    "krakow": "Kraków, Polska",
+    "year": "r"
 }
