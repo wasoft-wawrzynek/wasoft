@@ -7,33 +7,38 @@ const getNewPosition = (maxMove: number[]) => {
   return [newX, newY];
 };
 
-const FloatingCard: React.FC<{ intervalMs: number; maxMove: number[] }> = ({
-  children,
-  intervalMs,
-  maxMove,
-}) => {
+const FloatingCard: React.FC<{
+  className?: string;
+  intervalMs: number;
+  maxMove: number[];
+}> = ({ children, className, intervalMs, maxMove }) => {
   const [translation, setTranslation] = useState([0, 0]);
-  const styleObj: CSSProperties = {
-    margin: `${maxMove[0] * 1.5}px ${maxMove[1] * 1.5}px`,
+
+  const boxStyle: CSSProperties = {
+    padding: `${maxMove[0]}px ${maxMove[1]}px`,
+  };
+  const cardStyle: CSSProperties = {
     transform: `translate(${translation[0]}px, ${translation[1]}px)`,
     transition: `transform ${intervalMs / 1000}s`,
     transitionTimingFunction: "linear",
   };
 
   useEffect(() => {
-    setTimeout(() => {
+    let intervalId = setInterval(() => {
       setTranslation(getNewPosition(maxMove));
     }, intervalMs);
-    return () => {};
-  });
+    return () => clearInterval(intervalId);
+  }, [intervalMs, maxMove]);
 
   return (
-    <div className="floating-card" style={styleObj}>
-      {children}
-      <div className="corner lt"></div>
-      <div className="corner rt"></div>
-      <div className="corner lb"></div>
-      <div className="corner rb"></div>
+    <div className={`${className} floating-card-box`} style={boxStyle}>
+      <div className="floating-card" style={cardStyle}>
+        {children}
+        <div className="corner lt"></div>
+        <div className="corner rt"></div>
+        <div className="corner lb"></div>
+        <div className="corner rb"></div>
+      </div>
     </div>
   );
 };

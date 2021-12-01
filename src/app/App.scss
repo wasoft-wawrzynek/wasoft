@@ -16,6 +16,7 @@ body {
   h2,
   h3,
   h4,
+  h5,
   p {
     color: $light-color;
   }
@@ -27,13 +28,14 @@ body {
   }
 
   h4,
+  h5,
   p,
   a,
   input,
   textarea {
     font-family: "Montserrat", sans-serif;
   }
-  
+
   h1 {
     font-weight: 700;
     font-size: 5rem;
@@ -43,16 +45,23 @@ body {
   h2 {
     font-weight: 600;
     font-size: 3.5rem;
+    line-height: 3.5rem;
   }
 
   h3 {
     font-weight: 500;
     font-size: 2.5rem;
+    line-height: 1.5rem;
   }
 
   h4 {
     font-weight: 400;
     font-size: 1.5rem;
+  }
+
+  h5 {
+    font-weight: 300;
+    font-size: 1.2rem;
   }
 
   p {
@@ -68,7 +77,24 @@ body {
 .container {
   max-width: $content-width;
   margin: auto;
-  padding: 1.5rem;
+  padding: 4rem 0;
   height: 100%;
   width: 100%;
+
+  .section-title {
+    color: $light-color;
+    align-self: flex-start;
+    margin: 2rem;
+
+    &:after {
+      content: "_";
+      color: $primary-color;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 0;
+  }
 }
