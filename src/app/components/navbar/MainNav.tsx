@@ -10,12 +10,9 @@ const MainNav: React.FC<{
 }> = (props) => {
   return (
     <div id="main-nav">
-      <Menu.Item as={Scroll.Link} smooth spy to="header">
-        WaSoft
-      </Menu.Item>
-      <Menu.Item as={Scroll.Link} smooth spy to="skills">
+      {/* <Menu.Item as={Scroll.Link} smooth spy to="skills">
         <FormattedMessage id="navbar.skills" />
-      </Menu.Item>
+      </Menu.Item> */}
       <Menu.Item as={Scroll.Link} smooth spy to="experience">
         <FormattedMessage id="navbar.experience" />
       </Menu.Item>
@@ -25,9 +22,9 @@ const MainNav: React.FC<{
       <Menu.Item as={Scroll.Link} smooth spy to="hobby">
         <FormattedMessage id="navbar.hobby" />
       </Menu.Item>
-      <Menu.Item as={Scroll.Link} smooth spy to="contact">
+      {/* <Menu.Item as={Scroll.Link} smooth spy to="contact">
         <FormattedMessage id="navbar.contact" />
-      </Menu.Item>
+      </Menu.Item> */}
     </div>
   );
 };

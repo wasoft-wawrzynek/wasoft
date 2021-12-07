@@ -11,11 +11,11 @@ const FloatingCard: React.FC<{
   className?: string;
   intervalMs: number;
   maxMove: number[];
-}> = ({ children, className, intervalMs, maxMove }) => {
+}> = ({ children, className, intervalMs = 2000, maxMove = [20, 20] }) => {
   const [translation, setTranslation] = useState([0, 0]);
 
   const boxStyle: CSSProperties = {
-    padding: `${maxMove[0]}px ${maxMove[1]}px`,
+    padding: `${maxMove[1]}px ${maxMove[0]}px`,
   };
   const cardStyle: CSSProperties = {
     transform: `translate(${translation[0]}px, ${translation[1]}px)`,
@@ -31,7 +31,7 @@ const FloatingCard: React.FC<{
   }, [intervalMs, maxMove]);
 
   return (
-    <div className={`${className} floating-card-box`} style={boxStyle}>
+    <div className={`${className ? className : ""} floating-card-box`} style={boxStyle}>
       <div className="floating-card" style={cardStyle}>
         {children}
         <div className="corner lt"></div>

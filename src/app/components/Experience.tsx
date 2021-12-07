@@ -7,6 +7,7 @@ import {
 } from "react-intl";
 import FloatingCard from "./FloatingCard";
 import personalData from "../config/personalData";
+import { values } from "../config/translations";
 
 const Experience: React.FC<WrappedComponentProps> = (props) => {
   const technologiesToString = (technologies: string[]) => {
@@ -83,7 +84,7 @@ const Experience: React.FC<WrappedComponentProps> = (props) => {
                           </p>
                         )}
                         <p className="desc">
-                          <FormattedMessage id={role.descriptionId} />
+                          <FormattedMessage id={role.descriptionId} values={values} />
                         </p>
                       </div>
                     );
