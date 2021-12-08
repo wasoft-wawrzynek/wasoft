@@ -6,14 +6,15 @@ import Header from "./components/Header";
 import NavBar from "./components/navbar/NavBar";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
-import translations from "./config/translations";
+import messages from "./config/translations";
+import Hobby from "./components/Hobby";
 
 const App: React.FC = () => {
   const [locale, setLocale] = useState("pl");
   const [onTop, setOnTop] = useState(true);
 
   return (
-    <IntlProvider locale={locale} messages={translations[locale]}>
+    <IntlProvider locale={locale} messages={messages[locale]}>
       <Fragment>
         <NavBar isHidden={onTop} language={locale} setLanguage={setLocale} />
         <Waypoint
@@ -23,6 +24,7 @@ const App: React.FC = () => {
         <Header />
         <Experience />
         <Education />
+        <Hobby />
       </Fragment>
     </IntlProvider>
   );

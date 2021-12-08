@@ -1,7 +1,7 @@
 {
     "navbar.skills": "Umiejętności",
     "navbar.experience": "Doświadczenie",
-    "navbar.education": "Edukacja",
+    "navbar.education": "Wykształcenie",
     "navbar.hobby": "Po pracy",
     "navbar.contact": "Kontakt",
 
@@ -13,10 +13,10 @@
     "header.traveler": "podróżnikiem",
 
     "experience.title": "Moje doświadczenie",
-    "experience.eqtek.description": "Rozwijanie i utrzymywanie plaftormy służacej do konfigurowania i projektowania formularzy i procesów. Projektowanie i dostarczanie rozwiązań dopasowanych do potrzeb indywidualnych klientów - brytyjskich instytucji państwowych i banków. Zarządzanie zespołem około dziesięciorga programistów i testerów, wspomaganie komunikacji z biznesem i usprawnianie procesu wytwarzania oprogramowania.",
+    "experience.eqtek.description": "Rozwijanie i utrzymywanie plaftormy służacej do konfigurowania i projektowania formularzy i procesów. Projektowanie i dostarczanie rozwiązań dopasowanych do potrzeb indywidualnych klientów - brytyjskich instytucji państwowych i banków.{br}Zarządzanie zespołem około dziesięciorga programistów i testerów, wspomaganie komunikacji z biznesem i usprawnianie procesu wytwarzania oprogramowania.",
     "experience.vsoft.description": "Utrzymywanie aplikacji webowej do obsługi sprzedaży złożonych konfiguracji ubezpieczeń komunikacyjnych (OC/AC), dostarczanej dla ogólnopolskich towarzystw ubezpieczeniowych.",
-    "experience.flightscope.pm-description": "Ocena, planowanie i projektowanie architektury kilku równoległych projektów technicznych. Wspomaganie komunikacji pomiędzy oddziałami (Polska, RPA i USA) oraz wspomaganie współpracy między zespołami zadaniowymi (grafikami, inżynierami, sprzedawcami, itd.). Priorytetyzowanie zadań i projektów z uwzględnieniem aktualnych zasobów i zapotrzebowania klientów. Zarządzanie kilkoma niewielkimi zespołami programistów.",
-    "experience.flightscope.leader-description": "Ponad dotychczasowe obowiązki, projektowanie architektury nowych rozwiązań, planowanie rozwoju projektu i przewodzenie niewielkiemu zespołowi programistów.",
+    "experience.flightscope.pm-description": "Ocena, planowanie i projektowanie architektury kilku równoległych projektów technicznych.{br}Wspomaganie komunikacji pomiędzy oddziałami (Polska, RPA i USA) oraz wspomaganie współpracy między zespołami zadaniowymi (grafikami, inżynierami, sprzedawcami, itd.).{br}Priorytetyzowanie zadań i projektów z uwzględnieniem aktualnych zasobów i zapotrzebowania klientów.{br}Zarządzanie kilkoma niewielkimi zespołami programistów.",
+    "experience.flightscope.leader-description": "Ponad dotychczasowe obowiązki, włączyłem się w projektowanie architektury nowych rozwiązań, planowanie rozwoju projektu i przewodzenie niewielkiemu zespołowi programistów.",
     "experience.flightscope.dev-description": "Rozwój i utrzymanie aplikacji desktopowej, używanej przez golfistów (profesjonalistów i amatorów) do doskonalenia swoich umiejętności, na podstawie danych analitycznych dotyczących lotu piłki, dostarczonych przez radar sportowy.",
 
     "education.title": "Moje wykształcenie",
@@ -27,8 +27,15 @@
     "education.bachelor-title": "studia inżynierskie",
     "eductaion.bachelor-desc": " ",
 
+    "hobby.title": "Po pracy",
+    "hobby.brewing-title": "Piwowarstwo",
+    "hobby.brewing-description": "Warzenie własnego piwa na pierwszy rzut oka może wydawać się skomplikowane i wymagające. I takie właśnie jest... Po kilkudziesięcu warkach nadal mam wrażenie, że poznałem nawet wierzchołka góry chmielowej.{br}{br}Niezależnie od efektów, uwielbiam eksperymentować z kolejnymi stylami - planować, warzyć i doglądać fermentacji. Gorzej z myciem butelek, etykietowaniem i sprzątaniem. Ale bez pracy nie ma kołaczy...{br}{br}Postęp mojej piwnej przygody można śledzić na stronie mojego browaru:{br}{br}{wawrzelniaLink}",
+    "hobby.squash-title": "Squash",
+    "hobby.squash-description": "Dla zdrowotności, zarówno tej fizycznej, jak i psychicznej, potrzebuję czasem wylać z siebie trochę potu.{br}{br}Zdecydowanie nie należę do tych, którzy potafią stawiać wyzwania sami sobie, śrubując wyniki. Ja potrzebuję żywego, wymagającego przeciwnika po drugiej stronie kortu. Czasem wygram, czasem przegram, ale najważniejszy jest ten dreszcz emocji między początkiem a kończem meczu.",
+    "hobby.traveling-title": "Podróże",
+    "hobby.traveling-description": "Nic w tym oryginalnego, ale tak jak wielu innych - uwielbiam podróżować. Im dalszy i bardziej egzotyczny kierunek - tym lepiej. I nie chodzi tylko o widoki czy architekturę. Bardzo lubię obserwować osobliwości innych miejsc i kultur.{br}{br}Najciekawsze są zawsze... sklepy spożywcze. To właśnie tam najepiej widać jak bardzo dany kraj różni się od naszego - po smakach, zapachach i upodobaniach tubylców.",
+
     "skills.title": "Moje umiejętności",
-    "hobby.title": "Poza pracą",
     "contact.title": "Kontakt",
 
     "gliwice": "Gliwice, Polska",

@@ -1,17 +1,96 @@
 @import "../variables";
 
-#hobby {
-  height: 100vh;
-  background: $medium-dark-color;
+$bubble-size: 150px;
 
-  .container {
+#hobby {
+  background: $dark-color;
+  padding: 2rem 0;
+
+  .container .activities {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    gap: 2rem;
 
-    h2 {
-      color: $primary-color;
+    .floating-card-box .floating-card {
+      padding: 1rem 0;
+    }
+
+    .activity-card {
+      max-width: 50%;
+      margin: 0 $bubble-size/2;
+
+      .activity-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .img-bubble {
+          position: absolute;
+          border: 5px solid $primary-color;
+          background: $dark-color;
+          border-radius: 50%;
+          height: $bubble-size;
+          width: $bubble-size;
+          margin: -$bubble-size/2;
+          overflow: hidden;
+
+          .img-box {
+            width: 100%;
+            height: 100%;
+            padding: 15%;
+            img {
+              height: 100%;
+              margin: auto auto auto auto;
+              display: block;
+            }
+          }
+        }
+
+        .content {
+          padding: 1rem;
+          margin: 0 1rem 0 $bubble-size/2;
+          text-align: end;
+          h3 {
+            color: $primary-color;
+            margin-bottom: 1rem;
+          }
+
+          a {
+            font-size: 1.5rem;
+            font-weight: bold;
+          }
+        }
+      }
+
+      &:nth-of-type(2n) {
+        align-self: flex-end;
+        .activity-content {
+          flex-direction: row-reverse;
+          .content {
+            margin: 0 $bubble-size/2 0 1rem;
+            text-align: start;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #hobby .container .activities .activity-card {
+    max-width: 100%;
+
+    &:nth-of-type(2n + 1),
+    &:nth-of-type(2n) {
+      margin: $bubble-size/2 1rem 0 1rem;
+      .activity-content {
+        flex-direction: column;
+
+        .content {
+          margin: $bubble-size/2 0 0 0;
+          text-align: center;
+        }
+      }
     }
   }
 }

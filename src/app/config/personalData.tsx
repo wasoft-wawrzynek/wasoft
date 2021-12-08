@@ -100,6 +100,23 @@ const personalData = {
       ],
     },
   ],
+  hobby: [
+    {
+      titleId: "hobby.brewing-title",
+      descriptionId: "hobby.brewing-description",
+      imgSrc: "img/wawrzelnia.svg",
+    },
+    {
+      titleId: "hobby.squash-title",
+      descriptionId: "hobby.squash-description",
+      imgSrc: "img/squash.svg",
+    },
+    {
+      titleId: "hobby.traveling-title",
+      descriptionId: "hobby.traveling-description",
+      imgSrc: "img/world.svg",
+    },
+  ],
 };
 
 export default personalData;

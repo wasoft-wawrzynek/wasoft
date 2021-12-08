@@ -7,6 +7,7 @@ import {
 } from "react-intl";
 import FloatingCard from "./FloatingCard";
 import personalData from "../config/personalData";
+import { values } from "../config/translations";
 
 const Experience: React.FC<WrappedComponentProps> = (props) => {
   const technologiesToString = (technologies: string[]) => {
@@ -50,15 +51,13 @@ const Experience: React.FC<WrappedComponentProps> = (props) => {
         <div className="timeline">
           {personalData.experience.map((job) => {
             return (
-              <FloatingCard
-                key={job.company}
-                className="job-card"
-                intervalMs={2000}
-                maxMove={[20, 20]}
-              >
+              <FloatingCard key={job.company} className="job-card">
                 <div className="job-header">
                   <h3>
-                    {job.company} <span>(<FormattedMessage id={job.locationId}/>)</span>
+                    {job.company}{" "}
+                    <span>
+                      (<FormattedMessage id={job.locationId} />)
+                    </span>
                   </h3>
                   <p>
                     {getDateRangeString(
@@ -83,7 +82,10 @@ const Experience: React.FC<WrappedComponentProps> = (props) => {
                           </p>
                         )}
                         <p className="desc">
-                          <FormattedMessage id={role.descriptionId} />
+                          <FormattedMessage
+                            id={role.descriptionId}
+                            values={values}
+                          />
                         </p>
                       </div>
                     );
