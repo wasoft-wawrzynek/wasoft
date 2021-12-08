@@ -1,4 +1,4 @@
-import React, { CSSProperties, useEffect, useState } from "react";
+import { CSSProperties, ReactNode, useEffect, useState } from "react";
 import "./FloatingCard.scss";
 
 const getNewPosition = (maxMove: number[]) => {
@@ -7,11 +7,19 @@ const getNewPosition = (maxMove: number[]) => {
   return [newX, newY];
 };
 
-const FloatingCard: React.FC<{
+interface FloatingCardProps {
+  children: ReactNode;
   className?: string;
   intervalMs: number;
   maxMove: number[];
-}> = ({ children, className, intervalMs = 2000, maxMove = [20, 20] }) => {
+}
+
+const FloatingCard = ({
+  children,
+  className,
+  intervalMs,
+  maxMove,
+}: FloatingCardProps): JSX.Element => {
   const [translation, setTranslation] = useState([0, 0]);
 
   const boxStyle: CSSProperties = {
@@ -31,7 +39,10 @@ const FloatingCard: React.FC<{
   }, [intervalMs, maxMove]);
 
   return (
-    <div className={`${className ? className : ""} floating-card-box`} style={boxStyle}>
+    <div
+      className={`${className ? className : ""} floating-card-box`}
+      style={boxStyle}
+    >
       <div className="floating-card" style={cardStyle}>
         {children}
         <div className="corner lt"></div>
@@ -41,6 +52,12 @@ const FloatingCard: React.FC<{
       </div>
     </div>
   );
+};
+
+FloatingCard.defaultProps = {
+  className: "",
+  intervalMs: 2000,
+  maxMove: [20, 20],
 };
 
 export default FloatingCard;

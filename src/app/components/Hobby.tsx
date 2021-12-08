@@ -17,7 +17,6 @@ const Hobby: React.FC = () => {
             return (
               <FloatingCard
                 className="activity-card"
-                intervalMs={2000}
                 maxMove={[15, 15]}
               >
                 <div className="activity-content">

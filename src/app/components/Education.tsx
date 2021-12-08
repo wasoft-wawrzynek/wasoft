@@ -31,11 +31,7 @@ const Education: React.FC = () => {
                 <h3 className="degree-title">
                   <FormattedMessage id={step.titleId} />
                 </h3>
-                <FloatingCard
-                  intervalMs={2000}
-                  maxMove={[20, 20]}
-                  className="degree-content"
-                >
+                <FloatingCard className="degree-content">
                   <h3>
                     <FormattedMessage id={step.facultyId} />
                   </h3>
