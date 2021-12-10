@@ -8,6 +8,7 @@ import Experience from "./components/Experience";
 import Education from "./components/Education";
 import messages from "./config/translations";
 import Hobby from "./components/Hobby";
+import Contact from "./components/Contact";
 
 const App: React.FC = () => {
   const [locale, setLocale] = useState("pl");
@@ -25,6 +26,7 @@ const App: React.FC = () => {
         <Experience />
         <Education />
         <Hobby />
+        <Contact />
       </Fragment>
     </IntlProvider>
   );

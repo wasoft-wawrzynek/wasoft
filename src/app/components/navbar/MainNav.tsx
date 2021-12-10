@@ -22,9 +22,9 @@ const MainNav: React.FC<{
       <Menu.Item as={Scroll.Link} smooth spy to="hobby">
         <FormattedMessage id="navbar.hobby" />
       </Menu.Item>
-      {/* <Menu.Item as={Scroll.Link} smooth spy to="contact">
+      <Menu.Item as={Scroll.Link} smooth spy to="contact">
         <FormattedMessage id="navbar.contact" />
-      </Menu.Item> */}
+      </Menu.Item>
     </div>
   );
 };

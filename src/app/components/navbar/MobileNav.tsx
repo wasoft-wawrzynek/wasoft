@@ -68,7 +68,7 @@ const MobileNav: React.FC<{
         >
           <FormattedMessage id="navbar.hobby" />
         </Menu.Item>
-        {/* <Menu.Item
+        <Menu.Item
           as={Scroll.Link}
           smooth
           spy
@@ -76,7 +76,7 @@ const MobileNav: React.FC<{
           onClick={() => setShowPanel(false)}
         >
           <FormattedMessage id="navbar.contact" />
-        </Menu.Item> */}
+        </Menu.Item>
         <div className="lang">
           <img
             src="/img/pl.svg"

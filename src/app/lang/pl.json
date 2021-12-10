@@ -35,8 +35,15 @@
     "hobby.traveling-title": "Podróże",
     "hobby.traveling-description": "Nic w tym oryginalnego, ale tak jak wielu innych - uwielbiam podróżować. Im dalszy i bardziej egzotyczny kierunek - tym lepiej. I nie chodzi tylko o widoki czy architekturę. Bardzo lubię obserwować osobliwości innych miejsc i kultur.{br}{br}Najciekawsze są zawsze... sklepy spożywcze. To właśnie tam najepiej widać jak bardzo dany kraj różni się od naszego - po smakach, zapachach i upodobaniach tubylców.",
 
-    "skills.title": "Moje umiejętności",
     "contact.title": "Kontakt",
+    "contact.intro": "Zainteresował Cię mój profil?{br} Myślisz, że pasuję jak ulał do Twojego zespołu?{br}Napisz do mnie! Załącz kilka szczegółów i wysyłaj!{br}Odpiszę jak najprędzej.",
+    "contact.company": "Firma",
+    "contact.name": "Imię",
+    "contact.address": "Email",
+    "contact.message": "Zamieniam się w słuch!",
+    "contact.send": "Ślij!",
+
+    "skills.title": "Moje umiejętności",
 
     "gliwice": "Gliwice, Polska",
     "krakow": "Kraków, Polska",

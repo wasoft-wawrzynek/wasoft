@@ -35,8 +35,15 @@
     "hobby.traveling-title": "Traveling",
     "hobby.traveling-description": "I won't be the first one to say it, but I love to travel. The further and more exotic my destination is - the better. And it's not only about the sights and architecture. I really enjoy observing peculiarities of all the different places and cultures.{br}{br}And the most interesting are... markets. It's always the regular food shop, where you can clearly see the differences between countries - by the taste, scent and likes of the natives.",
 
-    "skills.title": "My skills",
-    "contact.title": "Contact me",
+    "contact.title": "Contact",
+    "contact.intro": "Do you find my profile interesting?{br}You think I would perfectly fit in your team?{br}Contact me! Include a bit of details, and send!{br}I'll respond in no time.",
+    "contact.company": "Comapny",
+    "contact.name": "Name",
+    "contact.address": "Email",
+    "contact.message": "Shoot!",
+    "contact.send": "Off it goes!",
+
+    "skills.title": "Moje umiejętności",
 
     "gliwice": "Gliwice, Poland",
     "krakow": "Kraków, Poland",
