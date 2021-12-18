@@ -3,7 +3,6 @@ import React from "react";
 import Particles from "react-tsparticles";
 import { FormattedMessage, useIntl } from "react-intl";
 import Typed from "react-typed";
-import logo from "../icons/wasoft-light-full.svg";
 import { particlesConfig } from "../config/particlesConfig";
 
 const Header: React.FC = () => {
@@ -27,7 +26,7 @@ const Header: React.FC = () => {
               <img src=".\img\profile.png" alt="logo" />
             </div>
             <div className="img-bubble wasoft">
-              <img src={logo} alt="logo" />
+              <img src="img/wasoft-light-full.svg" alt="logo" />
             </div>
           </div>
         </div>

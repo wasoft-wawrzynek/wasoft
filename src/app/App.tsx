@@ -9,6 +9,7 @@ import Education from "./components/Education";
 import messages from "./config/translations";
 import Hobby from "./components/Hobby";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 const App: React.FC = () => {
   const [locale, setLocale] = useState("pl");
@@ -27,6 +28,7 @@ const App: React.FC = () => {
         <Education />
         <Hobby />
         <Contact />
+        <Footer />
       </Fragment>
     </IntlProvider>
   );

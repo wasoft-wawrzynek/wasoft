@@ -46,6 +46,7 @@ const MobileNav: React.FC<{
           smooth
           spy
           to="experience"
+          offset={-90}
           onClick={() => setShowPanel(false)}
         >
           <FormattedMessage id="navbar.experience" />
@@ -55,6 +56,7 @@ const MobileNav: React.FC<{
           smooth
           spy
           to="education"
+          offset={-90}
           onClick={() => setShowPanel(false)}
         >
           <FormattedMessage id="navbar.education" />
@@ -64,6 +66,7 @@ const MobileNav: React.FC<{
           smooth
           spy
           to="hobby"
+          offset={-90}
           onClick={() => setShowPanel(false)}
         >
           <FormattedMessage id="navbar.hobby" />
@@ -73,6 +76,7 @@ const MobileNav: React.FC<{
           smooth
           spy
           to="contact"
+          offset={-90}
           onClick={() => setShowPanel(false)}
         >
           <FormattedMessage id="navbar.contact" />
