@@ -5,17 +5,11 @@ import {
   WrappedComponentProps,
 } from "react-intl";
 import { values } from "../config/translations";
+import IContactFormData from "../model/IContactFormData";
 import "./Contact.scss";
 
-interface IContactForm {
-  company: string;
-  name: string;
-  email: string;
-  message: string;
-}
-
 const Contact = (props: WrappedComponentProps) => {
-  const [input, setInput] = useState<IContactForm>({
+  const [input, setInput] = useState<IContactFormData>({
     company: "",
     name: "",
     email: "",
