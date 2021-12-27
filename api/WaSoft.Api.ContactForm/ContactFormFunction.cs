@@ -15,7 +15,7 @@ namespace WaSoft.Api.ContactForm
     {
         private static ILogger _logger;
 
-        [FunctionName(nameof(ContactFormFunction))]
+        [FunctionName("contactForm")]
         public static async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = null)] HttpRequest request, ILogger logger, ExecutionContext context)
         {
             _logger = logger;
