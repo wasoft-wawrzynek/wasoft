@@ -44,7 +44,7 @@ namespace WaSoft.Api.ContactForm
 
         private SendGridMessage CreateMessage(ContactFormData contactForm)
         {
-            contactForm.Date = DateTime.UtcNow.ToString("dd/MM/yyyy HH:mm");
+            contactForm.Date = DateTime.UtcNow.ToString("dd'/'MM'/'yyyy HH:mm");
             contactForm.Message = contactForm.Message.ReplaceLineEndings("<br>");
 
             var from = new EmailAddress(_settings.FromEmail, _settings.FromName);
