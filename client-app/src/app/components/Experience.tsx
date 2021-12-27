@@ -6,8 +6,8 @@ import {
   WrappedComponentProps,
 } from "react-intl";
 import FloatingCard from "./FloatingCard";
-import personalData from "../config/personalData";
-import { values } from "../config/translations";
+import personalData from "../resources/personalData";
+import { values } from "../translations";
 
 const Experience: React.FC<WrappedComponentProps> = (props) => {
   const technologiesToString = (technologies: string[]) => {

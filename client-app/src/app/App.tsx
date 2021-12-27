@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import NavBar from "./components/navbar/NavBar";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
-import messages from "./config/translations";
+import messages from "./translations";
 import Hobby from "./components/Hobby";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";

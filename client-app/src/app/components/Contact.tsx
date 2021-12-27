@@ -5,7 +5,7 @@ import {
   injectIntl,
   WrappedComponentProps,
 } from "react-intl";
-import { values } from "../config/translations";
+import { values } from "../translations";
 import IContactFormData from "../api/models/IContactFormData";
 import "./Contact.scss";
 import client from "../api/client";

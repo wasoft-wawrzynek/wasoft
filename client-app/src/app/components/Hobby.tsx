@@ -1,7 +1,7 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
-import personalData from "../config/personalData";
-import { values } from "../config/translations";
+import personalData from "../resources/personalData";
+import { values } from "../translations";
 import FloatingCard from "./FloatingCard";
 import "./Hobby.scss";
 

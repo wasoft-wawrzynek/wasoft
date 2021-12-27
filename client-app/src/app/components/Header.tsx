@@ -3,7 +3,7 @@ import React from "react";
 import Particles from "react-tsparticles";
 import { FormattedMessage, useIntl } from "react-intl";
 import Typed from "react-typed";
-import { particlesConfig } from "../config/particlesConfig";
+import { particlesConfig } from "../resources/particlesConfig";
 
 const Header: React.FC = () => {
   const intl = useIntl();

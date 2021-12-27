@@ -1,0 +1,130 @@
+name: 1.0$(Rev:.r)
+
+pr: none
+trigger:
+  branches:
+    include:
+    - develop
+    exclude:
+    - feature/*
+  paths:  
+    exclude:
+    - '**/*.yml'
+    - '**/*.md'
+
+pool:
+  vmImage: ubuntu-latest
+
+jobs:
+- job: ApiJob
+  displayName: Build API
+
+  variables:
+    buildConfiguration: 'Release'
+    apiFolder: 'api'
+
+  steps:
+    - task: Assembly-Info-NetCore@2
+      displayName: 'Update assembly info'
+      inputs:
+        Path: '$(apiFolder)'
+        FileNames: '**/*.csproj'
+        InsertAttributes: false
+        FileEncoding: 'auto'
+        WriteBOM: false
+        PackageId: '$(Build.BuildNumber)'
+        Authors: 'Paweł Wawrzynek'
+        Company: 'WaSoft'
+        Product: 'WaSoft API'
+        Copyright: 'WaSoft'
+        VersionNumber: '$(Build.BuildNumber)'
+        FileVersionNumber: '$(Build.BuildNumber)'
+        PackageVersion: '$(Build.BuildNumber)'
+        LogLevel: 'verbose'
+        FailOnWarning: false
+        DisableTelemetry: false
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Build the solution'
+      inputs:
+        command: 'build'
+        projects: '$(apiFolder)/WaSoft.Api.sln'
+        arguments: '--configuration $(buildConfiguration)'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Run tests'
+      inputs:
+        command: test
+        projects: '$(apiFolder)/*Tests/*.csproj'
+        arguments: '--configuration $(buildConfiguration)'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Create publish package'
+      inputs:
+        command: publish
+        publishWebProjects: True
+        arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+        zipAfterPublish: True
+
+    - task: PublishBuildArtifacts@1
+      displayName: Publish package
+      inputs:
+        pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
+        artifactName: 'wasoft-api-$(Build.BuildNumber)'
+     
+- job: AppJob
+  displayName: Build Client App
+
+  variables:
+    clientAppFolder: 'client-app'
+    buildOutputFolder: '$(clientAppFolder)/build'
+    configFilename: 'appConfig'
+    version: '$(Build.BuildNumber)'
+
+  steps:
+    - task: CMdLine@2
+      displayName: 'Replace config files'
+      inputs:
+        script: |
+          pushd $(clientAppFolder)/public
+          mv $(configFilename).release.js $(configFilename).js
+          popd
+
+    - task: FileTransform@1
+      displayName: 'Update package.json'
+      inputs:
+        folderPath: '$(clientAppFolder)'
+        targetFiles: '**/package.json'
+        fileType: json
+
+    - task: NodeTool@0
+      displayName: 'Install Node.js'
+      inputs:
+        versionSpec: '12.x'
+
+    - script: |
+        pushd $(clientAppFolder) && npm install && popd
+        pushd $(clientAppFolder) && npm run build && popd
+      displayName: 'npm install and build'
+
+    - task: CopyFiles@2
+      displayName: 'Copy to the staging directory'
+      inputs:
+        sourceFolder: '$(buildOutputFolder)' 
+        contents: '**/*' 
+        targetFolder: '$(Build.ArtifactStagingDirectory)'
+        cleanTargetFolder: true
+
+    - task: ArchiveFiles@2
+      displayName: 'Archive into zip file for publishing'
+      inputs:
+        rootFolderOrFile: $(Build.ArtifactStagingDirectory)
+        archiveType: 'zip'
+        archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+        includeRootFolder: false
+
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish package'
+      inputs:
+        pathtoPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+        artifactName: 'wasfot-app-$(Build.BuildNumber)'

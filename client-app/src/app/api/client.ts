@@ -7,7 +7,7 @@ axios.defaults.baseURL = appConfig.apiUrl;
 const Contact = {
   sendContactForm: async (form: IContactFormData): Promise<boolean> => {
     return axios
-      .post("/api/ContactFormFunction", form)
+      .post("/api/contactForm", form)
       .then(() => true)
       .catch(() => false);
   },
