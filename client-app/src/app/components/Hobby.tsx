@@ -13,25 +13,26 @@ const Hobby: React.FC = () => {
           <FormattedMessage id="hobby.title" />
         </h2>
         <div className="activities">
-          {personalData.hobby.map((activiy) => {
+          {personalData.hobby.map((activity) => {
             return (
               <FloatingCard
                 className="activity-card"
+                key={activity.titleId}
                 maxMove={[15, 15]}
               >
                 <div className="activity-content">
                   <div className="img-bubble">
                     <div className="img-box">
-                      <img src={activiy.imgSrc} alt="" />
+                      <img src={activity.imgSrc} alt="" />
                     </div>
                   </div>
                   <div className="content">
                     <h3 className="title">
-                      <FormattedMessage id={activiy.titleId} />
+                      <FormattedMessage id={activity.titleId} />
                     </h3>
                     <p className="desc">
                       <FormattedMessage
-                        id={activiy.descriptionId}
+                        id={activity.descriptionId}
                         values={values}
                       />
                     </p>

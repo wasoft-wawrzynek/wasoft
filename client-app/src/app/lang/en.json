@@ -42,6 +42,8 @@
     "contact.address": "Email",
     "contact.message": "Shoot!",
     "contact.send": "Off it goes!",
+    "contact.success": "Your message has been sent! Thank you for contactin me.",
+    "contact.error": "Something went wrong... Sending your message failed. Please, try again later.",
 
     "skills.title": "Moje umiejętności",
 

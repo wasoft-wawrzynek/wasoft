@@ -93,6 +93,29 @@ body {
   }
 }
 
+// Vendors
+
+.swal2-container {
+  .swal2-popup {
+    background: $medium-dark-color;
+  }
+
+  .swal2-icon.swal2-success {
+    border-color: $primary-color;
+    color: $primary-color;
+  }
+
+  .swal2-title {
+    color: $light-color;
+    line-height: 2.5rem;
+  }
+
+  .swal2-styled.swal2-confirm {
+    background-color: $primary-color;
+    color: $dark-color;
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 2rem 0;

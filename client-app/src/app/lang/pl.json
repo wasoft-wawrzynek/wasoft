@@ -42,6 +42,8 @@
     "contact.address": "Email",
     "contact.message": "Zamieniam się w słuch!",
     "contact.send": "Ślij!",
+    "contact.success": "Twoja wiadomość została wysłana! Dziękuję za kontakt.",
+    "contact.error": "Coś poszło nie tak... Nie udało się wysłać Twojej wiadomości. Spróbuj później.",
 
     "skills.title": "Moje umiejętności",
 

@@ -1,12 +1,14 @@
 import { useState } from "react";
+import Swal from "sweetalert2";
 import {
   FormattedMessage,
   injectIntl,
   WrappedComponentProps,
 } from "react-intl";
 import { values } from "../config/translations";
-import IContactFormData from "../model/IContactFormData";
+import IContactFormData from "../api/models/IContactFormData";
 import "./Contact.scss";
+import client from "../api/client";
 
 const Contact = (props: WrappedComponentProps) => {
   const [input, setInput] = useState<IContactFormData>({
@@ -26,35 +28,26 @@ const Contact = (props: WrappedComponentProps) => {
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
-    console.log(input);
 
+    let result = await client.Contact.sendContactForm(input);
+    if (result === false) {
+      Swal.fire({
+        icon: "error",
+        title: props.intl.formatMessage({ id: "contact.error" }),
+      });
+      return;
+    }
+
+    Swal.fire({
+      icon: "success",
+      title: props.intl.formatMessage({ id: "contact.success" }),
+    });
     setInput({
       company: "",
       name: "",
       email: "",
       message: "",
     });
-
-    // let result = await client.Contact.sendContactForm(input);
-    // runInAction(() => {
-    //   Swal.fire({
-    //     icon: result === true ? "success" : "error",
-    //     title:
-    //       result === true
-    //         ? "Twoja wiadomość została wysłana!"
-    //         : "Nie udało się wysłać Twojej wiadomości. Spróbuj później.",
-    //     showConfirmButton: false,
-    //     timer: 3000,
-    //   });
-
-    //   if (result === true) {
-    //     setInput({
-    //       name: "",
-    //       returnAddress: "",
-    //       message: "",
-    //     });
-    //   }
-    // });
   };
 
   return (
