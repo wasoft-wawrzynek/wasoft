@@ -2,7 +2,6 @@
 using SendGrid;
 using SendGrid.Helpers.Mail;
 using System;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace WaSoft.Api.ContactForm
@@ -45,6 +44,9 @@ namespace WaSoft.Api.ContactForm
 
         private SendGridMessage CreateMessage(ContactFormData contactForm)
         {
+            contactForm.Date = DateTime.UtcNow.ToString("dd/MM/yyyy HH:mm");
+            contactForm.Message = contactForm.Message.ReplaceLineEndings("<br>");
+
             var from = new EmailAddress(_settings.FromEmail, _settings.FromName);
             var to = new EmailAddress(_settings.ToEmail, _settings.ToName);
 

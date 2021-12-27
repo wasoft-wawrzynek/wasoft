@@ -6,7 +6,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
-using System.Configuration;
 using System.IO;
 using System.Threading.Tasks;
 
@@ -17,16 +16,16 @@ namespace WaSoft.Api.ContactForm
         private static ILogger _logger;
 
         [FunctionName(nameof(ContactFormFunction))]
-        public static async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = null)] HttpRequest req, ILogger log, ExecutionContext context)
+        public static async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = null)] HttpRequest request, ILogger logger, ExecutionContext context)
         {
-            _logger = log;
+            _logger = logger;
 
             _logger.LogInformation("New HTTP trigger received.");
 
             var settings = LoadSettings(context);
             _logger.LogInformation("Settings loaded.");
 
-            var data = await GetFormData(req);
+            var data = await GetFormData(request);
             if (data == null)
             {
                 return new BadRequestResult();
@@ -53,9 +52,7 @@ namespace WaSoft.Api.ContactForm
             try
             {
                 string requestBody = await new StreamReader(request.Body).ReadToEndAsync();
-                var data = JsonConvert.DeserializeObject<ContactFormData>(requestBody);
-                data.Date = DateTime.UtcNow.ToString("dd/MM/yyyy HH:mm");
-                return data;
+                return JsonConvert.DeserializeObject<ContactFormData>(requestBody);
             }
             catch (Exception ex)
             {
