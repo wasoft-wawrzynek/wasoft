@@ -1,0 +1,54 @@
+# Node.js with React
+# Build a Node.js project that uses React.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+name: 0.1$(Rev:.r)-pr
+
+trigger: none
+pr:
+  branches:
+    include:
+    - develop
+    exclude:
+    - feature/*
+  paths:
+    include:
+    - client-app
+    exclude:
+    - '**/*.yml'
+    - '**/*.md'
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  projectFolder: 'client-app'
+  buildOutputFolder: '$(projectFolder)/build'
+  configFilename: 'appConfig'
+  
+steps:
+- task: CMdLine@2
+  displayName: 'Replace config files'
+  inputs:
+    script: |
+      pushd $(projectFolder)/public
+      mv $(configFilename).release.js $(configFilename).js
+      popd
+
+- task: FileTransform@1
+  displayName: 'Update package.json'
+  inputs:
+    folderPath: '$(projectFolder)'
+    targetFiles: '**/package.json'
+    fileType: json
+
+- task: NodeTool@0
+  displayName: 'Install Node.js'
+  inputs:
+    versionSpec: '12.x'
+
+- script: |
+    pushd $(projectFolder) && npm install && popd
+    pushd $(projectFolder) && npm run build && popd
+  displayName: 'npm install and build'
