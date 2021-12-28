@@ -1,0 +1,133 @@
+<html>
+
+<head>
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Teko:400" rel="stylesheet" type="text/css" hs-webfonts="true">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200;300;400" rel="stylesheet" type="text/css"
+        hs-webfonts="true">
+    <style type="text/css">
+        body {
+            background-color: #111111;
+        }
+
+        p {
+            font-family: "Montserrat", Lucida Sans Unicode, sans-serif;
+            font-weight: 200;
+            font-size: 1.2rem;
+            color: white;
+            margin: 0;
+        }
+
+        span,
+        a {
+            text-decoration: none;
+            color: #96fd00;
+        }
+
+        .header {
+            background-color: #111111;
+            margin: 0 1rem;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .header .logo {
+            margin: 0 auto;
+            height: 8rem;
+        }
+
+        .details {
+            margin: 0 1rem;
+            padding: 2rem;
+            background-color: #333;
+        }
+
+        .details h2 {
+            font-family: "Teko", impact, sans-serif;
+            font-weight: 400;
+            font-size: 2.5rem;
+            text-align: center;
+            color: white;
+            margin: 0 0 1rem 0;
+        }
+
+        .details h3 {
+            font-family: "Montserrat", Lucida Sans Unicode, sans-serif;
+            font-weight: 400;
+            font-size: 1.3rem;
+            margin: 0.25rem 0;
+            color: #96fd00;
+            text-align: start;
+            margin-right: 2rem;
+        }
+
+        .details h4 {
+            font-family: "Montserrat", Lucida Sans Unicode, sans-serif;
+            font-weight: 300;
+            font-size: 1.2rem;
+            margin: 0.25rem 0;
+            color: white;
+            vertical-align: middle;
+        }
+
+        .footer {
+            margin: 0 1rem;
+            background: black;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .header .logo {
+                height: 5rem;
+            }
+            .details h2 {
+                font-size: 1.5rem;
+                margin: 0 0 2.5rem 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img class="logo"
+            src="http://cdn.mcauto-images-production.sendgrid.net/437f9d5523947287/9f6ac1bf-5ad0-420f-92e8-6d66ecf603f7/512x512.png" />
+    </div>
+    <div class="details">
+        <h2>Kontakt z <span>WaSoft.pl</span>:</h2>
+        <table>
+            <tr>
+                <th>
+                    <h3 class="value-name">Data:</h3>
+                </th>
+                <td>
+                    <h4>{{date}}</h4>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <h3>Od:</h3>
+                </th>
+                <td>
+                    <h4>{{name}} ({{company}}) &lt;{{email}}&gt;</h4>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <h3>Wiadomość:</h3>
+                </th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p>{{{message}}}</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="footer">
+        <p><a href="http://www.wasoft.pl">WaSoft</a> All rights reserved</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+@import "../variables";
+
+#footer {
+  background-color: $dark-color;
+
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .links {
+      .logo-wasoft {
+        align-self: center;
+        height: 4rem;
+        margin-right: 3rem;
+      }
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .social-logo {
+        height: 2rem;
+        margin: 1rem;
+        filter: invert(42%) sepia(9%) saturate(6%) hue-rotate(327deg)
+          brightness(92%) contrast(93%);
+
+        &:hover {
+          filter: invert(91%) sepia(64%) saturate(3671%) hue-rotate(24deg)
+            brightness(93%) contrast(114%);
+          height: 2.5rem;
+          margin: 0.75rem;
+        }
+      }
+    }
+
+    p {
+      color: $medium-light-color;
+      text-align: center;
+      line-height: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+
+    .links {
+      margin-bottom: 1.5rem;
+      .logo-wasoft {
+        display: none;
+      }
+      .social-logo {
+        margin: 0.5rem;
+      }
+    }
+  }
+}
