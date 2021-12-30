@@ -41,10 +41,16 @@ jobs:
         version: '6.0.x'
 
     - task: DotNetCoreCLI@2
+      inputs:
+        command: 'restore'
+        projects: '$(apiFolder)/*.sln'
+      displayName: 'Restore NuGet packages'
+ 
+    - task: DotNetCoreCLI@2
       displayName: 'Build the solution'
       inputs:
         command: 'build'
-        projects: '$(apiFolder)/WaSoft.Api.sln'
+        projects: '$(apiFolder)/*.sln'
         arguments: '--configuration $(buildConfiguration)'
 
     - task: DotNetCoreCLI@2
@@ -59,6 +65,7 @@ jobs:
       inputs:
         command: publish
         publishWebProjects: false
+        projects: '$(apiFolder)/*.sln'
         arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
         zipAfterPublish: True
 
