@@ -1,16 +1,7 @@
-name: 1.0$(Rev:.r)
+name: $(versionNumber)
 
+trigger: none
 pr: none
-trigger:
-  branches:
-    include:
-    - develop
-    exclude:
-    - feature/*
-  paths:  
-    exclude:
-    - '**/*.yml'
-    - '**/*.md'
 
 pool:
   vmImage: ubuntu-latest
@@ -32,14 +23,14 @@ jobs:
         InsertAttributes: false
         FileEncoding: 'auto'
         WriteBOM: false
-        PackageId: '$(Build.BuildNumber)'
+        PackageId: '$(versionNumber)'
         Authors: 'Paweł Wawrzynek'
         Company: 'WaSoft'
         Product: 'WaSoft API'
         Copyright: 'WaSoft'
-        VersionNumber: '$(Build.BuildNumber)'
-        FileVersionNumber: '$(Build.BuildNumber)'
-        PackageVersion: '$(Build.BuildNumber)'
+        VersionNumber: '$(versionNumber)'
+        FileVersionNumber: '$(versionNumber)'
+        PackageVersion: '$(versionNumber)'
         LogLevel: 'verbose'
         FailOnWarning: false
         DisableTelemetry: false
@@ -70,7 +61,7 @@ jobs:
       displayName: Publish package
       inputs:
         pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
-        artifactName: 'wasoft-api-$(Build.BuildNumber)'
+        artifactName: 'wasoft-api-$(versionNumber)'
      
 - job: AppJob
   displayName: Build Client App
@@ -79,7 +70,7 @@ jobs:
     clientAppFolder: 'client-app'
     buildOutputFolder: '$(clientAppFolder)/build'
     configFilename: 'appConfig'
-    version: '$(Build.BuildNumber)'
+    version: '$(versionNumber)'
 
   steps:
     - task: CMdLine@2
@@ -127,4 +118,4 @@ jobs:
       displayName: 'Publish package'
       inputs:
         pathtoPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-        artifactName: 'wasfot-app-$(Build.BuildNumber)'
+        artifactName: 'wasoft-app-$(versionNumber)'
