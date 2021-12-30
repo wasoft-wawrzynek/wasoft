@@ -15,8 +15,7 @@ jobs:
     apiFolder: 'api'
 
   steps:
-    - task: Assembly-Info-NetCore@2
-      displayName: 'Update assembly info'
+    - task: Assembly-Info-NetCore@3
       inputs:
         Path: '$(apiFolder)'
         FileNames: '**/*.csproj'
@@ -30,6 +29,7 @@ jobs:
         Copyright: 'WaSoft'
         VersionNumber: '$(versionNumber)'
         FileVersionNumber: '$(versionNumber)'
+        InformationalVersion: '$(versionNumber)'
         PackageVersion: '$(versionNumber)'
         LogLevel: 'verbose'
         FailOnWarning: false
