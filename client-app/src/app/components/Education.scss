@@ -1,0 +1,53 @@
+@import "../variables";
+
+#education {
+  background: $medium-dark-color;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .degrees {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .degree {
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+          color: $medium-light-color;
+          align-self: center;
+          margin: 1rem 0;
+        }
+
+        &-content {
+          h3 {
+            color: $primary-color;
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-align: end;
+          }
+          h5 {
+            color: $medium-light-color;
+            margin-bottom: 1rem;
+          }
+          p {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #education .container .degrees {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+  }
+}
