@@ -73,7 +73,7 @@ jobs:
       displayName: Publish package
       inputs:
         pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
-        artifactName: 'wasoft-api-$(versionNumber)'
+        artifactName: 'wasoft-api'
      
 - job: AppJob
   displayName: Build Client App
@@ -123,11 +123,11 @@ jobs:
       inputs:
         rootFolderOrFile: $(Build.ArtifactStagingDirectory)
         archiveType: 'zip'
-        archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+        archiveFile: '$(Build.ArtifactStagingDirectory)/app.zip'
         includeRootFolder: false
 
     - task: PublishBuildArtifacts@1
       displayName: 'Publish package'
       inputs:
-        pathtoPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-        artifactName: 'wasoft-app-$(versionNumber)'
+        pathtoPublish: '$(Build.ArtifactStagingDirectory)/app.zip'
+        artifactName: 'wasoft-app'
