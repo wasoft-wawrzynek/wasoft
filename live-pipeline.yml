@@ -1,16 +1,7 @@
-name: 1.0$(Rev:.r)
+name: $(versionNumber)
 
+trigger: none
 pr: none
-trigger:
-  branches:
-    include:
-    - develop
-    exclude:
-    - feature/*
-  paths:  
-    exclude:
-    - '**/*.yml'
-    - '**/*.md'
 
 pool:
   vmImage: ubuntu-latest
@@ -24,31 +15,42 @@ jobs:
     apiFolder: 'api'
 
   steps:
-    - task: Assembly-Info-NetCore@2
-      displayName: 'Update assembly info'
+    - task: Assembly-Info-NetCore@3
       inputs:
         Path: '$(apiFolder)'
         FileNames: '**/*.csproj'
         InsertAttributes: false
         FileEncoding: 'auto'
         WriteBOM: false
-        PackageId: '$(Build.BuildNumber)'
+        PackageId: '$(versionNumber)'
         Authors: 'Paweł Wawrzynek'
         Company: 'WaSoft'
         Product: 'WaSoft API'
         Copyright: 'WaSoft'
-        VersionNumber: '$(Build.BuildNumber)'
-        FileVersionNumber: '$(Build.BuildNumber)'
-        PackageVersion: '$(Build.BuildNumber)'
+        VersionNumber: '$(versionNumber)'
+        FileVersionNumber: '$(versionNumber)'
+        InformationalVersion: '$(versionNumber)'
+        PackageVersion: '$(versionNumber)'
         LogLevel: 'verbose'
         FailOnWarning: false
         DisableTelemetry: false
 
+    - task: UseDotNet@2
+      displayName: 'Use dotnet 6'
+      inputs:
+        version: '6.0.x'
+
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'restore'
+        projects: '$(apiFolder)/*.sln'
+      displayName: 'Restore NuGet packages'
+ 
     - task: DotNetCoreCLI@2
       displayName: 'Build the solution'
       inputs:
         command: 'build'
-        projects: '$(apiFolder)/WaSoft.Api.sln'
+        projects: '$(apiFolder)/*.sln'
         arguments: '--configuration $(buildConfiguration)'
 
     - task: DotNetCoreCLI@2
@@ -62,15 +64,16 @@ jobs:
       displayName: 'Create publish package'
       inputs:
         command: publish
-        publishWebProjects: True
-        arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+        publishWebProjects: false
+        projects: '$(apiFolder)/*.sln'
+        arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
         zipAfterPublish: True
 
     - task: PublishBuildArtifacts@1
       displayName: Publish package
       inputs:
         pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
-        artifactName: 'wasoft-api-$(Build.BuildNumber)'
+        artifactName: 'wasoft-api-$(versionNumber)'
      
 - job: AppJob
   displayName: Build Client App
@@ -79,7 +82,7 @@ jobs:
     clientAppFolder: 'client-app'
     buildOutputFolder: '$(clientAppFolder)/build'
     configFilename: 'appConfig'
-    version: '$(Build.BuildNumber)'
+    version: '$(versionNumber)'
 
   steps:
     - task: CMdLine@2
@@ -127,4 +130,4 @@ jobs:
       displayName: 'Publish package'
       inputs:
         pathtoPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-        artifactName: 'wasfot-app-$(Build.BuildNumber)'
+        artifactName: 'wasoft-app-$(versionNumber)'
