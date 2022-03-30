@@ -3,7 +3,7 @@
 $bubble-size: 150px;
 
 #hobby {
-  background: $dark-color;
+  position: relative;
 
   .container .activities {
     display: flex;
@@ -12,6 +12,7 @@ $bubble-size: 150px;
 
     .floating-card-box .floating-card {
       padding: 1rem 0;
+      background: $dark-color;
     }
 
     .activity-card {

@@ -37,9 +37,12 @@ const Experience: React.FC<WrappedComponentProps> = (props) => {
       12 * (endDate.getFullYear() - startDate.getFullYear());
 
     var diff = { years: Math.floor(monthsDiff / 12), months: monthsDiff % 12 };
-    return diff.years > 0
-      ? `${diff.years}${props.intl.messages["year"]}, ${diff.months}m`
-      : `${diff.months}m`;
+
+    if (diff.years <= 0) return `${diff.months}m`;
+
+    return `${diff.years}${
+      props.intl.messages[diff.years > 1 ? "years" : "year"]
+    }, ${diff.months}m`;
   };
 
   return (

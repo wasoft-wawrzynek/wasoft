@@ -1,7 +1,8 @@
 @import "../variables";
 
 #education {
-  background: $medium-dark-color;
+  position: relative;
+  background: $dark-color;
 
   .container {
     display: flex;

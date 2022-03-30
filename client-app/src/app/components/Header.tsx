@@ -1,24 +1,19 @@
 import "./Header.scss";
 import React from "react";
-import Particles from "react-tsparticles";
-import { FormattedMessage, useIntl } from "react-intl";
 import Typed from "react-typed";
-import { particlesConfig } from "../resources/particlesConfig";
+import { FormattedMessage, useIntl } from "react-intl";
 
 const Header: React.FC = () => {
   const intl = useIntl();
 
-  function getWords() {
-    return [
-      intl.messages["header.developer"].toString(),
-      intl.messages["header.team-leader"].toString(),
-      intl.messages["header.brewer"].toString()
-    ];
-  }
+  const words = [
+    intl.messages["header.developer"].toString(),
+    intl.messages["header.team-leader"].toString(),
+    intl.messages["header.brewer"].toString(),
+  ];
 
   return (
     <div id="header">
-      <Particles style={{ position: "unset" }} params={particlesConfig} />
       <div className="header-content">
         <div className="logo-content">
           <div className="img-container">
@@ -38,7 +33,7 @@ const Header: React.FC = () => {
           </h3>
           <h2>
             <Typed
-              strings={getWords()}
+              strings={words}
               typeSpeed={80}
               backSpeed={50}
               backDelay={3000}
