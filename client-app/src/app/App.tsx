@@ -10,6 +10,8 @@ import messages from "./translations";
 import Hobby from "./components/Hobby";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Particles from "react-tsparticles";
+import { particlesConfig } from "./resources/particlesConfig";
 
 const App: React.FC = () => {
   const [locale, setLocale] = useState("pl");
@@ -18,6 +20,7 @@ const App: React.FC = () => {
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
       <Fragment>
+        <Particles params={particlesConfig} />
         <NavBar isHidden={onTop} language={locale} setLanguage={setLocale} />
         <Waypoint
           onEnter={() => setOnTop(true)}
