@@ -17,9 +17,25 @@ function Resume() {
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
       <div id="resume">
-        <div className="header">
-          <h1>{`Resume in ${lang} will come here`}</h1>
+        <div className="profile">
+          <div className="img-bubble">
+            <img src="/img/profile.png" alt="logo" />
+          </div>
         </div>
+        <div className="title">
+          <div className="title-content">
+            <h2>Paweł Wawrzynek</h2>
+            <hr />
+            <h4>.NET Developer</h4>
+          </div>
+        </div>
+        <div className="about-me"></div>
+        <div className="experience"></div>
+        <div className="contact"></div>
+        <div className="education"></div>
+        <div className="soft-skills"></div>
+        <div className="tech-skills"></div>
+        <div className="hobbies"></div>
       </div>
     </IntlProvider>
   );
