@@ -10,7 +10,18 @@ export const messages: {
 
 export const values = {
   br: <br />,
-  wawrzelniaLink: <a href="https://www.wawrzelnia.pl">Wawrzelnia.pl</a>
+  wawrzelniaLink: <a href="https://www.wawrzelnia.pl">Wawrzelnia.pl</a>,
+};
+
+export const hasLanguage = (lang: string): boolean => {
+  switch (lang) {
+    case "pl":
+    case "en":
+      return true;
+
+    default:
+      return false;
+  }
 };
 
 export default messages;

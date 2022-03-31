@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.scss";
-import packageJson from "../../package.json";
+import packageJson from "../../../package.json";
 
 const Footer: React.FC = () => {
   return (
