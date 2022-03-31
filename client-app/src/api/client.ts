@@ -1,6 +1,6 @@
 import axios from "axios";
 import IContactFormData from "./models/IContactFormData";
-import appConfig from "../../appConfig";
+import appConfig from "../appConfig";
 
 axios.defaults.baseURL = appConfig.apiUrl;
 

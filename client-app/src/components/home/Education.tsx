@@ -1,8 +1,8 @@
 import "./Education.scss";
 import React from "react";
 import { FormattedMessage } from "react-intl";
-import personalData from "../resources/personalData";
-import FloatingCard from "./FloatingCard";
+import personalData from "../../resources/personalData";
+import FloatingCard from "../controls/FloatingCard";
 
 const Education: React.FC = () => {
   const getDateRangeString = (startDate: Date, endDate: Date): string => {

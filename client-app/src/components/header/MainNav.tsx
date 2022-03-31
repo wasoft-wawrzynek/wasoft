@@ -11,19 +11,19 @@ const MainNav: React.FC<{
   return (
     <div id="main-nav">
       {/* <Menu.Item as={Scroll.Link} smooth spy to="skills">
-        <FormattedMessage id="navbar.skills" />
+        <FormattedMessage id="header.skills" />
       </Menu.Item> */}
       <Menu.Item as={Scroll.Link} smooth spy to="experience" offset={-90}>
-        <FormattedMessage id="navbar.experience" />
+        <FormattedMessage id="header.experience" />
       </Menu.Item>
       <Menu.Item as={Scroll.Link} smooth spy to="education" offset={-90}>
-        <FormattedMessage id="navbar.education" />
+        <FormattedMessage id="header.education" />
       </Menu.Item>
       <Menu.Item as={Scroll.Link} smooth spy to="hobby" offset={-90}>
-        <FormattedMessage id="navbar.hobby" />
+        <FormattedMessage id="header.hobby" />
       </Menu.Item>
       <Menu.Item as={Scroll.Link} smooth spy to="contact" offset={-90}>
-        <FormattedMessage id="navbar.contact" />
+        <FormattedMessage id="header.contact" />
       </Menu.Item>
     </div>
   );

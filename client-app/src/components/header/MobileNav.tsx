@@ -26,7 +26,7 @@ const MobileNav: React.FC<{
           as={Scroll.Link}
           smooth
           spy
-          to="header"
+          to="hero"
           onClick={() => setShowPanel(false)}
         >
           WaSoft
@@ -38,7 +38,7 @@ const MobileNav: React.FC<{
           to="skills"
           onClick={() => setShowPanel(false)}
         >
-          <FormattedMessage id="navbar.skills" />
+          <FormattedMessage id="header.skills" />
         </Menu.Item> */}
         <Menu.Item
           name="Experience"
@@ -49,7 +49,7 @@ const MobileNav: React.FC<{
           offset={-90}
           onClick={() => setShowPanel(false)}
         >
-          <FormattedMessage id="navbar.experience" />
+          <FormattedMessage id="header.experience" />
         </Menu.Item>
         <Menu.Item
           as={Scroll.Link}
@@ -59,7 +59,7 @@ const MobileNav: React.FC<{
           offset={-90}
           onClick={() => setShowPanel(false)}
         >
-          <FormattedMessage id="navbar.education" />
+          <FormattedMessage id="header.education" />
         </Menu.Item>
         <Menu.Item
           as={Scroll.Link}
@@ -69,7 +69,7 @@ const MobileNav: React.FC<{
           offset={-90}
           onClick={() => setShowPanel(false)}
         >
-          <FormattedMessage id="navbar.hobby" />
+          <FormattedMessage id="header.hobby" />
         </Menu.Item>
         <Menu.Item
           as={Scroll.Link}
@@ -79,7 +79,7 @@ const MobileNav: React.FC<{
           offset={-90}
           onClick={() => setShowPanel(false)}
         >
-          <FormattedMessage id="navbar.contact" />
+          <FormattedMessage id="header.contact" />
         </Menu.Item>
         <div className="lang">
           <img

@@ -2,15 +2,15 @@ import "./App.scss";
 import { Fragment, useState } from "react";
 import { Waypoint } from "react-waypoint";
 import { IntlProvider } from "react-intl";
-import Header from "./components/Header";
-import NavBar from "./components/navbar/NavBar";
-import Experience from "./components/Experience";
-import Education from "./components/Education";
-import messages from "./translations";
-import Hobby from "./components/Hobby";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 import Particles from "react-tsparticles";
+import messages from "./lang/translations";
+import Header from "./components/header/Header";
+import Footer from "./components/Footer";
+import Hero from "./components/home/Hero";
+import Experience from "./components/home/Experience";
+import Education from "./components/home/Education";
+import Hobby from "./components/home/Hobby";
+import Contact from "./components/home/Contact";
 import { particlesConfig } from "./resources/particlesConfig";
 
 const App: React.FC = () => {
@@ -21,12 +21,12 @@ const App: React.FC = () => {
     <IntlProvider locale={locale} messages={messages[locale]}>
       <Fragment>
         <Particles params={particlesConfig} />
-        <NavBar isHidden={onTop} language={locale} setLanguage={setLocale} />
+        <Header isHidden={onTop} language={locale} setLanguage={setLocale} />
         <Waypoint
           onEnter={() => setOnTop(true)}
           onLeave={() => setOnTop(false)}
         ></Waypoint>
-        <Header />
+        <Hero />
         <Experience />
         <Education />
         <Hobby />

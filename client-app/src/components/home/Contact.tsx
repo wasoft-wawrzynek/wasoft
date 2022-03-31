@@ -1,3 +1,4 @@
+import "./Contact.scss";
 import { useState } from "react";
 import Swal from "sweetalert2";
 import {
@@ -5,10 +6,9 @@ import {
   injectIntl,
   WrappedComponentProps,
 } from "react-intl";
-import { values } from "../translations";
-import IContactFormData from "../api/models/IContactFormData";
-import "./Contact.scss";
-import client from "../api/client";
+import { values } from "../../lang/translations";
+import IContactFormData from "../../api/models/IContactFormData";
+import client from "../../api/client";
 
 const Contact = (props: WrappedComponentProps) => {
   const [input, setInput] = useState<IContactFormData>({

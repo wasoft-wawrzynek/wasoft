@@ -1,9 +1,9 @@
+import "./Hobby.scss";
 import React from "react";
 import { FormattedMessage } from "react-intl";
-import personalData from "../resources/personalData";
-import { values } from "../translations";
-import FloatingCard from "./FloatingCard";
-import "./Hobby.scss";
+import personalData from "../../resources/personalData";
+import { values } from "../../lang/translations";
+import FloatingCard from "../controls/FloatingCard";
 
 const Hobby: React.FC = () => {
   return (

@@ -1,6 +1,6 @@
-@import "../variables";
+@import "../../variables";
 
-#header {
+#hero {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@
   height: 100vh;
   width: 100vw;
 
-  .header-content {
+  .hero-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 2rem;
@@ -82,7 +82,7 @@
 }
 
 @media (max-width: 768px) {
-  #header .header-content {
+  #hero .hero-content {
     display: grid;
     grid-template-columns: unset;
     grid-template-rows: repeat(2, 1fr);
@@ -105,7 +105,7 @@
 }
 
 @media (max-width: 1080px) and (orientation: landscape) {
-  #header .header-content .logo-content .img-container {
+  #hero .hero-content .logo-content .img-container {
     height: 50vh;
     width: 50vh;
   }

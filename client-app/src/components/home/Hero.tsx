@@ -1,20 +1,20 @@
-import "./Header.scss";
+import "./Hero.scss";
 import React from "react";
 import Typed from "react-typed";
 import { FormattedMessage, useIntl } from "react-intl";
 
-const Header: React.FC = () => {
+const Hero: React.FC = () => {
   const intl = useIntl();
 
   const words = [
-    intl.messages["header.developer"].toString(),
-    intl.messages["header.team-leader"].toString(),
-    intl.messages["header.brewer"].toString(),
+    intl.messages["hero.developer"].toString(),
+    intl.messages["hero.team-leader"].toString(),
+    intl.messages["hero.brewer"].toString(),
   ];
 
   return (
-    <div id="header">
-      <div className="header-content">
+    <div id="hero">
+      <div className="hero-content">
         <div className="logo-content">
           <div className="img-container">
             <div className="img-bubble profile">
@@ -27,9 +27,9 @@ const Header: React.FC = () => {
         </div>
         <div className="info-content">
           <h3>
-            <FormattedMessage id="header.introduction-start" />
+            <FormattedMessage id="hero.introduction-start" />
             <span>Paweł</span>
-            <FormattedMessage id="header.introduction-end" />
+            <FormattedMessage id="hero.introduction-end" />
           </h3>
           <h2>
             <Typed
@@ -47,4 +47,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default Hero;

@@ -5,9 +5,9 @@ import {
   injectIntl,
   WrappedComponentProps,
 } from "react-intl";
-import FloatingCard from "./FloatingCard";
-import personalData from "../resources/personalData";
-import { values } from "../translations";
+import FloatingCard from "../controls/FloatingCard";
+import personalData from "../../resources/personalData";
+import { values } from "../../lang/translations";
 
 const Experience: React.FC<WrappedComponentProps> = (props) => {
   const technologiesToString = (technologies: string[]) => {
