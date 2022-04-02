@@ -2,7 +2,9 @@ import "./Resume.scss";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { IntlProvider } from "react-intl";
+import { jsPDF } from "jspdf";
 import messages, { hasLanguage } from "../../lang/translations";
+import addTekoBold from './Teko-Bold-bold.js';
 
 function Resume() {
   const { lang } = useParams();
@@ -14,8 +16,27 @@ function Resume() {
     }
   });
 
+  const generatePdf = () => {
+    const element = document.getElementById("resume");
+    if (!element) {
+      console.log("Failed!");
+      return;
+    }
+
+    addTekoBold();
+    let doc = new jsPDF("p", "px", "A4");
+    doc.setFont("Teko", "normal", "bold");
+    console.log(doc.getFontList());
+    doc.html(element, {
+      callback: () => {
+        doc.save(`PawelWawrzynek_resume_${lang?.toUpperCase()}.pdf`);
+      },
+    });
+  };
+
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
+      <button onClick={() => generatePdf()}>Print!</button>
       <div id="resume">
         <div className="profile">
           <div className="img-bubble">
