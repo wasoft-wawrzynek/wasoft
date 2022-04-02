@@ -74,6 +74,30 @@ body {
   }
 }
 
+button,
+.button {
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  background: $dark-color;
+  color: $primary-color;
+  border: 1px solid $primary-color;
+
+  &-main {
+    border: none;
+    background-color: $primary-color;
+    color: $dark-color;
+  }
+
+  &.disabled,
+  &:disabled {
+    background: $medium-dark-color;
+    color: $medium-light-color;
+    border: 1px solid $medium-light-color;
+  }
+}
+
 .container {
   max-width: $content-width;
   margin: auto;

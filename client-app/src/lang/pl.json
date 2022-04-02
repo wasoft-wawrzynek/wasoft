@@ -50,5 +50,7 @@
     "gliwice": "Gliwice, Polska",
     "krakow": "Kraków, Polska",
     "year": "r",
-    "years": "l"
+    "years": "l",
+
+    "resume.print": "Drukuj"
 }
