@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { IntlProvider } from "react-intl";
 import { jsPDF } from "jspdf";
 import messages, { hasLanguage } from "../../lang/translations";
-import addTekoBold from './Teko-Bold-bold.js';
+import initPdfFonts from "../../resources/pdfFonts.js";
 
 function Resume() {
   const { lang } = useParams();
@@ -18,15 +18,11 @@ function Resume() {
 
   const generatePdf = () => {
     const element = document.getElementById("resume");
-    if (!element) {
-      console.log("Failed!");
-      return;
-    }
+    if (!element) return;
 
-    addTekoBold();
+    initPdfFonts();
+
     let doc = new jsPDF("p", "px", "A4");
-    doc.setFont("Teko", "normal", "bold");
-    console.log(doc.getFontList());
     doc.html(element, {
       callback: () => {
         doc.save(`PawelWawrzynek_resume_${lang?.toUpperCase()}.pdf`);
@@ -51,7 +47,9 @@ function Resume() {
           </div>
         </div>
         <div className="about-me"></div>
-        <div className="experience"></div>
+        <div className="experience">
+          <p style={{ color: "black" }}>Asd ASD asd ąśćżź</p>
+        </div>
         <div className="contact"></div>
         <div className="education"></div>
         <div className="soft-skills"></div>
