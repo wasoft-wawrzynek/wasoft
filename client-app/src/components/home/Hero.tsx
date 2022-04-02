@@ -18,10 +18,10 @@ const Hero: React.FC = () => {
         <div className="logo-content">
           <div className="img-container">
             <div className="img-bubble profile">
-              <img src=".\img\profile.png" alt="logo" />
+              <img src="/img/profile.png" alt="logo" />
             </div>
             <div className="img-bubble wasoft">
-              <img src="img/wasoft-light-full.svg" alt="logo" />
+              <img src="/img/wasoft-light-full.svg" alt="logo" />
             </div>
           </div>
         </div>

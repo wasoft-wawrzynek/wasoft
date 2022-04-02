@@ -16,7 +16,7 @@ const Header: React.FC<{
       <Menu className={props.isHidden ? "hidden" : ""}>
         <Container>
           <Menu.Item className="logo" as={Scroll.Link} smooth spy to="hero">
-            <img className="logo-img" src="./img/wasoft-light.svg" alt="" />
+            <img className="logo-img" src="/img/wasoft-light.svg" alt="" />
           </Menu.Item>
           <MainNav language={props.language} setLanguage={props.setLanguage} />
           <LanguageSelector

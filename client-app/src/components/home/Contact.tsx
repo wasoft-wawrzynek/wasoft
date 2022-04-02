@@ -59,7 +59,7 @@ const Contact = (props: WrappedComponentProps) => {
         <div className="contact-content">
           <div className="contact-info">
             <div className="img-bubble">
-              <img src="img/paper-plane.png" alt="" />
+              <img src="/img/paper-plane.png" alt="" />
             </div>
             <p>
               <FormattedMessage id="contact.intro" values={values} />

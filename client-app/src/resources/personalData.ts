@@ -104,17 +104,17 @@ const personalData = {
     {
       titleId: "hobby.brewing-title",
       descriptionId: "hobby.brewing-description",
-      imgSrc: "img/wawrzelnia.svg",
+      imgSrc: "/img/wawrzelnia.svg",
     },
     {
       titleId: "hobby.squash-title",
       descriptionId: "hobby.squash-description",
-      imgSrc: "img/squash.svg",
+      imgSrc: "/img/squash.svg",
     },
     {
       titleId: "hobby.traveling-title",
       descriptionId: "hobby.traveling-description",
-      imgSrc: "img/world.svg",
+      imgSrc: "/img/world.svg",
     },
   ],
 };
