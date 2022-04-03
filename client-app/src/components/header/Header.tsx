@@ -2,7 +2,6 @@ import "./Header.scss";
 import React from "react";
 import { Container, Menu } from "semantic-ui-react";
 import Scroll from "react-scroll";
-import LanguageSelector from "./LanguageSelector";
 import MainNav from "./MainNav";
 import MobileNav from "./MobileNav";
 
@@ -19,10 +18,6 @@ const Header: React.FC<{
             <img className="logo-img" src="/img/wasoft-light.svg" alt="" />
           </Menu.Item>
           <MainNav language={props.language} setLanguage={props.setLanguage} />
-          <LanguageSelector
-            language={props.language}
-            setLanguage={props.setLanguage}
-          />
           <MobileNav
             language={props.language}
             setLanguage={props.setLanguage}
