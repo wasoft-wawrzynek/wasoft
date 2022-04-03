@@ -1,4 +1,10 @@
 {
+    "about-me": "TODO",
+    "lang.polish": "polski",
+    "lang.english": "angielski",
+    "lang.native": "ojczysty",
+    "lang.communicative": "biegły",
+
     "header.skills": "Umiejętności",
     "header.experience": "Doświadczenie",
     "header.education": "Wykształcenie",
@@ -52,5 +58,6 @@
     "year": "r",
     "years": "l",
 
-    "resume.print": "Drukuj"
+    "resume.print": "Drukuj",
+    "resume.about-me": "O mnie"
 }

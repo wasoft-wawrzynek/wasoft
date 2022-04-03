@@ -1,4 +1,10 @@
 {
+    "about-me": "TODO",
+    "lang.polish": "polish",
+    "lang.english": "english",
+    "lang.native": "native",
+    "lang.communicative": "fluent",
+
     "header.skills": "Skills",
     "header.experience": "Experience",
     "header.education": "Education",
@@ -52,5 +58,6 @@
     "year": "y",
     "years": "y",
 
-    "resume.print": "Print"
+    "resume.print": "Print",
+    "resume.about-me": "About me"
 }

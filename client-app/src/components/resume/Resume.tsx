@@ -5,11 +5,13 @@ import { FormattedMessage, IntlProvider } from "react-intl";
 import { jsPDF } from "jspdf";
 import messages, { hasLanguage } from "../../lang/translations";
 import initPdfFonts from "../../resources/pdfFonts.js";
-import { ReactComponent as DownloadIcon } from "../../icons/download.svg";
+import personalData from "../../resources/personalData";
 import Title from "./Title";
+import { ReactComponent as DownloadIcon } from "../../icons/download.svg";
 
-const PAGE_WIDTH = 1000;
 const A4_RATIO = 1.414285714285714;
+const PAGE_WIDTH = 1000;
+const PAGE_HEIGHT = PAGE_WIDTH * A4_RATIO;
 
 function Resume() {
   const { lang } = useParams();
@@ -27,7 +29,7 @@ function Resume() {
 
     initPdfFonts();
 
-    let doc = new jsPDF("p", "pt", [PAGE_WIDTH, PAGE_WIDTH * A4_RATIO]);
+    let doc = new jsPDF("p", "pt", [PAGE_WIDTH, PAGE_HEIGHT]);
     doc.html(element, {
       callback: () => {
         doc.save(`PawelWawrzynek_resume_${lang?.toUpperCase()}.pdf`);
@@ -46,28 +48,61 @@ function Resume() {
             </h3>
           </button>
         </div>
-        <div id="pdf-page" style={{ width: `${PAGE_WIDTH}px` }}>
+        <div
+          id="pdf-page"
+          style={{ width: `${PAGE_WIDTH}px`, height: `${PAGE_HEIGHT - 1}px` }}
+        >
           <div className="profile">
             <div className="img-bubble">
               <img src="/img/profile.png" alt="logo" />
             </div>
           </div>
-          <div className="title">
-            <div className="title-content">
+          <div className="header">
+            <div className="header-content">
               <h2>Paweł Wawrzynek</h2>
               <hr />
               <h4>.NET Developer</h4>
             </div>
           </div>
-          <div className="about-me"></div>
-          <div className="experience">
+          <div className="resume-section about-me">
+            <Title textId="resume.about-me" />
+          </div>
+          <div className="resume-section experience">
             <Title textId="header.experience" />
           </div>
-          <div className="contact"></div>
-          <div className="education"></div>
-          <div className="soft-skills"></div>
-          <div className="tech-skills"></div>
-          <div className="hobbies"></div>
+          <div className="resume-section contact">
+            <Title textId="header.contact" />
+            <div className="info-item">
+              <img className="icon" src="/img/resume/phone.png" />
+              <p>{personalData.contact.telephone}</p>
+            </div>
+            <div className="info-item">
+              <img className="icon" src="/img/resume/address.png" />
+              <p>
+                {`${personalData.contact.street}, ${personalData.contact.postCode} ${personalData.contact.city}`}
+              </p>
+            </div>
+            <div className="info-item">
+              <img className="icon" src="/img/resume/email.png" />
+              <p>{personalData.contact.mail}</p>
+            </div>
+            <div className="info-item">
+              <img className="icon" src="/img/resume/website.png" />
+              <p>{personalData.contact.website}</p>
+            </div>
+            <div className="info-item">
+              <img className="icon" src="/img/resume/linkedIn.png" />
+              <p>{personalData.contact.linkedIn}</p>
+            </div>
+          </div>
+          <div className="resume-section education">
+            <Title textId="header.education" />
+          </div>
+          <div className="resume-section soft-skills"></div>
+          <div className="resume-section tech-skills"></div>
+          <div className="resume-section hobbies">
+            <Title textId="header.hobby" />
+          </div>
         </div>
       </div>
     </IntlProvider>

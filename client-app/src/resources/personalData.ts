@@ -1,4 +1,19 @@
 const personalData = {
+  aboutMeId: "about-me",
+  dateOfBirth: new Date("1991-07-01"),
+  contact: {
+    telephone: "691-262-330",
+    mail: "pawel.wawrzynek@gmail.com",
+    street: "Wałowa 15/13",
+    city: "Kraków",
+    postCode: "30-704",
+    website: "https://www.wasoft.pl",
+    linkedIn: "paweł-wawrzynek-6b3433100",
+  },
+  languages: [
+    { languageId: "lang.polish", level: "lang.native" },
+    { languageId: "lang.english", level: "lang.communicative" },
+  ],
   education: [
     {
       titleId: "education.masters-title",
