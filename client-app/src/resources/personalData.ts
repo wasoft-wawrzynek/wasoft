@@ -1,5 +1,5 @@
 const personalData = {
-  aboutMeId: "about-me",
+  aboutMeId: ["about-me-1", "about-me-2", "about-me-3"],
   dateOfBirth: new Date("1991-07-01"),
   contact: {
     telephone: "691-262-330",

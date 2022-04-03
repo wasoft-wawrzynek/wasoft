@@ -66,6 +66,37 @@ function Resume() {
           </div>
           <div className="resume-section about-me">
             <Title textId="resume.about-me" />
+            <div className="info-item">
+              <img className="icon" src="/img/resume/birth.png" />
+              <p>
+                {personalData.dateOfBirth.toLocaleDateString("en-GB", {
+                  year: "numeric",
+                  month: "2-digit",
+                  day: "2-digit",
+                })}
+              </p>
+            </div>
+            <div className="info-item">
+              <img className="icon" src="/img/resume/language.png" />
+              <div>
+                {personalData.languages.map((l) => {
+                  return (
+                    <p key={l.languageId}>
+                      <FormattedMessage id={l.languageId} />
+                      {" - "}
+                      <FormattedMessage id={l.level} />
+                    </p>
+                  );
+                })}
+              </div>
+            </div>
+            {personalData.aboutMeId.map((paragraph) => {
+              return (
+                <p key={paragraph}>
+                  <FormattedMessage id={paragraph} />
+                </p>
+              );
+            })}
           </div>
           <div className="resume-section experience">
             <Title textId="header.experience" />
