@@ -63,7 +63,7 @@ const personalData = {
       locationId: "krakow",
       roles: [
         {
-          title: "Software Developer Technical Lead",
+          title: "Technical Lead",
           startDate: new Date("2019-03"),
           endDate: new Date("2019-07"),
           descriptionId: "experience.vsoft.description",

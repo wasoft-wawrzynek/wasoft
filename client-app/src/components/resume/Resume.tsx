@@ -3,11 +3,12 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { FormattedMessage, IntlProvider } from "react-intl";
 import { jsPDF } from "jspdf";
-import messages, { hasLanguage } from "../../lang/translations";
+import messages, { hasLanguage, values } from "../../lang/translations";
 import initPdfFonts from "../../resources/pdfFonts.js";
 import personalData from "../../resources/personalData";
 import Title from "./Title";
 import { ReactComponent as DownloadIcon } from "../../icons/download.svg";
+import { getDateRangeString } from "../../helpers/stringHelpers";
 
 const A4_RATIO = 1.414285714285714;
 const PAGE_WIDTH = 1000;
@@ -100,6 +101,40 @@ function Resume() {
           </div>
           <div className="resume-section experience">
             <Title textId="header.experience" />
+            <div className="timeline">
+              {personalData.experience.map((job) => {
+                return (
+                  <div key={job.company} className="job-item">
+                    <div className="dates">
+                      <p>
+                        {getDateRangeString(
+                          messages[locale]["now"].toString(),
+                          job.roles.at(-1)?.startDate,
+                          job.roles[0].endDate
+                        )}
+                      </p>
+                    </div>
+                    <div className="line"></div>
+                    <div className="desc">
+                      <h3 className="company-name">{`/ ${job.company} /`}</h3>
+                      {job.roles.map((role) => {
+                        return (
+                          <>
+                            <h3 className="role-name">{role.title}</h3>
+                            <p>
+                              <FormattedMessage
+                                id={role.descriptionId}
+                                values={values}
+                              />
+                            </p>
+                          </>
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
           <div className="resume-section contact">
             <Title textId="header.contact" />

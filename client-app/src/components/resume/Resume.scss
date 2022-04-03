@@ -32,7 +32,7 @@
 
 #pdf-page {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2.5fr;
   grid-template-rows: auto auto auto auto 1fr;
   margin: auto;
 
@@ -63,7 +63,7 @@
 
       h2 {
         font-size: 3rem;
-        line-height: unset;
+        line-height: 2.5rem;
         text-transform: uppercase;
         font-weight: bold;
         margin: -0.5rem 0;
@@ -71,7 +71,9 @@
       }
       hr {
         width: 100%;
-        color: $light-color;
+        height: 3px;
+        border: none;
+        background-color: $primary-color;
       }
       h4 {
         color: $medium-light-color;
@@ -92,7 +94,61 @@
     background-color: $medium-light-color;
   }
 
-  .experience,
+  .experience {
+    background-color: $light-color;
+
+    .timeline {
+      padding-top: 1rem;
+
+      .job-item {
+        display: grid;
+        grid-template-columns: 4.5rem 3px 1fr;
+        gap: 0.5rem;
+
+        .dates p {
+          text-align: center;
+        }
+
+        .line {
+          position: relative;
+          height: 100%;
+          width: 100%;
+          background-color: $dark-color;
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: -8px;
+            width: 10px;
+            height: 10px;
+            background-color: $primary-color;
+            border: 4px solid $medium-dark-color;
+            border-radius: 50%;
+            z-index: 1;
+          }
+        }
+        .desc {
+          display: flex;
+          flex-direction: column;
+          padding: 0 0.5rem;
+          margin-bottom: 1rem;
+
+          .company-name {
+            color: $dark-color;
+            font-size: 1.5rem;
+          }
+          .role-name {
+            color: $dark-color;
+            font-size: 1.25rem;
+          }
+          p {
+            font-size: 0.85rem;
+          }
+        }
+      }
+    }
+  }
+
   .education {
     background-color: $light-color;
   }

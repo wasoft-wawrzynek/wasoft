@@ -8,41 +8,14 @@ import {
 import FloatingCard from "../controls/FloatingCard";
 import personalData from "../../resources/personalData";
 import { values } from "../../lang/translations";
+import {
+  getDateRangeString,
+  getPeriodSting,
+} from "../../helpers/stringHelpers";
 
 const Experience: React.FC<WrappedComponentProps> = (props) => {
   const technologiesToString = (technologies: string[]) => {
     return technologies.toString().replaceAll(",", " | ");
-  };
-
-  const getDateRangeString = (startDate?: Date, endDate?: Date): string => {
-    var startDateFormatted = startDate?.toLocaleDateString("en-GB", {
-      year: "numeric",
-      month: "2-digit",
-    });
-    var endDateFormatted = endDate
-      ? endDate.toLocaleDateString("en-GB", {
-          year: "numeric",
-          month: "2-digit",
-        })
-      : "now";
-
-    return `${startDateFormatted} - ${endDateFormatted}`;
-  };
-  const getPeriodSting = (startDate: Date, endDate?: Date): string => {
-    if (!endDate) endDate = new Date();
-
-    var monthsDiff =
-      endDate.getMonth() -
-      startDate.getMonth() +
-      12 * (endDate.getFullYear() - startDate.getFullYear());
-
-    var diff = { years: Math.floor(monthsDiff / 12), months: monthsDiff % 12 };
-
-    if (diff.years <= 0) return `${diff.months}m`;
-
-    return `${diff.years}${
-      props.intl.messages[diff.years > 1 ? "years" : "year"]
-    }, ${diff.months}m`;
   };
 
   return (
@@ -64,6 +37,7 @@ const Experience: React.FC<WrappedComponentProps> = (props) => {
                   </h3>
                   <p>
                     {getDateRangeString(
+                      props.intl.messages["now"].toString(),
                       job.roles.at(-1)?.startDate,
                       job.roles[0].endDate
                     )}
@@ -75,7 +49,13 @@ const Experience: React.FC<WrappedComponentProps> = (props) => {
                       <div className="role" key={role.title}>
                         <div className="role-header">
                           <h3>{role.title}</h3>
-                          <p>{getPeriodSting(role.startDate, role.endDate)}</p>
+                          <p>
+                            {getPeriodSting(
+                              props.intl,
+                              role.startDate,
+                              role.endDate
+                            )}
+                          </p>
                         </div>
                         {role.technologies.length > 0 && (
                           <p className="tech">
