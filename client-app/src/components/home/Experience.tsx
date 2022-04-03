@@ -37,7 +37,7 @@ const Experience: React.FC<WrappedComponentProps> = (props) => {
                   </h3>
                   <p>
                     {getDateRangeString(
-                      props.intl.messages["now"].toString(),
+                      props.intl,
                       job.roles.at(-1)?.startDate,
                       job.roles[0].endDate
                     )}

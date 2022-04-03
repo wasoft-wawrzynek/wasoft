@@ -1,7 +1,7 @@
 import { IntlShape } from "react-intl";
 
 export const getDateRangeString = (
-  nowString: string,
+  intl: IntlShape,
   startDate?: Date,
   endDate?: Date
 ): string => {
@@ -14,7 +14,7 @@ export const getDateRangeString = (
         year: "numeric",
         month: "2-digit",
       })
-    : nowString;
+    : intl.messages["now"].toString();
 
   return `${startDateFormatted} - ${endDateFormatted}`;
 };

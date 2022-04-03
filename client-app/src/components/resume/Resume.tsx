@@ -3,12 +3,10 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { FormattedMessage, IntlProvider } from "react-intl";
 import { jsPDF } from "jspdf";
-import messages, { hasLanguage, values } from "../../lang/translations";
+import messages, { hasLanguage } from "../../lang/translations";
 import initPdfFonts from "../../resources/pdfFonts.js";
-import personalData from "../../resources/personalData";
-import Title from "./Title";
+import PrintPage from "./PrintPage";
 import { ReactComponent as DownloadIcon } from "../../icons/download.svg";
-import { getDateRangeString } from "../../helpers/stringHelpers";
 
 const A4_RATIO = 1.414285714285714;
 const PAGE_WIDTH = 1000;
@@ -49,127 +47,7 @@ function Resume() {
             </h3>
           </button>
         </div>
-        <div
-          id="pdf-page"
-          style={{ width: `${PAGE_WIDTH}px`, height: `${PAGE_HEIGHT - 1}px` }}
-        >
-          <div className="profile">
-            <div className="img-bubble">
-              <img src="/img/profile.png" alt="logo" />
-            </div>
-          </div>
-          <div className="header">
-            <div className="header-content">
-              <h2>Paweł Wawrzynek</h2>
-              <hr />
-              <h4>.NET Developer</h4>
-            </div>
-          </div>
-          <div className="resume-section about-me">
-            <Title textId="resume.about-me" />
-            <div className="info-item">
-              <img className="icon" src="/img/resume/birth.png" />
-              <p>
-                {personalData.dateOfBirth.toLocaleDateString("en-GB", {
-                  year: "numeric",
-                  month: "2-digit",
-                  day: "2-digit",
-                })}
-              </p>
-            </div>
-            <div className="info-item">
-              <img className="icon" src="/img/resume/language.png" />
-              <div>
-                {personalData.languages.map((l) => {
-                  return (
-                    <p key={l.languageId}>
-                      <FormattedMessage id={l.languageId} />
-                      {" - "}
-                      <FormattedMessage id={l.level} />
-                    </p>
-                  );
-                })}
-              </div>
-            </div>
-            {personalData.aboutMeId.map((paragraph) => {
-              return (
-                <p key={paragraph}>
-                  <FormattedMessage id={paragraph} />
-                </p>
-              );
-            })}
-          </div>
-          <div className="resume-section experience">
-            <Title textId="header.experience" />
-            <div className="timeline">
-              {personalData.experience.map((job) => {
-                return (
-                  <div key={job.company} className="job-item">
-                    <div className="dates">
-                      <p>
-                        {getDateRangeString(
-                          messages[locale]["now"].toString(),
-                          job.roles.at(-1)?.startDate,
-                          job.roles[0].endDate
-                        )}
-                      </p>
-                    </div>
-                    <div className="line"></div>
-                    <div className="desc">
-                      <h3 className="company-name">{`/ ${job.company} /`}</h3>
-                      {job.roles.map((role) => {
-                        return (
-                          <>
-                            <h3 className="role-name">{role.title}</h3>
-                            <p>
-                              <FormattedMessage
-                                id={role.descriptionId}
-                                values={values}
-                              />
-                            </p>
-                          </>
-                        );
-                      })}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-          <div className="resume-section contact">
-            <Title textId="header.contact" />
-            <div className="info-item">
-              <img className="icon" src="/img/resume/phone.png" />
-              <p>{personalData.contact.telephone}</p>
-            </div>
-            <div className="info-item">
-              <img className="icon" src="/img/resume/address.png" />
-              <p>
-                {`${personalData.contact.street}, ${personalData.contact.postCode} ${personalData.contact.city}`}
-              </p>
-            </div>
-            <div className="info-item">
-              <img className="icon" src="/img/resume/email.png" />
-              <p>{personalData.contact.mail}</p>
-            </div>
-            <div className="info-item">
-              <img className="icon" src="/img/resume/website.png" />
-              <p>{personalData.contact.website}</p>
-            </div>
-            <div className="info-item">
-              <img className="icon" src="/img/resume/linkedIn.png" />
-              <p>{personalData.contact.linkedIn}</p>
-            </div>
-          </div>
-          <div className="resume-section education">
-            <Title textId="header.education" />
-          </div>
-          <div className="resume-section soft-skills"></div>
-          <div className="resume-section tech-skills"></div>
-          <div className="resume-section hobbies">
-            <Title textId="header.hobby" />
-          </div>
-        </div>
+        <PrintPage width={PAGE_WIDTH} height={PAGE_HEIGHT} />
       </div>
     </IntlProvider>
   );
