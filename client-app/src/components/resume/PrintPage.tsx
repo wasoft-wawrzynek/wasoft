@@ -79,7 +79,7 @@ function PrintPage(props: IPageProps) {
         <div className="timeline">
           {personalData.experience.map((job) => {
             return (
-              <div key={job.company} className="job-item">
+              <div key={job.company} className="timeline-item">
                 <div className="dates">
                   <p>
                     {getDateRangeString(
@@ -91,18 +91,18 @@ function PrintPage(props: IPageProps) {
                 </div>
                 <div className="line"></div>
                 <div className="desc">
-                  <h3 className="company-name">{`/ ${job.company} /`}</h3>
+                  <h3 className="title">{`/ ${job.company} /`}</h3>
                   {job.roles.map((role) => {
                     return (
                       <>
-                        <h3 className="role-name">{`${
+                        <h3 className="sub-title">{`${
                           role.title
                         } - ${getPeriodSting(
                           intl,
                           role.startDate,
                           role.endDate
                         )}`}</h3>
-                        <p>
+                        <p className="text">
                           <FormattedMessage
                             id={role.descriptionId}
                             values={values}
@@ -148,6 +148,32 @@ function PrintPage(props: IPageProps) {
       </div>
       <div className="resume-section education">
         <Title textId="header.education" />
+        <div className="timeline">
+          {personalData.education.map((school) => {
+            return (
+              <div key={school.titleId} className="timeline-item">
+                <div className="dates">
+                  <p>
+                    {getDateRangeString(intl, school.startDate, school.endDate)}
+                  </p>
+                </div>
+                <div className="line"></div>
+                <div className="desc">
+                  <h3 className="title">
+                    <FormattedMessage id={school.titleId} />
+                    {" - "}
+                    <FormattedMessage id={school.facultyId} />
+                  </h3>
+                  <p className="text">
+                    <FormattedMessage id={school.schoolId} />
+                    {", "}
+                    <FormattedMessage id={school.locationId} />
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
       <div className="resume-section soft-skills"></div>
       <div className="resume-section tech-skills"></div>
