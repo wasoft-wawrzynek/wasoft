@@ -23,7 +23,7 @@ const Hobby: React.FC = () => {
                 <div className="activity-content">
                   <div className="img-bubble">
                     <div className="img-box">
-                      <img src={activity.imgSrc} alt="" />
+                      <img src={activity.icon} alt="" />
                     </div>
                   </div>
                   <div className="content">

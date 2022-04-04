@@ -4,6 +4,7 @@ import { Container, Menu } from "semantic-ui-react";
 import Scroll from "react-scroll";
 import MainNav from "./MainNav";
 import MobileNav from "./MobileNav";
+import { ReactComponent as WasoftLightIcon } from "../../icons/wasoft-light.svg";
 
 const Header: React.FC<{
   isHidden: boolean;
@@ -15,7 +16,7 @@ const Header: React.FC<{
       <Menu className={props.isHidden ? "hidden" : ""}>
         <Container>
           <Menu.Item className="logo" as={Scroll.Link} smooth spy to="hero">
-            <img className="logo-img" src="/img/wasoft-light.svg" alt="" />
+            <WasoftLightIcon className="logo-img" />
           </Menu.Item>
           <MainNav language={props.language} setLanguage={props.setLanguage} />
           <MobileNav

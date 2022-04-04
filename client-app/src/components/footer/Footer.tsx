@@ -1,6 +1,10 @@
-import React from "react";
 import "./Footer.scss";
+import React from "react";
 import packageJson from "../../../package.json";
+import { ReactComponent as WasoftLightIcon } from "../../icons/wasoft-light.svg";
+import { ReactComponent as WawrzelniaIcon } from "../../icons/wawrzelnia.svg";
+import { ReactComponent as BitbucketIcon } from "../../icons/bitbucket.svg";
+import { ReactComponent as LinkedInIcon } from "../../icons/linkedin.svg";
 
 const Footer: React.FC = () => {
   return (
@@ -8,27 +12,27 @@ const Footer: React.FC = () => {
       <div className="container">
         <div className="footer-content">
           <div className="links">
-            <img className="logo-wasoft" src="/img/wasoft-light.svg" alt="" />
+            <WasoftLightIcon className="logo-wasoft" />
             <a
               href="https://www.linkedin.com/in/pawe%C5%82-wawrzynek-6b3433100/"
               target="_blank"
               rel="noreferrer noopener"
             >
-              <img className="social-logo" src="/img/linkedin.svg" alt="" />
+              <LinkedInIcon className="logo-social" />
             </a>
             <a
               href="https://bitbucket.org/Laurer/"
               target="_blank"
               rel="noreferrer noopener"
             >
-              <img className="social-logo" src="/img/bitbucket.svg" alt="" />
+              <BitbucketIcon className="logo-social" />
             </a>
             <a
               href="https://www.wawrzelnia.pl/"
               target="_blank"
               rel="noreferrer noopener"
             >
-              <img className="social-logo" src="/img/wawrzelnia-black.svg" alt="" />
+              <WawrzelniaIcon className="logo-wawrzelnia" />
             </a>
           </div>
           <p>

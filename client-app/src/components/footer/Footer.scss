@@ -21,17 +21,29 @@
       align-items: center;
       justify-content: center;
 
-      .social-logo {
+      .logo-social {
         height: 2rem;
         margin: 1rem;
-        filter: invert(42%) sepia(9%) saturate(6%) hue-rotate(327deg)
-          brightness(92%) contrast(93%);
+        fill: $medium-light-color;
+        color: $medium-light-color;
 
         &:hover {
-          filter: invert(91%) sepia(64%) saturate(3671%) hue-rotate(24deg)
-            brightness(93%) contrast(114%);
           height: 2.5rem;
           margin: 0.75rem;
+          fill: $primary-color;
+          color: $primary-color;
+        }
+      }
+
+      .logo-wawrzelnia {
+        height: 2rem;
+        margin: 1rem;
+        stroke: $medium-light-color;
+
+        &:hover {
+          height: 2.5rem;
+          margin: 0.75rem;
+          stroke: $primary-color;
         }
       }
     }

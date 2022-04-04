@@ -2,6 +2,7 @@ import "./Hero.scss";
 import React from "react";
 import Typed from "react-typed";
 import { FormattedMessage, useIntl } from "react-intl";
+import { ReactComponent as WasoftIcon } from "../../icons/wasoft-light-full.svg";
 
 const Hero: React.FC = () => {
   const intl = useIntl();
@@ -21,7 +22,7 @@ const Hero: React.FC = () => {
               <img src="/img/profile.png" alt="logo" />
             </div>
             <div className="img-bubble wasoft">
-              <img src="/img/wasoft-light-full.svg" alt="logo" />
+              <WasoftIcon className="icon" />
             </div>
           </div>
         </div>

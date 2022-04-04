@@ -119,6 +119,31 @@
     }
   }
 
+  .hobbies .items {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+
+      .icon {
+        border-radius: 50%;
+        border: 2px solid $dark-color;
+        padding: 0.5rem;
+
+        img {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+    }
+  }
+
   .tech-skills {
     grid-row: span 2;
   }

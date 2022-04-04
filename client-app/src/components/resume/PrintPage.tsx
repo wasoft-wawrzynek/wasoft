@@ -39,7 +39,7 @@ function PrintPage(props: IPageProps) {
       <div className="resume-section about-me">
         <Title textId="resume.about-me" />
         <div className="info-item">
-          <img className="icon" src="/img/resume/birth.png" />
+          <img className="icon" src="/img/resume/birth.png" alt="birthday" />
           <p>
             {personalData.dateOfBirth.toLocaleDateString("en-GB", {
               year: "numeric",
@@ -49,7 +49,11 @@ function PrintPage(props: IPageProps) {
           </p>
         </div>
         <div className="info-item">
-          <img className="icon" src="/img/resume/language.png" />
+          <img
+            className="icon"
+            src="/img/resume/language.png"
+            alt="languages"
+          />
           <div>
             {personalData.languages.map((l) => {
               return (
@@ -116,25 +120,29 @@ function PrintPage(props: IPageProps) {
       <div className="resume-section contact">
         <Title textId="header.contact" />
         <div className="info-item">
-          <img className="icon" src="/img/resume/phone.png" />
+          <img className="icon" src="/img/resume/phone.png" alt="phone" />
           <p>{personalData.contact.telephone}</p>
         </div>
         <div className="info-item">
-          <img className="icon" src="/img/resume/address.png" />
+          <img className="icon" src="/img/resume/address.png" alt="address" />
           <p>
             {`${personalData.contact.street}, ${personalData.contact.postCode} ${personalData.contact.city}`}
           </p>
         </div>
         <div className="info-item">
-          <img className="icon" src="/img/resume/email.png" />
+          <img className="icon" src="/img/resume/email.png" alt="email" />
           <p>{personalData.contact.mail}</p>
         </div>
         <div className="info-item">
-          <img className="icon" src="/img/resume/website.png" />
+          <img className="icon" src="/img/resume/website.png" alt="website" />
           <p>{personalData.contact.website}</p>
         </div>
         <div className="info-item">
-          <img className="icon" src="/img/resume/linkedIn.png" />
+          <img
+            className="icon"
+            src="/img/resume/linkedIn.png"
+            alt="linked-in"
+          />
           <p>{personalData.contact.linkedIn}</p>
         </div>
       </div>
@@ -145,6 +153,20 @@ function PrintPage(props: IPageProps) {
       <div className="resume-section tech-skills"></div>
       <div className="resume-section hobbies">
         <Title textId="header.hobby" />
+        <div className="items">
+          {personalData.hobby.map((hobby) => {
+            return (
+              <div key={hobby.titleId} className="item">
+                <div className="icon">
+                  <img src={hobby.image} alt={hobby.titleId} />
+                </div>
+                <p className="name">
+                  <FormattedMessage id={hobby.titleId} />
+                </p>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

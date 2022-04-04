@@ -115,21 +115,58 @@ const personalData = {
       ],
     },
   ],
+  techSkills: [
+    {
+      tech: "C# / .NET",
+      level: "0.9",
+    },
+    {
+      tech: "HTML/CSS",
+      level: "0.5",
+    },
+    {
+      tech: "React",
+      level: "0.4",
+    },
+    {
+      tech: "Azure",
+      level: "0.4",
+    },
+    {
+      tech: "JavaScript / TypeScript",
+      level: "0.3",
+    },
+    {
+      tech: "SQL",
+      level: "0.3",
+    },
+    {
+      tech: "Java",
+      level: "0.2",
+    },
+    {
+      tech: "C++",
+      level: "0.2",
+    },
+  ],
   hobby: [
+    {
+      titleId: "hobby.traveling-title",
+      descriptionId: "hobby.traveling-description",
+      icon: "/img/icons/travel.svg",
+      image: "/img/resume/travel.png",
+    },
     {
       titleId: "hobby.brewing-title",
       descriptionId: "hobby.brewing-description",
-      imgSrc: "/img/wawrzelnia.svg",
+      icon: "/img/icons/wawrzelnia.svg",
+      image: "/img/resume/brewing.png",
     },
     {
       titleId: "hobby.squash-title",
       descriptionId: "hobby.squash-description",
-      imgSrc: "/img/squash.svg",
-    },
-    {
-      titleId: "hobby.traveling-title",
-      descriptionId: "hobby.traveling-description",
-      imgSrc: "/img/world.svg",
+      icon: "/img/icons/squash.svg",
+      image: "/img/resume/squash.png",
     },
   ],
 };
