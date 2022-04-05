@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import Scroll from "react-scroll";
 import { Menu } from "semantic-ui-react";
 import { FormattedMessage } from "react-intl";
-import LanguageSelector from "./LanguageSelector";
+import LanguageSelector from "../controls/LanguageSelector";
+import { sections } from "./Header";
 
 const MobileNav: React.FC<{
   language: string;
@@ -32,56 +33,20 @@ const MobileNav: React.FC<{
         >
           WaSoft
         </Menu.Item>
-        {/* <Menu.Item
-          as={Scroll.Link}
-          smooth
-          spy
-          to="skills"
-          onClick={() => setShowPanel(false)}
-        >
-          <FormattedMessage id="header.skills" />
-        </Menu.Item> */}
-        <Menu.Item
-          name="Experience"
-          as={Scroll.Link}
-          smooth
-          spy
-          to="experience"
-          offset={-90}
-          onClick={() => setShowPanel(false)}
-        >
-          <FormattedMessage id="header.experience" />
-        </Menu.Item>
-        <Menu.Item
-          as={Scroll.Link}
-          smooth
-          spy
-          to="education"
-          offset={-90}
-          onClick={() => setShowPanel(false)}
-        >
-          <FormattedMessage id="header.education" />
-        </Menu.Item>
-        <Menu.Item
-          as={Scroll.Link}
-          smooth
-          spy
-          to="hobby"
-          offset={-90}
-          onClick={() => setShowPanel(false)}
-        >
-          <FormattedMessage id="header.hobby" />
-        </Menu.Item>
-        <Menu.Item
-          as={Scroll.Link}
-          smooth
-          spy
-          to="contact"
-          offset={-90}
-          onClick={() => setShowPanel(false)}
-        >
-          <FormattedMessage id="header.contact" />
-        </Menu.Item>
+        {sections.map((section) => {
+          return (
+            <Menu.Item
+              as={Scroll.Link}
+              smooth
+              spy
+              to={section}
+              offset={-90}
+              onClick={() => setShowPanel(false)}
+            >
+              <FormattedMessage id={`header.${section}`} />
+            </Menu.Item>
+          );
+        })}
         <LanguageSelector
           inline
           language={language}

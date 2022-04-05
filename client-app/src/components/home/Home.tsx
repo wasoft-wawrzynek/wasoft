@@ -12,6 +12,7 @@ import Education from "./Education";
 import Experience from "./Experience";
 import Hero from "./Hero";
 import Hobby from "./Hobby";
+import Skills from "./Skills";
 
 function Home() {
   const { lang } = useParams();
@@ -44,6 +45,7 @@ function Home() {
         ></Waypoint>
         <Hero />
         <Experience />
+        <Skills />
         <Education />
         <Hobby />
         <Contact />

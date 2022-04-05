@@ -1,13 +1,12 @@
 import "./Resume.scss";
-import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useState } from "react";
 import { FormattedMessage, IntlProvider } from "react-intl";
 import { jsPDF } from "jspdf";
-import messages, { hasLanguage } from "../../lang/translations";
+import messages from "../../lang/translations";
 import initPdfFonts from "../../resources/pdfFonts.js";
 import PrintPage from "./PrintPage";
 import { ReactComponent as DownloadIcon } from "../../icons/download.svg";
-import LanguageSelector from "../header/LanguageSelector";
+import LanguageSelector from "../controls/LanguageSelector";
 
 const A4_RATIO = 1.414285714285714;
 const PAGE_WIDTH = 1000;

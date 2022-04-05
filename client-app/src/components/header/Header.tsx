@@ -6,6 +6,14 @@ import MainNav from "./MainNav";
 import MobileNav from "./MobileNav";
 import { ReactComponent as WasoftLightIcon } from "../../icons/wasoft-light.svg";
 
+export const sections = [
+  "experience",
+  "skills",
+  "education",
+  "hobby",
+  "contact",
+];
+
 const Header: React.FC<{
   isHidden: boolean;
   language: string;
