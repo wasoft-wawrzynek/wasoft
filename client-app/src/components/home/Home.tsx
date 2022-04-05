@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useState } from "react";
-import { Navigate, useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { Waypoint } from "react-waypoint";
 import { IntlProvider } from "react-intl";
 import Particles from "react-tsparticles";
@@ -15,6 +15,7 @@ import Hobby from "./Hobby";
 
 function Home() {
   const { lang } = useParams();
+  const navigate = useNavigate();
   const [locale, setLocale] = useState("pl");
   const [onTop, setOnTop] = useState(true);
 
@@ -32,7 +33,11 @@ function Home() {
     <IntlProvider locale={locale} messages={messages[locale]}>
       <Fragment>
         <Particles params={particlesConfig} />
-        <Header isHidden={onTop} language={locale} setLanguage={setLocale} />
+        <Header
+          isHidden={onTop}
+          language={locale}
+          setLanguage={(lang) => navigate("/" + lang)}
+        />
         <Waypoint
           onEnter={() => setOnTop(true)}
           onLeave={() => setOnTop(false)}
