@@ -49,6 +49,8 @@
     "contact.send": "Ślij!",
     "contact.success": "Twoja wiadomość została wysłana! Dziękuję za kontakt.",
     "contact.error": "Coś poszło nie tak... Nie udało się wysłać Twojej wiadomości. Spróbuj później.",
+    "contact.resume": "Potrzebujesz mojego CV do celów rekrutacji? Nic prostszego! Możesz wygenerować je tutaj:",
+    "contact.here": "Cirriculum Vitae",
 
     "skills.title": "Moje umiejętności",
     "skills.key": "Kluczowe",

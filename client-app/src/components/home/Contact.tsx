@@ -9,6 +9,7 @@ import {
 import { values } from "../../lang/translations";
 import IContactFormData from "../../api/models/IContactFormData";
 import client from "../../api/client";
+import { Link } from "react-router-dom";
 
 const Contact = (props: WrappedComponentProps) => {
   const [input, setInput] = useState<IContactFormData>({
@@ -59,7 +60,7 @@ const Contact = (props: WrappedComponentProps) => {
         <div className="contact-content">
           <div className="contact-info">
             <div className="img-bubble">
-              <img src="/img/paper-plane.png" alt="" />
+              <img className="icon" src="/img/paper-plane.png" alt="" />
             </div>
             <p>
               <FormattedMessage id="contact.intro" values={values} />
@@ -102,6 +103,14 @@ const Contact = (props: WrappedComponentProps) => {
               value={props.intl.formatMessage({ id: "contact.send" })}
             />
           </form>
+        </div>
+        <div className="resume-info">
+          <p>
+            <FormattedMessage id="contact.resume" />
+          </p>
+          <Link to="/resume">
+            <FormattedMessage id="contact.here" />
+          </Link>
         </div>
       </div>
     </div>
