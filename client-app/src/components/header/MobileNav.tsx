@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import { Menu } from "semantic-ui-react";
-import Scroll from "react-scroll";
 import "./MobileNav.scss";
+import React, { useState } from "react";
+import Scroll from "react-scroll";
+import { Menu } from "semantic-ui-react";
 import { FormattedMessage } from "react-intl";
+import LanguageSelector from "./LanguageSelector";
 
 const MobileNav: React.FC<{
   language: string;
@@ -81,26 +82,14 @@ const MobileNav: React.FC<{
         >
           <FormattedMessage id="header.contact" />
         </Menu.Item>
-        <div className="lang">
-          <img
-            src="/img/pl.svg"
-            alt="PL"
-            className={`${language === "pl" ? "active" : ""}`}
-            onClick={() => {
-              setLanguage("pl");
-              setShowPanel(false);
-            }}
-          />
-          <img
-            src="/img/en.svg"
-            alt="EN"
-            className={`${language === "en" ? "active" : ""}`}
-            onClick={() => {
-              setLanguage("en");
-              setShowPanel(false);
-            }}
-          />
-        </div>
+        <LanguageSelector
+          inline
+          language={language}
+          setLanguage={(lang) => {
+            setLanguage(lang);
+            setShowPanel(false);
+          }}
+        />
       </div>
     </div>
   );
