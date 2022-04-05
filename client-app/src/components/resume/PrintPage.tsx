@@ -175,8 +175,6 @@ function PrintPage(props: IPageProps) {
           })}
         </div>
       </div>
-      <div className="resume-section soft-skills"></div>
-      <div className="resume-section tech-skills"></div>
       <div className="resume-section hobbies">
         <Title textId="header.hobby" />
         <div className="items">
@@ -192,6 +190,63 @@ function PrintPage(props: IPageProps) {
               </div>
             );
           })}
+        </div>
+      </div>
+      <div className="resume-section skills">
+        <Title textId="header.skills" />
+        <div className="groups">
+          <div className="skill-group key">
+            <div className="group-header">
+              <img src="/img/resume/level-4.png" alt="Level Top" />
+              <h2 className="group-name">
+                <FormattedMessage id="skills.key" />
+              </h2>
+            </div>
+            <div className="list">
+              {personalData.skills.key.map((skill) => {
+                return <p className="skill-name">{skill}</p>;
+              })}
+            </div>
+          </div>
+          <div className="skill-group solid">
+            <div className="group-header">
+              <img src="/img/resume/level-3.png" alt="Level Medium" />
+              <h2 className="group-name">
+                <FormattedMessage id="skills.solid" />
+              </h2>
+            </div>
+            <div className="list">
+              {personalData.skills.solid.map((skill) => {
+                return <p className="skill-name">{skill}</p>;
+              })}
+            </div>
+          </div>
+          <div className="skill-group promising">
+            <div className="group-header">
+              <img src="/img/resume/level-2.png" alt="Level Low" />
+              <h2 className="group-name">
+                <FormattedMessage id="skills.promising" />
+              </h2>
+            </div>
+            <div className="list">
+              {personalData.skills.promising.map((skill) => {
+                return <p className="skill-name">{skill}</p>;
+              })}
+            </div>
+          </div>
+          <div className="skill-group basic">
+            <div className="group-header">
+              <img src="/img/resume/level-1.png" alt="Level Low" />
+              <h2 className="group-name">
+                <FormattedMessage id="skills.basic" />
+              </h2>
+            </div>
+            <div className="list">
+              {personalData.skills.basic.map((skill) => {
+                return <p className="skill-name">{skill}</p>;
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </div>

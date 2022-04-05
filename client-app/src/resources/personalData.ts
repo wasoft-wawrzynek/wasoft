@@ -1,5 +1,5 @@
 const personalData = {
-  aboutMeId: ["about-me-1", "about-me-2", "about-me-3"],
+  aboutMeId: ["resume.about-me-text"],
   dateOfBirth: new Date("1991-07-01"),
   contact: {
     telephone: "691-262-330",
@@ -115,40 +115,12 @@ const personalData = {
       ],
     },
   ],
-  techSkills: [
-    {
-      tech: "C# / .NET",
-      level: "0.9",
-    },
-    {
-      tech: "HTML/CSS",
-      level: "0.5",
-    },
-    {
-      tech: "React",
-      level: "0.4",
-    },
-    {
-      tech: "Azure",
-      level: "0.4",
-    },
-    {
-      tech: "JavaScript / TypeScript",
-      level: "0.3",
-    },
-    {
-      tech: "SQL",
-      level: "0.3",
-    },
-    {
-      tech: "Java",
-      level: "0.2",
-    },
-    {
-      tech: "C++",
-      level: "0.2",
-    },
-  ],
+  skills: {
+    key: ["C#/.NET", "HTML/CSS", "SCRUM"],
+    solid: ["nUnit", "TFS", "React", "JIRA"],
+    promising: ["Azure", "JS / TS", "SQL", "Git", "WiX"],
+    basic: ["Java", "C++", "DirectX"],
+  },
   hobby: [
     {
       titleId: "hobby.traveling-title",

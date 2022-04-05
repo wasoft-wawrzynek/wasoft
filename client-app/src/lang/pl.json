@@ -1,7 +1,4 @@
 {
-    "about-me-1": "TODO - 1",
-    "about-me-2": "TODO - 2",
-    "about-me-3": "TODO - 3",
     "lang.polish": "polski",
     "lang.english": "angielski",
     "lang.native": "ojczysty",
@@ -54,6 +51,10 @@
     "contact.error": "Coś poszło nie tak... Nie udało się wysłać Twojej wiadomości. Spróbuj później.",
 
     "skills.title": "Moje umiejętności",
+    "skills.key": "Kluczowe",
+    "skills.solid": "Solidne",
+    "skills.promising": "Obiecujące",
+    "skills.basic": "Podstawowe",
 
     "gliwice": "Gliwice, Polska",
     "krakow": "Kraków, Polska",
@@ -62,5 +63,6 @@
     "years": "l",
 
     "resume.print": "Drukuj",
-    "resume.about-me": "O mnie"
+    "resume.about-me": "O mnie",
+    "resume.about-me-text": "TODO - 1"
 }

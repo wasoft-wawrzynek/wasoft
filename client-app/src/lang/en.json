@@ -1,7 +1,4 @@
 {
-    "about-me-1": "TODO - 1",
-    "about-me-2": "TODO - 2",
-    "about-me-3": "TODO - 3",
     "lang.polish": "polish",
     "lang.english": "english",
     "lang.native": "native",
@@ -54,6 +51,10 @@
     "contact.error": "Something went wrong... Sending your message failed. Please, try again later.",
 
     "skills.title": "Moje umiejętności",
+    "skills.key": "Key",
+    "skills.solid": "Solid",
+    "skills.promising": "Promising",
+    "skills.basic": "Basic",
 
     "gliwice": "Gliwice, Poland",
     "krakow": "Kraków, Poland",
@@ -62,5 +63,6 @@
     "years": "y",
 
     "resume.print": "Print",
-    "resume.about-me": "About me"
+    "resume.about-me": "About me",
+    "resume.about-me-text": "TODO 1"
 }
