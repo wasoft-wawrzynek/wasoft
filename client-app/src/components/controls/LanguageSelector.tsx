@@ -13,14 +13,14 @@ const options = [
     key: "pl",
     value: "pl",
     image: {
-      src: "/img/pl.svg",
+      src: "/img/icons/pl.svg",
     },
   },
   {
     key: "en",
     value: "en",
     image: {
-      src: "/img/en.svg",
+      src: "/img/icons/en.svg",
     },
   },
 ];
