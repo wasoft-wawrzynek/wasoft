@@ -7,6 +7,29 @@ import { ReactComponent as Level2 } from "../../icons/level-2.svg";
 import { ReactComponent as Level3 } from "../../icons/level-3.svg";
 import { ReactComponent as Level4 } from "../../icons/level-4.svg";
 
+// interface SkillIcons {
+//   key: React.FunctionComponent<
+//     React.SVGProps<SVGSVGElement> & { title?: string }
+//   >;
+//   solid: React.FunctionComponent<
+//     React.SVGProps<SVGSVGElement> & { title?: string }
+//   >;
+//   promising: React.FunctionComponent<
+//     React.SVGProps<SVGSVGElement> & { title?: string }
+//   >;
+//   basic: React.FunctionComponent<
+//     React.SVGProps<SVGSVGElement> & { title?: string }
+//   >;
+// }
+
+// const sections = ["key", "solid", "promising", "basic"];
+// const icons: SkillIcons = {
+//   key: <Level4 className="icon" />,
+//   solid: <Level3 className="icon" />,
+//   promising: <Level2 className="icon" />,
+//   basic: <Level1 className="icon" />,
+// };
+
 function Skills() {
   return (
     <div id="skills">
@@ -99,6 +122,31 @@ function Skills() {
               })}
             </div>
           </div>
+          {/* {sections.map((section) => {
+            return (
+              <div className="group">
+                <div className="group-header">
+                  {icons[section]}
+                  <h2 className="name">
+                    <FormattedMessage id={`skills.${section}`} />
+                  </h2>
+                </div>
+                <div className="list">
+                  {personalData.skills[section].map((skill) => {
+                    return (
+                      <FloatingCard
+                        key={skill}
+                        className="skill-card"
+                        maxMove={[8, 8]}
+                      >
+                        <h4 className="skill-name">{skill}</h4>
+                      </FloatingCard>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })} */}
         </div>
       </div>
     </div>

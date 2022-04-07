@@ -1,9 +1,4 @@
 {
-    "lang.polish": "polski",
-    "lang.english": "angielski",
-    "lang.native": "ojczysty",
-    "lang.communicative": "biegły",
-
     "header.skills": "Umiejętności",
     "header.experience": "Doświadczenie",
     "header.education": "Wykształcenie",
@@ -66,5 +61,12 @@
 
     "resume.print": "Drukuj",
     "resume.about-me": "O mnie",
-    "resume.about-me-text": "TODO - 1"
+    "resume.about-me-text-1": "Uwielbiam programować i było tak od zawsze. Wymyślanie odpowiedniego algorytmy i stopniowe wcielanie go w życie, kawałek po kawałku, daje mi mnóstwo satysfakcji. Nawet nieodzowny element analizowania błędów może być budujący, gdy wreszcie uda się rozwiązać problem.",
+    "resume.about-me-text-2": "Ale tworzenie komercyjnej aplikacji to dużo więcej niż tylko pisanie kodu. Właściwie to zaledwie wierzchołek góry lodowej. Potrzebny jest dobry projekt, dokładny plan i przewidywalność. Wiele osób o różnych umiejętnościach i z różnych środowisk musi znaleźć wspólny język, by osiągnąć wspólny cel. Nawet takie sprawy jak nieodpowiednie narzędzia lub niskie morale mogą zagrozić ostatecznemu wynikowi. I te elementy są dla mnie równie ciekawe.",
+    "resume.about-me-text-3": "Nie potrafię siedzieć cicho, gdy widzę, że coś nie działa lub zwyczajnie może być poprawione. Potrafię być nieustępliwy lub wręcz natrętny by pomóc mojemu zespołowi. I jeśli mam być szczery, uważam to za zaletę.",
+    "resume.lang-polish": "polski",
+    "resume.lang-english": "angielski",
+    "resume.lang-native": "ojczysty",
+    "resume.lang-communicative": "biegły"
+
 }

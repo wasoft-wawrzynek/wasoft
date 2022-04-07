@@ -33,7 +33,7 @@ function PrintPage(props: IPageProps) {
         <div className="header-content">
           <h2>Paweł Wawrzynek</h2>
           <hr />
-          <h4>.NET Developer</h4>
+          <h4>.NET Developer / Team leader</h4>
         </div>
       </div>
       <div className="resume-section about-me">
@@ -68,7 +68,7 @@ function PrintPage(props: IPageProps) {
         </div>
         {personalData.aboutMeId.map((paragraph) => {
           return (
-            <p key={paragraph}>
+            <p className="paragraph" key={paragraph}>
               <FormattedMessage id={paragraph} />
             </p>
           );

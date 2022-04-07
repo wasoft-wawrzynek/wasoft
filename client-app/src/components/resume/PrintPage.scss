@@ -11,7 +11,7 @@
   .contact,
   .soft-skills,
   .hobbies {
-    background-color: #a3a3a3;
+    background-color: #aaaaaa;
   }
 
   .experience,
@@ -25,7 +25,6 @@
 
     .img-bubble {
       border-radius: 50%;
-      background-color: $dark-color;
       overflow: hidden;
       img {
         width: 100%;
@@ -35,7 +34,7 @@
 
   .header {
     display: flex;
-    background-color: $medium-dark-color;
+    background-color: #252525;
 
     &-content {
       display: flex;
@@ -59,11 +58,15 @@
         background-color: $primary-color;
       }
       h4 {
-        color: $medium-light-color;
+        color: #888888;
         font-size: 1.5rem;
         line-height: unset;
       }
     }
+  }
+
+  .about-me .paragraph {
+    margin-bottom: 0.5rem;
   }
 
   .hobbies .items {
@@ -146,6 +149,7 @@
 
   p {
     color: $dark-color;
+    font-size: 0.85rem;
   }
 
   .resume-section {
@@ -208,10 +212,6 @@
         .sub-title {
           color: $dark-color;
           font-size: 1.25rem;
-        }
-
-        .text {
-          font-size: 0.85rem;
         }
       }
     }

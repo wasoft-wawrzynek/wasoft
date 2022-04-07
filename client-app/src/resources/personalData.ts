@@ -1,5 +1,9 @@
 const personalData = {
-  aboutMeId: ["resume.about-me-text"],
+  aboutMeId: [
+    "resume.about-me-text-1",
+    "resume.about-me-text-2",
+    "resume.about-me-text-3",
+  ],
   dateOfBirth: new Date("1991-07-01"),
   contact: {
     telephone: "691-262-330",
@@ -8,11 +12,11 @@ const personalData = {
     city: "Kraków",
     postCode: "30-704",
     website: "https://www.wasoft.pl",
-    linkedIn: "paweł-wawrzynek-6b3433100",
+    linkedIn: "pawel-wawrzynek",
   },
   languages: [
-    { languageId: "lang.polish", level: "lang.native" },
-    { languageId: "lang.english", level: "lang.communicative" },
+    { languageId: "resume.lang-polish", level: "resume.lang-native" },
+    { languageId: "resume.lang-english", level: "resume.lang-communicative" },
   ],
   education: [
     {

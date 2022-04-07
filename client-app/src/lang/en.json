@@ -1,9 +1,4 @@
 {
-    "lang.polish": "polish",
-    "lang.english": "english",
-    "lang.native": "native",
-    "lang.communicative": "fluent",
-
     "header.skills": "Skills",
     "header.experience": "Experience",
     "header.education": "Education",
@@ -66,5 +61,11 @@
 
     "resume.print": "Print",
     "resume.about-me": "About me",
-    "resume.about-me-text": "TODO 1"
+    "resume.about-me-text-1": "I really enjoy developing apps and I always did. Figuring out the right algorithm and seeing it come to life, piece by piece, gives me a great deal of satisfaction. Even the inevitable element of chasing bugs can be uplifting, when the problem is finally solved.",
+    "resume.about-me-text-2": "But implementing a commercial application is far more than just the code. Actually, it's barely the tip of the iceberg. It requires a solid design, thorough planning and predictability. A lot of people with different roles and background must communicate efficiently to reach the common goal. Even inadequate tools or low team spirit may jeopardize the final result. For me, helping with that is equally exciting.",
+    "resume.about-me-text-3": "I cannot look away, when I see something doesn't work, is inefficient, or at least can be improved. I can be unyielding or even annoying, when representing my team or improving the process. And, to be honest, I consider it a virtue.",
+    "resume.lang-polish": "polish",
+    "resume.lang-english": "english",
+    "resume.lang-native": "native",
+    "resume.lang-communicative": "fluent"
 }
