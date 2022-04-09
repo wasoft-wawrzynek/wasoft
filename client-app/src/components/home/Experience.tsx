@@ -7,7 +7,7 @@ import {
 } from "react-intl";
 import FloatingCard from "../controls/FloatingCard";
 import personalData from "../../resources/personalData";
-import { values } from "../../lang/translations";
+import { values } from "../../resources/translations";
 import {
   getDateRangeString,
   getPeriodSting,
