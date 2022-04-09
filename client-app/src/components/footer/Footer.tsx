@@ -1,10 +1,10 @@
 import "./Footer.scss";
 import React from "react";
 import packageJson from "../../../package.json";
+import { ReactComponent as WasoftIcon } from "../../icons/wasoft.svg";
 import { ReactComponent as WawrzelniaIcon } from "../../icons/wawrzelnia.svg";
 import { ReactComponent as BitbucketIcon } from "../../icons/bitbucket.svg";
 import { ReactComponent as LinkedInIcon } from "../../icons/linkedin.svg";
-import { ReactComponent as WasoftIcon } from "../../icons/wasoft.svg";
 
 const Footer: React.FC = () => {
   return (
