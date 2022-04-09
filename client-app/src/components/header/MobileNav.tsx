@@ -1,15 +1,12 @@
 import "./MobileNav.scss";
-import React, { useState } from "react";
+import { useState } from "react";
 import Scroll from "react-scroll";
 import { Menu } from "semantic-ui-react";
 import { FormattedMessage } from "react-intl";
 import LanguageSelector from "../controls/LanguageSelector";
-import { sections } from "./Header";
+import { INavBarProps, sections } from "./Header";
 
-const MobileNav: React.FC<{
-  language: string;
-  setLanguage: (language: string) => void;
-}> = ({ language, setLanguage }) => {
+function MobileNav(props: INavBarProps) {
   const [showPanel, setShowPanel] = useState(false);
 
   return (
@@ -49,15 +46,15 @@ const MobileNav: React.FC<{
         })}
         <LanguageSelector
           inline
-          language={language}
+          language={props.language}
           setLanguage={(lang) => {
-            setLanguage(lang);
+            props.setLanguage(lang);
             setShowPanel(false);
           }}
         />
       </div>
     </div>
   );
-};
+}
 
 export default MobileNav;
