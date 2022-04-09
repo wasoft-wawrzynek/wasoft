@@ -4,7 +4,7 @@ import { Waypoint } from "react-waypoint";
 import { IntlProvider } from "react-intl";
 import Particles from "react-tsparticles";
 import { particlesConfig } from "../../resources/particlesConfig";
-import messages, { hasLanguage } from "../../lang/translations";
+import messages, { hasLanguage } from "../../resources/translations";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import Contact from "./Contact";

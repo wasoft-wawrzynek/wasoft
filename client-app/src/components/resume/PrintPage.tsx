@@ -1,6 +1,6 @@
 import "./PrintPage.scss";
 import { FormattedMessage, useIntl } from "react-intl";
-import { values } from "../../lang/translations";
+import { values } from "../../resources/translations";
 import personalData from "../../resources/personalData";
 import Title from "./Title";
 import {

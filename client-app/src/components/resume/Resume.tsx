@@ -2,7 +2,7 @@ import "./Resume.scss";
 import { useState } from "react";
 import { FormattedMessage, IntlProvider } from "react-intl";
 import { jsPDF } from "jspdf";
-import messages from "../../lang/translations";
+import messages from "../../resources/translations";
 import initPdfFonts from "../../resources/pdfFonts.js";
 import PrintPage from "./PrintPage";
 import { ReactComponent as DownloadIcon } from "../../icons/download.svg";

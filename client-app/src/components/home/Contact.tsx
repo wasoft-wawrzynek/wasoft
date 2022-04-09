@@ -6,7 +6,7 @@ import {
   injectIntl,
   WrappedComponentProps,
 } from "react-intl";
-import { values } from "../../lang/translations";
+import { values } from "../../resources/translations";
 import IContactFormData from "../../api/models/IContactFormData";
 import client from "../../api/client";
 import { Link } from "react-router-dom";

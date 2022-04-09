@@ -4,7 +4,7 @@ import { Container, Menu } from "semantic-ui-react";
 import Scroll from "react-scroll";
 import MainNav from "./MainNav";
 import MobileNav from "./MobileNav";
-import { ReactComponent as WasoftLightIcon } from "../../icons/wasoft-light.svg";
+import { ReactComponent as WasoftLightIcon } from "../../icons/wasoft.svg";
 
 export const sections = [
   "experience",
