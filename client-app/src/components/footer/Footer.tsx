@@ -1,10 +1,10 @@
 import "./Footer.scss";
 import React from "react";
 import packageJson from "../../../package.json";
-import { ReactComponent as WasoftLightIcon } from "../../icons/wasoft-light.svg";
 import { ReactComponent as WawrzelniaIcon } from "../../icons/wawrzelnia.svg";
 import { ReactComponent as BitbucketIcon } from "../../icons/bitbucket.svg";
 import { ReactComponent as LinkedInIcon } from "../../icons/linkedin.svg";
+import { ReactComponent as WasoftIcon } from "../../icons/wasoft.svg";
 
 const Footer: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
       <div className="container">
         <div className="footer-content">
           <div className="links">
-            <WasoftLightIcon className="logo-wasoft" />
+            <WasoftIcon className="logo-wasoft" />
             <a
               href="https://www.linkedin.com/in/pawe%C5%82-wawrzynek-6b3433100/"
               target="_blank"
