@@ -24,7 +24,7 @@ function Home() {
     if (lang && hasLanguage(lang)) {
       setLocale(lang);
     }
-  });
+  }, [lang]);
 
   if (lang && !hasLanguage(lang)) {
     return <Navigate to="/" />;
