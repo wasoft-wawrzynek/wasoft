@@ -1,0 +1,75 @@
+@import "../../variables";
+
+#footer {
+  position: relative;
+  background-color: $dark-color;
+
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .links {
+      .logo-wasoft {
+        align-self: center;
+        height: 4rem;
+        margin-right: 3rem;
+      }
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .logo-social {
+        height: 2rem;
+        margin: 1rem;
+        fill: $medium-light-color;
+        color: $medium-light-color;
+
+        &:hover {
+          height: 2.5rem;
+          margin: 0.75rem;
+          fill: $primary-color;
+          color: $primary-color;
+        }
+      }
+
+      .logo-wawrzelnia {
+        height: 2rem;
+        margin: 1rem;
+        stroke: $medium-light-color;
+
+        &:hover {
+          height: 2.5rem;
+          margin: 0.75rem;
+          stroke: $primary-color;
+        }
+      }
+    }
+
+    p {
+      color: $medium-light-color;
+      text-align: center;
+      line-height: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+
+    .links {
+      margin-bottom: 1.5rem;
+      .logo-wasoft {
+        display: none;
+      }
+      .social-logo {
+        margin: 0.5rem;
+      }
+    }
+  }
+}

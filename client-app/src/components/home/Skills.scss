@@ -1,0 +1,63 @@
+@import "../../variables";
+
+#skills {
+  position: relative;
+  background: $dark-color;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .groups {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      width: 100%;
+
+      .group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .group-header {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 1rem;
+
+          .icon {
+            height: 3rem;
+            width: 3rem;
+            fill: $primary-color;
+          }
+
+          .name {
+            color: $light-color;
+            font-size: 2.2rem;
+            font-weight: 600;
+          }
+        }
+
+        .list {
+          display: grid;
+          grid-template-columns: auto auto auto;
+
+          .skill-name {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #skills .container .groups {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+  }
+}
