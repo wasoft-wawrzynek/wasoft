@@ -33,6 +33,7 @@ function MobileNav(props: INavBarProps) {
         {sections.map((section) => {
           return (
             <Menu.Item
+              key={section}
               as={Scroll.Link}
               smooth
               spy
