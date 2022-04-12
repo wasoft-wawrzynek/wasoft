@@ -10,7 +10,7 @@ variables:
   version: '$(versionNumber)'
   clientAppFolder: 'client-app'
   apiFolder: 'api'
-  imageRepository: 'wasoft'
+  imageRepository: 'wasoft/wasoft'
   dockerfilePath: '$(clientAppFolder)/Dockerfile'
   tag: '$(versionNumber)'
 
