@@ -1,3 +1,4 @@
+// Debug values, replaced on start-up in production, by the env.sh script
 window['appConfig'] = {
-    "apiUrl": "http://localhost:7071/"
+    REACT_APP_API_URL: "http://localhost:7071/"
 }

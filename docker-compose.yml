@@ -1,8 +1,12 @@
-version: '3'
+version: '3.2'
 services:
   client-app:
+    image: wasoft/wasoft:latest
+    restart: always
     build:
       context: ./client-app
       dockerfile: Dockerfile
     ports:
-      - '80:80' 
+      - '80:80'
+    environment:
+      - REACT_APP_API_URL=#{apiUrl}#
