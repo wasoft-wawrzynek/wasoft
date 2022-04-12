@@ -10,11 +10,7 @@ variables:
   version: '$(versionNumber)'
   clientAppFolder: 'client-app'
   apiFolder: 'api'
-
-  # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'e9d0f44e-5ffb-4198-a9ae-99f36b5f6abb'
   imageRepository: 'wasoft'
-  containerRegistry: 'wasoft.azurecr.io'
   dockerfilePath: '$(clientAppFolder)/Dockerfile'
   tag: '$(versionNumber)'
 
@@ -37,11 +33,15 @@ stages:
         targetFiles: '**/package.json'
         fileType: json
     - task: Docker@2
-      displayName: Build and push an image to container registry
+      displayName: 'Login to Container Registry'
       inputs:
+        command: login
+        containerRegistry: 'gcr-wasoft'
+    - task: Docker@2
+      displayName: 'Build and push image'
+      inputs:
+        Dockerfile: '$(dockerfilePath)'
         command: buildAndPush
-        repository: $(imageRepository)
-        dockerfile: $(dockerfilePath)
-        containerRegistry: $(dockerRegistryServiceConnection)
+        repository: '$(imageRepository)'
         tags: |
           $(tag)
