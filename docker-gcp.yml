@@ -19,10 +19,9 @@ variables:
 
 stages:
 - stage: Build
-  displayName: Build and push stage
   jobs:
   - job: ClientApp
-    displayName: Build
+    displayName: Build and push client-app
     pool:
       vmImage: $(vmImageName)
     steps:
@@ -44,4 +43,5 @@ stages:
         command: buildAndPush
         repository: '$(imageRepository)'
         tags: |
+          latest
           $(tag)

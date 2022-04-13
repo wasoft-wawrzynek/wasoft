@@ -14,7 +14,7 @@ COPY ./env.sh .
 COPY .env .
 
 # Make our shell script executable
-#RUN chmod +x env.sh
+RUN chmod +x env.sh
 
 # Replace environment variables and start Nginx server
-ENTRYPOINT ["/bin/bash", "-c", "/usr/share/nginx/html/env.sh && nginx -g \"daemon off;\""]
+RUN ["/bin/bash", "-c", "/usr/share/nginx/html/env.sh && nginx -g \"daemon off;\""]
