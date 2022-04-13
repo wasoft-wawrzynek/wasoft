@@ -121,9 +121,9 @@ const personalData = {
   ],
   skills: {
     key: ["C#/.NET", "HTML/CSS", "SCRUM"],
-    solid: ["nUnit", "TFS", "React", "JIRA"],
-    promising: ["Azure", "JS / TS", "SQL", "Git", "WiX"],
-    basic: ["Java", "C++", "DirectX"],
+    solid: ["TFS", "Azure DevOps", "nUnit", "React", "JIRA"],
+    promising: ["Azure Portal", "JS / TS", "SQL", "Git", "WiX"],
+    basic: ["Docker", "GCP", "Java", "C++", "DirectX"],
   },
   hobby: [
     {
