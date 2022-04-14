@@ -39,11 +39,15 @@ function Home() {
           language={locale}
           setLanguage={(lang) => navigate("/" + lang)}
         />
-        <Waypoint
-          onEnter={() => setOnTop(true)}
-          onLeave={() => setOnTop(false)}
-        ></Waypoint>
-        <Hero />
+        <div>
+          <Hero />
+          <Waypoint
+            onEnter={() => setOnTop(true)}
+            onLeave={() => setOnTop(false)}
+            bottomOffset={-1}
+            topOffset="50%"
+          />
+        </div>
         <Experience />
         <Skills />
         <Education />
