@@ -1,5 +1,3 @@
-name: $(versionNumber).$(rev:r)
-
 trigger:
 - develop
 pr: none
@@ -8,8 +6,10 @@ resources:
 - repo: self
 
 variables:
-  version: '$(versionNumber).$(rev:r)'
-  vmImageName: 'ubuntu-latest'
+  revision: $[counter($(versionPrefix),0)]
+  version: '$(versionPrefix).$(revision)'
+
+name: $(version)
 
 stages:
 - stage: Build
@@ -21,10 +21,10 @@ stages:
       clientAppFolder: 'client-app'
       imageRepository: 'wasoft/wasoft'
       dockerfilePath: '$(clientAppFolder)/Dockerfile'
-      tag: '$(versionNumber)'
+      tag: '$(version)'
       
     pool:
-      vmImage: $(vmImageName)
+      vmImage: 'ubuntu-latest'
       
     steps:
     - task: FileTransform@1
@@ -65,15 +65,15 @@ stages:
           InsertAttributes: false
           FileEncoding: 'auto'
           WriteBOM: false
-          PackageId: '$(versionNumber)'
+          PackageId: '$(version)'
           Authors: 'Paweł Wawrzynek'
           Company: 'WaSoft'
           Product: 'WaSoft API'
           Copyright: 'WaSoft'
-          VersionNumber: '$(versionNumber)'
-          FileVersionNumber: '$(versionNumber)'
-          InformationalVersion: '$(versionNumber)'
-          PackageVersion: '$(versionNumber)'
+          VersionNumber: '$(version)'
+          FileVersionNumber: '$(version)'
+          InformationalVersion: '$(version)'
+          PackageVersion: '$(version)'
           LogLevel: 'verbose'
           FailOnWarning: false
           DisableTelemetry: false
