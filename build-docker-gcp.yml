@@ -1,10 +1,14 @@
-name: $(versionNumber)
+name: $(versionNumber).$(rev:r)
+
+trigger:
+- develop
+pr: none
 
 resources:
 - repo: self
 
 variables:
-  version: '$(versionNumber)'
+  version: '$(versionNumber).$(rev:r)'
   vmImageName: 'ubuntu-latest'
 
 stages:
