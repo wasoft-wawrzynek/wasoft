@@ -1,3 +1,4 @@
+// Debug values, to be replaced on deployemtn (by the env.sh script for Docker, or by *.release.js file on Azure Web App)
 window['appConfig'] = {
-    "apiUrl": "http://localhost:7071/"
+    REACT_APP_API_URL: "http://localhost:7071/"
 }

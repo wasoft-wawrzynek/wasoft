@@ -1,5 +1,6 @@
 import "./Contact.scss";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import {
   FormattedMessage,
@@ -9,7 +10,7 @@ import {
 import { values } from "../../resources/translations";
 import IContactFormData from "../../api/models/IContactFormData";
 import client from "../../api/client";
-import { Link } from "react-router-dom";
+import { ReactComponent as DownloadIcon } from "../../icons/download.svg";
 
 const Contact = (props: WrappedComponentProps) => {
   const [input, setInput] = useState<IContactFormData>({
@@ -109,7 +110,9 @@ const Contact = (props: WrappedComponentProps) => {
             <FormattedMessage id="contact.resume" />
           </p>
           <Link to="/resume">
-            <FormattedMessage id="contact.here" />
+            <div className="img-bubble">
+              <DownloadIcon className="icon" />
+            </div>
           </Link>
         </div>
       </div>

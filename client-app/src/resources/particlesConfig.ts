@@ -35,7 +35,7 @@ export const particlesConfig: ISourceOptions = {
     },
     move: {
       enable: true,
-      speed: 1.5,
+      speed: 0.75,
       direction: "none",
       random: false,
       straight: false,
@@ -86,6 +86,6 @@ export const particlesConfig: ISourceOptions = {
       },
     },
   },
-  retina_detect: true,
+  retina_detect: false,
   fpsLimit: 25,
 };

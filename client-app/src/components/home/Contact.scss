@@ -2,20 +2,35 @@
 
 #contact {
   position: relative;
-  min-height: 75vh;
   background-color: $medium-dark-color;
 
   .resume-info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-    margin: auto;
-    margin-top: 5rem;
+    align-content: center;
+    gap: 1rem;
+    margin: 5rem auto 3rem auto;
     max-width: 50%;
     text-align: center;
     padding: 1rem;
     border-radius: 0.5rem;
+
+    .img-bubble {
+      border: 3px solid $primary-color;
+      border-radius: 50%;
+      width: 6rem;
+      height: 6rem;
+      padding: 10%;
+      margin: 1rem 0;
+
+      .icon {
+        width: 100%;
+        height: 100%;
+        margin-left: 7%;
+        fill: $primary-color;
+      }
+    }
   }
 
   .contact-content {
@@ -101,7 +116,6 @@
   #contact {
     .resume-info {
       max-width: 100%;
-      margin-top: 2rem;
     }
 
     .contact-content {

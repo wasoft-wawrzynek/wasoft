@@ -1,0 +1,126 @@
+# Temporary, initial name (will be replaced in one of the jobs)
+name: '$(versionPrefix).?'
+
+trigger:
+- develop
+pr: none
+
+resources:
+- repo: self
+
+variables:
+  revision: $[counter(variables['versionPrefix'],0)]
+  version: '$(versionPrefix).$(revision)'
+
+stages:
+- stage: Build
+  jobs:
+  - job: UpdateBuildVersion
+    displayName: Update build name
+    steps:
+    - pwsh: Write-Host "##vso[build.updatebuildnumber]$(version)"
+  
+  - job: BuildClientApp
+    displayName: Build and push client-app container
+    
+    variables:
+      clientAppFolder: 'client-app'
+      imageRepository: 'wasoft/wasoft'
+      dockerfilePath: '$(clientAppFolder)/Dockerfile'
+      tag: '$(version)'
+      
+    pool:
+      vmImage: 'ubuntu-latest'
+      
+    steps:
+    - task: FileTransform@1
+      displayName: 'Update package.json'
+      inputs:
+        folderPath: '$(clientAppFolder)'
+        targetFiles: '**/package.json'
+        fileType: json
+        
+    - task: Docker@2
+      displayName: 'Login to Container Registry'
+      inputs:
+        command: login
+        containerRegistry: 'gcr-wasoft'
+        
+    - task: Docker@2
+      displayName: 'Build and push image'
+      inputs:
+        Dockerfile: '$(dockerfilePath)'
+        command: buildAndPush
+        repository: '$(imageRepository)'
+        tags: |
+          latest
+          $(tag)
+          
+  - job: BuildApi
+    displayName: Build and publish API artifact
+  
+    variables:
+      buildConfiguration: 'Release'
+      apiFolder: 'api'
+  
+    steps:
+      - task: Assembly-Info-NetCore@3
+        inputs:
+          Path: '$(apiFolder)'
+          FileNames: '**/*.csproj'
+          InsertAttributes: false
+          FileEncoding: 'auto'
+          WriteBOM: false
+          PackageId: '$(version)'
+          Authors: 'Paweł Wawrzynek'
+          Company: 'WaSoft'
+          Product: 'WaSoft API'
+          Copyright: 'WaSoft'
+          VersionNumber: '$(version)'
+          FileVersionNumber: '$(version)'
+          InformationalVersion: '$(version)'
+          PackageVersion: '$(version)'
+          LogLevel: 'verbose'
+          FailOnWarning: false
+          DisableTelemetry: false
+  
+      - task: UseDotNet@2
+        displayName: 'Use dotnet 6'
+        inputs:
+          version: '6.0.x'
+  
+      - task: DotNetCoreCLI@2
+        inputs:
+          command: 'restore'
+          projects: '$(apiFolder)/*.sln'
+        displayName: 'Restore NuGet packages'
+   
+      - task: DotNetCoreCLI@2
+        displayName: 'Build the solution'
+        inputs:
+          command: 'build'
+          projects: '$(apiFolder)/*.sln'
+          arguments: '--configuration $(buildConfiguration)'
+  
+      - task: DotNetCoreCLI@2
+        displayName: 'Run tests'
+        inputs:
+          command: test
+          projects: '$(apiFolder)/*Tests/*.csproj'
+          arguments: '--configuration $(buildConfiguration)'
+  
+      - task: DotNetCoreCLI@2
+        displayName: 'Create publish package'
+        inputs:
+          command: publish
+          publishWebProjects: false
+          projects: '$(apiFolder)/*.sln'
+          arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+          zipAfterPublish: True
+  
+      - task: PublishBuildArtifacts@1
+        displayName: Publish package
+        inputs:
+          pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
+          artifactName: 'wasoft-api'
+     

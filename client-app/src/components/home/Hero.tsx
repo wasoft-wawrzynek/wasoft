@@ -1,10 +1,9 @@
 import "./Hero.scss";
-import React from "react";
-import Typed from "react-typed";
 import { FormattedMessage, useIntl } from "react-intl";
+import Typed from "../controls/Typed";
 import { ReactComponent as WasoftIcon } from "../../icons/wasoft-light-full.svg";
 
-const Hero: React.FC = () => {
+function Hero() {
   const intl = useIntl();
 
   const words = [
@@ -35,9 +34,9 @@ const Hero: React.FC = () => {
           <h2>
             <Typed
               strings={words}
-              typeSpeed={80}
-              backSpeed={50}
-              backDelay={3000}
+              typeSpeed={40}
+              backSpeed={20}
+              backDelay={2000}
               cursorChar="_"
               loop
             />
@@ -46,6 +45,6 @@ const Hero: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Hero;
