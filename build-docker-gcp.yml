@@ -1,3 +1,6 @@
+# Temporary, initial name (will be replaced in one of the jobs)
+name: '$(versionPrefix).?'
+
 trigger:
 - develop
 pr: none
@@ -12,12 +15,12 @@ variables:
 stages:
 - stage: Build
   jobs:
-  - job: BuildVersion
+  - job: UpdateBuildVersion
     displayName: Update build name
     steps:
     - pwsh: Write-Host "##vso[build.updatebuildnumber]$(version)"
   
-  - job: ClientApp
+  - job: BuildClientApp
     displayName: Build and push client-app container
     
     variables:
@@ -53,7 +56,7 @@ stages:
           latest
           $(tag)
           
-  - job: ApiJob
+  - job: BuildApi
     displayName: Build and publish API artifact
   
     variables:
