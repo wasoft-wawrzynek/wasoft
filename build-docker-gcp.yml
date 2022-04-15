@@ -7,13 +7,16 @@ resources:
 
 variables:
   revision: $[counter(variables['versionPrefix'],0)]
-  version: $(versionPrefix).$(revision)
-
-name: $(version)
+  version: '$(versionPrefix).$(revision)'
 
 stages:
 - stage: Build
   jobs:
+  - job: BuildVersion
+    displayName: Update build name
+    steps:
+    - pwsh: Write-Host "##vso[build.updatebuildnumber]$(version)"
+  
   - job: ClientApp
     displayName: Build and push client-app container
     
