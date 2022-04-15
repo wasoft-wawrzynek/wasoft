@@ -1,10 +1,20 @@
 import "./Header.scss";
-import React from "react";
 import { Container, Menu } from "semantic-ui-react";
 import Scroll from "react-scroll";
 import MainNav from "./MainNav";
 import MobileNav from "./MobileNav";
 import { ReactComponent as WasoftLightIcon } from "../../icons/wasoft.svg";
+
+interface IHeaderProps {
+  isHidden: boolean;
+  language: string;
+  setLanguage: (language: string) => void;
+}
+
+export interface INavBarProps {
+  language: string;
+  setLanguage: (language: string) => void;
+}
 
 export const sections = [
   "experience",
@@ -14,11 +24,7 @@ export const sections = [
   "contact",
 ];
 
-const Header: React.FC<{
-  isHidden: boolean;
-  language: string;
-  setLanguage: (language: string) => void;
-}> = (props) => {
+function Header(props: IHeaderProps) {
   return (
     <div id="header">
       <Menu className={props.isHidden ? "hidden" : ""}>
@@ -35,6 +41,6 @@ const Header: React.FC<{
       </Menu>
     </div>
   );
-};
+}
 
 export default Header;

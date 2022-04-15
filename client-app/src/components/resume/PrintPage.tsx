@@ -140,7 +140,7 @@ function PrintPage(props: IPageProps) {
         <div className="info-item">
           <img
             className="icon"
-            src="/img/resume/linkedIn.png"
+            src="/img/resume/linked-in.png"
             alt="linked-in"
           />
           <p>{personalData.contact.linkedIn}</p>

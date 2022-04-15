@@ -1,4 +1,4 @@
-﻿import { jsPDF } from "jspdf";
+import { jsPDF } from "jspdf";
 import TekoBold from "./fonts/Teko-bold.js";
 import TekoRegular from "./fonts/Teko-regular.js";
 import MontserratNormal from "./fonts/Montserrat-normal.js";
