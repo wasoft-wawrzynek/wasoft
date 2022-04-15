@@ -34,9 +34,9 @@ function Hero() {
           <h2>
             <Typed
               strings={words}
-              typeSpeed={80}
-              backSpeed={50}
-              backDelay={2500}
+              typeSpeed={40}
+              backSpeed={20}
+              backDelay={2000}
               cursorChar="_"
               loop
             />
