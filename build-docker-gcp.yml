@@ -2,6 +2,7 @@ name: $(versionNumber).$(rev:r)
 
 trigger:
 - develop
+pr: none
 
 resources:
 - repo: self
