@@ -7,7 +7,7 @@ resources:
 
 variables:
   revision: $[counter(variables['versionPrefix'],0)]
-  version: '$(versionPrefix).$(revision)'
+  version: $(versionPrefix).$(revision)
 
 name: $(version)
 
