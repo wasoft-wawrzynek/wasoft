@@ -6,7 +6,7 @@ resources:
 - repo: self
 
 variables:
-  revision: $[counter($(versionPrefix),0)]
+  revision: $[counter(variables['versionPrefix'],0)]
   version: '$(versionPrefix).$(revision)'
 
 name: $(version)
