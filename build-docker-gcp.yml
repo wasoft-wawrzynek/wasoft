@@ -11,7 +11,7 @@ stages:
 - stage: Build
   jobs:
   - job: ClientApp
-    displayName: Build and push client-app
+    displayName: Build and push client-app container
     
     variables:
       clientAppFolder: 'client-app'
@@ -47,7 +47,7 @@ stages:
           $(tag)
           
   - job: ApiJob
-    displayName: Build API
+    displayName: Build and publish API artifact
   
     variables:
       buildConfiguration: 'Release'
