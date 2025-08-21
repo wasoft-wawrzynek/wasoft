@@ -18,6 +18,15 @@ function Home() {
   const [onTop, setOnTop] = useState(true);
 
   useEffect(() => {
+    const handleScroll = () => {
+      setOnTop(window.scrollY < 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
     if (lang && hasLanguage(lang)) {
       setLocale(lang);
     }
@@ -38,12 +47,6 @@ function Home() {
         />
         <div>
           <Hero />
-          <Waypoint
-            onEnter={() => setOnTop(true)}
-            onLeave={() => setOnTop(false)}
-            bottomOffset={-1}
-            topOffset="50%"
-          />
         </div>
         <Experience />
         <Skills />
