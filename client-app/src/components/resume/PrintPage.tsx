@@ -84,7 +84,7 @@ function PrintPage(props: IPageProps) {
                   <p>
                     {getDateRangeString(
                       intl,
-                      job.roles.at(-1)?.startDate,
+                      job.roles[job.roles.length - 1]?.startDate,
                       job.roles[0].endDate
                     )}
                   </p>

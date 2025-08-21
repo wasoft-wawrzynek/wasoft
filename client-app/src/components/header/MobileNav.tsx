@@ -1,13 +1,17 @@
 import "./MobileNav.scss";
 import { useState } from "react";
-import Scroll from "react-scroll";
-import { Menu } from "semantic-ui-react";
 import { FormattedMessage } from "react-intl";
 import LanguageSelector from "../controls/LanguageSelector";
 import { INavBarProps, sections } from "./Header";
 
 function MobileNav(props: INavBarProps) {
   const [showPanel, setShowPanel] = useState(false);
+
+  const scroll = (section: string) => {
+    setShowPanel(false);
+    const el = document.getElementById(section);
+    el?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div id="mobile-nav">
@@ -21,38 +25,15 @@ function MobileNav(props: INavBarProps) {
         <div></div>
       </div>
       <div id="side-panel" className={showPanel ? "" : " hidden"}>
-        <Menu.Item
-          as={Scroll.Link}
-          smooth
-          spy
-          to="hero"
-          onClick={() => setShowPanel(false)}
-        >
-          WaSoft
-        </Menu.Item>
+        <button onClick={() => scroll("hero")}>WaSoft</button>
         {sections.map((section) => {
           return (
-            <Menu.Item
-              key={section}
-              as={Scroll.Link}
-              smooth
-              spy
-              to={section}
-              offset={-90}
-              onClick={() => setShowPanel(false)}
-            >
+            <button key={section} onClick={() => scroll(section)}>
               <FormattedMessage id={`header.${section}`} />
-            </Menu.Item>
+            </button>
           );
         })}
-        <LanguageSelector
-          inline
-          language={props.language}
-          setLanguage={(lang) => {
-            props.setLanguage(lang);
-            setShowPanel(false);
-          }}
-        />
+        <LanguageSelector />
       </div>
     </div>
   );

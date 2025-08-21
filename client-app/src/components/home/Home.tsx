@@ -1,6 +1,5 @@
 import { Fragment, useEffect, useState } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
-import { Waypoint } from "react-waypoint";
 import { IntlProvider } from "react-intl";
 import Particles from "react-tsparticles";
 import { particlesConfig } from "../../resources/particlesConfig";

@@ -19,7 +19,7 @@ const FloatingCard = ({
   className,
   intervalMs,
   maxMove,
-}: FloatingCardProps): JSX.Element => {
+}: FloatingCardProps) => {
   const [translation, setTranslation] = useState([0, 0]);
 
   const boxStyle: CSSProperties = {
