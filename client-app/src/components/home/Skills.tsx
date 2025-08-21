@@ -2,10 +2,10 @@ import "./Skills.scss";
 import { FormattedMessage } from "react-intl";
 import personalData from "../../resources/personalData";
 import FloatingCard from "../controls/FloatingCard";
-import { ReactComponent as Level1 } from "../../icons/level-1.svg";
-import { ReactComponent as Level2 } from "../../icons/level-2.svg";
-import { ReactComponent as Level3 } from "../../icons/level-3.svg";
-import { ReactComponent as Level4 } from "../../icons/level-4.svg";
+import Level1 from "../../icons/level-1.svg?react";
+import Level2 from "../../icons/level-2.svg?react";
+import Level3 from "../../icons/level-3.svg?react";
+import Level4 from "../../icons/level-4.svg?react";
 
 // interface SkillIcons {
 //   key: React.FunctionComponent<

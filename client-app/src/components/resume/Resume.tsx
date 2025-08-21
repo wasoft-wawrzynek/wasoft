@@ -1,9 +1,10 @@
 import "./Resume.scss";
 import { Trans, useTranslation } from "react-i18next";
 import { jsPDF } from "jspdf";
+// @ts-ignore
 import initPdfFonts from "../../resources/pdfFonts.js";
 import PrintPage from "./PrintPage";
-import { ReactComponent as DownloadIcon } from "../../icons/download.svg";
+import DownloadIcon from '../../icons/download.svg?react';
 import LanguageSelector from "../controls/LanguageSelector";
 
 const A4_RATIO = 1.414285714285714;

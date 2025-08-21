@@ -11,11 +11,11 @@ const languages = ["pl-pl", "pl-sp", "en"];
 
 const getFlagSrc = (language: string): string => `./locales/${language}.svg`;
 
-interface ILanguageSelector {
-  inline: boolean
+interface ILanguageSelectorProps {
+  inline?: boolean
 };
 
-const LanguageSelector = ({inline} : ILanguageSelector) => {
+const LanguageSelector = ({ }: ILanguageSelectorProps) => {
   const { i18n } = useTranslation();
 
   const getCurrentLang = () => {

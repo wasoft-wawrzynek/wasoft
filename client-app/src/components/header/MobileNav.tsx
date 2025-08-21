@@ -2,9 +2,9 @@ import "./MobileNav.scss";
 import { useState } from "react";
 import { FormattedMessage } from "react-intl";
 import LanguageSelector from "../controls/LanguageSelector";
-import { INavBarProps, sections } from "./Header";
+import { sections } from "./Header";
 
-function MobileNav(props: INavBarProps) {
+const MobileNav = () => {
   const [showPanel, setShowPanel] = useState(false);
 
   const scroll = (section: string) => {

@@ -10,7 +10,7 @@ import {
 import { values } from "../../resources/translations";
 import IContactFormData from "../../api/models/IContactFormData";
 import client from "../../api/client";
-import { ReactComponent as DownloadIcon } from "../../icons/download.svg";
+import DownloadIcon from "../../icons/download.svg?react";
 
 const Contact = (props: WrappedComponentProps) => {
   const [input, setInput] = useState<IContactFormData>({

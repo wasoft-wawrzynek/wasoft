@@ -3,7 +3,7 @@ import { Container, Menu } from "semantic-ui-react";
 import Scroll from "react-scroll";
 import MainNav from "./MainNav";
 import MobileNav from "./MobileNav";
-import { ReactComponent as WasoftLightIcon } from "../../icons/wasoft.svg";
+import WasoftLightIcon from "../../icons/wasoft.svg?react";
 
 interface IHeaderProps {
   isHidden: boolean;

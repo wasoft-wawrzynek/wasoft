@@ -1,7 +1,7 @@
 import "./Hero.scss";
 import { FormattedMessage, useIntl } from "react-intl";
 import Typed from "../controls/Typed";
-import { ReactComponent as WasoftIcon } from "../../icons/wasoft-light-full.svg";
+import WasoftIcon from "../../icons/wasoft-light-full.svg?react";
 
 function Hero() {
   const intl = useIntl();
