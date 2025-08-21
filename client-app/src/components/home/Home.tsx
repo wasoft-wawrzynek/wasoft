@@ -1,8 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { IntlProvider } from "react-intl";
-import Particles from "react-tsparticles";
-import { particlesConfig } from "../../resources/particlesConfig";
 import messages, { hasLanguage } from "../../resources/translations";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
@@ -32,7 +30,7 @@ function Home() {
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
       <Fragment>
-        <Particles params={particlesConfig} />
+        {/* Add particles background here if needed */}
         <Header
           isHidden={onTop}
           language={locale}
