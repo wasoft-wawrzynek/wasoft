@@ -3,7 +3,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import Typed from "../controls/Typed";
 import WasoftIcon from "../../icons/wasoft-light-full.svg?react";
 
-function Hero() {
+const Hero = () => {
   const intl = useIntl();
 
   const words = [

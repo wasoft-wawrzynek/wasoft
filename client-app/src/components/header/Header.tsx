@@ -11,11 +11,6 @@ interface IHeaderProps {
   setLanguage: (language: string) => void;
 }
 
-export interface INavBarProps {
-  language: string;
-  setLanguage: (language: string) => void;
-}
-
 export const sections = [
   "experience",
   "skills",
@@ -24,7 +19,7 @@ export const sections = [
   "contact",
 ];
 
-function Header(props: IHeaderProps) {
+const Header = (props: IHeaderProps) => {
   return (
     <div id="header">
       <Menu className={props.isHidden ? "hidden" : ""}>
@@ -32,11 +27,8 @@ function Header(props: IHeaderProps) {
           <Menu.Item className="logo" as={Scroll.Link} smooth spy to="hero">
             <WasoftLightIcon className="logo-img" />
           </Menu.Item>
-          <MainNav language={props.language} setLanguage={props.setLanguage} />
-          <MobileNav
-            language={props.language}
-            setLanguage={props.setLanguage}
-          />
+          <MainNav />
+          <MobileNav />
         </Container>
       </Menu>
     </div>

@@ -6,7 +6,7 @@ interface ITitleProps {
   lightMode?: boolean;
 }
 
-function Title(props: ITitleProps) {
+const Title = (props: ITitleProps) => {
   return (
     <div className={`resume-title ${props.lightMode ? "light" : ""}`}>
       <hr />

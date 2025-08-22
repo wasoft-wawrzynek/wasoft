@@ -1,9 +1,9 @@
 import "./MainNav.scss";
 import { FormattedMessage } from "react-intl";
 import LanguageSelector from "../controls/LanguageSelector";
-import { INavBarProps, sections } from "./Header";
+import { sections } from "./Header";
 
-function MainNav(props: INavBarProps) {
+const MainNav = () => {
   return (
     <>
       <div id="main-nav">

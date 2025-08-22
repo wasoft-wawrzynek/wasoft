@@ -11,7 +11,7 @@ const A4_RATIO = 1.414285714285714;
 const PAGE_WIDTH = 1000;
 const PAGE_HEIGHT = PAGE_WIDTH * A4_RATIO;
 
-function Resume() {
+const Resume = () => {
   const { i18n } = useTranslation();
 
   const generatePdf = () => {

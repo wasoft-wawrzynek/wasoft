@@ -13,7 +13,7 @@ interface IPageProps {
   height: number;
 }
 
-function PrintPage(props: IPageProps) {
+const PrintPage = (props: IPageProps) => {
   const intl = useIntl();
 
   return (
@@ -95,13 +95,12 @@ function PrintPage(props: IPageProps) {
                   {job.roles.map((role) => {
                     return (
                       <>
-                        <h3 className="sub-title">{`${
-                          role.title
-                        } - ${getPeriodSting(
-                          intl,
-                          role.startDate,
-                          role.endDate
-                        )}`}</h3>
+                        <h3 className="sub-title">{`${role.title
+                          } - ${getPeriodSting(
+                            intl,
+                            role.startDate,
+                            role.endDate
+                          )}`}</h3>
                         <p className="text">
                           <FormattedMessage
                             id={role.descriptionId}

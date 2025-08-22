@@ -1,11 +1,10 @@
 import "./Hobby.scss";
-import React from "react";
 import { FormattedMessage } from "react-intl";
 import personalData from "../../resources/personalData";
 import { values } from "../../resources/translations";
 import FloatingCard from "../controls/FloatingCard";
 
-const Hobby: React.FC = () => {
+const Hobby = () => {
   return (
     <div id="hobby">
       <div className="container">

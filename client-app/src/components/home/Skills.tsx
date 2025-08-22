@@ -30,7 +30,7 @@ import Level4 from "../../icons/level-4.svg?react";
 //   basic: <Level1 className="icon" />,
 // };
 
-function Skills() {
+const Skills = () => {
   return (
     <div id="skills">
       <div className="container">

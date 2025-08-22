@@ -11,7 +11,7 @@ import Hero from "./Hero";
 import Hobby from "./Hobby";
 import Skills from "./Skills";
 
-function Home() {
+const Home = () => {
   const { lang } = useParams();
   const navigate = useNavigate();
   const [locale, setLocale] = useState("pl");

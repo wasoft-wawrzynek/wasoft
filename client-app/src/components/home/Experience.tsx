@@ -1,5 +1,4 @@
 import "./Experience.scss";
-import React from "react";
 import {
   FormattedMessage,
   injectIntl,
@@ -13,7 +12,7 @@ import {
   getPeriodSting,
 } from "../../helpers/stringHelpers";
 
-const Experience: React.FC<WrappedComponentProps> = (props) => {
+const Experience = (props: WrappedComponentProps) => {
   const technologiesToString = (technologies: string[]) => {
     return technologies.toString().replaceAll(",", " | ");
   };
