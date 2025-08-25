@@ -4,6 +4,7 @@ import Typed from "../controls/Typed";
 import WasoftIcon from "../../icons/wasoft-light-full.svg?react";
 
 const Hero = () => {
+    /* TODO Get rid of react-intl */
   const intl = useIntl();
 
   const words = [

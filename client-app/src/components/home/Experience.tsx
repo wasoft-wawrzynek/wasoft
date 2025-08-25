@@ -2,7 +2,6 @@ import "./Experience.scss";
 import {
   FormattedMessage,
   injectIntl,
-  WrappedComponentProps,
 } from "react-intl";
 import FloatingCard from "../controls/FloatingCard";
 import personalData from "../../resources/personalData";
@@ -12,9 +11,9 @@ import {
   getPeriodSting,
 } from "../../helpers/stringHelpers";
 
-const Experience = (props: WrappedComponentProps) => {
+const Experience = () => {
   const technologiesToString = (technologies: string[]) => {
-    return technologies.toString().replaceAll(",", " | ");
+    return technologies.toString().replace(/,/g, " | ");
   };
 
   return (
@@ -36,8 +35,7 @@ const Experience = (props: WrappedComponentProps) => {
                   </h3>
                   <p>
                     {getDateRangeString(
-                      props.intl,
-                      job.roles.at(-1)?.startDate,
+                      job.roles[job.roles.length - 1]?.startDate,
                       job.roles[0].endDate
                     )}
                   </p>
@@ -50,7 +48,6 @@ const Experience = (props: WrappedComponentProps) => {
                           <h3>{role.title}</h3>
                           <p>
                             {getPeriodSting(
-                              props.intl,
                               role.startDate,
                               role.endDate
                             )}

@@ -1,9 +1,8 @@
 import "./Header.scss";
-import { Container, Menu } from "semantic-ui-react";
-import Scroll from "react-scroll";
 import MainNav from "./MainNav";
 import MobileNav from "./MobileNav";
 import WasoftLightIcon from "../../icons/wasoft.svg?react";
+import { DropdownMenu, DropdownMenuContent } from "@radix-ui/react-dropdown-menu";
 
 interface IHeaderProps {
   isHidden: boolean;
@@ -22,15 +21,17 @@ export const sections = [
 const Header = (props: IHeaderProps) => {
   return (
     <div id="header">
-      <Menu className={props.isHidden ? "hidden" : ""}>
-        <Container>
-          <Menu.Item className="logo" as={Scroll.Link} smooth spy to="hero">
+      {/* TODO: Check if this even works */}
+      <DropdownMenu>
+        <DropdownMenuContent className={props.isHidden ? "hidden" : ""}>
+          {/* TODO: Implement scrolling to Hero section */}
+          <div className="logo">
             <WasoftLightIcon className="logo-img" />
-          </Menu.Item>
+          </div>
           <MainNav />
           <MobileNav />
-        </Container>
-      </Menu>
+        </DropdownMenuContent>
+      </DropdownMenu>
     </div>
   );
 }

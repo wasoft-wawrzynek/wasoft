@@ -9,14 +9,8 @@ const MainNav = () => {
       <div id="main-nav">
         {sections.map((section) => {
           return (
-            <button
-              key={section}
-              as={Scroll.Link}
-              smooth
-              spy
-              to={section}
-              offset={-90}
-            >
+            // TODO: Implement scrolling to section
+            <button key={section}            >
               <FormattedMessage id={`header.${section}`} />
             </button>
           );

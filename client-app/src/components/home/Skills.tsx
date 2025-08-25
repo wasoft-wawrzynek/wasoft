@@ -7,29 +7,6 @@ import Level2 from "../../icons/level-2.svg?react";
 import Level3 from "../../icons/level-3.svg?react";
 import Level4 from "../../icons/level-4.svg?react";
 
-// interface SkillIcons {
-//   key: React.FunctionComponent<
-//     React.SVGProps<SVGSVGElement> & { title?: string }
-//   >;
-//   solid: React.FunctionComponent<
-//     React.SVGProps<SVGSVGElement> & { title?: string }
-//   >;
-//   promising: React.FunctionComponent<
-//     React.SVGProps<SVGSVGElement> & { title?: string }
-//   >;
-//   basic: React.FunctionComponent<
-//     React.SVGProps<SVGSVGElement> & { title?: string }
-//   >;
-// }
-
-// const sections = ["key", "solid", "promising", "basic"];
-// const icons: SkillIcons = {
-//   key: <Level4 className="icon" />,
-//   solid: <Level3 className="icon" />,
-//   promising: <Level2 className="icon" />,
-//   basic: <Level1 className="icon" />,
-// };
-
 const Skills = () => {
   return (
     <div id="skills">

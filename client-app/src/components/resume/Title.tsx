@@ -1,5 +1,5 @@
-import { FormattedMessage } from "react-intl";
 import "./Title.scss";
+import { Trans } from "react-i18next";
 
 interface ITitleProps {
   textId: string;
@@ -11,7 +11,7 @@ const Title = (props: ITitleProps) => {
     <div className={`resume-title ${props.lightMode ? "light" : ""}`}>
       <hr />
       <h3 className="text">
-        <FormattedMessage id={props.textId} />{" "}
+        <Trans i18nKey={props.textId} />{" "}
       </h3>
       <hr />
     </div>

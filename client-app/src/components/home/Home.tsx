@@ -37,6 +37,7 @@ const Home = () => {
   }
 
   return (
+    /* TODO Get rid of react-intl */
     <IntlProvider locale={locale} messages={messages[locale]}>
       <Fragment>
         {/* Add particles background here if needed */}

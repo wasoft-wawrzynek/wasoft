@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode, useEffect, useState } from "react";
+import { ReactNode } from "react";
 import "./FloatingCard.scss";
 
 const getNewPosition = (maxMove: number[]) => {
@@ -20,30 +20,12 @@ const FloatingCard = ({
   intervalMs,
   maxMove,
 }: FloatingCardProps) => {
-  const [translation, setTranslation] = useState([0, 0]);
-
-  const boxStyle: CSSProperties = {
-    padding: `${maxMove[1]}px ${maxMove[0]}px`,
-  };
-  const cardStyle: CSSProperties = {
-    transform: `translate(${translation[0]}px, ${translation[1]}px)`,
-    transition: `transform ${intervalMs / 1000}s`,
-    transitionTimingFunction: "linear",
-  };
-
-  useEffect(() => {
-    let intervalId = setInterval(() => {
-      setTranslation(getNewPosition(maxMove));
-    }, intervalMs);
-    return () => clearInterval(intervalId);
-  }, [intervalMs, maxMove]);
-
+  /* TODO: Introduce floating the box with the same tool as po-ptokach, instead of the CSS styles */
   return (
     <div
       className={`${className ? className : ""} floating-card-box`}
-      style={boxStyle}
     >
-      <div className="floating-card" style={cardStyle}>
+      <div className="floating-card">
         {children}
         <div className="corner lt"></div>
         <div className="corner rt"></div>

@@ -1,5 +1,4 @@
 import "./PrintPage.scss";
-import { FormattedMessage, useIntl } from "react-intl";
 import { values } from "../../resources/translations";
 import personalData from "../../resources/personalData";
 import Title from "./Title";
@@ -7,6 +6,7 @@ import {
   getDateRangeString,
   getPeriodSting,
 } from "../../helpers/stringHelpers";
+import { Trans } from "react-i18next";
 
 interface IPageProps {
   width: number;
@@ -14,8 +14,6 @@ interface IPageProps {
 }
 
 const PrintPage = (props: IPageProps) => {
-  const intl = useIntl();
-
   return (
     <div
       id="pdf-page"
@@ -58,9 +56,9 @@ const PrintPage = (props: IPageProps) => {
             {personalData.languages.map((l) => {
               return (
                 <p key={l.languageId}>
-                  <FormattedMessage id={l.languageId} />
+                  <Trans i18nKey={l.languageId} />
                   {" - "}
-                  <FormattedMessage id={l.level} />
+                  <Trans i18nKey={l.level} />
                 </p>
               );
             })}
@@ -69,7 +67,7 @@ const PrintPage = (props: IPageProps) => {
         {personalData.aboutMeId.map((paragraph) => {
           return (
             <p className="paragraph" key={paragraph}>
-              <FormattedMessage id={paragraph} />
+              <Trans i18nKey={paragraph} />
             </p>
           );
         })}
@@ -83,7 +81,6 @@ const PrintPage = (props: IPageProps) => {
                 <div className="dates">
                   <p>
                     {getDateRangeString(
-                      intl,
                       job.roles[job.roles.length - 1]?.startDate,
                       job.roles[0].endDate
                     )}
@@ -97,13 +94,12 @@ const PrintPage = (props: IPageProps) => {
                       <>
                         <h3 className="sub-title">{`${role.title
                           } - ${getPeriodSting(
-                            intl,
                             role.startDate,
                             role.endDate
                           )}`}</h3>
                         <p className="text">
-                          <FormattedMessage
-                            id={role.descriptionId}
+                          <Trans
+                            i18nKey={role.descriptionId}
                             values={values}
                           />
                         </p>
@@ -153,20 +149,20 @@ const PrintPage = (props: IPageProps) => {
               <div key={school.titleId} className="timeline-item">
                 <div className="dates">
                   <p>
-                    {getDateRangeString(intl, school.startDate, school.endDate)}
+                    {getDateRangeString(school.startDate, school.endDate)}
                   </p>
                 </div>
                 <div className="line"></div>
                 <div className="desc">
                   <h3 className="title">
-                    <FormattedMessage id={school.titleId} />
+                    <Trans i18nKey={school.titleId} />
                     {" - "}
-                    <FormattedMessage id={school.facultyId} />
+                    <Trans i18nKey={school.facultyId} />
                   </h3>
                   <p className="text">
-                    <FormattedMessage id={school.schoolId} />
+                    <Trans i18nKey={school.schoolId} />
                     {", "}
-                    <FormattedMessage id={school.locationId} />
+                    <Trans i18nKey={school.locationId} />
                   </p>
                 </div>
               </div>
@@ -184,7 +180,7 @@ const PrintPage = (props: IPageProps) => {
                   <img src={hobby.image} alt={hobby.titleId} />
                 </div>
                 <p className="name">
-                  <FormattedMessage id={hobby.titleId} />
+                  <Trans i18nKey={hobby.titleId} />
                 </p>
               </div>
             );
@@ -198,7 +194,7 @@ const PrintPage = (props: IPageProps) => {
             <div className="group-header">
               <img src="/img/resume/level-4.png" alt="Level Top" />
               <h2 className="group-name">
-                <FormattedMessage id="skills.key" />
+                <Trans i18nKey="skills.key" />
               </h2>
             </div>
             <div className="list">
@@ -211,7 +207,7 @@ const PrintPage = (props: IPageProps) => {
             <div className="group-header">
               <img src="/img/resume/level-3.png" alt="Level Medium" />
               <h2 className="group-name">
-                <FormattedMessage id="skills.solid" />
+                <Trans i18nKey="skills.solid" />
               </h2>
             </div>
             <div className="list">
@@ -224,7 +220,7 @@ const PrintPage = (props: IPageProps) => {
             <div className="group-header">
               <img src="/img/resume/level-2.png" alt="Level Low" />
               <h2 className="group-name">
-                <FormattedMessage id="skills.promising" />
+                <Trans i18nKey="skills.promising" />
               </h2>
             </div>
             <div className="list">
@@ -237,7 +233,7 @@ const PrintPage = (props: IPageProps) => {
             <div className="group-header">
               <img src="/img/resume/level-1.png" alt="Level Low" />
               <h2 className="group-name">
-                <FormattedMessage id="skills.basic" />
+                <Trans i18nKey="skills.basic" />
               </h2>
             </div>
             <div className="list">
