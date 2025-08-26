@@ -1,9 +1,9 @@
 import "./Footer.scss";
 import packageJson from "../../../package.json";
-import WasoftIcon from "../../icons/wasoft.svg?react";
-import WawrzelniaIcon from "../../icons/wawrzelnia.svg?react";
-import BitbucketIcon from "../../icons/bitbucket.svg?react";
-import LinkedInIcon from "../../icons/linkedin.svg?react";
+import WasoftIcon from "@/resources/icons/wasoft.svg?react";
+import WawrzelniaIcon from "@/resources/icons/wawrzelnia.svg?react";
+import BitbucketIcon from "@/resources/icons/bitbucket.svg?react";
+import LinkedInIcon from "@/resources/icons/linkedin.svg?react";
 
 const Footer = () => {
   return (

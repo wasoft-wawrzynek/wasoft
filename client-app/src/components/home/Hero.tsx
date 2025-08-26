@@ -1,7 +1,7 @@
 import "./Hero.scss";
 import { Trans, useTranslation } from "react-i18next";
 import Typed from "../controls/Typed";
-import WasoftIcon from "../../icons/wasoft-light-full.svg?react";
+import WasoftIcon from "@/resources/icons/wasoft-light-full.svg?react";
 
 const Hero = () => {
   const { t } = useTranslation();

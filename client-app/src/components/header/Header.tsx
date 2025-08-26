@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import MainNav from "./MainNav";
 import MobileNav from "./MobileNav";
-import WasoftLightIcon from "../../icons/wasoft.svg?react";
+import WasoftLightIcon from "@/resources/icons/wasoft.svg?react";
 
 export const sections = [
   "experience",

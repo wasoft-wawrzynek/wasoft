@@ -3,10 +3,10 @@ import { useTransition } from "react";
 import { Trans } from "react-i18next";
 import personalData from "../../resources/personalData";
 import FloatingCard from "../controls/FloatingCard";
-import Level1 from "../../icons/level-1.svg?react";
-import Level2 from "../../icons/level-2.svg?react";
-import Level3 from "../../icons/level-3.svg?react";
-import Level4 from "../../icons/level-4.svg?react";
+import Level1 from "@/resources/icons/level-1.svg?react";
+import Level2 from "@/resources/icons/level-2.svg?react";
+import Level3 from "@/resources/icons/level-3.svg?react";
+import Level4 from "@/resources/icons/level-4.svg?react";
 
 const Skills = () => {
   useTransition();

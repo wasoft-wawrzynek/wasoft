@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 import { substitutes } from "../../resources/translations";
 import IContactFormData from "../../api/models/IContactFormData";
 import client from "../../api/client";
-import DownloadIcon from "../../icons/download.svg?react";
+import DownloadIcon from "@/resources/icons/download.svg?react";
 
 const Contact = () => {
   const { t } = useTranslation();
