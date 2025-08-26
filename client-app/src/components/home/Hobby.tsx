@@ -1,15 +1,17 @@
 import "./Hobby.scss";
-import { FormattedMessage } from "react-intl";
+import { Trans, useTranslation } from "react-i18next";
 import personalData from "../../resources/personalData";
-import { values } from "../../resources/translations";
 import FloatingCard from "../controls/FloatingCard";
+import { substitutes } from "@/resources/translations";
 
 const Hobby = () => {
+  useTranslation();
+
   return (
     <div id="hobby">
       <div className="container">
         <h2 className="section-title">
-          <FormattedMessage id="hobby.title" />
+          <Trans i18nKey="hobby.title" />
         </h2>
         <div className="activities">
           {personalData.hobby.map((activity) => {
@@ -27,13 +29,10 @@ const Hobby = () => {
                   </div>
                   <div className="content">
                     <h3 className="title">
-                      <FormattedMessage id={activity.titleId} />
+                      <Trans i18nKey={activity.titleId} />
                     </h3>
                     <p className="desc">
-                      <FormattedMessage
-                        id={activity.descriptionId}
-                        values={values}
-                      />
+                      <Trans i18nKey={activity.descriptionId} components={substitutes} />
                     </p>
                   </div>
                 </div>

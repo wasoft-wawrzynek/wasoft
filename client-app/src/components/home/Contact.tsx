@@ -1,18 +1,16 @@
 import "./Contact.scss";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Trans, useTranslation } from "react-i18next";
 import Swal from "sweetalert2";
-import {
-  FormattedMessage,
-  injectIntl,
-  WrappedComponentProps,
-} from "react-intl";
-import { values } from "../../resources/translations";
+import { substitutes } from "../../resources/translations";
 import IContactFormData from "../../api/models/IContactFormData";
 import client from "../../api/client";
 import DownloadIcon from "../../icons/download.svg?react";
 
-const Contact = (props: WrappedComponentProps) => {
+const Contact = () => {
+  const { t } = useTranslation();
+
   const [input, setInput] = useState<IContactFormData>({
     company: "",
     name: "",
@@ -35,14 +33,14 @@ const Contact = (props: WrappedComponentProps) => {
     if (result === false) {
       Swal.fire({
         icon: "error",
-        title: props.intl.formatMessage({ id: "contact.error" }),
+        title: t("contact.error"),
       });
       return;
     }
 
     Swal.fire({
       icon: "success",
-      title: props.intl.formatMessage({ id: "contact.success" }),
+      title: t("contact.success"),
     });
     setInput({
       company: "",
@@ -56,7 +54,7 @@ const Contact = (props: WrappedComponentProps) => {
     <div id="contact">
       <div className="container">
         <h2 className="section-title">
-          <FormattedMessage id="contact.title" />
+          <Trans i18nKey="contact.title" />
         </h2>
         <div className="contact-content">
           <div className="contact-info">
@@ -64,21 +62,21 @@ const Contact = (props: WrappedComponentProps) => {
               <img className="icon" src="/img/paper-plane.png" alt="" />
             </div>
             <p>
-              <FormattedMessage id="contact.intro" values={values} />
+              <Trans i18nKey="contact.intro" components={substitutes} />
             </p>
           </div>
           <form onSubmit={handleSubmit}>
             <input
               type="text"
               name="company"
-              placeholder={props.intl.formatMessage({ id: "contact.company" })}
+              placeholder={t("contact.company")}
               onChange={handleInputChange}
               value={input.company}
             />
             <input
               type="text"
               name="name"
-              placeholder={props.intl.formatMessage({ id: "contact.name" })}
+              placeholder={t("contact.name")}
               required
               onChange={handleInputChange}
               value={input.name}
@@ -86,14 +84,14 @@ const Contact = (props: WrappedComponentProps) => {
             <input
               type="email"
               name="email"
-              placeholder={props.intl.formatMessage({ id: "contact.address" })}
+              placeholder={t("contact.address")}
               required
               onChange={handleInputChange}
               value={input.email}
             />
             <textarea
               name="message"
-              placeholder={props.intl.formatMessage({ id: "contact.message" })}
+              placeholder={t("contact.message")}
               required
               onChange={handleInputChange}
               value={input.message}
@@ -101,13 +99,13 @@ const Contact = (props: WrappedComponentProps) => {
             <input
               disabled={!(input.name && input.email && input.message)}
               type="submit"
-              value={props.intl.formatMessage({ id: "contact.send" })}
+              value={t("contact.send")}
             />
           </form>
         </div>
         <div className="resume-info">
           <p>
-            <FormattedMessage id="contact.resume" />
+            <Trans i18nKey="contact.resume" />
           </p>
           <Link to="/resume">
             <div className="img-bubble">
@@ -120,4 +118,4 @@ const Contact = (props: WrappedComponentProps) => {
   );
 };
 
-export default injectIntl(Contact);
+export default Contact;

@@ -1,11 +1,11 @@
-import i18n from "i18next";
+import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
-import en from "./locales/en.json";
-import pl from "./locales/pl.json";
-import sl from "./locales/sl.json";
+import en from "@/resources/locales/en.json";
+import pl from "@/resources/locales/pl.json";
+import sl from "@/resources/locales/sl.json";
 
-i18n
+i18next
   .use(initReactI18next)
   .use(LanguageDetector)
   .init({
@@ -20,4 +20,4 @@ i18n
     },
   });
 
-export default i18n;
+export default i18next;

@@ -1,21 +1,17 @@
 import { useTranslation } from "react-i18next";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
 } from "@radix-ui/react-dropdown-menu";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
 const languages = ["pl-pl", "pl-sp", "en"];
 
 const getFlagSrc = (language: string): string => `./locales/${language}.svg`;
 
-interface ILanguageSelectorProps {
-  inline?: boolean
-};
-
-const LanguageSelector = ({ }: ILanguageSelectorProps) => {
+const LanguageSelector = () => {
   const { i18n } = useTranslation();
 
   const getCurrentLang = () => {

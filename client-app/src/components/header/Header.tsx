@@ -1,13 +1,9 @@
 import "./Header.scss";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import MainNav from "./MainNav";
 import MobileNav from "./MobileNav";
 import WasoftLightIcon from "../../icons/wasoft.svg?react";
-
-interface IHeaderProps {
-  isHidden: boolean;
-  language: string;
-  setLanguage: (language: string) => void;
-}
 
 export const sections = [
   "experience",
@@ -17,11 +13,23 @@ export const sections = [
   "contact",
 ];
 
-const Header = (props: IHeaderProps) => {
+const Header = () => {
+  useTranslation();
+
+  const [onTop, setOnTop] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setOnTop(window.scrollY < 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div id="header">
-      <div className={`menu ${props.isHidden ? "hidden" : ""}`}>
-        {/* TODO: Implement scrolling to Hero section */}
+      <div className={`menu ${onTop ? "hidden" : ""}`}>
         <div className="container">
           <div className="logo">
             <WasoftLightIcon className="logo-img" />

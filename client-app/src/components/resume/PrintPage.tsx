@@ -1,12 +1,12 @@
 import "./PrintPage.scss";
-import { values } from "../../resources/translations";
+import { Trans } from "react-i18next";
+import { substitutes } from "../../resources/translations";
 import personalData from "../../resources/personalData";
 import Title from "./Title";
 import {
   getDateRangeString,
   getPeriodSting,
 } from "../../helpers/stringHelpers";
-import { Trans } from "react-i18next";
 
 interface IPageProps {
   width: number;
@@ -100,7 +100,7 @@ const PrintPage = (props: IPageProps) => {
                         <p className="text">
                           <Trans
                             i18nKey={role.descriptionId}
-                            values={values}
+                            components={substitutes}
                           />
                         </p>
                       </>

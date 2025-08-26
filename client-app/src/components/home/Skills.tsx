@@ -1,5 +1,6 @@
 import "./Skills.scss";
-import { FormattedMessage } from "react-intl";
+import { useTransition } from "react";
+import { Trans } from "react-i18next";
 import personalData from "../../resources/personalData";
 import FloatingCard from "../controls/FloatingCard";
 import Level1 from "../../icons/level-1.svg?react";
@@ -8,18 +9,20 @@ import Level3 from "../../icons/level-3.svg?react";
 import Level4 from "../../icons/level-4.svg?react";
 
 const Skills = () => {
+  useTransition();
+
   return (
     <div id="skills">
       <div className="container">
         <h2 className="section-title">
-          <FormattedMessage id="skills.title" />
+          <Trans i18nKey="skills.title" />
         </h2>
         <div className="groups">
           <div className="group key">
             <div className="group-header">
               <Level4 className="icon" />
               <h2 className="name">
-                <FormattedMessage id="skills.key" />
+                <Trans i18nKey="skills.key" />
               </h2>
             </div>
             <div className="list">
@@ -40,7 +43,7 @@ const Skills = () => {
             <div className="group-header">
               <Level3 className="icon" />
               <h2 className="name">
-                <FormattedMessage id="skills.solid" />
+                <Trans i18nKey="skills.solid" />
               </h2>
             </div>
             <div className="list">
@@ -61,7 +64,7 @@ const Skills = () => {
             <div className="group-header">
               <Level2 className="icon" />
               <h2 className="name">
-                <FormattedMessage id="skills.promising" />
+                <Trans i18nKey="skills.promising" />
               </h2>
             </div>
             <div className="list">
@@ -82,7 +85,7 @@ const Skills = () => {
             <div className="group-header">
               <Level1 className="icon" />
               <h2 className="name">
-                <FormattedMessage id="skills.basic" />
+                <Trans i18nKey="skills.basic" />
               </h2>
             </div>
             <div className="list">

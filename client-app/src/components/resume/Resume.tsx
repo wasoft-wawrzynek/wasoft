@@ -31,7 +31,7 @@ const Resume = () => {
   return (
     <div id="resume">
       <div className="controls">
-        <LanguageSelector inline />
+        <LanguageSelector />
         <button className="download" onClick={() => generatePdf()}>
           <DownloadIcon className="icon" />
           <h3 className="desc">

@@ -1,16 +1,15 @@
 import "./Hero.scss";
-import { FormattedMessage, useIntl } from "react-intl";
+import { Trans, useTranslation } from "react-i18next";
 import Typed from "../controls/Typed";
 import WasoftIcon from "../../icons/wasoft-light-full.svg?react";
 
 const Hero = () => {
-    /* TODO Get rid of react-intl */
-  const intl = useIntl();
+  const { t } = useTranslation();
 
   const words = [
-    intl.messages["hero.developer"].toString(),
-    intl.messages["hero.team-leader"].toString(),
-    intl.messages["hero.brewer"].toString(),
+    t("hero.developer"),
+    t("hero.team-leader"),
+    t("hero.brewer"),
   ];
 
   return (
@@ -28,9 +27,9 @@ const Hero = () => {
         </div>
         <div className="info-content">
           <h3>
-            <FormattedMessage id="hero.introduction-start" />
+            <Trans i18nKey="hero.introduction-start" />
             <span>Paweł</span>
-            <FormattedMessage id="hero.introduction-end" />
+            <Trans i18nKey="hero.introduction-end" />
           </h3>
           <h2>
             <Typed

@@ -1,26 +1,25 @@
 import "./Experience.scss";
-import {
-  FormattedMessage,
-  injectIntl,
-} from "react-intl";
+import { Trans, useTranslation } from "react-i18next";
 import FloatingCard from "../controls/FloatingCard";
 import personalData from "../../resources/personalData";
-import { values } from "../../resources/translations";
+import { substitutes } from "../../resources/translations";
 import {
   getDateRangeString,
   getPeriodSting,
 } from "../../helpers/stringHelpers";
 
+const technologiesToString = (technologies: string[]) => {
+  return technologies.toString().replace(/,/g, " | ");
+};
+
 const Experience = () => {
-  const technologiesToString = (technologies: string[]) => {
-    return technologies.toString().replace(/,/g, " | ");
-  };
+  useTranslation();
 
   return (
     <div id="experience">
       <div className="container">
         <h2 className="section-title">
-          <FormattedMessage id="experience.title" />
+          <Trans i18nKey="experience.title" />
         </h2>
         <div className="timeline">
           {personalData.experience.map((job) => {
@@ -30,7 +29,7 @@ const Experience = () => {
                   <h3>
                     {job.company}{" "}
                     <span>
-                      (<FormattedMessage id={job.locationId} />)
+                      (<Trans i18nKey={job.locationId} />)
                     </span>
                   </h3>
                   <p>
@@ -61,10 +60,7 @@ const Experience = () => {
                           </p>
                         )}
                         <p className="desc">
-                          <FormattedMessage
-                            id={role.descriptionId}
-                            values={values}
-                          />
+                          <Trans i18nKey={role.descriptionId} components={substitutes} />
                         </p>
                       </div>
                     );
@@ -79,4 +75,4 @@ const Experience = () => {
   );
 };
 
-export default injectIntl(Experience);
+export default Experience;
