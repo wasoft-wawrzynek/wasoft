@@ -1,17 +1,22 @@
 import "./MainNav.scss";
-import { FormattedMessage } from "react-intl";
 import LanguageSelector from "../controls/LanguageSelector";
 import { sections } from "./Header";
+import { Trans } from "react-i18next";
 
 const MainNav = () => {
+  const scroll = (section: string) => {
+    const el = document.getElementById(section);
+    el?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
+    /* TODO: Implement highlighting active section */
     <>
       <div id="main-nav">
         {sections.map((section) => {
           return (
-            // TODO: Implement scrolling to section
-            <button key={section}            >
-              <FormattedMessage id={`header.${section}`} />
+            <button key={section} onClick={() => scroll(section)}>
+              <Trans i18nKey={`header.${section}`} />
             </button>
           );
         })}

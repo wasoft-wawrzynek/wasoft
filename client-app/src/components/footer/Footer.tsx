@@ -19,6 +19,7 @@ const Footer = () => {
             >
               <LinkedInIcon className="logo-social" />
             </a>
+            {/*TODO: Change Bitbucket to GitHub*/}
             <a
               href="https://bitbucket.org/Laurer/"
               target="_blank"
