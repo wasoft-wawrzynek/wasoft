@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import "./FloatingCard.scss";
 
 const getNewPosition = (maxMove: number[]) => {
   var newX = Math.floor(Math.random() * 2 * maxMove[0] - maxMove[0]);
@@ -20,17 +19,15 @@ const FloatingCard = ({
   intervalMs,
   maxMove,
 }: FloatingCardProps) => {
-  /* TODO: Introduce floating the box with the same tool as po-ptokach, instead of the CSS styles */
+  // TODO: Introduce floating the box with the same tool as po-ptokach, instead of the CSS styles
   return (
-    <div
-      className={`${className ? className : ""} floating-card-box`}
-    >
-      <div className="floating-card">
+    <div className={className ? className : ""}>
+      <div className="relative border-2 border-primary/30 p-4">
         {children}
-        <div className="corner lt"></div>
-        <div className="corner rt"></div>
-        <div className="corner lb"></div>
-        <div className="corner rb"></div>
+        <div className="bg-primary h-[6px] w-[6px] rounded-[30%] absolute top-[-3px] left-[-3px]" />
+        <div className="bg-primary h-[6px] w-[6px] rounded-[30%] absolute top-[-3px] right-[-3px]" />
+        <div className="bg-primary h-[6px] w-[6px] rounded-[30%] absolute bottom-[-3px] left-[-3px]" />
+        <div className="bg-primary h-[6px] w-[6px] rounded-[30%] absolute bottom-[-3px] right-[-3px]" />
       </div>
     </div>
   );
