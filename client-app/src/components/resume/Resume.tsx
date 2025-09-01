@@ -1,4 +1,3 @@
-import "./Resume.scss";
 import { Trans, useTranslation } from "react-i18next";
 import { jsPDF } from "jspdf";
 // @ts-ignore
@@ -29,12 +28,15 @@ const Resume = () => {
   };
 
   return (
-    <div id="resume">
-      <div className="controls">
+    <div className="flex flex-col items-center">
+      <div className="flex gap-4 my-4">
         <LanguageSelector />
-        <button className="download" onClick={() => generatePdf()}>
-          <DownloadIcon className="icon" />
-          <h3 className="desc">
+        <button
+          className="grid grid-cols-[auto_1fr] items-center gap-2 px-2 py-2 text-light w-32"
+          onClick={generatePdf}
+        >
+          <DownloadIcon className="fill-primary" />
+          <h3 className="uppercase text-center text-xl pt-1">
             <Trans i18nKey="resume.print" />
           </h3>
         </button>

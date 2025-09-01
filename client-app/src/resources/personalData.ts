@@ -123,7 +123,7 @@ const personalData = {
     key: ["C#/.NET", "HTML/CSS", "SCRUM"],
     solid: ["TFS", "Azure DevOps", "nUnit", "React", "JIRA"],
     promising: ["SQL", "Azure Portal", "JS / TS", "Git"],
-    basic: ["Docker", "Google Cloud", "Java", "C++", "DirectX"],
+    basic: ["Docker", "GCP", "Java", "C++", "DirectX"],
   },
   hobby: [
     {

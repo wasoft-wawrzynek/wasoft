@@ -144,7 +144,8 @@
   p,
   a,
   input,
-  textarea {
+  textarea,
+  span {
     font-family: "Montserrat", sans-serif;
   }
 
