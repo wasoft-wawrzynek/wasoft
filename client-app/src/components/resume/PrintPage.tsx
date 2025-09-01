@@ -182,12 +182,14 @@ const PrintPage = (props: IPageProps) => {
               </h2>
             </div>
             <div className="flex flex-row items-center gap-1">
-              {personalData.skills.key.map((skill, idx) => (
-                <span className="text-dark text-base" key={idx}>
-                  {skill}
-                  {idx !== personalData.skills.key.length - 1 && <span> | </span>}
-                </span>
-              ))}
+              <p>
+                {personalData.skills.key.map((skill, idx) => (
+                  <span className="text-dark text-base" key={idx}>
+                    {skill}
+                    {idx !== personalData.skills.key.length - 1 && <span> | </span>}
+                  </span>
+                ))}
+              </p>
             </div>
           </div>
           <div className="flex flex-col items-center gap-2">
@@ -198,12 +200,14 @@ const PrintPage = (props: IPageProps) => {
               </h2>
             </div>
             <div className="flex flex-row items-center gap-1">
-              {personalData.skills.solid.map((skill, idx) => (
-                <span className="text-dark text-base" key={idx}>
-                  {skill}
-                  {idx !== personalData.skills.solid.length - 1 && <span> | </span>}
-                </span>
-              ))}
+              <p>
+                {personalData.skills.solid.map((skill, idx) => (
+                  <span className="text-dark text-base" key={idx}>
+                    {skill}
+                    {idx !== personalData.skills.solid.length - 1 && <span> | </span>}
+                  </span>
+                ))}
+              </p>
             </div>
           </div>
           <div className="flex flex-col items-center gap-2">
@@ -214,12 +218,14 @@ const PrintPage = (props: IPageProps) => {
               </h2>
             </div>
             <div className="flex flex-row items-center gap-1">
-              {personalData.skills.promising.map((skill, idx) => (
-                <span className="text-dark text-base" key={idx}>
-                  {skill}
-                  {idx !== personalData.skills.promising.length - 1 && <span> | </span>}
-                </span>
-              ))}
+              <p>
+                {personalData.skills.promising.map((skill, idx) => (
+                  <span className="text-dark text-base" key={idx}>
+                    {skill}
+                    {idx !== personalData.skills.promising.length - 1 && <span> | </span>}
+                  </span>
+                ))}
+              </p>
             </div>
           </div>
           <div className="flex flex-col items-center gap-2">
@@ -230,12 +236,14 @@ const PrintPage = (props: IPageProps) => {
               </h2>
             </div>
             <div className="flex flex-row flex-wrap items-center gap-1">
-              {personalData.skills.basic.map((skill, idx) => (
-                <span className="text-dark text-base" key={idx}>
-                  {skill}
-                  {idx !== personalData.skills.basic.length - 1 && <span> | </span>}
-                </span>
-              ))}
+              <p>
+                {personalData.skills.basic.map((skill, idx) => (
+                  <span className="text-dark text-base" key={idx}>
+                    {skill}
+                    {idx !== personalData.skills.basic.length - 1 && <span> | </span>}
+                  </span>
+                ))}
+              </p>
             </div>
           </div>
         </div>
