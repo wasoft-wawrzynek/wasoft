@@ -133,10 +133,26 @@
     overflow-x: hidden;
   }
 
-  h1,
-  h2,
+  /* TODO: This should probably be done by Tailwind themes, not the base styles */
+  h1 {
+    font-family: "Teko", sans-serif;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 3rem;
+  }
+
+  h2 {
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+
   h3 {
     font-family: "Teko", sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 1.5rem;
   }
 
   h4,

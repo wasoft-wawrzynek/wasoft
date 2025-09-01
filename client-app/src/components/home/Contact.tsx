@@ -1,4 +1,3 @@
-import "./Contact.scss";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Trans, useTranslation } from "react-i18next";
@@ -51,27 +50,33 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact">
-      <div className="container">
+    <div className="relative bg-medium-dark"    >
+      <div className="container mx-auto px-4">
         <h2 className="section-title">
           <Trans i18nKey="contact.title" />
         </h2>
-        <div className="contact-content">
-          <div className="contact-info">
-            <div className="img-bubble">
-              <img className="icon" src="/img/paper-plane.png" alt="" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-2">
+          {/* Contact Info */}
+          <div className="flex flex-col items-center justify-center text-center">
+            <div className="border-4 border-primary rounded-full w-1/4 md:w-1/4 p-4 my-4 flex items-center justify-center">
+              <img className="w-full" src="/img/paper-plane.png" alt="" />
             </div>
-            <p>
+            <p className="text-light leading-6 mb-2">
               <Trans i18nKey="contact.intro" components={substitutes} />
             </p>
           </div>
-          <form onSubmit={handleSubmit}>
+          {/* Contact Form */}
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col items-center w-full"
+          >
             <input
               type="text"
               name="company"
               placeholder={t("contact.company")}
               onChange={handleInputChange}
               value={input.company}
+              className="text-light bg-dark border border-medium-light px-4 py-2 my-2 w-full rounded focus:outline-none focus:border-primary transition"
             />
             <input
               type="text"
@@ -80,6 +85,7 @@ const Contact = () => {
               required
               onChange={handleInputChange}
               value={input.name}
+              className="text-light bg-dark border border-medium-light px-4 py-2 my-2 w-full rounded focus:outline-none focus:border-primary transition"
             />
             <input
               type="email"
@@ -88,6 +94,7 @@ const Contact = () => {
               required
               onChange={handleInputChange}
               value={input.email}
+              className="text-light bg-dark border border-medium-light px-4 py-2 my-2 w-full rounded focus:outline-none focus:border-primary transition"
             />
             <textarea
               name="message"
@@ -95,21 +102,28 @@ const Contact = () => {
               required
               onChange={handleInputChange}
               value={input.message}
+              className="text-light bg-dark border border-medium-light px-4 py-2 my-2 w-full rounded h-40 resize-none focus:outline-none focus:border-primary transition"
             ></textarea>
             <input
               disabled={!(input.name && input.email && input.message)}
               type="submit"
               value={t("contact.send")}
+              className={`mt-2 px-6 py-2 rounded font-bold text-lg transition 
+                ${input.name && input.email && input.message
+                  ? "bg-primary text-dark cursor-pointer border-none"
+                  : "bg-medium-dark text-medium-light border border-medium-light cursor-not-allowed"
+                }`}
             />
           </form>
         </div>
-        <div className="resume-info">
-          <p>
+        {/* Resume Info */}
+        <div className="flex flex-col items-center gap-4 mt-16 mb-8 max-w-xl mx-auto text-center bg-medium-dark/80 p-4 rounded-lg">
+          <p className="text-light">
             <Trans i18nKey="contact.resume" />
           </p>
           <Link to="/resume">
-            <div className="img-bubble">
-              <DownloadIcon className="icon" />
+            <div className="border-4 border-primary rounded-full w-24 h-24 flex items-center justify-center p-4 my-2">
+              <DownloadIcon className="w-full h-full fill-primary" />
             </div>
           </Link>
         </div>
