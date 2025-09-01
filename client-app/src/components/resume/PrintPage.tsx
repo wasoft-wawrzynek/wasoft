@@ -112,12 +112,6 @@ const PrintPage = (props: IPageProps) => {
           <p className="text-dark text-sm">{personalData.contact.telephone}</p>
         </div>
         <div className="flex items-center gap-2 my-2">
-          <img className="h-6" src="/img/resume/address.png" alt="address" />
-          <p className="text-dark text-sm">
-            {`${personalData.contact.street}, ${personalData.contact.postCode} ${personalData.contact.city}`}
-          </p>
-        </div>
-        <div className="flex items-center gap-2 my-2">
           <img className="h-6" src="/img/resume/email.png" alt="email" />
           <p className="text-dark text-sm">{personalData.contact.mail}</p>
         </div>

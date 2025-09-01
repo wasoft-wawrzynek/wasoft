@@ -8,9 +8,6 @@ const personalData = {
   contact: {
     telephone: "691-262-330",
     mail: "pawel.wawrzynek@gmail.com",
-    street: "Wałowa 15/13",
-    city: "Kraków",
-    postCode: "30-704",
     website: "https://www.wasoft.pl",
     linkedIn: "pawel-wawrzynek",
   },
