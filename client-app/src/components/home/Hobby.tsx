@@ -9,7 +9,7 @@ const Hobby = () => {
 
   return (
     <div id="hobby">
-      <div className="container">
+      <div className="container mx-auto py-8">
         <h2 className="section-title">
           <Trans i18nKey="hobby.title" />
         </h2>

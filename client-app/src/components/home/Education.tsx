@@ -21,7 +21,7 @@ const Education = () => {
 
   return (
     <div id="education">
-      <div className="container">
+      <div className="container mx-auto py-8">
         <h2 className="section-title">
           <Trans i18nKey="education.title" />
         </h2>

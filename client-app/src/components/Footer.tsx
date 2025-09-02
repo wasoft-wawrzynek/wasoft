@@ -8,7 +8,7 @@ import LinkedInIcon from "@/resources/icons/linkedin.svg?react";
 const Footer = () => {
   return (
     <footer className="relative w-full">
-      <div className="container">
+      <div className="container mx-auto py-8">
         <div className="flex flex-col md:flex-row items-center justify-between w-full">
           <div className="flex items-center justify-center">
             <WasoftIcon className="hidden md:block self-center h-16 mr-12" />

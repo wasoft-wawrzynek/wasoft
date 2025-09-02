@@ -13,7 +13,7 @@ const Skills = () => {
 
   return (
     <div id="skills">
-      <div className="container">
+      <div className="container mx-auto py-8">
         <h2 className="section-title">
           <Trans i18nKey="skills.title" />
         </h2>

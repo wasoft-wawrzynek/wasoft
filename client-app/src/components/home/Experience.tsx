@@ -17,7 +17,7 @@ const Experience = () => {
 
   return (
     <div id="experience">
-      <div className="container">
+      <div className="container mx-auto py-8">
         <h2 className="section-title">
           <Trans i18nKey="experience.title" />
         </h2>

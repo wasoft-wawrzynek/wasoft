@@ -51,7 +51,7 @@ const Contact = () => {
 
   return (
     <div className="relative bg-medium-dark"    >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto py-8 mx-auto px-4">
         <h2 className="section-title">
           <Trans i18nKey="contact.title" />
         </h2>

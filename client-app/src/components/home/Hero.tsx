@@ -16,7 +16,7 @@ const Hero = () => {
     <div id="hero">
       <div className="hero-content">
         <div className="logo-content">
-          <div className="img-container">
+          <div className="img-container mx-auto py-8">
             <div className="img-bubble profile">
               <img src="/img/profile.png" alt="logo" />
             </div>
