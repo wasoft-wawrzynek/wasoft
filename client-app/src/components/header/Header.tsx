@@ -1,4 +1,3 @@
-import "./Header.scss";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import MainNav from "./MainNav";
@@ -29,10 +28,10 @@ const Header = () => {
 
   return (
     <div id="header">
-      <div className={`menu ${onTop ? "hidden" : ""}`}>
-        <div className="container">
-          <div className="logo">
-            <WasoftLightIcon className="logo-img" />
+      <div className={`fixed top-0 w-full h-[90px] z-2 bg-dark bg-opacity-90 transition-all duration-1000 ${onTop ? "-translate-y-full" : "translate-y-0"}`}>
+        <div className="container h-full mx-auto flex items-center justify-between px-0 py-0">
+          <div className="h-full ml-4 flex items-center">
+            <WasoftLightIcon className="h-full w-auto" />
           </div>
           <MainNav />
           <MobileNav />
@@ -40,6 +39,6 @@ const Header = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Header;
