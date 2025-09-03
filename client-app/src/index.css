@@ -164,6 +164,15 @@
     font-family: "Montserrat", sans-serif;
   }
 
+  button {
+    margin: 0 0.3rem;
+    padding: 0.5rem 1rem;
+    font-family: "Teko", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    @apply text-light;
+  }
+
   body {
     @apply bg-background text-foreground;
   }
