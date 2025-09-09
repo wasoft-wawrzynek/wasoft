@@ -1,4 +1,3 @@
-import "./Hero.scss";
 import { Trans, useTranslation } from "react-i18next";
 import Typed from "../controls/Typed";
 import WasoftIcon from "@/resources/icons/wasoft-light-full.svg?react";
@@ -13,25 +12,32 @@ const Hero = () => {
   ];
 
   return (
-    <div id="hero">
-      <div className="hero-content">
-        <div className="logo-content">
-          <div className="img-container mx-auto py-8">
-            <div className="img-bubble profile">
-              <img src="/img/profile.png" alt="logo" />
+    <div className="relative flex flex-col items-center justify-center h-screen w-screen">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-[5em] w-full px-4 md:px-8 z-10">
+        {/* Logo Content */}
+        <div className="flex justify-center md:justify-end items-center">
+          <div className="relative mx-auto aspect-square w-[min(70vw,50vh)] max-w-[400px] max-h-[400px]">
+            {/* Profile bubble */}
+            <div className="rounded-full bg-dark border-4 border-primary overflow-hidden w-full h-full flex items-center justify-center">
+              <img
+                src="/img/profile.png"
+                alt="logo"
+              />
             </div>
-            <div className="img-bubble wasoft">
-              <WasoftIcon className="icon" />
+            {/* Wasoft bubble */}
+            <div className="absolute w-1/2 h-1/2 p-[5%] bottom-[-15%] right-[-15%] rounded-full bg-dark border-4 border-primary flex items-center justify-center">
+              <WasoftIcon />
             </div>
           </div>
         </div>
-        <div className="info-content">
-          <h3>
+        {/* Info Content */}
+        <div className="flex flex-col text-center justify-center mx-0 md:mx-12 max-w-full min-w-[270px]">
+          <h3 className="mt-6 leading-[2.5rem]">
             <Trans i18nKey="hero.introduction-start" />
-            <span>Paweł</span>
+            <span className="text-primary">Paweł</span>
             <Trans i18nKey="hero.introduction-end" />
           </h3>
-          <h2>
+          <h2 className="mt-4 font-bold text-primary">
             <Typed
               strings={words}
               typeSpeed={40}
@@ -45,6 +51,6 @@ const Hero = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Hero;
