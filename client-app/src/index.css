@@ -155,9 +155,23 @@
     line-height: 1.5rem;
   }
 
-  h4,
-  h5,
-  p,
+  h4 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+
+  h5 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+  }
+
   a,
   input,
   textarea {

@@ -17,22 +17,22 @@ const personalData = {
   ],
   education: [
     {
-      titleId: "education.masters-title",
+      titleId: "education.masters.title",
       schoolId: "education.school",
       facultyId: "education.faculty",
       locationId: "gliwice",
       startDate: new Date("2014-01"),
       endDate: new Date("2015-09"),
-      descriptionId: "education.masters-desc",
+      descriptionId: "education.masters.desc",
     },
     {
-      titleId: "education.bachelor-title",
+      titleId: "education.bachelor.title",
       schoolId: "education.school",
       facultyId: "education.faculty",
       locationId: "gliwice",
       startDate: new Date("2010/10"),
       endDate: new Date("2014-01"),
-      descriptionId: "eductaion.bachelor-desc",
+      descriptionId: "education.bachelor.desc",
     },
   ],
   experience: [

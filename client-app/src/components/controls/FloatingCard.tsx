@@ -22,7 +22,7 @@ const FloatingCard = ({
   // TODO: Introduce floating the box with the same tool as po-ptokach, instead of the CSS styles
   return (
     <div className={className ? className : ""}>
-      <div className="relative border-2 border-primary/30 p-4">
+      <div className="relative border-2 border-primary/30 p-4 w-full">
         {children}
         <div className="bg-primary h-[6px] w-[6px] rounded-[30%] absolute top-[-3px] left-[-3px]" />
         <div className="bg-primary h-[6px] w-[6px] rounded-[30%] absolute top-[-3px] right-[-3px]" />
