@@ -13,7 +13,7 @@ const Hero = () => {
 
   return (
     <div className="relative flex flex-col items-center justify-center h-screen w-screen">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-[5em] w-full px-4 md:px-8 z-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-[5em] w-full px-4 md:px-8">
         {/* Logo Content */}
         <div className="flex justify-center md:justify-end items-center">
           <div className="relative mx-auto aspect-square w-[min(70vw,50vh)] max-w-[400px] max-h-[400px]">
