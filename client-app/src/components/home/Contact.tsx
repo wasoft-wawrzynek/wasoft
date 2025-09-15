@@ -56,16 +56,14 @@ const Contact = () => {
           <Trans i18nKey="contact.title" />
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-2">
-          {/* Contact Info */}
-          <div className="flex flex-col items-center justify-center text-center">
-            <div className="border-4 border-primary rounded-full w-1/4 md:w-1/4 p-4 my-4 flex items-center justify-center">
+          <div className="flex flex-col items-center justify-center text-center gap-4">
+            <div className="border-4 border-primary rounded-full w-1/4 p-4 md:p-8">
               <img className="w-full" src="/img/paper-plane.png" alt="" />
             </div>
-            <p className="text-light leading-6 mb-2">
+            <p className="text-light leading-6">
               <Trans i18nKey="contact.intro" components={substitutes} />
             </p>
           </div>
-          {/* Contact Form */}
           <form
             onSubmit={handleSubmit}
             className="flex flex-col items-center w-full"
@@ -122,7 +120,7 @@ const Contact = () => {
             <Trans i18nKey="contact.resume" />
           </p>
           <Link to="/resume">
-            <div className="border-4 border-primary rounded-full w-24 h-24 flex items-center justify-center p-4 my-2">
+            <div className="border-4 border-primary rounded-full w-24 h-24 p-4 my-2">
               <DownloadIcon className="w-full h-full fill-primary" />
             </div>
           </Link>
