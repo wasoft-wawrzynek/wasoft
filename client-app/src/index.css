@@ -190,4 +190,19 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .container {
+
+    /* TODO: Revert to older tailwind to allow defining automatic center and padding for containers */
+    .section-title {
+      @apply text-light;
+      align-self: flex-start;
+      margin: 2rem;
+
+      &:after {
+        @apply text-primary;
+        content: "_";
+      }
+    }
+  }
 }
