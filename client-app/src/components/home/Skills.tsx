@@ -29,7 +29,7 @@ const skillSections: { key: SkillSectionKey; icon: React.FC<React.SVGProps<SVGSV
 
 const Skills = () => {
   return (
-    <div className="relative bg-dark">
+    <div id="skills" className="relative bg-dark">
       <div className="container mx-auto py-8 flex flex-col items-center justify-center">
         <h2 className="section-title">
           <Trans i18nKey="skills.title" />

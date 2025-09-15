@@ -15,7 +15,7 @@ const Experience = () => {
   useTranslation();
 
   return (
-    <div className="relative bg-medium-dark py-8">
+    <div id="experience" className="relative bg-medium-dark py-8">
       <div className="container mx-auto flex flex-col items-center">
         <h2 className="section-title">
           <Trans i18nKey="experience.title" />

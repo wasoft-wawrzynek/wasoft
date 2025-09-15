@@ -7,7 +7,7 @@ const Hobby = () => {
   useTranslation();
 
   return (
-    <div className="relative">
+    <div id="hobby" className="relative">
       <div className="container mx-auto py-8">
         <h2 className="section-title">
           <Trans i18nKey="hobby.title" />

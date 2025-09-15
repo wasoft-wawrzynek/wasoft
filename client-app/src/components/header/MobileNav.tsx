@@ -1,18 +1,43 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LanguageSelector from "../controls/LanguageSelector";
 import { sections } from "./Header";
 import { Trans } from "react-i18next";
 
+const TOPBAR_HEIGHT = 72; // "h-18" = 4.5rem = 72px
+
 const MobileNav = () => {
   const [showPanel, setShowPanel] = useState(false);
 
+  const [active, setActive] = useState<string>("");
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.find((e) => e.isIntersecting);
+        if (visible) {
+          setActive(visible.target.id);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   const scroll = (section: string) => {
-    setShowPanel(false);
     const el = document.getElementById(section);
-    el?.scrollIntoView({ behavior: "smooth" });
+    if (el) {
+      const yOffset = -TOPBAR_HEIGHT;
+      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
   };
 
-  /* TODO: Implement highlighting active section */
   /* TODO: Fix hiding on clicking outside the panel */
   /* TODO: Improve appearance (spacing between buttons, fonts, etc.) */
   return (
@@ -61,7 +86,7 @@ const MobileNav = () => {
         {sections.map((section) => (
           <button
             key={section}
-            className="text-light py-2 mb-2 text-xl border-b-2 border-transparent hover:border-primary hover:text-primary transition-colors w-full text-left"
+            className={`text-light py-2 mb-2 border-b-2 border-transparent hover:border-primary hover:text-primary transition-colors w-full text-left ${active === section ? "text-primary" : ""}`}
             onClick={() => scroll(section)}
           >
             <Trans i18nKey={`header.${section}`} />

@@ -19,7 +19,7 @@ const Education = () => {
   useTranslation();
 
   return (
-    <div className="relative bg-medium-dark">
+    <div id="education" className="relative bg-medium-dark">
       <div className="container mx-auto py-8 flex flex-col items-center justify-center">
         <h2 className="section-title">
           <Trans i18nKey="education.title" />
