@@ -11,7 +11,7 @@ const languages = ["pl-pl", "pl-sp", "en"];
 
 const getFlagSrc = (language: string): string => `./locales/${language}.svg`;
 
-const LanguageSelector = () => {
+const LanguageSelector = ({ className }: { className?: string }) => {
   const { i18n } = useTranslation();
 
   const getCurrentLang = () => {
@@ -21,29 +21,31 @@ const LanguageSelector = () => {
   };
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Avatar className="w-10 h-10">
-          <AvatarImage src={getFlagSrc(getCurrentLang())} />
-        </Avatar>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent side="left" className="flex flex-row gap-2 p-2">
-        {languages
-          .filter((lang) => lang != getCurrentLang())
-          .map((lang) => {
-            return (
-              <DropdownMenuItem
-                key={lang}
-                onClick={() => i18n.changeLanguage(lang)}
-              >
-                <Avatar className="w-10 h-10">
-                  <AvatarImage src={getFlagSrc(lang)} alt={lang} />
-                </Avatar>
-              </DropdownMenuItem>
-            );
-          })}
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <div className={className}>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Avatar className="w-10 h-10">
+            <AvatarImage src={getFlagSrc(getCurrentLang())} />
+          </Avatar>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent side="left" className="flex flex-row gap-2 p-2">
+          {languages
+            .filter((lang) => lang != getCurrentLang())
+            .map((lang) => {
+              return (
+                <DropdownMenuItem
+                  key={lang}
+                  onClick={() => i18n.changeLanguage(lang)}
+                >
+                  <Avatar className="w-10 h-10">
+                    <AvatarImage src={getFlagSrc(lang)} alt={lang} />
+                  </Avatar>
+                </DropdownMenuItem>
+              );
+            })}
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </div>
   );
 };
 
