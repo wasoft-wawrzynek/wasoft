@@ -12,7 +12,7 @@ const Hero = () => {
   ];
 
   return (
-    <div id="hero" className="relative flex flex-col items-center justify-center h-screen w-screen">
+    <div id="hero" className="relative flex flex-col items-center justify-center h-[100vh] w-full">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-[5em] w-full px-4 md:px-8">
         {/* Logo Content */}
         <div className="flex justify-center md:justify-end items-center">

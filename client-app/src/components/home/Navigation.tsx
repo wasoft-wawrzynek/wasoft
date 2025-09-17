@@ -61,8 +61,8 @@ const Navigation = () => {
   return (
     <nav
       className={`fixed top-0 w-full h-18 z-20 bg-dark transition-all duration-700 ${showTopPanel ? "translate-y-0" : "-translate-y-full"}`}>
-      <div className="container h-full mx-auto flex items-center justify-between px-0 py-0">
-        <div className="h-full ml-4 flex items-center">
+      <div className="container h-full mx-auto flex items-center justify-between px-8">
+        <div className="h-full flex items-center">
           <WasoftLightIcon className="h-full w-auto" />
         </div>
 
@@ -79,10 +79,10 @@ const Navigation = () => {
             </button>
           ))}
         </div>
-        <LanguageSelector className="hidden md:flex items-center h-full mr-4" />
+        <LanguageSelector className="hidden md:flex items-center h-full" side="bottom" />
 
         {/* Mobile */}
-        <div className="md:hidden flex items-center h-full mr-4">
+        <div className="md:hidden flex items-center h-full">
           <Hamburger
             toggled={showSidePanel}
             toggle={setShowSidePanel}
@@ -97,7 +97,7 @@ const Navigation = () => {
         <>
           {/* Overlay */}
           <div
-            className="fixed inset-0 z-5 h-screen w-screen"
+            className="fixed inset-0 z-5 h-screen w-full"
             onClick={() => setShowSidePanel(false)}
           />
           <div
@@ -113,7 +113,7 @@ const Navigation = () => {
                 <Trans i18nKey={`header.${section}`} />
               </button>
             ))}
-            <LanguageSelector className="mt-4 w-full flex justify-start" />
+            <LanguageSelector className="mt-4 w-full flex justify-start" side="right" />
           </div>
         </>
       )}

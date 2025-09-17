@@ -11,7 +11,7 @@ const languages = ["pl-pl", "pl-sp", "en"];
 
 const getFlagSrc = (language: string): string => `./locales/${language}.svg`;
 
-const LanguageSelector = ({ className }: { className?: string }) => {
+const LanguageSelector = ({ className, side }: { className?: string, side: "bottom" | "right" }) => {
   const { i18n } = useTranslation();
 
   const getCurrentLang = () => {
@@ -28,7 +28,7 @@ const LanguageSelector = ({ className }: { className?: string }) => {
             <AvatarImage src={getFlagSrc(getCurrentLang())} />
           </Avatar>
         </DropdownMenuTrigger>
-        <DropdownMenuContent side="left" className="flex flex-row gap-2 p-2">
+        <DropdownMenuContent side={side} className={`flex ${side === "bottom" ? "flex-col" : "flex-row"} gap-2 p-2`}>
           {languages
             .filter((lang) => lang != getCurrentLang())
             .map((lang) => {
