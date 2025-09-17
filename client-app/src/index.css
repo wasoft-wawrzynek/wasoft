@@ -133,6 +133,11 @@
     overflow-x: hidden;
   }
 
+  /* Fix for Radix-ui dropdown issue */
+  body[data-scroll-locked] {
+    margin: 0 !important;
+  }
+
   /* TODO: This should probably be done by Tailwind themes, not the base styles */
   h1 {
     font-family: "Teko", sans-serif;
