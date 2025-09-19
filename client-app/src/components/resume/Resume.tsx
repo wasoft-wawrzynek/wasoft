@@ -30,7 +30,7 @@ const Resume = () => {
   return (
     <div className="flex flex-col items-center">
       <div className="flex gap-4 my-4">
-        <LanguageSelector />
+        <LanguageSelector side="bottom" />
         <button
           className="grid grid-cols-[auto_1fr] items-center gap-2 px-2 py-2 text-light w-32"
           onClick={generatePdf}

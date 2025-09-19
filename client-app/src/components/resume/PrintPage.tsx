@@ -12,13 +12,14 @@ interface IPageProps {
   height: number;
 }
 
-const PrintPage = (props: IPageProps) => {
+const PrintPage = ({ width, height }: IPageProps) => {
   return (
     <div
+      id="pdf-page"
       className="grid grid-cols-[1fr_2.5fr] grid-rows-[auto_auto_auto_1fr] mx-auto"
       style={{
-        width: `${props.width}px`,
-        height: `${Math.floor(props.height)}px`,
+        width: `${width}px`,
+        height: `${Math.floor(height)}px`,
       }}
     >
       {/* Profile Section */}
