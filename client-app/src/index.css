@@ -90,6 +90,11 @@
     margin: 0 !important;
   }
 
+  /* Fix for PDF print-out overlap */
+  #pdf-page * {
+    line-height: 1.2 !important;
+  }
+
   /* TODO: This should probably be done by Tailwind themes, not the base styles */
   h1 {
     font-family: "Teko", sans-serif;
