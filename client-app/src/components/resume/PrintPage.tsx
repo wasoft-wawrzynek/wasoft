@@ -10,9 +10,10 @@ import {
 interface IPageProps {
   width: number;
   height: number;
+  isPdf?: boolean;
 }
 
-const PrintPage = ({ width, height }: IPageProps) => {
+const PrintPage = ({ width, height, isPdf }: IPageProps) => {
   return (
     <div
       id="pdf-page"
@@ -30,11 +31,11 @@ const PrintPage = ({ width, height }: IPageProps) => {
       </div>
       {/* Header Section */}
       <div className="flex bg-[#252525]">
-        <div className="flex flex-col gap-2 items-center m-auto">
-          <h2 className="text-3xl leading-10 uppercase font-bold mt-[-0.5rem] mb-[-0.5rem] tracking-[4px]">
+        <div className="flex flex-col items-center m-auto">
+          <h2 className="uppercase font-bold tracking-[4px]" style={isPdf ? { marginBottom: "1.75rem" } : {}}>
             Paweł Wawrzynek
           </h2>
-          <hr className="w-full h-[3px] border-none bg-primary" />
+          <hr className="w-full h-[3px] border-none bg-primary my-2" />
           <h4 className="text-medium-light text-xl">
             .NET Developer / Team leader
           </h4>
@@ -42,7 +43,7 @@ const PrintPage = ({ width, height }: IPageProps) => {
       </div>
       {/* About Me Section */}
       <div className="bg-medium-light p-4">
-        <Title textId="resume.about-me" />
+        <Title textId="resume.about-me" isPdf={isPdf} />
         <div className="flex items-center gap-2 my-2">
           <img className="h-6" src="/img/resume/birth.png" alt="birthday" />
           <p className="text-dark text-sm">
@@ -73,7 +74,7 @@ const PrintPage = ({ width, height }: IPageProps) => {
       </div>
       {/* Experience Section */}
       <div className="bg-light p-4">
-        <Title textId="header.experience" />
+        <Title textId="header.experience" isPdf={isPdf} />
         <div className="pt-4">
           {personalData.experience.map((job) => (
             <div key={job.company} className="grid grid-cols-[4.5rem_3px_1fr] gap-2">
@@ -107,7 +108,7 @@ const PrintPage = ({ width, height }: IPageProps) => {
       </div>
       {/* Contact Section */}
       <div className="bg-medium-light p-4">
-        <Title textId="header.contact" />
+        <Title textId="header.contact" isPdf={isPdf} />
         <div className="flex items-center gap-2 my-2">
           <img className="h-6" src="/img/resume/phone.png" alt="phone" />
           <p className="text-dark text-sm">{personalData.contact.telephone}</p>
@@ -127,7 +128,7 @@ const PrintPage = ({ width, height }: IPageProps) => {
       </div>
       {/* Education Section */}
       <div className="bg-light p-4">
-        <Title textId="header.education" />
+        <Title textId="header.education" isPdf={isPdf} />
         <div className="pt-4">
           {personalData.education.map((school) => (
             <div key={school.titleId} className="grid grid-cols-[4.5rem_3px_1fr] gap-2">
@@ -157,7 +158,7 @@ const PrintPage = ({ width, height }: IPageProps) => {
       </div>
       {/* Hobbies Section */}
       <div className="bg-medium-light p-4">
-        <Title textId="header.hobby" />
+        <Title textId="header.hobby" isPdf={isPdf} />
         <div className="flex flex-row gap-2 mt-2">
           {personalData.hobby.map((hobby) => (
             <div key={hobby.titleId} className="flex flex-col gap-2 items-center">
@@ -173,7 +174,7 @@ const PrintPage = ({ width, height }: IPageProps) => {
       </div>
       {/* Skills Section */}
       <div className="bg-light p-4">
-        <Title textId="header.skills" />
+        <Title textId="header.skills" isPdf={isPdf} />
         <div className="grid grid-cols-2 gap-4 mt-4">
           <div className="flex flex-col items-center gap-2">
             <div className="flex flex-row items-center">
