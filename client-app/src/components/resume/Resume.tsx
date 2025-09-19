@@ -1,14 +1,12 @@
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import { jsPDF } from "jspdf";
 // @ts-ignore
 import initPdfFonts from "@/resources/pdfFonts.js";
 import PrintPage from "./PrintPage";
-import DownloadIcon from '@/resources/icons/download.svg?react';
-import LanguageSelector from "../controls/LanguageSelector";
+import Navigation from "./Navigation";
 
-const A4_RATIO = 1.414285714285714;
 const PAGE_WIDTH = 1000;
-const PAGE_HEIGHT = PAGE_WIDTH * A4_RATIO;
+const PAGE_HEIGHT = PAGE_WIDTH * 1.414285714285714;
 
 const Resume = () => {
   const { i18n } = useTranslation();
@@ -28,22 +26,13 @@ const Resume = () => {
   };
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="flex gap-4 my-4">
-        <LanguageSelector side="bottom" />
-        <button
-          className="grid grid-cols-[auto_1fr] items-center gap-2 px-2 py-2 text-light w-32"
-          onClick={generatePdf}
-        >
-          <DownloadIcon className="fill-primary" />
-          <h3 className="uppercase text-center text-xl pt-1">
-            <Trans i18nKey="resume.print" />
-          </h3>
-        </button>
+    <div className="flex flex-col items-center w-full">
+      <Navigation onPrint={generatePdf} />
+      <div className="pt-20 w-full flex flex-col items-center">
+        <PrintPage width={PAGE_WIDTH} height={PAGE_HEIGHT} />
       </div>
-      <PrintPage width={PAGE_WIDTH} height={PAGE_HEIGHT} />
     </div>
   );
-}
+};
 
 export default Resume;
