@@ -31,9 +31,9 @@ const FloatingCard = ({
 
   return (
     <div className={className} style={{ position: "relative" }}>
-      <div className={`w-full h-full px-[${maxMove[0]}px] py-[${maxMove[1]}px]`}>
+      <div className="w-full h-full" style={{ padding: `${maxMove[1]}px ${maxMove[0]}px`, }}>
         <div
-          className={`relative border-2 border-primary/50 p-4 w-full transition-transform duration-${2000 * 1.25} ease-in`}
+          className={`relative border-2 border-primary/50 p-4 w-full transition-transform duration-2500 ease-in`}
           style={{ transform: `translate(${position[0]}px, ${position[1]}px)` }}
         >
           {children}
@@ -48,4 +48,3 @@ const FloatingCard = ({
 };
 
 export default FloatingCard;
-// filepath: c:\Projects\wasoft\client-app\src\components\controls\FloatingCard.tsx
