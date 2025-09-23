@@ -31,7 +31,7 @@ const Education = () => {
                 <h3 className="text-medium-light self-center my-4">
                   <Trans i18nKey={step.titleId} />
                 </h3>
-                <FloatingCard className="flex flex-col items-center p-6">
+                <FloatingCard className="flex flex-col items-center pl-6 md:pl-0" maxMove={[15, 15]}>
                   <h3 className="text-primary text-2xl mb-4 w-full text-end">
                     <Trans i18nKey={step.facultyId} />
                   </h3>

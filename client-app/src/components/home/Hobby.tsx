@@ -20,7 +20,7 @@ const Hobby = () => {
               <FloatingCard
                 className={`mx-4 md:max-w-[50%] md:mx-15 md:self-${isEven ? "end" : "start"}`}
                 key={activity.titleId}
-                maxMove={[15, 15]}
+                maxMove={[20, 20]}
               >
                 <div className={`relative flex items-center flex-col ${isEven ? "md:flex-row-reverse" : "md:flex-row"}`}>
                   {/* Bubble image */}

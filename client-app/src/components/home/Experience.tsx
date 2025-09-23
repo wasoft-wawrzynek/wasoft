@@ -35,7 +35,7 @@ const Experience = () => {
                 <div
                   className={`absolute top-8 w-6 h-6 rounded-full bg-primary border-4 border-medium-dark ${isRight ? "md:-left-3" : "md:-right-3 md:left-auto"} left-2`}
                 />
-                <FloatingCard className="p-6 pl-10 md:pl-6">
+                <FloatingCard className={`pl-6 md:pl-0 ${isRight ? "ml-2" : "mr-2"}`} maxMove={[20, 20]}>
                   <div className="flex flex-col gap-2 md:flex-row md:justify-between md:items-center mb-2">
                     <h3 className="text-primary">
                       {job.company}{" "}
