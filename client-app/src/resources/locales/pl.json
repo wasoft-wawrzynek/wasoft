@@ -1,72 +1,90 @@
 {
-    "header.skills": "Umiejętności",
-    "header.experience": "Doświadczenie",
-    "header.education": "Wykształcenie",
-    "header.hobby": "Po pracy",
-    "header.contact": "Kontakt",
-    "hero": {
-        "introduction-start": "Nazywam się ",
-        "introduction-end": " i jestem",
-        "developer": "programistą",
-        "team-leader": "team leaderem",
-        "brewer": "piwowarem",
-        "traveler": "podróżnikiem"
+  "header": {
+    "skills": "Umiejętności",
+    "experience": "Doświadczenie",
+    "education": "Wykształcenie",
+    "hobby": "Po pracy",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "introduction-start": "Nazywam się ",
+    "introduction-end": " i jestem",
+    "developer": "programistą",
+    "team-leader": "team leaderem",
+    "brewer": "piwowarem",
+    "traveler": "podróżnikiem"
+  },
+  "experience": {
+    "title": "Moje doświadczenie",
+    "eqtek": {
+      "description": "Rozwijanie i utrzymywanie platformy służącej do konfigurowania i projektowania formularzy i procesów. Projektowanie i dostarczanie rozwiązań dopasowanych do potrzeb indywidualnych klientów - brytyjskich instytucji państwowych i banków.<br>Zarządzanie zespołem programistów i testerów, wspomaganie komunikacji z biznesem i usprawnianie procesu wytwarzania oprogramowania."
     },
-    "experience.title": "Moje doświadczenie",
-    "experience.eqtek.description": "Rozwijanie i utrzymywanie platformy służącej do konfigurowania i projektowania formularzy i procesów. Projektowanie i dostarczanie rozwiązań dopasowanych do potrzeb indywidualnych klientów - brytyjskich instytucji państwowych i banków.<br>Zarządzanie zespołem programistów i testerów, wspomaganie komunikacji z biznesem i usprawnianie procesu wytwarzania oprogramowania.",
-    "experience.vsoft.description": "Utrzymywanie aplikacji webowej do obsługi sprzedaży złożonych konfiguracji ubezpieczeń komunikacyjnych (OC/AC), dostarczanej dla ogólnopolskich towarzystw ubezpieczeniowych.",
-    "experience.flightscope.pm-description": "Ocena, planowanie i projektowanie architektury kilku równoległych projektów technicznych.<br>Wspomaganie komunikacji pomiędzy oddziałami (Polska, RPA i USA) oraz wspomaganie współpracy między zespołami zadaniowymi (grafikami, inżynierami, sprzedawcami, itd.).<br>Priorytetyzowanie zadań i projektów z uwzględnieniem aktualnych zasobów i zapotrzebowania klientów.<br>Zarządzanie kilkoma niewielkimi zespołami programistów.",
-    "experience.flightscope.leader-description": "Ponad dotychczasowe obowiązki, włączyłem się w projektowanie architektury nowych rozwiązań, planowanie rozwoju projektu i przewodzenie niewielkiemu zespołowi programistów.",
-    "experience.flightscope.dev-description": "Rozwój i utrzymanie aplikacji desktopowej, używanej przez golfistów (profesjonalistów i amatorów) do doskonalenia swoich umiejętności, na podstawie danych analitycznych dotyczących lotu piłki, dostarczonych przez radar sportowy.",
-    "education": {
-        "title": "Moje wykształcenie",
-        "school": "Politechnika Śląska",
-        "faculty": "Automatyka i Robotyka",
-        "masters": {
-            "title": "Studia magisterskie",
-            "desc": "Praca dyplowmowa pod tytułem \"System do dekodowania kodu Morse'a z użyciem programowo definiowanego radia\" zrealizowany w postaci aplikacji dokonującej przetwarzania cyfrowego sygnału dźwiękowego w czasie rzeczywistym, napisanej w języku C++."
-        },
-        "bachelor": {
-            "title": "Studia inżynierskie",
-            "desc": " "
-        }
+    "vsoft": {
+      "description": "Utrzymywanie aplikacji webowej do obsługi sprzedaży złożonych konfiguracji ubezpieczeń komunikacyjnych (OC/AC), dostarczanej dla ogólnopolskich towarzystw ubezpieczeniowych."
     },
-    "hobby.title": "Po pracy",
-    "hobby.brewing-title": "Piwowarstwo",
-    "hobby.brewing-description": "Warzenie własnego piwa na pierwszy rzut oka może wydawać się skomplikowane i wymagające. I takie właśnie jest... Po kilkudziesięcu warkach nadal mam wrażenie, że nie poznałem nawet wierzchołka góry chmielowej.<br><br>Niezależnie od efektów, uwielbiam eksperymentować z kolejnymi stylami - planować, warzyć i doglądać fermentacji. Gorzej z myciem butelek, etykietowaniem i sprzątaniem. Ale bez pracy nie ma kołaczy...<br><br>Postęp mojej piwnej przygody można śledzić na stronie mojego browaru:<br><br><wawrzelniaLink>",
-    "hobby.squash-title": "Squash",
-    "hobby.squash-description": "Dla zdrowotności, zarówno tej fizycznej, jak i psychicznej, potrzebuję czasem wylać z siebie trochę potu.<br><br>Zdecydowanie nie należę do tych, którzy potafią stawiać wyzwania sami sobie, śrubując wyniki. Ja potrzebuję żywego, wymagającego przeciwnika po drugiej stronie kortu. Czasem wygram, czasem przegram, ale najważniejszy jest ten dreszcz emocji między początkiem a kończem meczu.",
-    "hobby.traveling-title": "Podróże",
-    "hobby.traveling-description": "Nic w tym oryginalnego, ale tak jak wielu innych - uwielbiam podróżować. Im dalszy i bardziej egzotyczny kierunek - tym lepiej. I nie chodzi tylko o widoki czy architekturę. Bardzo lubię obserwować osobliwości innych miejsc i kultur.<br><br>Najciekawsze są zawsze... sklepy spożywcze. To właśnie tam najepiej widać jak bardzo dany kraj różni się od naszego - po smakach, zapachach i upodobaniach tubylców.",
-    "contact.title": "Kontakt",
-    "contact.intro": "Zainteresował Cię mój profil?<br> Myślisz, że pasuję jak ulał do Twojego zespołu?<br>Napisz do mnie! Załącz kilka szczegółów i wysyłaj!<br>Odpiszę jak najprędzej.",
-    "contact.company": "Firma",
-    "contact.name": "Imię",
-    "contact.address": "Email",
-    "contact.message": "Zamieniam się w słuch!",
-    "contact.send": "Ślij!",
-    "contact.success": "Twoja wiadomość została wysłana! Dziękuję za kontakt.",
-    "contact.error": "Coś poszło nie tak... Nie udało się wysłać Twojej wiadomości. Spróbuj później.",
-    "contact.resume": "Potrzebujesz mojego CV do celów rekrutacji? Nic prostszego! Możesz wygenerować je tutaj:",
-    "contact.here": "Cirriculum Vitae",
-    "skills.title": "Moje umiejętności",
-    "skills.key": "Kluczowe",
-    "skills.solid": "Ugruntowane",
-    "skills.promising": "Rokujące",
-    "skills.basic": "Podstawowe",
-    "gliwice": "Gliwice, Polska",
-    "krakow": "Kraków, Polska",
-    "now": "teraz",
-    "year": "r",
-    "years": "l",
-    "resume.back": "Powrót",
-    "resume.print": "Drukuj",
-    "resume.about-me": "O mnie",
-    "resume.about-me-text-1": "Uwielbiam programować i było tak od zawsze. Wymyślanie odpowiedniego algorytmy i stopniowe wcielanie go w życie, kawałek po kawałku, daje mi mnóstwo satysfakcji. Nawet nieodzowny element analizowania błędów może być budujący, gdy wreszcie uda się rozwiązać problem.",
-    "resume.about-me-text-2": "Ale tworzenie komercyjnej aplikacji to dużo więcej niż tylko pisanie kodu. Właściwie to zaledwie wierzchołek góry lodowej. Potrzebny jest dobry projekt, dokładny plan i przewidywalność. Wiele osób o różnych umiejętnościach i z różnych środowisk musi znaleźć wspólny język, by osiągnąć wspólny cel. Nawet takie sprawy jak nieodpowiednie narzędzia lub niskie morale mogą zagrozić ostatecznemu wynikowi. I te elementy są dla mnie równie ciekawe.",
-    "resume.about-me-text-3": "Nie potrafię siedzieć cicho, gdy widzę, że coś nie działa lub zwyczajnie może być poprawione. Potrafię być nieustępliwy lub wręcz natrętny by pomóc mojemu zespołowi. I jeśli mam być szczery, uważam to za zaletę.",
-    "resume.lang-polish": "polski",
-    "resume.lang-english": "angielski",
-    "resume.lang-native": "ojczysty",
-    "resume.lang-communicative": "biegły"
+    "flightscope": {
+      "pm-description": "Ocena, planowanie i projektowanie architektury kilku równoległych projektów technicznych.<br>Wspomaganie komunikacji pomiędzy oddziałami (Polska, RPA i USA) oraz wspomaganie współpracy między zespołami zadaniowymi (grafikami, inżynierami, sprzedawcami, itd.).<br>Priorytetyzowanie zadań i projektów z uwzględnieniem aktualnych zasobów i zapotrzebowania klientów.<br>Zarządzanie kilkoma niewielkimi zespołami programistów.",
+      "leader-description": "Ponad dotychczasowe obowiązki, włączyłem się w projektowanie architektury nowych rozwiązań, planowanie rozwoju projektu i przewodzenie niewielkiemu zespołowi programistów.",
+      "dev-description": "Rozwój i utrzymanie aplikacji desktopowej, używanej przez golfistów (profesjonalistów i amatorów) do doskonalenia swoich umiejętności, na podstawie danych analitycznych dotyczących lotu piłki, dostarczonych przez radar sportowy."
+    }
+  },
+  "education": {
+    "title": "Moje wykształcenie",
+    "school": "Politechnika Śląska",
+    "faculty": "Automatyka i Robotyka",
+    "masters": {
+      "title": "Studia magisterskie",
+      "desc": "Praca dyplowmowa pod tytułem \"System do dekodowania kodu Morse'a z użyciem programowo definiowanego radia\" zrealizowany w postaci aplikacji dokonującej przetwarzania cyfrowego sygnału dźwiękowego w czasie rzeczywistym, napisanej w języku C++."
+    },
+    "bachelor": {
+      "title": "Studia inżynierskie",
+      "desc": " "
+    }
+  },
+  "hobby": {
+    "title": "Po pracy",
+    "brewing-title": "Piwowarstwo",
+    "brewing-description": "Warzenie własnego piwa na pierwszy rzut oka może wydawać się skomplikowane i wymagające. I takie właśnie jest... Po kilkudziesięcu warkach nadal mam wrażenie, że nie poznałem nawet wierzchołka góry chmielowej.<br><br>Niezależnie od efektów, uwielbiam eksperymentować z kolejnymi stylami - planować, warzyć i doglądać fermentacji. Gorzej z myciem butelek, etykietowaniem i sprzątaniem. Ale bez pracy nie ma kołaczy...<br><br>Postęp mojej piwnej przygody można śledzić na stronie mojego browaru:<br><br><wawrzelniaLink>",
+    "squash-title": "Squash",
+    "squash-description": "Dla zdrowotności, zarówno tej fizycznej, jak i psychicznej, potrzebuję czasem wylać z siebie trochę potu.<br><br>Zdecydowanie nie należę do tych, którzy potafią stawiać wyzwania sami sobie, śrubując wyniki. Ja potrzebuję żywego, wymagającego przeciwnika po drugiej stronie kortu. Czasem wygram, czasem przegram, ale najważniejszy jest ten dreszcz emocji między początkiem a kończem meczu.",
+    "traveling-title": "Podróże",
+    "traveling-description": "Nic w tym oryginalnego, ale tak jak wielu innych - uwielbiam podróżować. Im dalszy i bardziej egzotyczny kierunek - tym lepiej. I nie chodzi tylko o widoki czy architekturę. Bardzo lubię obserwować osobliwości innych miejsc i kultur.<br><br>Najciekawsze są zawsze... sklepy spożywcze. To właśnie tam najepiej widać jak bardzo dany kraj różni się od naszego - po smakach, zapachach i upodobaniach tubylców."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "intro": "Zainteresował Cię mój profil?<br> Myślisz, że pasuję jak ulał do Twojego zespołu?<br>Napisz do mnie! Załącz kilka szczegółów i wysyłaj!<br>Odpiszę jak najprędzej.",
+    "company": "Firma",
+    "name": "Imię",
+    "address": "Email",
+    "message": "Zamieniam się w słuch!",
+    "send": "Ślij!",
+    "success": "Twoja wiadomość została wysłana! Dziękuję za kontakt.",
+    "error": "Coś poszło nie tak... Nie udało się wysłać Twojej wiadomości. Spróbuj później.",
+    "resume": "Potrzebujesz mojego CV do celów rekrutacji? Nic prostszego! Możesz wygenerować je tutaj:",
+    "here": "Cirriculum Vitae"
+  },
+  "skills": {
+    "title": "Moje umiejętności",
+    "key": "Kluczowe",
+    "solid": "Ugruntowane",
+    "promising": "Rokujące",
+    "basic": "Podstawowe"
+  },
+  "gliwice": "Gliwice, Polska",
+  "krakow": "Kraków, Polska",
+  "now": "teraz",
+  "year": "r",
+  "years": "l",
+  "resume": {
+    "back": "Powrót",
+    "print": "Drukuj",
+    "about-me": "O mnie",
+    "about-me-text-1": "Uwielbiam programować i było tak od zawsze. Wymyślanie odpowiedniego algorytmy i stopniowe wcielanie go w życie, kawałek po kawałku, daje mi mnóstwo satysfakcji. Nawet nieodzowny element analizowania błędów może być budujący, gdy wreszcie uda się rozwiązać problem.",
+    "about-me-text-2": "Ale tworzenie komercyjnej aplikacji to dużo więcej niż tylko pisanie kodu. Właściwie to zaledwie wierzchołek góry lodowej. Potrzebny jest dobry projekt, dokładny plan i przewidywalność. Wiele osób o różnych umiejętnościach i z różnych środowisk musi znaleźć wspólny język, by osiągnąć wspólny cel. Nawet takie sprawy jak nieodpowiednie narzędzia lub niskie morale mogą zagrozić ostatecznemu wynikowi. I te elementy są dla mnie równie ciekawe.",
+    "about-me-text-3": "Nie potrafię siedzieć cicho, gdy widzę, że coś nie działa lub zwyczajnie może być poprawione. Potrafię być nieustępliwy lub wręcz natrętny by pomóc mojemu zespołowi. I jeśli mam być szczery, uważam to za zaletę.",
+    "lang-polish": "polski",
+    "lang-english": "angielski",
+    "lang-native": "ojczysty",
+    "lang-communicative": "biegły"
+  }
 }
