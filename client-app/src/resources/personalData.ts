@@ -1,9 +1,4 @@
 const personalData = {
-  aboutMeId: [
-    "resume.about-me-text-1",
-    "resume.about-me-text-2",
-    "resume.about-me-text-3",
-  ],
   dateOfBirth: new Date("1991-07-01"),
   contact: {
     telephone: "691-262-330",

@@ -78,10 +78,14 @@
   "resume": {
     "back": "Nazŏd",
     "print": "Drukuj",
-    "about-me": "Ô mnie",
-    "about-me-text-1": "Lubiōm programować i tak było ôd dycki. Myślanie ô algorytmach i wcielanie ich w życie, kawałek po kawałku, daje mi moc radości. Nawet szukanie błyndōw może być fajne, jak sie w kōńcu naprawi problem.",
-    "about-me-text-2": "Ale robiynie aplikacyje to niy ino kod. To sam nojpiyrszy szrajber. Potrzebny je projekt, plan i spokōj. Lōdzie z roztōmajtych dziedzin muszōm się dogadać. Nawet złe nŏrzynia abo niske morale mogōm zniszczyć projekt. I to też je dlo mie ciekawe.",
-    "about-me-text-3": "Niy umia siedzieć cicho, jak widza, że cosik niy funguje abo idzie zrobić lepi. Umia być uparci i natrętni, coby pomōc moji ekipie. I powiym szczerze – widza to za zaleta.",
+    "about-me": {
+      "title": "Ô mnie",
+      "content": [
+        "Lubiōm programować i tak było ôd dycki. Myślanie ô algorytmach i wcielanie ich w życie, kawałek po kawałku, daje mi moc radości. Nawet szukanie błyndōw może być fajne, jak sie w kōńcu naprawi problem.",
+        "Ale robiynie aplikacyje to niy ino kod. To sam nojpiyrszy szrajber. Potrzebny je projekt, plan i spokōj. Lōdzie z roztōmajtych dziedzin muszōm się dogadać. Nawet złe nŏrzynia abo niske morale mogōm zniszczyć projekt. I to też je dlo mie ciekawe.",
+        "Niy umia siedzieć cicho, jak widza, że cosik niy funguje abo idzie zrobić lepi. Umia być uparci i natrętni, coby pomōc moji ekipie. I powiym szczerze – widza to za zaleta."
+      ]
+    },
     "lang-polish": "polski",
     "lang-english": "angielski",
     "lang-native": "ôjcysty",
