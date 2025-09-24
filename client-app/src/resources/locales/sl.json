@@ -3,38 +3,38 @@
     "skills": "Umiejętności",
     "experience": "Doświadczenie",
     "education": "Wykształcenie",
-    "hobby": "Po pracy",
-    "contact": "Kontakt"
+    "hobby": "Po robocie",
+    "contact": "Kōntakt"
   },
   "hero": {
-    "introduction-start": "Nazywam się ",
-    "introduction-end": " i jestem",
-    "developer": "programistą",
-    "team-leader": "team leaderem",
-    "brewer": "piwowarem",
-    "traveler": "podróżnikiem"
+    "introduction-start": "Mianujom mie ",
+    "introduction-end": " i jeżech",
+    "developer": "programisto",
+    "team-leader": "szefym ekipy",
+    "brewer": "piwoŏrzym",
+    "traveler": "podróżnikiym"
   },
   "experience": {
     "title": "Moje doświadczenie",
     "eqtek": {
-      "description": "Rozwijanie i utrzymywanie platformy służącej do konfigurowania i projektowania formularzy i procesów. Projektowanie i dostarczanie rozwiązań dopasowanych do potrzeb indywidualnych klientów - brytyjskich instytucji państwowych i banków.<br>Zarządzanie zespołem programistów i testerów, wspomaganie komunikacji z biznesem i usprawnianie procesu wytwarzania oprogramowania."
+      "description": "Rozwiyjanie i utrzimowanie platformy do kōnfigurowanio i projektowanio formularzy i procesōw. Projektowanie i dostarczanie rozwiōnzań dopasowanych do potrzeb klijyntōw – głōwnie brytyjskich instytucyji i bankōw.<br>Zarządzanie ekipōm programistōw i testerōw, pomaganie w kōmunikacyji z biznesym i ulepszanie procesu robiynio softu."
     },
     "vsoft": {
-      "description": "Utrzymywanie aplikacji webowej do obsługi sprzedaży złożonych konfiguracji ubezpieczeń komunikacyjnych (OC/AC), dostarczanej dla ogólnopolskich towarzystw ubezpieczeniowych."
+      "description": "Utrzimowanie aplikacyje webowej do obsugi sprzedoży kōmbinacyji ubezpieczeŏń kōmunikacyjnych (OC/AC), dostarczanej dlo polskich towarzistw ubezpieczeniowych."
     },
     "flightscope": {
-      "pm-description": "Ocena, planowanie i projektowanie architektury kilku równoległych projektów technicznych.<br>Wspomaganie komunikacji pomiędzy oddziałami (Polska, RPA i USA) oraz wspomaganie współpracy między zespołami zadaniowymi (grafikami, inżynierami, sprzedawcami, itd.).<br>Priorytetyzowanie zadań i projektów z uwzględnieniem aktualnych zasobów i zapotrzebowania klientów.<br>Zarządzanie kilkoma niewielkimi zespołami programistów.",
-      "leader-description": "Ponad dotychczasowe obowiązki, włączyłem się w projektowanie architektury nowych rozwiązań, planowanie rozwoju projektu i przewodzenie niewielkiemu zespołowi programistów.",
-      "dev-description": "Rozwój i utrzymanie aplikacji desktopowej, używanej przez golfistów (profesjonalistów i amatorów) do doskonalenia swoich umiejętności, na podstawie danych analitycznych dotyczących lotu piłki, dostarczonych przez radar sportowy."
+      "pm-description": "Szacunek, planowanie i projektowanie architektury kilku projektōw technicznych na roz. <br>Łōnczenie kōmunikacyje miyndzy ôddziałami (Polska, RPA i USA) i miyndzy ekipami (grafiki, inżyniery, sprzedŏwcy itp.).<br>Ustawiōnie pierszeństwa zadań i projektōw podług zasobōw i potrzeb klijyntōw.<br>Zarządzanie mniejszymi ekipami programistōw.",
+      "leader-description": "Nad to co już robiōłech, wciōng siech do projektowanio architektury nowych rozwiōnzań, planowanio rozwoju projektu i przodowaniŏ mniejszymu zespołowi programistōw.",
+      "dev-description": "Rozwōj i utrzimowanie aplikacyje desktopowej, co używajōm jŏgolfiści (zawodowi i amatorscy), coby polepszali swoje umiejętności na bazie danych ôd radaru sportowego o locie gańbola."
     }
   },
   "education": {
     "title": "Moje wykształcenie",
-    "school": "Politechnika Śląska",
+    "school": "Politechnika Ślōnsko",
     "faculty": "Automatyka i Robotyka",
     "masters": {
       "title": "Studia magisterskie",
-      "desc": "Praca dyplowmowa pod tytułem \"System do dekodowania kodu Morse'a z użyciem programowo definiowanego radia\" zrealizowany w postaci aplikacji dokonującej przetwarzania cyfrowego sygnału dźwiękowego w czasie rzeczywistym, napisanej w języku C++."
+      "desc": "Praca dyplōmowo pt. \"System do dekodowanio kodu Morse'a ze użyciym softwarowo definiowanego radia\" – aplikacyjo do przetwŏrzanio cyfrowego sygnołu dźwiynkowego w rzeczywistym czasie, napisanŏ w C++."
     },
     "bachelor": {
       "title": "Studia inżynierskie",
@@ -42,49 +42,49 @@
     }
   },
   "hobby": {
-    "title": "Po pracy",
-    "brewing-title": "Piwowarstwo",
-    "brewing-description": "Warzenie własnego piwa na pierwszy rzut oka może wydawać się skomplikowane i wymagające. I takie właśnie jest... Po kilkudziesięcu warkach nadal mam wrażenie, że nie poznałem nawet wierzchołka góry chmielowej.<br><br>Niezależnie od efektów, uwielbiam eksperymentować z kolejnymi stylami - planować, warzyć i doglądać fermentacji. Gorzej z myciem butelek, etykietowaniem i sprzątaniem. Ale bez pracy nie ma kołaczy...<br><br>Postęp mojej piwnej przygody można śledzić na stronie mojego browaru:<br><br><wawrzelniaLink>",
+    "title": "Po robocie",
+    "brewing-title": "Piwoŏrstwo",
+    "brewing-description": "Worzynie swojigo piwa na piyrszy sznup może sie wydŏwać skōmpikowane. I tak je… Po dziesiōntkach warek dalij żech niy widzioł nawet wiyrchōłka chmielowyj gōry.<br><br>Bez względu na efekt, lubia eksperymyntować ze stylami – planować, warzić i pilnować fermentacyje. Gorszŏ rzecz to mycie flaszek i sprzątanie. Ale bez roboty niy ma kołocza.<br><br>Postym moji przygody piwnej idzie śledzić na strōnie browaru:<br><br><wawrzelniaLink>",
     "squash-title": "Squash",
-    "squash-description": "Dla zdrowotności, zarówno tej fizycznej, jak i psychicznej, potrzebuję czasem wylać z siebie trochę potu.<br><br>Zdecydowanie nie należę do tych, którzy potafią stawiać wyzwania sami sobie, śrubując wyniki. Ja potrzebuję żywego, wymagającego przeciwnika po drugiej stronie kortu. Czasem wygram, czasem przegram, ale najważniejszy jest ten dreszcz emocji między początkiem a kończem meczu.",
-    "traveling-title": "Podróże",
-    "traveling-description": "Nic w tym oryginalnego, ale tak jak wielu innych - uwielbiam podróżować. Im dalszy i bardziej egzotyczny kierunek - tym lepiej. I nie chodzi tylko o widoki czy architekturę. Bardzo lubię obserwować osobliwości innych miejsc i kultur.<br><br>Najciekawsze są zawsze... sklepy spożywcze. To właśnie tam najepiej widać jak bardzo dany kraj różni się od naszego - po smakach, zapachach i upodobaniach tubylców."
+    "squash-description": "Dlo zdrowotności – i ciała, i łebŏ – musza czasym wylać ze siebie trochę potu.<br><br>Żodyn ze mie, co stawiŏ wyzwania sam se. Potrzebuja żywego przeciwnika na kōrcie. Czasym wygrywŏm, czasym przegrywŏm, ale nojważniyjszy je ten szpil miyndzy początkiym a kōńciym meczu.",
+    "traveling-title": "Podruże",
+    "traveling-description": "To niy żŏdna oryginalność, ale tak jak inkszi – lubia podrużować. Im dalij i egzotyczniyjsze miejsce – tym lepsze. I niy ino widoki. Lubiōm łobserwować dziwactwa inkszych kultur.<br><br>Nojciekawejsze sōm sklepy spożywcze. Tam nojlepij widać, jak sie roz różni kajś kraj – po smakach, wōniach i tym, co lubiōm miejscowi."
   },
   "contact": {
-    "title": "Kontakt",
-    "intro": "Zainteresował Cię mój profil?<br> Myślisz, że pasuję jak ulał do Twojego zespołu?<br>Napisz do mnie! Załącz kilka szczegółów i wysyłaj!<br>Odpiszę jak najprędzej.",
-    "company": "Firma",
-    "name": "Imię",
+    "title": "Kōntakt",
+    "intro": "Zainteresowoł cie moj profil?<br> Myślisz, iże pasuja do Twojij ekipy?<br>Napisz do mie! Dopisz parę szczegōłōw i ślij!<br>Ôdpiso najszybci.",
+    "company": "Ôrganizacyjo",
+    "name": "Miano",
     "address": "Email",
-    "message": "Zamieniam się w słuch!",
-    "send": "Ślij!",
-    "success": "Twoja wiadomość została wysłana! Dziękuję za kontakt.",
-    "error": "Coś poszło nie tak... Nie udało się wysłać Twojej wiadomości. Spróbuj później.",
-    "resume": "Potrzebujesz mojego CV do celów rekrutacji? Nic prostszego! Możesz wygenerować je tutaj:",
-    "here": "Cirriculum Vitae"
+    "message": "Żech sie wciepuje w suchanie!",
+    "send": "Wysyłej",
+    "success": "Twoja wiadōmość była wysłano! Dziynkuja za kōntakt.",
+    "error": "Cosik poszło źle... Twoja wiadōmość niy poszła. Sprōbuj niyskorzij.",
+    "resume": "Potrzebujesz mojigo CV dlo roboty? Prosto! Idzie wygenerować je tu:",
+    "here": "Curriculum Vitae"
   },
   "skills": {
     "title": "Moje umiejętności",
     "key": "Kluczowe",
-    "solid": "Ugruntowane",
-    "promising": "Rokujące",
+    "solid": "Mocne",
+    "promising": "Dobrze rokujōnce",
     "basic": "Podstawowe"
   },
-  "gliwice": "Gliwice, Polska",
-  "krakow": "Kraków, Polska",
-  "now": "teraz",
+  "gliwice": "Gliwice, Ślōnsk",
+  "krakow": "Krakōw, Polska",
+  "now": "terŏzki",
   "year": "r",
   "years": "l",
   "resume": {
-    "back": "Powrót",
+    "back": "Nazŏd",
     "print": "Drukuj",
-    "about-me": "O mnie",
-    "about-me-text-1": "Uwielbiam programować i było tak od zawsze. Wymyślanie odpowiedniego algorytmy i stopniowe wcielanie go w życie, kawałek po kawałku, daje mi mnóstwo satysfakcji. Nawet nieodzowny element analizowania błędów może być budujący, gdy wreszcie uda się rozwiązać problem.",
-    "about-me-text-2": "Ale tworzenie komercyjnej aplikacji to dużo więcej niż tylko pisanie kodu. Właściwie to zaledwie wierzchołek góry lodowej. Potrzebny jest dobry projekt, dokładny plan i przewidywalność. Wiele osób o różnych umiejętnościach i z różnych środowisk musi znaleźć wspólny język, by osiągnąć wspólny cel. Nawet takie sprawy jak nieodpowiednie narzędzia lub niskie morale mogą zagrozić ostatecznemu wynikowi. I te elementy są dla mnie równie ciekawe.",
-    "about-me-text-3": "Nie potrafię siedzieć cicho, gdy widzę, że coś nie działa lub zwyczajnie może być poprawione. Potrafię być nieustępliwy lub wręcz natrętny by pomóc mojemu zespołowi. I jeśli mam być szczery, uważam to za zaletę.",
+    "about-me": "Ô mnie",
+    "about-me-text-1": "Lubiōm programować i tak było ôd dycki. Myślanie ô algorytmach i wcielanie ich w życie, kawałek po kawałku, daje mi moc radości. Nawet szukanie błyndōw może być fajne, jak sie w kōńcu naprawi problem.",
+    "about-me-text-2": "Ale robiynie aplikacyje to niy ino kod. To sam nojpiyrszy szrajber. Potrzebny je projekt, plan i spokōj. Lōdzie z roztōmajtych dziedzin muszōm się dogadać. Nawet złe nŏrzynia abo niske morale mogōm zniszczyć projekt. I to też je dlo mie ciekawe.",
+    "about-me-text-3": "Niy umia siedzieć cicho, jak widza, że cosik niy funguje abo idzie zrobić lepi. Umia być uparci i natrętni, coby pomōc moji ekipie. I powiym szczerze – widza to za zaleta.",
     "lang-polish": "polski",
     "lang-english": "angielski",
-    "lang-native": "ojczysty",
+    "lang-native": "ôjcysty",
     "lang-communicative": "biegły"
   }
 }

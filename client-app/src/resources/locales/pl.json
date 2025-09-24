@@ -23,7 +23,7 @@
       "description": "Utrzymywanie aplikacji webowej do obsługi sprzedaży złożonych konfiguracji ubezpieczeń komunikacyjnych (OC/AC), dostarczanej dla ogólnopolskich towarzystw ubezpieczeniowych."
     },
     "flightscope": {
-      "pm-description": "Ocena, planowanie i projektowanie architektury kilku równoległych projektów technicznych.<br>Wspomaganie komunikacji pomiędzy oddziałami (Polska, RPA i USA) oraz wspomaganie współpracy między zespołami zadaniowymi (grafikami, inżynierami, sprzedawcami, itd.).<br>Priorytetyzowanie zadań i projektów z uwzględnieniem aktualnych zasobów i zapotrzebowania klientów.<br>Zarządzanie kilkoma niewielkimi zespołami programistów.",
+      "pm-description": "Ocena, planowanie i projektowanie architektury kilku równoległych projektów technicznych.<br>Wspomaganie komunikacji pomiędzy oddziałami (Polska, RPA i USA) oraz wspomaganie współpracy między zespołami zadaniowymi (grafikami, inżynierami, sprzedawcami, itd.).<br>Ustalanie priorytetów zadań i projektów z uwzględnieniem aktualnych zasobów i zapotrzebowania klientów.<br>Zarządzanie kilkoma niewielkimi zespołami programistów.",
       "leader-description": "Ponad dotychczasowe obowiązki, włączyłem się w projektowanie architektury nowych rozwiązań, planowanie rozwoju projektu i przewodzenie niewielkiemu zespołowi programistów.",
       "dev-description": "Rozwój i utrzymanie aplikacji desktopowej, używanej przez golfistów (profesjonalistów i amatorów) do doskonalenia swoich umiejętności, na podstawie danych analitycznych dotyczących lotu piłki, dostarczonych przez radar sportowy."
     }
@@ -34,7 +34,7 @@
     "faculty": "Automatyka i Robotyka",
     "masters": {
       "title": "Studia magisterskie",
-      "desc": "Praca dyplowmowa pod tytułem \"System do dekodowania kodu Morse'a z użyciem programowo definiowanego radia\" zrealizowany w postaci aplikacji dokonującej przetwarzania cyfrowego sygnału dźwiękowego w czasie rzeczywistym, napisanej w języku C++."
+      "desc": "Praca dyplomowa pod tytułem \"System do dekodowania kodu Morse'a z użyciem programowo definiowanego radia\" zrealizowany w postaci aplikacji dokonującej przetwarzania cyfrowego sygnału dźwiękowego w czasie rzeczywistym, napisanej w języku C++."
     },
     "bachelor": {
       "title": "Studia inżynierskie",
@@ -46,22 +46,22 @@
     "brewing-title": "Piwowarstwo",
     "brewing-description": "Warzenie własnego piwa na pierwszy rzut oka może wydawać się skomplikowane i wymagające. I takie właśnie jest... Po kilkudziesięcu warkach nadal mam wrażenie, że nie poznałem nawet wierzchołka góry chmielowej.<br><br>Niezależnie od efektów, uwielbiam eksperymentować z kolejnymi stylami - planować, warzyć i doglądać fermentacji. Gorzej z myciem butelek, etykietowaniem i sprzątaniem. Ale bez pracy nie ma kołaczy...<br><br>Postęp mojej piwnej przygody można śledzić na stronie mojego browaru:<br><br><wawrzelniaLink>",
     "squash-title": "Squash",
-    "squash-description": "Dla zdrowotności, zarówno tej fizycznej, jak i psychicznej, potrzebuję czasem wylać z siebie trochę potu.<br><br>Zdecydowanie nie należę do tych, którzy potafią stawiać wyzwania sami sobie, śrubując wyniki. Ja potrzebuję żywego, wymagającego przeciwnika po drugiej stronie kortu. Czasem wygram, czasem przegram, ale najważniejszy jest ten dreszcz emocji między początkiem a kończem meczu.",
+    "squash-description": "Dla zdrowotności, zarówno tej fizycznej, jak i psychicznej, potrzebuję czasem wylać z siebie trochę potu.<br><br>Zdecydowanie nie należę do tych, którzy potafią stawiać wyzwania sami sobie, śrubując wyniki. Ja potrzebuję żywego, wymagającego przeciwnika po drugiej stronie kortu. Czasem wygram, czasem przegram, ale najważniejszy jest ten dreszcz emocji między początkiem a końcem meczu.",
     "traveling-title": "Podróże",
-    "traveling-description": "Nic w tym oryginalnego, ale tak jak wielu innych - uwielbiam podróżować. Im dalszy i bardziej egzotyczny kierunek - tym lepiej. I nie chodzi tylko o widoki czy architekturę. Bardzo lubię obserwować osobliwości innych miejsc i kultur.<br><br>Najciekawsze są zawsze... sklepy spożywcze. To właśnie tam najepiej widać jak bardzo dany kraj różni się od naszego - po smakach, zapachach i upodobaniach tubylców."
+    "traveling-description": "Nic w tym oryginalnego, ale tak jak wielu innych - uwielbiam podróżować. Im dalszy i bardziej egzotyczny kierunek - tym lepiej. I nie chodzi tylko o widoki czy architekturę. Bardzo lubię obserwować osobliwości innych miejsc i kultur.<br><br>Najciekawsze są zawsze... sklepy spożywcze. To właśnie tam najlepiej widać jak bardzo dany kraj różni się od naszego - po smakach, zapachach i upodobaniach tubylców."
   },
   "contact": {
     "title": "Kontakt",
     "intro": "Zainteresował Cię mój profil?<br> Myślisz, że pasuję jak ulał do Twojego zespołu?<br>Napisz do mnie! Załącz kilka szczegółów i wysyłaj!<br>Odpiszę jak najprędzej.",
-    "company": "Firma",
+    "company": "Organizacja",
     "name": "Imię",
     "address": "Email",
     "message": "Zamieniam się w słuch!",
-    "send": "Ślij!",
+    "send": "Wyślij",
     "success": "Twoja wiadomość została wysłana! Dziękuję za kontakt.",
     "error": "Coś poszło nie tak... Nie udało się wysłać Twojej wiadomości. Spróbuj później.",
     "resume": "Potrzebujesz mojego CV do celów rekrutacji? Nic prostszego! Możesz wygenerować je tutaj:",
-    "here": "Cirriculum Vitae"
+    "here": "Curriculum Vitae"
   },
   "skills": {
     "title": "Moje umiejętności",

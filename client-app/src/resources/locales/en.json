@@ -25,7 +25,7 @@
     "flightscope": {
       "pm-description": "Evaluating, planning and designing architecture for multiple software projects.<br>Coordinating communication between offices (Poland, South Africa and USA) and synchronizing co-operation of teams (project owners, UI designers, engineers, etc.).<br>Prioritizing tasks and projects in regard to the available resources and the market demand.<br>Managing a few small software teams on all levels.",
       "leader-description": "I kept the previous duties. On top of that, I started designing software architecture, planning project development and overseeing the process, as well as managing a team of a few developers.",
-      "dev-description": "Developing and maintaining applications used by golfers (both professional and amateur) to improve their skills by analysing ball flight data provided by multiple sport radars."
+      "dev-description": "Developing and maintaining applications used by golfers (both professional and amateur) to improve their skills by analyzing ball flight data provided by multiple sport radars."
     }
   },
   "education": {
@@ -53,11 +53,11 @@
   "contact": {
     "title": "Contact",
     "intro": "Do you find my profile interesting?<br>You think I would perfectly fit in your team?<br>Contact me! Include a bit of details, and send!<br>I'll respond in no time.",
-    "company": "Company",
+    "company": "Organization",
     "name": "Name",
     "address": "Email",
-    "message": "Shoot!",
-    "send": "Off it goes!",
+    "message": "I'm listening!",
+    "send": "Send",
     "success": "Your message has been sent! Thank you for contacting me.",
     "error": "Something went wrong... Sending your message failed. Please, try again later.",
     "resume": "You need my resume for the purposes of your recruitment process? Easy peasy! You can generate it here:",
