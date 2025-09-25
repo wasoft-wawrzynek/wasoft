@@ -60,6 +60,7 @@ const Navigation = () => {
 
   return (
     <nav
+      data-testid="navigation"
       className={`fixed top-0 w-full h-18 z-20 bg-dark transition-all duration-700 ${showTopPanel ? "translate-y-0" : "-translate-y-full"}`}>
       <div className="container h-full mx-auto flex items-center justify-between px-8">
         <div className="h-full flex items-center">
