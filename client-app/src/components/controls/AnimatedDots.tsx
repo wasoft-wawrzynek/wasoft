@@ -4,7 +4,7 @@ import {
   LINE_MAX_OPACITY,
   LINE_MIN_OPACITY,
   LINE_WIDTH,
-} from "@/constants/dots";
+} from "@/config/dots";
 import { useEffect, useRef } from "react";
 
 type Color = {
