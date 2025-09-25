@@ -4,6 +4,10 @@ import svgr from "vite-plugin-svgr";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
+export const alias = {
+  "@": path.resolve(__dirname, "./src"),
+};
+
 export default defineConfig({
   plugins: [react(), tailwindcss(), svgr()],
   build: {
@@ -19,8 +23,6 @@ export default defineConfig({
     },
   },
   resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
+    alias,
   },
 });

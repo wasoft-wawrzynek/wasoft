@@ -42,3 +42,4 @@ describe("Home page", () => {
 });
 
 // TODO: Add tests for mobile navigation menu toggle
+// TODO: Add tests for language switcher
