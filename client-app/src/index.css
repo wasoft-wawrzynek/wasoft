@@ -126,6 +126,30 @@
     @apply bg-background text-foreground;
   }
 
+  /* Vendors */
+
+  .swal2-container {
+    .swal2-popup {
+      @apply bg-medium-dark;
+    }
+
+    .swal2-icon.swal2-success {
+      @apply border-primary;
+      @apply text-primary;
+    }
+
+    .swal2-title {
+      @apply text-light;
+      line-height: 2.5rem;
+    }
+
+    .swal2-styled.swal2-confirm {
+      @apply bg-primary;
+      @apply text-dark;
+    }
+  }
+
+  /* TODO: Revert to older tailwind to allow defining automatic center and padding for containers */
   .container {
     .section-title {
       @apply text-light;
