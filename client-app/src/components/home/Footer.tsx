@@ -1,4 +1,4 @@
-import packageJson from "../../package.json";
+import packageJson from "../../../package.json";
 import WasoftIcon from "@/resources/icons/wasoft.svg?react";
 import WawrzelniaIcon from "@/resources/icons/wawrzelnia.svg?react";
 import BitbucketIcon from "@/resources/icons/bitbucket.svg?react";

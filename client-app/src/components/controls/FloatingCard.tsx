@@ -9,7 +9,6 @@ const getNewPosition = (maxMove: [number, number]): [number, number] => {
 interface FloatingCardProps {
   children: ReactNode;
   className?: string;
-  intervalMs?: number;
   maxMove?: [number, number];
 }
 
