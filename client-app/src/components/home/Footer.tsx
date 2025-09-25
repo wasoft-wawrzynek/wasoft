@@ -4,7 +4,6 @@ import WawrzelniaIcon from "@/resources/icons/wawrzelnia.svg?react";
 import BitbucketIcon from "@/resources/icons/bitbucket.svg?react";
 import LinkedInIcon from "@/resources/icons/linkedin.svg?react";
 
-
 const Footer = () => {
   return (
     <footer id="footer" className="relative w-full">

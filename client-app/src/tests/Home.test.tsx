@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import App from "../App";
 import { describe, it, expect, vi } from "vitest";
 import '@testing-library/jest-dom';
@@ -40,3 +40,5 @@ describe("Home page", () => {
     expect(nav).toHaveClass("translate-y-0");
   });
 });
+
+// TODO: Add tests for mobile navigation menu toggle
