@@ -1,7 +1,6 @@
-import { IntlShape } from "react-intl";
+import i18next from 'i18next';
 
 export const getDateRangeString = (
-  intl: IntlShape,
   startDate?: Date,
   endDate?: Date
 ): string => {
@@ -14,13 +13,12 @@ export const getDateRangeString = (
         year: "numeric",
         month: "2-digit",
       })
-    : intl.messages["now"].toString();
+    : i18next.t("now");
 
   return `${startDateFormatted} - ${endDateFormatted}`;
 };
 
 export const getPeriodSting = (
-  intl: IntlShape,
   startDate: Date,
   endDate?: Date
 ): string => {
@@ -35,7 +33,7 @@ export const getPeriodSting = (
 
   if (diff.years <= 0) return `${diff.months}m`;
 
-  return `${diff.years}${intl.messages[diff.years > 1 ? "years" : "year"]}, ${
+  return `${diff.years}${i18next.t(diff.years > 1 ? "years" : "year")}, ${
     diff.months
   }m`;
 };

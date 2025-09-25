@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { default as TypedLib, TypedOptions } from "typed.js";
 
-function Typed(options: TypedOptions) {
+const Typed = (options: TypedOptions) => {
   const ref = useRef<HTMLSpanElement | null>(null);
 
   useEffect(() => {
