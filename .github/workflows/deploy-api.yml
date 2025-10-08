@@ -13,7 +13,7 @@ jobs:
     runs-on: windows-latest
     
     steps:
-      - name: 'Checkout GitHub Action'
+      - name: 'Checkout code'
         uses: actions/checkout@v4
 
       - name: Setup DotNet environment
@@ -21,14 +21,14 @@ jobs:
         with:
           dotnet-version: '9.0.x'
 
-      - name: 'Resolve Project Dependencies Using Dotnet'
+      - name: 'Build project'
         shell: pwsh
         run: |
           pushd './api'
           dotnet build --configuration Release --output ./output
           popd
       
-      - name: 'Configure Azure Function App settings'
+      - name: 'Update app settings on Azure Function'
         uses: azure/appservice-settings@v1
         with:
           app-name: 'wasoft-api'
@@ -68,7 +68,7 @@ jobs:
             ]
           publish-profile: ${{ secrets.AZURE_FUNCTION_APP_TOKEN }}
 
-      - name: 'Run Azure Functions Action'
+      - name: 'Deploy app to Azure Functions'
         uses: Azure/functions-action@v1
         id: fa
         with:
