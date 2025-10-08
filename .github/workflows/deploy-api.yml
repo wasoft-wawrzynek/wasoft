@@ -29,6 +29,10 @@ jobs:
           dotnet build --configuration Release --output ./output
           popd
       
+      - uses: azure/login@v1
+        with:
+          creds: '${{ secrets.AZURE_FUNCTION_CREDENTIALS }}'
+
       - name: 'Update app settings on Azure Function'
         uses: azure/appservice-settings@v1
         with:
@@ -75,4 +79,3 @@ jobs:
           app-name: 'wasoft-api'
           slot-name: 'Production'
           package: 'api/output'
-          publish-profile: ${{ secrets.AZURE_FUNCTION_APP_TOKEN }}

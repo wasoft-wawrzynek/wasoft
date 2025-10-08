@@ -2,7 +2,8 @@ name: Run UI tests
 on:
   pull_request:
     branches:
-      - develop
+      - master
+  workflow_dispatch:
 
 jobs:
   test:
