@@ -12,14 +12,17 @@ jobs:
     environment: PROD
     runs-on: ubuntu-latest
     name: Build and Deploy Job
+
     steps:
       - uses: actions/checkout@v3
         with:
           submodules: true
           lfs: false
+
       - name: Set up production environment variables
         run: |
           echo "REACT_APP_API_URL=${{ vars.API_URL }}" > ./client-app/.env    
+
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -29,3 +32,13 @@ jobs:
           action: "upload"
           app_location: "./client-app"
           output_location: "build"
+          
+      - name: Create Tag
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          npm version patch -m "ci: bump version to %s [skip ci]"
+          git push origin HEAD:master --follow-tags
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
