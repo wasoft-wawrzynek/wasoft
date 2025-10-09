@@ -13,15 +13,22 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
 
+    defaults:
+      run:
+        working-directory: client-app
     steps:
       - uses: actions/checkout@v3
         with:
           submodules: true
           lfs: false
+          
+      - name: Save environment variables
+        run:
+          echo "REACT_APP_API_URL=${{ vars.API_URL }}" >> .env.production
 
-      - name: Set up production environment variables
-        run: |
-          echo "REACT_APP_API_URL=${{ vars.API_URL }}" > ./client-app/.env    
+      - name: Test environment variables
+        run:
+          cat .env.production
 
       - name: Build And Deploy
         id: builddeploy
@@ -30,7 +37,7 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APP_TOKEN }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          app_location: "./client-app"
+          app_location: "."
           output_location: "build"
           
       - name: Create Tag
