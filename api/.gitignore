@@ -4,7 +4,7 @@
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
 # Custom
-local.settings.json
+WaSoft.Api.ContactForm/local.settings.json
 
 # User-specific files
 *.rsuser
