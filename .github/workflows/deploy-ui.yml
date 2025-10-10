@@ -1,60 +1,57 @@
 name: Build and deploy UI (React, Vite, Azure Static Web Apps)
-
 on:
   push:
     branches:
       - master
     paths:
       - 'client-app/**'
-  pull_request:
-    types: [opened, synchronize, reopened, closed]
-    branches:
-      - master
   workflow_dispatch:
 
 jobs:
   build_and_deploy_job:
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     environment: PROD
     runs-on: ubuntu-latest
     name: Build and Deploy Job
+
     steps:
       - uses: actions/checkout@v3
         with:
           submodules: true
           lfs: false
-          
+
       - name: Set up production environment variables
         run: |
-          echo "REACT_APP_API_URL=${{ vars.API_URL }}" > ./client-app/.env
+          echo "REACT_APP_API_URL=${{ vars.API_URL }}" > ./client-app/.env.production
 
         # Test if the variables were being stored
       - name: Test environment variables
         run:
-          cat ./client-app/.env
+          cat ./client-app/.env.production
 
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APP_TOKEN }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
-          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "./client-app" # App source code path
-          api_location: "" # Api source code path - optional
-          output_location: "build" # Built app content directory - optional
-          ###### End of Repository/Build Configurations ######
+          app_location: "./client-app"
+          output_location: "build"
 
-  close_pull_request_job:
-    if: github.event_name == 'pull_request' && github.event.action == 'closed'
-    runs-on: ubuntu-latest
-    name: Close Pull Request Job
-    steps:
-      - name: Close Pull Request
-        id: closepullrequest
+      - name: Finalize Deployment
+        id: close
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_AMBITIOUS_ISLAND_0332E5203 }}
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APP_TOKEN }}
+          app_location: "./client-app"
           action: "close"
+          
+      # - name: Create Tag
+      #   if: github.ref == 'refs/heads/master'
+      #   run: |
+      #     git config --local user.email "action@github.com"
+      #     git config --local user.name "GitHub Action"
+      #     npm version patch -m "ci: bump version to %s [skip ci]"
+      #     git push origin HEAD:master --follow-tags
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
