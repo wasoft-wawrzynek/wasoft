@@ -22,19 +22,19 @@ jobs:
           submodules: true
           lfs: false
 
-      # - name: Set up production environment variables
-      #   run: |
-      #     echo "REACT_APP_API_URL=${{ vars.API_URL }}" > ./client-app/.env.production
+      - name: Set up production environment variables
+        run: |
+          echo "REACT_APP_API_URL=${{ vars.API_URL }}" > ./client-app/.env.production
 
-      # - name: Build And Deploy
-      #   id: builddeploy
-      #   uses: Azure/static-web-apps-deploy@v1
-      #   with:
-      #     azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APP_TOKEN }}
-      #     repo_token: ${{ secrets.GITHUB_TOKEN }}
-      #     action: "upload"
-      #     app_location: "./client-app"
-      #     output_location: "build"
+      - name: Build And Deploy
+        id: builddeploy
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APP_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          action: "upload"
+          app_location: "./client-app"
+          output_location: "build"
 
         # Update version based on conventional commits and create tag
       - name: Bump version and push tag
