@@ -41,13 +41,18 @@ public class MailSender(ILogger<MailSender> logger, IOptions<MailSettings> mailC
 
     private SendGridMessage CreateMessage(ContactFormData contactForm)
     {
-        contactForm.Date = DateTime.UtcNow.ToString("dd'/'MM'/'yyyy HH:mm");
-        contactForm.Message = contactForm.Message.ReplaceLineEndings("<br>");
-
-        var from = new EmailAddress(mailConfig.Value.FromEmail, mailConfig.Value.FromName);
-        var to = new EmailAddress(mailConfig.Value.ToEmail, mailConfig.Value.ToName);
-
-        var mail = MailHelper.CreateSingleTemplateEmail(from, to, mailConfig.Value.TemplateId, contactForm);
+        var mail = MailHelper.CreateSingleTemplateEmail(
+            from: new EmailAddress(mailConfig.Value.FromEmail, mailConfig.Value.FromName),
+            to: new EmailAddress(mailConfig.Value.ToEmail, mailConfig.Value.ToName),
+            templateId: mailConfig.Value.TemplateId,
+            dynamicTemplateData: new
+            {
+                date = DateTime.UtcNow.ToString("dd'/'MM'/'yyyy HH:mm"),
+                company = contactForm.Company,
+                name = contactForm.Name,
+                email = contactForm.Email,
+                message = contactForm.Message.ReplaceLineEndings("<br>")
+            });
         mail.ReplyTo = new EmailAddress(contactForm.Email);
         return mail;
     }
