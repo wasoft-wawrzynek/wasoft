@@ -37,6 +37,10 @@ jobs:
           output_location: "build"
 
         # Update version based on conventional commits and create tag
+      - name: Fix file permissions
+        if: github.ref == 'refs/heads/master'
+        run: chmod -R u+w ./client-app
+
       - name: Update version & create tag
         if: github.ref == 'refs/heads/master'
         id: bump
@@ -46,7 +50,7 @@ jobs:
           git config --local user.name "GitHub Action"
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}
           
-          npm install -g standard-version
+          npm install standard-version
 
           npx standard-version --commit-all -m "ci: bump version to %s [skip ci]"
           git push origin HEAD:master --follow-tags
