@@ -21,8 +21,6 @@ public class ContactFormFunction(ILogger<ContactFormFunction> logger, IMailSende
             return new BadRequestResult();
         }
 
-        logger.LogInformation("Contact form data loaded");
-
         return await sender.SendAsync(data) ? new OkResult() : new StatusCodeResult(500);
     }
 }

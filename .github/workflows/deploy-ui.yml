@@ -23,11 +23,6 @@ jobs:
         run: |
           echo "REACT_APP_API_URL=${{ vars.API_URL }}" > ./client-app/.env.production
 
-        # Test if the variables were being stored
-      - name: Test environment variables
-        run:
-          cat ./client-app/.env.production
-
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -38,20 +33,13 @@ jobs:
           app_location: "./client-app"
           output_location: "build"
 
-      # - name: Finalize Deployment
-      #   id: close
-      #   uses: Azure/static-web-apps-deploy@v1
-      #   with:
-      #     azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APP_TOKEN }}
-      #     app_location: "./client-app"
-      #     action: "close"
-          
-      # - name: Create Tag
-      #   if: github.ref == 'refs/heads/master'
-      #   run: |
-      #     git config --local user.email "action@github.com"
-      #     git config --local user.name "GitHub Action"
-      #     npm version patch -m "ci: bump version to %s [skip ci]"
-      #     git push origin HEAD:master --follow-tags
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create Tag
+        if: github.ref == 'refs/heads/master'
+        run: |
+          cd ./client-app
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          npm version patch -m "ci: bump version to %s [skip ci]"
+          git push origin HEAD:master --follow-tags
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
