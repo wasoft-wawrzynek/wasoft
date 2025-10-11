@@ -22,37 +22,23 @@ jobs:
           submodules: true
           lfs: false
 
-      - name: Set up production environment variables
-        run: |
-          echo "REACT_APP_API_URL=${{ vars.API_URL }}" > ./client-app/.env.production
+      # - name: Set up production environment variables
+      #   run: |
+      #     echo "REACT_APP_API_URL=${{ vars.API_URL }}" > ./client-app/.env.production
 
-      - name: Build And Deploy
-        id: builddeploy
-        uses: Azure/static-web-apps-deploy@v1
-        with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APP_TOKEN }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          action: "upload"
-          app_location: "./client-app"
-          output_location: "build"
+      # - name: Build And Deploy
+      #   id: builddeploy
+      #   uses: Azure/static-web-apps-deploy@v1
+      #   with:
+      #     azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APP_TOKEN }}
+      #     repo_token: ${{ secrets.GITHUB_TOKEN }}
+      #     action: "upload"
+      #     app_location: "./client-app"
+      #     output_location: "build"
 
         # Update version based on conventional commits and create tag
-      - name: Fix file permissions
-        if: github.ref == 'refs/heads/master'
-        run: chmod -R u+w ./client-app
-
-      - name: Update version & create tag
-        if: github.ref == 'refs/heads/master'
-        id: bump
-        run: |
-          cd ./client-app
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}
-          
-          npm install standard-version
-
-          npx standard-version --commit-all -m "ci: bump version to %s [skip ci]"
-          git push origin HEAD:master --follow-tags
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Bump version and push tag
+        uses: laputansoft/github-tag-action@v4.6
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          dry_run: true
