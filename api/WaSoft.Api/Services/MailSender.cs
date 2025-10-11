@@ -18,15 +18,15 @@ public class MailSender(ILogger<MailSender> logger, IOptions<MailSettings> mailC
     {
         try
         {
+            logger.LogInformation($"Sending message from {contactForm.Email} via SendGrid...");
             var client = new SendGridClient(mailConfig.Value.ApiKey);
             var message = CreateMessage(contactForm);
 
-            logger.LogInformation("Message successfully created, requesting SendGrid to process it...");
             var response = await client.SendEmailAsync(message);
             if (!response.IsSuccessStatusCode)
             {
                 var content = await response.Body.ReadAsStringAsync();
-                logger.LogError($"SendGrid responded with a non-success status ({response.StatusCode}). Content:\n{content}");
+                logger.LogError("SendGrid responded with a non-success status ({Code}). Content:\n{Content}", response.StatusCode, content);
                 return false;
             }
 
@@ -34,7 +34,7 @@ public class MailSender(ILogger<MailSender> logger, IOptions<MailSettings> mailC
         }
         catch (Exception ex)
         {
-            logger.LogError($"Something went wrong, when preparing contact message: {ex.Message}\n\nContact form data:\n{contactForm}");
+            logger.LogError(ex, "Something went wrong, when sending SendGrid of this content: {ContactData}", contactForm);
             return false;
         }
     }
