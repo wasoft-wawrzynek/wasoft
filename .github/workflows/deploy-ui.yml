@@ -7,6 +7,9 @@ on:
       - 'client-app/**'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build_and_deploy_job:
     environment: PROD
@@ -33,13 +36,19 @@ jobs:
           app_location: "./client-app"
           output_location: "build"
 
-      - name: Create Tag
+        # Update version based on conventional commits and create tag
+      - name: Update version & create tag
         if: github.ref == 'refs/heads/master'
+        id: bump
         run: |
           cd ./client-app
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          npm version patch -m "ci: bump version to %s [skip ci]"
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}
+          
+          npm install -g standard-version
+
+          npx standard-version --commit-all -m "ci: bump version to %s [skip ci]"
           git push origin HEAD:master --follow-tags
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
