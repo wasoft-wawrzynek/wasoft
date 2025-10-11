@@ -1,0 +1,27 @@
+# Place this file at the root of your project
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: ./api/WaSoft.Api
+      dockerfile: Dockerfile
+    ports:
+      - "7071:8080" # Maps host port 7071 to container port 8080
+    networks:
+      - wasoftnet
+
+  frontend:
+    build:
+      context: ./client-app
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80" # Maps host port 8080 to container port 80
+    environment:
+      - VITE_API_URL=http://api:8080 # Use the service name 'api' as hostname
+    networks:
+      - wasoftnet
+
+networks:
+  wasoftnet:
+    driver: bridge
