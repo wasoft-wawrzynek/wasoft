@@ -68,12 +68,12 @@ jobs:
               },
               {
                 "name": "MailSettings__ToName",
-                "value": "WaSoft Contact Form",
+                "value": "Paweł Wawrzynek",
                 "slotSetting": false
               },
               {
                 "name": "MailSettings__ToEmail",
-                "value": "wasoft.wawrzynek@gmail.com",
+                "value": "pawel.wawrzynek@gmail.com",
                 "slotSetting": false
               }
             ]
