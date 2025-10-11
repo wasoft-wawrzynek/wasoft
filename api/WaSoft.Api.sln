@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32002.185
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaSoft.Api.ContactForm", "WaSoft.Api.ContactForm\WaSoft.Api.ContactForm.csproj", "{3C25E5F7-4A19-4A35-898B-4EF87F11D80D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaSoft.Api", "WaSoft.Api\WaSoft.Api.csproj", "{9F7CB42C-AE2B-4A8A-AAD1-55E133A7C2CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3C25E5F7-4A19-4A35-898B-4EF87F11D80D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3C25E5F7-4A19-4A35-898B-4EF87F11D80D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3C25E5F7-4A19-4A35-898B-4EF87F11D80D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3C25E5F7-4A19-4A35-898B-4EF87F11D80D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F7CB42C-AE2B-4A8A-AAD1-55E133A7C2CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F7CB42C-AE2B-4A8A-AAD1-55E133A7C2CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F7CB42C-AE2B-4A8A-AAD1-55E133A7C2CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F7CB42C-AE2B-4A8A-AAD1-55E133A7C2CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

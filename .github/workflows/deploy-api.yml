@@ -72,6 +72,14 @@ jobs:
               }
             ]
 
+      - name: 'Reset and update CORS settings'
+        run: |
+          az functionapp cors remove --resource-group rg-wasoft --name wasoft-api --allowed-origins *
+          az functionapp cors add --resource-group rg-wasoft --name wasoft-api --allowed-origins https://ambitious-island-0332e5203.2.azurestaticapps.net
+          az functionapp cors add --resource-group rg-wasoft --name wasoft-api --allowed-origins https://www.wasoft.pl
+          az functionapp cors add --resource-group rg-wasoft --name wasoft-api --allowed-origins https://wasoft.pl
+        shell: bash
+
       - name: 'Deploy app to Azure Functions'
         uses: Azure/functions-action@v1
         id: fa
