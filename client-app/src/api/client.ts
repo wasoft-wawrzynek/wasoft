@@ -1,8 +1,7 @@
 import axios from "axios";
 import IContactFormData from "./models/IContactFormData";
 
-console.log("API Base URL:", process.env.REACT_APP_API_BASE_URL);
-axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL;
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
 const Contact = {
   sendContactForm: async (form: IContactFormData): Promise<boolean> => {

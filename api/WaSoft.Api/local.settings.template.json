@@ -1,0 +1,13 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+    "MailSettings__ApiKey": "<SEND_GRID_API_KEY_HERE>",
+    "MailSettings__TemplateId": "<SEND_GRID_TEMPLATE_ID_HERE>",
+    "MailSettings__FromEmail": "wasoft.wawrzynek@gmail.com",
+    "MailSettings__FromName": "WaSoft Contact Form",
+    "MailSettings__ToEmail": "wasoft.wawrzynek@gmail.com",
+    "MailSettings__ToName": "WaSoft Contact Form"
+  }
+}
