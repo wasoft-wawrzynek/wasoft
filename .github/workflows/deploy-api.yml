@@ -12,7 +12,6 @@ jobs:
   build-and-deploy:
     environment: PROD
     runs-on: windows-latest
-
         
     steps:
       - name: 'Checkout code'
@@ -26,7 +25,7 @@ jobs:
       - name: 'Build project'
         shell: pwsh
         run: |
-          dotnet build ./api/WaSoft.Api.ContactForm/WaSoft.Api.ContactForm.csproj --configuration Release --output ./api/output
+          dotnet build ./api/WaSoft.Api/WaSoft.Api.csproj --configuration Release --output ./api/output
 
       - uses: azure/login@v1
         with:
