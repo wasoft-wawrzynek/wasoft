@@ -1,13 +1,12 @@
 import axios from "axios";
 import IContactFormData from "./models/IContactFormData";
-import appConfig from "../config/appConfig";
 
-axios.defaults.baseURL = appConfig.API_URL;
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
 const Contact = {
   sendContactForm: async (form: IContactFormData): Promise<boolean> => {
     return axios
-      .post("/api/contactForm", form)
+      .post("/api/contact", form)
       .then(() => true)
       .catch(() => false);
   },

@@ -1,0 +1,87 @@
+name: Build and deploy API (.NET 9, Azure Functions)
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'api/**'
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    environment: PROD
+    runs-on: windows-latest
+        
+    steps:
+      - name: 'Checkout code'
+        uses: actions/checkout@v4
+
+      - name: Setup DotNet environment
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: 'Build project'
+        shell: pwsh
+        run: |
+          dotnet build ./api/WaSoft.Api/WaSoft.Api.csproj --configuration Release --output ./api/output
+
+      - uses: azure/login@v1
+        with:
+          creds: '${{ secrets.AZURE_FUNCTION_CREDENTIALS }}'
+
+      - name: 'Deploy app to Azure Functions'
+        uses: Azure/functions-action@v1
+        id: fa
+        with:
+          app-name: 'wasoft-api'
+          slot-name: 'Production'
+          package: 'api/output'
+
+      - name: 'Update app settings on Azure Function'
+        uses: azure/appservice-settings@v1
+        with:
+          app-name: 'wasoft-api'
+          slot-name: 'Production'
+          app-settings-json: |
+            [
+              {
+                "name": "MailSettings__ApiKey",
+                "value": "${{ secrets.SENDGRID_API_KEY }}",
+                "slotSetting": false
+              },
+              {
+                "name": "MailSettings__TemplateId",
+                "value": "${{ secrets.SENDGRID_TEMPLATE_ID }}",
+                "slotSetting": false
+              },
+              {
+                "name": "MailSettings__FromName",
+                "value": "WaSoft Contact Form",
+                "slotSetting": false
+              },
+              {
+                "name": "MailSettings__FromEmail",
+                "value": "wasoft.wawrzynek@gmail.com",
+                "slotSetting": false
+              },
+              {
+                "name": "MailSettings__ToName",
+                "value": "Paweł Wawrzynek",
+                "slotSetting": false
+              },
+              {
+                "name": "MailSettings__ToEmail",
+                "value": "pawel.wawrzynek@gmail.com",
+                "slotSetting": false
+              }
+            ]
+
+      - name: 'Reset and update CORS settings'
+        run: |
+          az functionapp cors remove --resource-group rg-wasoft --name wasoft-api --allowed-origins *
+          az functionapp cors add --resource-group rg-wasoft --name wasoft-api --allowed-origins https://ambitious-island-0332e5203.2.azurestaticapps.net
+          az functionapp cors add --resource-group rg-wasoft --name wasoft-api --allowed-origins https://www.wasoft.pl
+          az functionapp cors add --resource-group rg-wasoft --name wasoft-api --allowed-origins https://wasoft.pl
+        shell: bash
