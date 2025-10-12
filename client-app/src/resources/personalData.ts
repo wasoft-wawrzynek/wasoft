@@ -1,16 +1,8 @@
 const personalData = {
-  aboutMeId: [
-    "resume.about-me-text-1",
-    "resume.about-me-text-2",
-    "resume.about-me-text-3",
-  ],
   dateOfBirth: new Date("1991-07-01"),
   contact: {
     telephone: "691-262-330",
     mail: "pawel.wawrzynek@gmail.com",
-    street: "Wałowa 15/13",
-    city: "Kraków",
-    postCode: "30-704",
     website: "https://www.wasoft.pl",
     linkedIn: "pawel-wawrzynek",
   },
@@ -20,22 +12,22 @@ const personalData = {
   ],
   education: [
     {
-      titleId: "education.masters-title",
+      titleId: "education.masters.title",
       schoolId: "education.school",
       facultyId: "education.faculty",
       locationId: "gliwice",
       startDate: new Date("2014-01"),
       endDate: new Date("2015-09"),
-      descriptionId: "education.masters-desc",
+      descriptionId: "education.masters.desc",
     },
     {
-      titleId: "education.bachelor-title",
+      titleId: "education.bachelor.title",
       schoolId: "education.school",
       facultyId: "education.faculty",
       locationId: "gliwice",
       startDate: new Date("2010/10"),
       endDate: new Date("2014-01"),
-      descriptionId: "eductaion.bachelor-desc",
+      descriptionId: "education.bachelor.desc",
     },
   ],
   experience: [
@@ -123,7 +115,7 @@ const personalData = {
     key: ["C#/.NET", "HTML/CSS", "SCRUM"],
     solid: ["TFS", "Azure DevOps", "nUnit", "React", "JIRA"],
     promising: ["SQL", "Azure Portal", "JS / TS", "Git"],
-    basic: ["Docker", "Google Cloud", "Java", "C++", "DirectX"],
+    basic: ["Docker", "GCP", "Java", "C++", "DirectX"],
   },
   hobby: [
     {

@@ -1,66 +1,52 @@
-import React from "react";
-import { Dropdown, DropdownProps } from "semantic-ui-react";
-import "./LanguageSelector.scss";
+import { useTranslation } from "react-i18next";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@radix-ui/react-dropdown-menu";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
-interface ILanguageSelectorProps {
-  language: string;
-  setLanguage: (language: string) => void;
-  inline?: boolean;
-}
+const languages = ["pl-pl", "pl-sp", "en"];
 
-const options = [
-  {
-    key: "pl",
-    value: "pl",
-    image: {
-      src: "/img/icons/pl.svg",
-    },
-  },
-  {
-    key: "en",
-    value: "en",
-    image: {
-      src: "/img/icons/en.svg",
-    },
-  },
-];
+const getFlagSrc = (language: string): string => `./locales/${language}.svg`;
 
-function LanguageSelector(props: ILanguageSelectorProps) {
-  const onChange = (
-    event: React.SyntheticEvent<HTMLElement>,
-    data: DropdownProps
-  ) => {
-    if (data.value) {
-      props.setLanguage(data.value.toString());
-    }
+const LanguageSelector = ({ className, side }: { className?: string, side: "bottom" | "right" }) => {
+  const { i18n } = useTranslation();
+
+  const getCurrentLang = () => {
+    if (i18n.language.startsWith("en")) return "en";
+    if (i18n.language.toLowerCase() == "pl-sp") return "pl-sp";
+    return "pl-pl";
   };
 
-  return props.inline ? (
-    <div id="lang-inline">
-      {options.map((lang) => {
-        return (
-          <img
-            key={lang.key}
-            src={lang.image.src}
-            alt={lang.key.toUpperCase()}
-            className={`${props.language === lang.key ? "active" : ""}`}
-            onClick={() => props.setLanguage(lang.key)}
-          />
-        );
-      })}
-    </div>
-  ) : (
-    <div id="lang-drop">
-      <Dropdown
-        inline
-        basic
-        selection
-        onChange={onChange}
-        options={options}
-        value={props.language}
-      />
+  return (
+    <div className={className}>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Avatar className="w-10 h-10">
+            <AvatarImage src={getFlagSrc(getCurrentLang())} />
+          </Avatar>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent side={side} className={`flex ${side === "bottom" ? "flex-col" : "flex-row"} gap-2 p-2`}>
+          {languages
+            .filter((lang) => lang != getCurrentLang())
+            .map((lang) => {
+              return (
+                <DropdownMenuItem
+                  key={lang}
+                  onClick={() => i18n.changeLanguage(lang)}
+                >
+                  <Avatar className="w-10 h-10">
+                    <AvatarImage src={getFlagSrc(lang)} alt={lang} />
+                  </Avatar>
+                </DropdownMenuItem>
+              );
+            })}
+        </DropdownMenuContent>
+      </DropdownMenu>
     </div>
   );
-}
+};
 
 export default LanguageSelector;

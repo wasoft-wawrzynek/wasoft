@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Teko:wght@500;600;700&display=swap");
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+.dark {
+  --background: black;
+  --foreground: white;
+  --primary: #96fd00;
+  --dark: black;
+  --medium-dark: #111111;
+  --medium-light: #666666;
+  --light: white;
+}
+
+:root {
+  /* TODO: Work on light theme (currently dark is default and the only one tested) */
+  --background: white;
+  --foreground: black;
+  --primary: #96fd00;
+  --dark: black;
+  --medium-dark: #111111;
+  --medium-light: #666666;
+  --light: white;
+}
+
+@theme {
+  --color-dark: black;
+  --color-medium-dark: #111111;
+  --color-medium-light: #666666;
+  --color-light: white;
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+
+    a {
+      text-decoration: none;
+      @apply text-primary;
+    }
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Fix for Radix-ui dropdown issue */
+  body[data-scroll-locked] {
+    margin: 0 !important;
+  }
+
+  /* Fix for PDF print-out overlap */
+  #pdf-page * {
+    line-height: 1.2 !important;
+  }
+
+  /* TODO: This should probably be done by Tailwind themes, not the base styles */
+  h1 {
+    font-family: "Teko", sans-serif;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 3rem;
+  }
+
+  h2 {
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+
+  h3 {
+    font-family: "Teko", sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 1.5rem;
+  }
+
+  h4 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+
+  h5 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+  }
+
+  a,
+  input,
+  textarea {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  button {
+    margin: 0 0.3rem;
+    padding: 0.5rem 1rem;
+    font-family: "Teko", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    @apply text-light;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Vendors */
+
+  .swal2-container {
+    .swal2-popup {
+      @apply bg-medium-dark;
+    }
+
+    .swal2-icon.swal2-success {
+      @apply border-primary;
+      @apply text-primary;
+    }
+
+    .swal2-title {
+      @apply text-light;
+      line-height: 2.5rem;
+    }
+
+    .swal2-styled.swal2-confirm {
+      @apply bg-primary;
+      @apply text-dark;
+    }
+  }
+
+  /* TODO: Revert to older tailwind to allow defining automatic center and padding for containers */
+  .container {
+    .section-title {
+      @apply text-light;
+      align-self: flex-start;
+      margin: 2rem;
+
+      &:after {
+        @apply text-primary;
+        content: "_";
+      }
+    }
+  }
+}
