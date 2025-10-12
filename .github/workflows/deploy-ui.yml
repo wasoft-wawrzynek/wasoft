@@ -37,7 +37,8 @@ jobs:
           output_location: "build"
 
         # Update version based on conventional commits and create tag
-      - name: Bump version and push tag
+      - name: Create tag
         uses: laputansoft/github-tag-action@v4.6
         with:
+          release_branches: master
           github_token: ${{ secrets.GITHUB_TOKEN }}
