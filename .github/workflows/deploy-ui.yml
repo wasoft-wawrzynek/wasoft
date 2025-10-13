@@ -24,7 +24,7 @@ jobs:
 
       - name: Set up production environment variables
         run: |
-          echo "REACT_APP_API_URL=${{ vars.API_URL }}" > ./client-app/.env.production
+          echo "VITE_API_URL=${{ vars.API_URL }}" > ./client-app/.env.production
 
       - name: Build And Deploy
         id: builddeploy
