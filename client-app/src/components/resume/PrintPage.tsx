@@ -153,6 +153,10 @@ const PrintPage = ({ width, height, isPdf }: IPageProps) => {
             />
             <p className="text-dark text-sm">{personalData.contact.linkedIn}</p>
           </div>
+          <div className="flex items-center gap-2 my-2">
+            <img className="h-6" src="/img/resume/github.png" alt="github" />
+            <p className="text-dark text-sm">{personalData.contact.gitHub}</p>
+          </div>
         </div>
       </div>
       {/* Second page */}

@@ -5,6 +5,7 @@ const personalData = {
     mail: "pawel.wawrzynek@gmail.com",
     website: "https://www.wasoft.pl",
     linkedIn: "pawel-wawrzynek",
+    gitHub: "wasoft-wawrzynek",
   },
   languages: [
     { languageId: "resume.lang-polish", level: "resume.lang-native" },
