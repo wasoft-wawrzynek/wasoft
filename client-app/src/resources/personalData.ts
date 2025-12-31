@@ -42,11 +42,15 @@ const personalData = {
           endDate: undefined,
           descriptionId: "experience.endava.description",
           technologies: [
-            "C#/.NET",
-            "React 18",
-            "Azure DevOps CI/CD",
+            "C#/.NET 9",
+            "ASP.NET Core",
+            "Azure (App Service, AD B2C, DevOps)",
+            "YAML (Azure pipelines)",
+            "SignalR",
+            "React 18 + TypeScript",
             "SQL Server",
-            "nUnit"
+            "nUnit",
+            "NewRelic",
           ]
         }
       ]
@@ -132,10 +136,10 @@ const personalData = {
     },
   ],
   skills: {
-    key: ["C#/.NET", "HTML/CSS", "SCRUM"],
-    solid: ["TFS", "Azure DevOps", "nUnit", "React", "JIRA"],
-    promising: ["SQL", "Azure Portal", "JS / TS", "Git"],
-    basic: ["Docker", "GCP", "Java", "C++", "DirectX"],
+    key: ["C#/.NET", "HTML/CSS", "Azure", "YAML (pipelines)"],
+    solid: ["React", "JavaScript/TypeScript", "SQL", "xUnit", "SignalR", "microservices" ],
+    promising: ["Docker", "PowerShell", "Git"],
+    basic: ["GCP", "Java", "C++", "DirectX"],
   },
   hobby: [
     {

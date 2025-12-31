@@ -16,7 +16,7 @@ interface IPageProps {
 
 const PrintPage = ({ width, height, isPdf }: IPageProps) => {
   return (
-    <div id="pdf-page" className="flex flex-col">
+    <div id="pdf-page" className="flex flex-col font-[500]">
       {/* First page */}
       <div
         className="grid grid-cols-[1fr_2.5fr] grid-rows-[auto_auto_1fr] mx-auto"
@@ -75,6 +75,10 @@ const PrintPage = ({ width, height, isPdf }: IPageProps) => {
               ))}
             </div>
           </div>
+          <div className="flex items-center gap-2 my-2">
+            <img className="h-6" src="/img/resume/github.png" alt="github" />
+            <p className="text-dark text-sm">{personalData.contact.gitHub}</p>
+          </div>
           {(
             i18n.t("resume.about-me.content", {
               returnObjects: true,
@@ -108,13 +112,18 @@ const PrintPage = ({ width, height, isPdf }: IPageProps) => {
                 <div className="flex flex-col px-2 mb-4">
                   <h3 className="text-dark text-xl">{`/ ${job.company} /`}</h3>
                   {job.roles.map((role, idx) => (
-                    <div key={idx}>
+                    <div key={idx} className={idx > 0 ? "mt-2" : undefined}>
                       <h3 className="text-dark text-lg">
                         {`${role.title} - ${getPeriodSting(
                           role.startDate,
                           role.endDate
                         )}`}
                       </h3>
+                      {role.technologies && role.technologies.length > 0 && (
+                        <p className="text-dark text-xs mt-1 mb-2 italic">
+                          {role.technologies.join(" | ")}
+                        </p>
+                      )}
                       <p className="text-dark text-sm">
                         <Trans
                           i18nKey={role.descriptionId}
@@ -153,43 +162,17 @@ const PrintPage = ({ width, height, isPdf }: IPageProps) => {
             />
             <p className="text-dark text-sm">{personalData.contact.linkedIn}</p>
           </div>
-          <div className="flex items-center gap-2 my-2">
-            <img className="h-6" src="/img/resume/github.png" alt="github" />
-            <p className="text-dark text-sm">{personalData.contact.gitHub}</p>
-          </div>
         </div>
       </div>
       {/* Second page */}
       <div
-        className="grid grid-cols-[1fr_2.5fr] grid-rows-[_auto_1fr] mx-auto"
+        className="grid grid-cols-[1fr_2.5fr] grid-rows-[auto_auto_1fr] mx-auto"
         style={{
           width: `${width}px`,
           height: `${Math.floor(height)}px`,
         }}
       >
-        {/* Hobbies Section */}
-        <div className="bg-medium-light p-4 row-span-2">
-          <Title textId="header.hobby" isPdf={isPdf} />
-          <div className="flex flex-row gap-2 mt-2">
-            {personalData.hobby.map((hobby) => (
-              <div
-                key={hobby.titleId}
-                className="flex flex-col gap-2 items-center"
-              >
-                <div className="rounded-full border-2 border-dark p-2">
-                  <img
-                    src={hobby.image}
-                    alt={hobby.titleId}
-                    className="w-8 h-8"
-                  />
-                </div>
-                <p className="text-dark text-sm">
-                  <Trans i18nKey={hobby.titleId} />
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+        <div className="bg-medium-light p-4 row-span-3"/>
         {/* Education Section */}
         <div className="bg-light p-4">
           <Title textId="header.education" isPdf={isPdf} />
@@ -323,6 +306,29 @@ const PrintPage = ({ width, height, isPdf }: IPageProps) => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>        
+        {/* Hobbies Section */}
+        <div className="bg-light p-4">
+          <Title textId="header.hobby" isPdf={isPdf} />
+          <div className="flex flex-row gap-4 mt-4 justify-center">
+            {personalData.hobby.map((hobby) => (
+              <div
+                key={hobby.titleId}
+                className="flex flex-col gap-2 items-center"
+              >
+                <div className="rounded-full border-2 border-dark p-2">
+                  <img
+                    src={hobby.image}
+                    alt={hobby.titleId}
+                    className="w-8 h-8"
+                  />
+                </div>
+                <p className="text-dark text-sm">
+                  <Trans i18nKey={hobby.titleId} />
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
