@@ -126,7 +126,7 @@ const personalData = {
           startDate: new Date("2013-05"),
           endDate: new Date("2015-06"),
           descriptionId: "experience.flightscope.dev-description",
-          technologies: ["C#", "WPF", "Windows Strore Apps", "SVN"],
+          technologies: [],
         },
       ],
     },
