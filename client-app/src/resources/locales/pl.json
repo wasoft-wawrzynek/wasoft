@@ -47,7 +47,7 @@
   "hobby": {
     "title": "Po pracy",
     "brewing-title": "Piwowarstwo",
-    "brewing-description": "Warzenie własnego piwa na pierwszy rzut oka może wydawać się skomplikowane i wymagające. I takie właśnie jest... Po kilkudziesięcu warkach nadal mam wrażenie, że nie poznałem nawet wierzchołka góry chmielowej.<br><br>Niezależnie od efektów, uwielbiam eksperymentować z kolejnymi stylami - planować, warzyć i doglądać fermentacji. Gorzej z myciem butelek, etykietowaniem i sprzątaniem. Ale bez pracy nie ma kołaczy...<br><br>Postęp mojej piwnej przygody można śledzić na stronie mojego browaru:<br><br><wawrzelniaLink>",
+    "brewing-description": "Warzenie własnego piwa na pierwszy rzut oka może wydawać się skomplikowane i wymagające. I takie właśnie jest... Po kilkudziesięcu warkach nadal mam wrażenie, że nie poznałem nawet wierzchołka góry chmielowej.<br><br>Niezależnie od efektów, uwielbiam eksperymentować z kolejnymi stylami - planować, warzyć i doglądać fermentacji. Gorzej z myciem butelek, etykietowaniem i sprzątaniem. Ale bez pracy nie ma kołaczy...",
     "squash-title": "Squash",
     "squash-description": "Dla zdrowotności, zarówno tej fizycznej, jak i psychicznej, potrzebuję czasem wylać z siebie trochę potu.<br><br>Zdecydowanie nie należę do tych, którzy potafią stawiać wyzwania sami sobie, śrubując wyniki. Ja potrzebuję żywego, wymagającego przeciwnika po drugiej stronie kortu. Czasem wygram, czasem przegram, ale najważniejszy jest ten dreszcz emocji między początkiem a końcem meczu.",
     "traveling-title": "Podróże",
@@ -83,9 +83,9 @@
     "print": "Drukuj",
     "about-me": {
       "title": "O mnie",
-      "content": ["Uwielbiam programować i było tak od zawsze. Wymyślanie odpowiedniego algorytmy i stopniowe wcielanie go w życie, kawałek po kawałku, daje mi mnóstwo satysfakcji. Nawet nieodzowny element analizowania błędów może być budujący, gdy wreszcie uda się rozwiązać problem.",
-        "Ale tworzenie komercyjnej aplikacji to dużo więcej niż tylko pisanie kodu. Właściwie to zaledwie wierzchołek góry lodowej. Potrzebny jest dobry projekt, dokładny plan i przewidywalność. Wiele osób o różnych umiejętnościach i z różnych środowisk musi znaleźć wspólny język, by osiągnąć wspólny cel. Nawet takie sprawy jak nieodpowiednie narzędzia lub niskie morale mogą zagrozić ostatecznemu wynikowi. I te elementy są dla mnie równie ciekawe.",
-        "Nie potrafię siedzieć cicho, gdy widzę, że coś nie działa lub zwyczajnie może być poprawione. Potrafię być nieustępliwy lub wręcz natrętny by pomóc mojemu zespołowi. I jeśli mam być szczery, uważam to za zaletę."
+      "content": ["Zawsze ekscytowało mnie rozwiązywanie złożonych problemów technicznych, jakie daje programowanie. Wymyślanie odpowiedniego algorytmu i stopniowe wcielanie go w życie daje mi mnóstwo satysfakcji.",
+        "Jednak budowanie zaawansowanych systemów to znacznie więcej niż sama implementacja. To świadome wybory dotyczące architektury, przewidywanie przyszłych wymagań i potencjalnych wąskich gardeł. Wymaga to dobrego zrozumienia nie tylko kwestii technicznych, ale również celów biznesowych i ograniczeń zespołu. Wiele osób z różnymi umiejętnościami i perspektywami musi pracować w zgodzie, by osiągnąć wspólny cel – a nadzorowanie tego procesu, identyfikowanie ryzyk zanim się zmaterializują i pomaganie zespołowi w efektywnym działaniu, to dla mnie równie ekscytujące co sam kod.",
+        "Nie mogę przejść obojętnie obok sytuacji, w której widzę nieoptymalne podejście, rozwiązanie krótkowzroczne czy brak planu. Staram się być konstruktywny, ale nie będę milczał, gdy uważam, że coś zagraża projektowi lub zespołowi. Jeśli to czasami sprawia mi opinię nieustępliwego, akceptuję to – bo wierzę, że to odpowiedzialność lidera."
       ]
     },
     "lang-polish": "polski",
