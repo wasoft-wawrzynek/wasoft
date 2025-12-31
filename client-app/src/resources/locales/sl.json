@@ -16,6 +16,9 @@
   },
   "experience": {
     "title": "Moje doświadczenie",
+    "endava": {
+      "description": "Migracyjo i rozwōj platformy webowej, skierowanej do spōłek akcyjnych, używanyj do zarządzanio przydzielonymi akcjami, przeglanio akcjonarujūszy, monitorowanio dywidend i generowanio raportōw.<br>Kierowanie zespołiym w kwestiach technicznych i cołkowito nadzōr nad projektem. Zadania obejmowały projektowanie rozwiōnzań architektonicznych, definiowanie mōdelōw kōmunikacyji między serwisami i strategie radzenia se ze wyzwaniami technicznymi.<br>Zarządzanie długiym technicznym projektu – identyfikacja problemōw, ustalanie pierszeństwa i negocjowanie z interesarjuszami biznesowymi czasu dlo implementacyji poprawek. Zapewnienie bezproblemowego wdrażanio aplikacyje na srodowiska produkcyjne przez implementacyje i utrzimanie pipeline'ōw CI/CD. Projektowanie i wdrażanie mōdelu wspōłpracy między zespołiym dewelōpersków i QA, wspierajōnce efektywny przepływ roboty.<br>Wspōłpraca z działym biznesu w procesie planowanio kierunku rozwōju produktu na nŏstympne kwartały, definiowanie technicznych aspektōw planowanych funkcyji."
+    },
     "eqtek": {
       "description": "Rozwiyjanie i utrzimowanie platformy do kōnfigurowanio i projektowanio formularzy i procesōw. Projektowanie i dostarczanie rozwiōnzań dopasowanych do potrzeb klijyntōw – głōwnie brytyjskich instytucyji i bankōw.<br>Zarządzanie ekipōm programistōw i testerōw, pomaganie w kōmunikacyji z biznesym i ulepszanie procesu robiynio softu."
     },

@@ -1,7 +1,7 @@
 const personalData = {
   dateOfBirth: new Date("1991-07-01"),
   contact: {
-    telephone: "691-262-330",
+    telephone: "(+48) 691-262-330",
     mail: "pawel.wawrzynek@gmail.com",
     website: "https://www.wasoft.pl",
     linkedIn: "pawel-wawrzynek",
@@ -32,13 +32,32 @@ const personalData = {
   ],
   experience: [
     {
-      company: "EQTek",
+      company: "Endava",
+      locationId: "krakow",
+      roles: [
+        {
+          title: "Dev Lead",
+          startDate: new Date("2024-10"),
+          endDate: undefined,
+          descriptionId: "experience.endava.description",
+          technologies: [
+            "C#/.NET",
+            "React 18",
+            "Azure DevOps CI/CD",
+            "SQL Server",
+            "nUnit"
+          ]
+        }
+      ]
+    },
+    {
+      company: "EQ",
       locationId: "krakow",
       roles: [
         {
           title: ".NET Developer / Team Leader",
           startDate: new Date("2019-08"),
-          endDate: undefined,
+          endDate: new Date("2024-09"),
           descriptionId: "experience.eqtek.description",
           technologies: [
             "C#",
@@ -55,7 +74,7 @@ const personalData = {
       ],
     },
     {
-      company: "VSoft S.A.",
+      company: "VSoft",
       locationId: "krakow",
       roles: [
         {

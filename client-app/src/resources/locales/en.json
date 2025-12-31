@@ -16,6 +16,9 @@
   },
   "experience": {
     "title": "My professional experience",
+    "endava": {
+      "description": "Migration and development of a web platform designed for public companies, used for managing allocated shares, reviewing shareholders, monitoring dividends, and generating reports.<br>Direction of the team on technical matters and overall oversight of the project. Responsibilities included designing architectural solutions, defining communication between application services, and establishing strategies for resolving technical challenges.<br>Management of the project's technical debt – identification of problem areas, prioritization of resolutions, and negotiation with business stakeholders for time to implement necessary improvements. Ensuring smooth application deployments to production environments through implementation and maintenance of CI/CD pipelines. Design and implementation of collaboration models between development and QA teams, supporting efficient workflow.<br>Collaboration with the business unit on planning product development roadmaps for upcoming quarters and defining the technical aspects of planned features."
+    },
     "eqtek": {
       "description": "Developing and maintaining case management system platform. Designing and implementing short-term tailored projects for multiple clients from the British public sector and banking. Line management for a team of around ten devs and QAs, supporting communication with business and helping improving software development process."
     },
