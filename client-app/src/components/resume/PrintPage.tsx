@@ -221,18 +221,16 @@ const PrintPage = ({ width, height, isPdf }: IPageProps) => {
                   <Trans i18nKey="skills.key" />
                 </h2>
               </div>
-              <div className="flex flex-row items-center gap-1">
-                <p>
-                  {personalData.skills.key.map((skill, idx) => (
-                    <span className="text-dark text-base" key={idx}>
+                <div className="flex flex-wrap justify-center gap-2 text-center">
+                  {personalData.skills.key.map((skill) => (
+                    <p
+                      className="text-dark text-base whitespace-nowrap basis-1/4"
+                      key={skill}
+                    >
                       {skill}
-                      {idx !== personalData.skills.key.length - 1 && (
-                        <span> | </span>
-                      )}
-                    </span>
+                    </p>
                   ))}
-                </p>
-              </div>
+                </div>
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="flex flex-row items-center">
@@ -245,18 +243,16 @@ const PrintPage = ({ width, height, isPdf }: IPageProps) => {
                   <Trans i18nKey="skills.solid" />
                 </h2>
               </div>
-              <div className="flex flex-row items-center gap-1">
-                <p>
-                  {personalData.skills.solid.map((skill, idx) => (
-                    <span className="text-dark text-base" key={idx}>
+                <div className="flex flex-wrap justify-center gap-2 text-center">
+                  {personalData.skills.solid.map((skill) => (
+                    <p
+                      className="text-dark text-base whitespace-nowrap basis-1/4"
+                      key={skill}
+                    >
                       {skill}
-                      {idx !== personalData.skills.solid.length - 1 && (
-                        <span> | </span>
-                      )}
-                    </span>
+                    </p>
                   ))}
-                </p>
-              </div>
+                </div>
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="flex flex-row items-center">
@@ -269,18 +265,16 @@ const PrintPage = ({ width, height, isPdf }: IPageProps) => {
                   <Trans i18nKey="skills.promising" />
                 </h2>
               </div>
-              <div className="flex flex-row items-center gap-1">
-                <p>
-                  {personalData.skills.promising.map((skill, idx) => (
-                    <span className="text-dark text-base" key={idx}>
+                <div className="flex flex-wrap justify-center gap-2 text-center">
+                  {personalData.skills.promising.map((skill) => (
+                    <p
+                      className="text-dark text-base whitespace-nowrap basis-1/4"
+                      key={skill}
+                    >
                       {skill}
-                      {idx !== personalData.skills.promising.length - 1 && (
-                        <span> | </span>
-                      )}
-                    </span>
+                    </p>
                   ))}
-                </p>
-              </div>
+                </div>
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="flex flex-row items-center">
@@ -293,25 +287,23 @@ const PrintPage = ({ width, height, isPdf }: IPageProps) => {
                   <Trans i18nKey="skills.basic" />
                 </h2>
               </div>
-              <div className="flex flex-row flex-wrap items-center gap-1">
-                <p>
-                  {personalData.skills.basic.map((skill, idx) => (
-                    <span className="text-dark text-base" key={idx}>
+                <div className="flex flex-wrap justify-center gap-2 text-center">
+                  {personalData.skills.basic.map((skill) => (
+                    <p
+                      className="text-dark text-base whitespace-nowrap basis-1/4"
+                      key={skill}
+                    >
                       {skill}
-                      {idx !== personalData.skills.basic.length - 1 && (
-                        <span> | </span>
-                      )}
-                    </span>
+                    </p>
                   ))}
-                </p>
-              </div>
+                </div>
             </div>
           </div>
         </div>        
         {/* Hobbies Section */}
         <div className="bg-light p-4">
           <Title textId="header.hobby" isPdf={isPdf} />
-          <div className="flex flex-row gap-4 mt-4 justify-center">
+          <div className="grid grid-cols-3 mt-4 justify-center">
             {personalData.hobby.map((hobby) => (
               <div
                 key={hobby.titleId}
