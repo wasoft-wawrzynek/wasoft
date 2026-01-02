@@ -1,7 +1,6 @@
 import packageJson from "../../../package.json";
 import WasoftIcon from "@/resources/icons/wasoft.svg?react";
-import WawrzelniaIcon from "@/resources/icons/wawrzelnia.svg?react";
-import BitbucketIcon from "@/resources/icons/bitbucket.svg?react";
+import GitHubIcon from "@/resources/icons/github.svg?react";
 import LinkedInIcon from "@/resources/icons/linkedin.svg?react";
 
 const Footer = () => {
@@ -19,22 +18,13 @@ const Footer = () => {
             >
               <LinkedInIcon className="transition-transform duration-200 fill-medium-light hover:fill-primary hover:scale-125" />
             </a>
-            {/*TODO: Change Bitbucket to GitHub*/}
             <a
-              href="https://bitbucket.org/Laurer/"
+              href="https://github.com/wasoft-wawrzynek/"
               target="_blank"
               rel="noreferrer noopener"
               className="w-10 h-10 flex items-center justify-center m-4"
             >
-              <BitbucketIcon className="transition-transform duration-200 fill-medium-light hover:fill-primary hover:scale-125" />
-            </a>
-            <a
-              href="https://www.wawrzelnia.pl/"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="w-10 h-10 flex items-center justify-center m-4"
-            >
-              <WawrzelniaIcon className="transition-transform duration-200 stroke-medium-light hover:stroke-primary hover:scale-125" />
+              <GitHubIcon className="transition-transform duration-200 fill-medium-light hover:fill-primary hover:scale-125" />
             </a>
           </div>
           <p className="text-medium-light text-center leading-6">

@@ -1,6 +1,6 @@
 import { vi } from "vitest";
 
-vi.mock('@/resources/icons/bitbucket.svg?react', () => ({
+vi.mock('@/resources/icons/github.svg?react', () => ({
   default: () => <svg />,
 }));
 

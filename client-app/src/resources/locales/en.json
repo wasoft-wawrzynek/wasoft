@@ -16,8 +16,11 @@
   },
   "experience": {
     "title": "My professional experience",
+    "endava": {
+      "description": "Migration and development of a web platform for public companies to manage allocated shares, shareholders, dividends, and reports.<br>Direction of the team on technical matters and overall project oversight. Designing architectural solutions, inter-service communication models, and strategies for technical challenges.<br>Management of technical debt, smooth production deployments, implementation and maintenance of CI/CD pipelines, and collaboration models between development and QA teams.<br>Collaboration with the business unit on product roadmap planning and defining technical aspects of features."
+    },
     "eqtek": {
-      "description": "Developing and maintaining case management system platform. Designing and implementing short-term tailored projects for multiple clients from the British public sector and banking. Line management for a team of around ten devs and QAs, supporting communication with business and helping improving software development process."
+      "description": "Development and maintenance of a case management system for configuring forms and managing data workflows. Beyond platform work, projects focused on customizing and implementing individual solutions for clients in the British public and financial sectors.<br>Leadership of a technical team (about a dozen people in Scrum teams), planning and coordination, collaboration with the business unit on resource allocation and deployment priorities. Design and implementation of dedicated solutions, analysis of future requirements, and implementation strategies."
     },
     "vsoft": {
       "description": "Maintaining web application used by sales representatives to evaluate complex insurance configurations."
@@ -44,11 +47,13 @@
   "hobby": {
     "title": "After work",
     "brewing-title": "Home Brewing",
-    "brewing-description": "Brewing your own beer might seem as a complicating and demanding task. And that's exactly how it is... After a several dozen of batches, I still feel I barely starting exploring the hoppy world.<br><br>Regardless of results, I love experimenting with beer styles - planning, mashing and seeing to fermentation. It's not the same with sticking labels or cleaning the kitchen afterwards. But no pain, no gain...<br><br>Progress of my brewer's adventure can be followed on my brewery's website:<br><br><wawrzelniaLink>",
+    "brewing-description": "Brewing your own beer might seem as a complicating and demanding task. And that's exactly how it is... After a several dozen of batches, I still feel I barely starting exploring the hoppy world.<br><br>Regardless of results, I love experimenting with beer styles - planning, mashing and seeing to fermentation. It's not the same with sticking labels or cleaning the kitchen afterwards. But no pain, no gain...",
     "squash-title": "Squash",
     "squash-description": "To remain healthy, both physically and mentally, I simply must sweat a bit, from time to time.<br><br>I'm definitely not one of those, who can set their own challenges by going further or faster. I need an demanding opponent of flesh and blood on the other side of the court. Sometimes I win and sometimes I loose, but the most important part is this thrill between the first and last ball of the match.",
     "traveling-title": "Traveling",
-    "traveling-description": "I won't be the first one to say it, but I love to travel. The further and more exotic my destination is - the better. And it's not only about the sights and architecture. I really enjoy observing peculiarities of all the different places and cultures.<br><br>And the most interesting are... markets. It's always the regular food shop, where you can clearly see the differences between countries - by the taste, scent and likes of the natives."
+    "traveling-description": "I won't be the first one to say it, but I love to travel. The further and more exotic my destination is - the better. And it's not only about the sights and architecture. I really enjoy observing peculiarities of all the different places and cultures.<br><br>And the most interesting are... markets. It's always the regular food shop, where you can clearly see the differences between countries - by the taste, scent and likes of the natives.",
+    "drumming-title": "Drumming",
+    "drumming-description": "Learning and practicing drums brings me immense joy. I won't claim I'm particularly good at it, but every session behind the kit is pure pleasure for me. It's a way to express myself and connect with my favorite music on a completely different level.<br><br>Even when I'm not playing any specific song, just practicing techniques and rhythms, I have a great time. It's meditation in motion that helps me disconnect from everyday life."
   },
   "contact": {
     "title": "Contact",
@@ -81,9 +86,9 @@
     "about-me": {
       "title": "About me",
       "content": [
-        "I really enjoy developing apps and I always did. Figuring out the right algorithm and seeing it come to life, piece by piece, gives me a great deal of satisfaction. Even the inevitable element of chasing bugs can be uplifting, when the problem is finally solved.",
-        "But implementing a commercial application is far more than just the code. Actually, it's barely the tip of the iceberg. It requires a solid design, thorough planning and predictability. A lot of people with different roles and background must communicate efficiently to reach the common goal. Even inadequate tools or low team spirit may jeopardize the final result. For me, helping with that is equally exciting.",
-        "I cannot look away, when I see something doesn't work, is inefficient, or at least can be improved. I can be unyielding or even annoying, when representing my team or improving the process. And, to be honest, I consider it a virtue."
+        "Solving complex technical problems that programming offers has always excited me. Figuring out the right algorithm and bringing it to life step by step gives me immense satisfaction.",
+        "However, building advanced systems is far more than just implementation. It involves conscious architectural choices, anticipating future requirements and potential bottlenecks. This requires deep understanding not only of technical aspects but also business goals and team constraints. Many people with diverse skills and perspectives must work in harmony to reach a common objective – and overseeing this process, identifying risks before they materialize, and supporting efficient team execution is as compelling to me as the code itself.",
+        "I cannot remain indifferent when I see suboptimal approaches, short-sighted solutions, or lack of planning. I strive to be constructive, but I won't stay silent when I believe something threatens the project or team. If this occasionally gives me a reputation for being stubborn, I accept it – because I believe it's a leader's responsibility."
       ]
     },
     "lang-polish": "polish",

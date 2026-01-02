@@ -18,28 +18,30 @@ const Hobby = () => {
             const isEven = idx % 2 === 1;
             return (
               <FloatingCard
-                className={`mx-4 md:max-w-[50%] md:mx-15 md:self-${isEven ? "end" : "start"}`}
+                className={`mx-4 md:max-w-[50%] md:mx-15 md:self-${
+                  isEven ? "end" : "start"
+                }`}
                 key={activity.titleId}
                 maxMove={[20, 20]}
               >
-                <div className={`relative flex items-center flex-col ${isEven ? "md:flex-row-reverse" : "md:flex-row"}`}>
+                <div
+                  className={`relative flex items-center flex-col ${
+                    isEven ? "md:flex-row-reverse" : "md:flex-row"
+                  }`}
+                >
                   {/* Bubble image */}
-                  <div
-                    className="absolute border-4 border-primary bg-dark rounded-full overflow-hidden h-30 w-30 -m-15">
+                  <div className="absolute border-4 border-primary bg-dark rounded-full overflow-hidden h-30 w-30 -m-15">
                     <div className="w-full h-full p-[15%] flex items-center justify-center">
-                      <img
-                        src={activity.icon}
-                        alt=""
-                        className="h-full mx-auto block"
-                      />
+                      <activity.icon className="h-full mx-auto block fill-primary stroke-primary" />
                     </div>
                   </div>
                   {/* Content */}
                   <div
-                    className={`p-4 pt-18 md:pt-4 text-center ${isEven
-                      ? `md:ml-4 md:mr-15 md:text-left`
-                      : `md:ml-15 md:mr-4 md:text-right`
-                      }`}
+                    className={`p-4 pt-18 md:pt-4 text-center ${
+                      isEven
+                        ? `md:ml-4 md:mr-15 md:text-left`
+                        : `md:ml-15 md:mr-4 md:text-right`
+                    }`}
                   >
                     <h3 className="text-primary mb-4">
                       <Trans i18nKey={activity.titleId} />

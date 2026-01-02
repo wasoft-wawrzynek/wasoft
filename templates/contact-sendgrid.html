@@ -42,6 +42,11 @@
             background-color: #333;
         }
 
+        .details table {
+            width: 100%;
+            table-layout: auto;
+        }
+
         .details h2 {
             font-family: "Teko", impact, sans-serif;
             font-weight: 400;
@@ -68,6 +73,7 @@
             margin: 0.25rem 0;
             color: white;
             vertical-align: middle;
+            word-break: break-word;
         }
 
         .footer {
@@ -81,9 +87,41 @@
             .header .logo {
                 height: 5rem;
             }
+            .details {
+                padding: 1rem;
+                margin: 0 0.5rem;
+            }
             .details h2 {
-                font-size: 1.5rem;
-                margin: 0 0 2.5rem 0;
+                font-size: 1.8rem;
+                margin: 0 0 1.5rem 0;
+            }
+            .details h3 {
+                font-size: 1rem;
+                margin-right: 0.5rem;
+            }
+            .details h4 {
+                font-size: 0.95rem;
+            }
+            .details table {
+                display: block;
+            }
+            .details table tr {
+                display: block;
+                margin-bottom: 1rem;
+            }
+            .details table th,
+            .details table td {
+                display: block;
+                text-align: left;
+            }
+            .details table th {
+                margin-bottom: 0.25rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            .footer {
+                padding: 1rem;
             }
         }
     </style>

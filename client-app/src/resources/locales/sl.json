@@ -16,8 +16,11 @@
   },
   "experience": {
     "title": "Moje doświadczenie",
+    "endava": {
+      "description": "Migracyjo i rozwōj platformy webowej dlo spōłek akcyjnych do zarządzanio przydzielonymi akcjami, akcjonarujūszy, dywidendami i raportami.<br>Kierowanie zespołiym w kwestiach technicznych i cołkowito nadzōr nad projektem. Projektowanie rozwiōnzań architektonicznych, mōdelōw kōmunikacyji między serwisami i strategii radzenia se ze wyzwaniami technicznymi.<br>Zarządzanie długiym technicznym, bezproblemowe wdrażanio na produkcyjo, implementacyjo i utrzimanie pipeline'ōw CI/CD oraz mōdelu wspōłpracy zespołōw dev i QA.<br>Wspōłpraca z działym biznesu przy planowaniyu rozwoju produktu i definiowaniu technicznych aspektōw funkcyji."
+    },
     "eqtek": {
-      "description": "Rozwiyjanie i utrzimowanie platformy do kōnfigurowanio i projektowanio formularzy i procesōw. Projektowanie i dostarczanie rozwiōnzań dopasowanych do potrzeb klijyntōw – głōwnie brytyjskich instytucyji i bankōw.<br>Zarządzanie ekipōm programistōw i testerōw, pomaganie w kōmunikacyji z biznesym i ulepszanie procesu robiynio softu."
+      "description": "Rozwōj i utrzimanie platformy case management do kōnfigurowanio formularzy i zarządzanio przepływym danych. Poza platformōm realizowano projekty dostosowanio i wdrożeń indywidualnych rozwiōnzań dlo klijyntōw z brytyjskigo sektora publicznego i finansowego.<br>Kierowanie zespołym technicznych (kilkanoście ôsōb w zespołach scrumowych), planowanie i koordynacyjo, wspōłpraca z biznesym przy dopasowaniu zasobōw i priorytetyzacjŏch wdrożeń. Projektowanie i implementacyjo dedykowanych rozwiōnzań, analiza przyszłych wymagań i strategie ich realizacyje."
     },
     "vsoft": {
       "description": "Utrzimowanie aplikacyje webowej do obsugi sprzedoży kōmbinacyji ubezpieczeŏń kōmunikacyjnych (OC/AC), dostarczanej dlo polskich towarzistw ubezpieczeniowych."
@@ -44,11 +47,13 @@
   "hobby": {
     "title": "Po robocie",
     "brewing-title": "Piwoŏrstwo",
-    "brewing-description": "Worzynie swojigo piwa na piyrszy sznup może sie wydŏwać skōmpikowane. I tak je… Po dziesiōntkach warek dalij żech niy widzioł nawet wiyrchōłka chmielowyj gōry.<br><br>Bez względu na efekt, lubia eksperymyntować ze stylami – planować, warzić i pilnować fermentacyje. Gorszŏ rzecz to mycie flaszek i sprzątanie. Ale bez roboty niy ma kołocza.<br><br>Postym moji przygody piwnej idzie śledzić na strōnie browaru:<br><br><wawrzelniaLink>",
+    "brewing-description": "Worzynie swojigo piwa na piyrszy sznup może sie wydŏwać skōmpikowane. I tak je… Po dziesiōntkach warek dalij żech niy widzioł nawet wiyrchōłka chmielowyj gōry.<br><br>Bez względu na efekt, lubia eksperymyntować ze stylami – planować, warzić i pilnować fermentacyje. Gorszŏ rzecz to mycie flaszek i sprzątanie. Ale bez roboty niy ma kołocza...",
     "squash-title": "Squash",
     "squash-description": "Dlo zdrowotności – i ciała, i łebŏ – musza czasym wylać ze siebie trochę potu.<br><br>Żodyn ze mie, co stawiŏ wyzwania sam se. Potrzebuja żywego przeciwnika na kōrcie. Czasym wygrywŏm, czasym przegrywŏm, ale nojważniyjszy je ten szpil miyndzy początkiym a kōńciym meczu.",
     "traveling-title": "Podruże",
-    "traveling-description": "To niy żŏdna oryginalność, ale tak jak inkszi – lubia podrużować. Im dalij i egzotyczniyjsze miejsce – tym lepsze. I niy ino widoki. Lubiōm łobserwować dziwactwa inkszych kultur.<br><br>Nojciekawejsze sōm sklepy spożywcze. Tam nojlepij widać, jak sie roz różni kajś kraj – po smakach, wōniach i tym, co lubiōm miejscowi."
+    "traveling-description": "To niy żŏdna oryginalność, ale tak jak inkszi – lubia podrużować. Im dalij i egzotyczniyjsze miejsce – tym lepsze. I niy ino widoki. Lubiōm łobserwować dziwactwa inkszych kultur.<br><br>Nojciekawejsze sōm sklepy spożywcze. Tam nojlepij widać, jak sie roz różni kajś kraj – po smakach, wōniach i tym, co lubiōm miejscowi.",
+    "drumming-title": "Perkusyjo",
+    "drumming-description": "Uczynie sie i ćwiczynie na perkusyji dŏwo mi fest radości. Niy rzekna, iże żech je we tym dobry, ale kożdo sesyjo za zestawym to dlo mie sŏmŏ przijymność. To je sposōb na wyrażynie sie i wczucie we ulubionōm muzykã na całkiym inkszym poziomie.<br><br>Nawet jak niy grŏm żŏdnygo kōnkretnygo utwōru, ino ćwicza techniki i rytmy, świyntnie sie przeca tym bawiōm. To je medytacyjo we ruchu, co dŏwo mi możebność ôdciōngnyńcia sie ôd codziennõści."
   },
   "contact": {
     "title": "Kōntakt",
@@ -81,9 +86,9 @@
     "about-me": {
       "title": "Ô mnie",
       "content": [
-        "Lubiōm programować i tak było ôd dycki. Myślanie ô algorytmach i wcielanie ich w życie, kawałek po kawałku, daje mi moc radości. Nawet szukanie błyndōw może być fajne, jak sie w kōńcu naprawi problem.",
-        "Ale robiynie aplikacyje to niy ino kod. To sam nojpiyrszy szrajber. Potrzebny je projekt, plan i spokōj. Lōdzie z roztōmajtych dziedzin muszōm się dogadać. Nawet złe nŏrzynia abo niske morale mogōm zniszczyć projekt. I to też je dlo mie ciekawe.",
-        "Niy umia siedzieć cicho, jak widza, że cosik niy funguje abo idzie zrobić lepi. Umia być uparci i natrętni, coby pomōc moji ekipie. I powiym szczerze – widza to za zaleta."
+        "Ôd zawdy mie ekscytowało rozwiōnzywanie złożonych problemōw technicznych, co daje programowanie. Wymyślanie odpowiedniego algorytmu i stopniowe wcielanie go w życie daje mi moc radości.",
+        "Jednakoż budowanie zaawansowanych systemōw to dużo więcej niż samo kodowanie. To świadome wybory dotyczōnce architektury, przewidywanie przyszłych wymagań i potencjalnych węskich gardel. Wymaga to dobrego zrozumienia niy ino kwestyji technicznych, ale też celōw biznesowych i ograniczeń zespołu. Wiele ôsōb z rozmaitymi umiejętnościami i perspektywami musi pracować w zgodzie, coby osiōngnōńć wspólny cel – a nadzorowanie tego procesu, identyfikowanie ryzyk zanim się zmaterializujōm i pomaganie ekipie w efektywnym działaniu, to dlo mie równie ekscytujōnce co sam kod.",
+        "Niy mogōm przejść obojętnie obok sytuacyji, w keryj widza nieoptymalne podejście, rozwiōnzanie krótkowzroczne czy brak planu. Starams się być konstruktywny, ale niy beda milczōł, gdy uważam, że cosik zagraża projektowi abo ekipie. Jeśli to ôd czasu czasem sprawia mi opinijō nieustympliwego, akceptuja to – bo wierzā, że to odpowiedzialno lidera."
       ]
     },
     "lang-polish": "polski",

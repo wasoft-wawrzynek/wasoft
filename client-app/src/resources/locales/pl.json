@@ -16,14 +16,17 @@
   },
   "experience": {
     "title": "Moje doświadczenie",
+    "endava": {
+      "description": "Migracja i rozwój platformy webowej dla spółek akcyjnych do zarządzania przydzielonymi akcjami, akcjonariuszami, dywidendami i raportami.<br>Kierowanie zespołem w aspektach technicznych oraz całościowy nadzór nad projektem. Projektowanie rozwiązań architektonicznych, modeli komunikacji między serwisami i strategii rozwiązywania wyzwań technicznych.<br>Zarządzanie długiem technicznym, wdrożenia na produkcję, implementacja i utrzymanie pipeline'ów CI/CD oraz modelu współpracy zespołów dev i QA.<br>Współpraca z biznesem przy planowaniu rozwoju produktu i definiowaniu technicznych aspektów funkcjonalności."
+    },
     "eqtek": {
-      "description": "Rozwijanie i utrzymywanie platformy służącej do konfigurowania i projektowania formularzy i procesów. Projektowanie i dostarczanie rozwiązań dopasowanych do potrzeb indywidualnych klientów - brytyjskich instytucji państwowych i banków.<br>Zarządzanie zespołem programistów i testerów, wspomaganie komunikacji z biznesem i usprawnianie procesu wytwarzania oprogramowania."
+      "description": "Rozwój i utrzymanie platformy typu \"case management system\" do konfigurowania formularzy i zarządzania przepływem danych. Poza platformą realizowane były projekty dostosowania i wdrożeń indywidualnych rozwiązań dla klientów z brytyjskiego sektora publicznego i finansowego.<br>Kierowanie zespołem technicznym (kilkanaście osób w zespołach scrumowych), planowanie i koordynacja prac, współpraca z biznesem przy dopasowaniu zasobów i priorytetyzacji wdrożeń. Projektowanie i implementacja dedykowanych rozwiązań, analiza przyszłych wymagań i strategia ich realizacji."
     },
     "vsoft": {
       "description": "Utrzymywanie aplikacji webowej do obsługi sprzedaży złożonych konfiguracji ubezpieczeń komunikacyjnych (OC/AC), dostarczanej dla ogólnopolskich towarzystw ubezpieczeniowych."
     },
     "flightscope": {
-      "pm-description": "Ocena, planowanie i projektowanie architektury kilku równoległych projektów technicznych.<br>Wspomaganie komunikacji pomiędzy oddziałami (Polska, RPA i USA) oraz wspomaganie współpracy między zespołami zadaniowymi (grafikami, inżynierami, sprzedawcami, itd.).<br>Ustalanie priorytetów zadań i projektów z uwzględnieniem aktualnych zasobów i zapotrzebowania klientów.<br>Zarządzanie kilkoma niewielkimi zespołami programistów.",
+      "pm-description": "Ocena, planowanie i projektowanie architektury kilku równoległych projektów technicznych.<br>Wspomaganie komunikacji pomiędzy oddziałami (Polska, RPA i USA) oraz wspomaganie współpracy między zespołami zadaniowymi (grafikami, inżynierami, sprzedawcami, itd.).<br>Ustalanie priorytetów zadań i projektów z uwzględnieniem aktualnych zasobów i zapotrzebowania klientów.",
       "leader-description": "Ponad dotychczasowe obowiązki, włączyłem się w projektowanie architektury nowych rozwiązań, planowanie rozwoju projektu i przewodzenie niewielkiemu zespołowi programistów.",
       "dev-description": "Rozwój i utrzymanie aplikacji desktopowej, używanej przez golfistów (profesjonalistów i amatorów) do doskonalenia swoich umiejętności, na podstawie danych analitycznych dotyczących lotu piłki, dostarczonych przez radar sportowy."
     }
@@ -44,11 +47,13 @@
   "hobby": {
     "title": "Po pracy",
     "brewing-title": "Piwowarstwo",
-    "brewing-description": "Warzenie własnego piwa na pierwszy rzut oka może wydawać się skomplikowane i wymagające. I takie właśnie jest... Po kilkudziesięcu warkach nadal mam wrażenie, że nie poznałem nawet wierzchołka góry chmielowej.<br><br>Niezależnie od efektów, uwielbiam eksperymentować z kolejnymi stylami - planować, warzyć i doglądać fermentacji. Gorzej z myciem butelek, etykietowaniem i sprzątaniem. Ale bez pracy nie ma kołaczy...<br><br>Postęp mojej piwnej przygody można śledzić na stronie mojego browaru:<br><br><wawrzelniaLink>",
+    "brewing-description": "Warzenie własnego piwa na pierwszy rzut oka może wydawać się skomplikowane i wymagające. I takie właśnie jest... Po kilkudziesięciu warkach nadal mam wrażenie, że nie poznałem nawet wierzchołka góry chmielowej.<br><br>Niezależnie od efektów, uwielbiam eksperymentować z kolejnymi stylami - planować, warzyć i doglądać fermentacji. Gorzej z myciem butelek, etykietowaniem i sprzątaniem. Ale bez pracy nie ma kołaczy...",
     "squash-title": "Squash",
-    "squash-description": "Dla zdrowotności, zarówno tej fizycznej, jak i psychicznej, potrzebuję czasem wylać z siebie trochę potu.<br><br>Zdecydowanie nie należę do tych, którzy potafią stawiać wyzwania sami sobie, śrubując wyniki. Ja potrzebuję żywego, wymagającego przeciwnika po drugiej stronie kortu. Czasem wygram, czasem przegram, ale najważniejszy jest ten dreszcz emocji między początkiem a końcem meczu.",
+    "squash-description": "Dla zdrowotności, zarówno tej fizycznej, jak i psychicznej, potrzebuję czasem wylać z siebie trochę potu.<br><br>Zdecydowanie nie należę do tych, którzy potrafią stawiać wyzwania sami sobie, śrubując wyniki. Ja potrzebuję żywego, wymagającego przeciwnika po drugiej stronie kortu. Czasem wygram, czasem przegram, ale najważniejszy jest ten dreszcz emocji między początkiem a końcem meczu.",
     "traveling-title": "Podróże",
-    "traveling-description": "Nic w tym oryginalnego, ale tak jak wielu innych - uwielbiam podróżować. Im dalszy i bardziej egzotyczny kierunek - tym lepiej. I nie chodzi tylko o widoki czy architekturę. Bardzo lubię obserwować osobliwości innych miejsc i kultur.<br><br>Najciekawsze są zawsze... sklepy spożywcze. To właśnie tam najlepiej widać jak bardzo dany kraj różni się od naszego - po smakach, zapachach i upodobaniach tubylców."
+    "traveling-description": "Nic w tym oryginalnego, ale tak jak wielu innych - uwielbiam podróżować. Im dalszy i bardziej egzotyczny kierunek - tym lepiej. I nie chodzi tylko o widoki czy architekturę. Bardzo lubię obserwować osobliwości innych miejsc i kultur.<br><br>Najciekawsze są zawsze... sklepy spożywcze. To właśnie tam najlepiej widać jak bardzo dany kraj różni się od naszego - po smakach, zapachach i upodobaniach tubylców.",
+    "drumming-title": "Perkusja",
+    "drumming-description": "Nauka i ćwiczenie gry na perkusji sprawia mi ogromną radość. Nie twierdzę, że jestem w tym szczególnie dobry, ale każda sesja za zestawem to dla mnie czysta przyjemność. To sposób na wyrażenie siebie i wczucie się w ulubioną muzykę na zupełnie innym poziomie.<br><br>Nawet gdy nie gram żadnego konkretnego utworu, tylko ćwiczę same techniki i rytmy, świetnie się przy tym bawię. To medytacja w ruchu, która pozwala mi odciąć się od codzienności."
   },
   "contact": {
     "title": "Kontakt",
@@ -80,9 +85,9 @@
     "print": "Drukuj",
     "about-me": {
       "title": "O mnie",
-      "content": ["Uwielbiam programować i było tak od zawsze. Wymyślanie odpowiedniego algorytmy i stopniowe wcielanie go w życie, kawałek po kawałku, daje mi mnóstwo satysfakcji. Nawet nieodzowny element analizowania błędów może być budujący, gdy wreszcie uda się rozwiązać problem.",
-        "Ale tworzenie komercyjnej aplikacji to dużo więcej niż tylko pisanie kodu. Właściwie to zaledwie wierzchołek góry lodowej. Potrzebny jest dobry projekt, dokładny plan i przewidywalność. Wiele osób o różnych umiejętnościach i z różnych środowisk musi znaleźć wspólny język, by osiągnąć wspólny cel. Nawet takie sprawy jak nieodpowiednie narzędzia lub niskie morale mogą zagrozić ostatecznemu wynikowi. I te elementy są dla mnie równie ciekawe.",
-        "Nie potrafię siedzieć cicho, gdy widzę, że coś nie działa lub zwyczajnie może być poprawione. Potrafię być nieustępliwy lub wręcz natrętny by pomóc mojemu zespołowi. I jeśli mam być szczery, uważam to za zaletę."
+      "content": ["Zawsze ekscytowało mnie rozwiązywanie złożonych problemów technicznych, jakie daje programowanie. Wymyślanie odpowiedniego algorytmu i stopniowe wcielanie go w życie daje mi mnóstwo satysfakcji.",
+        "Jednak budowanie zaawansowanych systemów to znacznie więcej niż sama implementacja. To świadome wybory dotyczące architektury, przewidywanie przyszłych wymagań i potencjalnych wąskich gardeł. Wymaga to dobrego zrozumienia nie tylko kwestii technicznych, ale również celów biznesowych i ograniczeń zespołu. Wiele osób z różnymi umiejętnościami i perspektywami musi pracować w zgodzie, by osiągnąć wspólny cel – a nadzorowanie tego procesu, identyfikowanie ryzyk zanim się zmaterializują i pomaganie zespołowi w efektywnym działaniu, to dla mnie równie ekscytujące co sam kod.",
+        "Nie mogę przejść obojętnie obok sytuacji, w której widzę nieoptymalne podejście, rozwiązanie krótkowzroczne czy brak planu. Staram się być konstruktywny, ale nie będę milczał, gdy uważam, że coś zagraża projektowi lub zespołowi. Jeśli to czasami sprawia mi opinię nieustępliwego, akceptuję to – bo wierzę, że to odpowiedzialność lidera."
       ]
     },
     "lang-polish": "polski",

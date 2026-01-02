@@ -1,10 +1,16 @@
+import TravelIcon from "./icons/travel.svg?react";
+import SquashIcon from "./icons/squash.svg?react";
+import BreweryIcon from "./icons/brewery.svg?react";
+import DrumKitIcon from "./icons/drum-kit.svg?react";
+
 const personalData = {
   dateOfBirth: new Date("1991-07-01"),
   contact: {
-    telephone: "691-262-330",
+    telephone: "(+48) 691-262-330",
     mail: "pawel.wawrzynek@gmail.com",
     website: "https://www.wasoft.pl",
     linkedIn: "pawel-wawrzynek",
+    gitHub: "wasoft-wawrzynek",
   },
   languages: [
     { languageId: "resume.lang-polish", level: "resume.lang-native" },
@@ -32,13 +38,36 @@ const personalData = {
   ],
   experience: [
     {
-      company: "EQTek",
+      company: "Endava",
+      locationId: "krakow",
+      roles: [
+        {
+          title: "Dev Lead",
+          startDate: new Date("2024-10"),
+          endDate: undefined,
+          descriptionId: "experience.endava.description",
+          technologies: [
+            "C#/.NET 9",
+            "ASP.NET Core",
+            "Azure (App Service, AD B2C, DevOps)",
+            "YAML (Azure pipelines)",
+            "SignalR",
+            "React 18 + TypeScript",
+            "SQL Server",
+            "nUnit",
+            "NewRelic",
+          ]
+        }
+      ]
+    },
+    {
+      company: "EQ",
       locationId: "krakow",
       roles: [
         {
           title: ".NET Developer / Team Leader",
           startDate: new Date("2019-08"),
-          endDate: undefined,
+          endDate: new Date("2024-09"),
           descriptionId: "experience.eqtek.description",
           technologies: [
             "C#",
@@ -55,7 +84,7 @@ const personalData = {
       ],
     },
     {
-      company: "VSoft S.A.",
+      company: "VSoft",
       locationId: "krakow",
       roles: [
         {
@@ -106,35 +135,41 @@ const personalData = {
           startDate: new Date("2013-05"),
           endDate: new Date("2015-06"),
           descriptionId: "experience.flightscope.dev-description",
-          technologies: ["C#", "WPF", "Windows Strore Apps", "SVN"],
+          technologies: [],
         },
       ],
     },
   ],
   skills: {
-    key: ["C#/.NET", "HTML/CSS", "SCRUM"],
-    solid: ["TFS", "Azure DevOps", "nUnit", "React", "JIRA"],
-    promising: ["SQL", "Azure Portal", "JS / TS", "Git"],
-    basic: ["Docker", "GCP", "Java", "C++", "DirectX"],
+    key: ["C#/.NET", "HTML/CSS", "Azure", "YAML (pipelines)"],
+    solid: ["React", "TypeScript", "SQL", "xUnit", "SignalR", "microservices" ],
+    promising: ["Docker", "PowerShell", "Git"],
+    basic: ["GCP", "Java", "C++"],
   },
   hobby: [
     {
       titleId: "hobby.traveling-title",
       descriptionId: "hobby.traveling-description",
-      icon: "/img/icons/travel.svg",
+      icon: TravelIcon,
       image: "/img/resume/travel.png",
     },
     {
-      titleId: "hobby.brewing-title",
-      descriptionId: "hobby.brewing-description",
-      icon: "/img/icons/wawrzelnia.svg",
-      image: "/img/resume/brewing.png",
+      titleId: "hobby.drumming-title",
+      descriptionId: "hobby.drumming-description",
+      icon: DrumKitIcon,
+      image: "/img/resume/drum-kit.png",
     },
     {
       titleId: "hobby.squash-title",
       descriptionId: "hobby.squash-description",
-      icon: "/img/icons/squash.svg",
+      icon: SquashIcon,
       image: "/img/resume/squash.png",
+    },
+    {
+      titleId: "hobby.brewing-title",
+      descriptionId: "hobby.brewing-description",
+      icon: BreweryIcon,
+      image: "/img/resume/brewery.png",
     },
   ],
 };

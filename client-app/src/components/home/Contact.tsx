@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import { substitutes } from "../../resources/translations";
 import IContactFormData from "../../api/models/IContactFormData";
 import client from "../../api/client";
+import ContactIcon from "@/resources/icons/message.svg?react";
 import DownloadIcon from "@/resources/icons/download.svg?react";
 
 const Contact = () => {
@@ -57,9 +58,7 @@ const Contact = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-2">
           <div className="flex flex-col items-center justify-center text-center gap-4">
-            <div className="border-4 border-primary rounded-full w-1/4 p-4 md:p-8">
-              <img className="w-full" src="/img/paper-plane.png" alt="" />
-            </div>
+            <ContactIcon className="h-40 p-4 md:h-60 md:p-8 stroke-primary" />
             <p className="text-light leading-6">
               <Trans i18nKey="contact.intro" components={substitutes} />
             </p>
@@ -107,9 +106,10 @@ const Contact = () => {
               type="submit"
               value={t("contact.send")}
               className={`mt-2 px-6 py-2 rounded font-bold text-lg transition 
-                ${input.name && input.email && input.message
-                  ? "bg-primary text-dark cursor-pointer border-none"
-                  : "bg-medium-dark text-medium-light border border-medium-light cursor-not-allowed"
+                ${
+                  input.name && input.email && input.message
+                    ? "bg-primary text-dark cursor-pointer border-none"
+                    : "bg-medium-dark text-medium-light border border-medium-light cursor-not-allowed"
                 }`}
             />
           </form>
