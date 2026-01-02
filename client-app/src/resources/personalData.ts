@@ -142,10 +142,31 @@ const personalData = {
   ],
   skills: {
     key: ["C#/.NET", "HTML/CSS", "Azure", "YAML (pipelines)"],
-    solid: ["React", "TypeScript", "SQL", "xUnit", "SignalR", "microservices" ],
+    solid: ["React", "TypeScript", "SQL", "xUnit", "SignalR", "microservices"],
     promising: ["Docker", "PowerShell", "Git"],
     basic: ["GCP", "Java", "C++"],
   },
+  portfolio: [
+    {
+      titleId: "portfolio.wasoft.title",
+      descriptionId: "portfolio.wasoft.description",
+      technologies: [
+        "React 18",
+        "TypeScript",
+        "Vite",
+        "TailwindCSS",
+        "i18next",
+        "C#/.NET 8",
+        "Azure Functions",
+        "Azure Static Web Apps",
+        "SendGrid",
+        "GitHub Actions"
+      ],
+      screenshots: ["/img/portfolio/wasoft-1.png", "/img/portfolio/wasoft-2.png", "/img/portfolio/wasoft-3.png", "/img/portfolio/wasoft-4.png"],
+      repositoryUrl: "https://github.com/wasoft-wawrzynek/wasoft",
+      productionUrl: "https://wasoft.pl",
+    },
+  ],
   hobby: [
     {
       titleId: "hobby.traveling-title",
