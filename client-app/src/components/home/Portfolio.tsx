@@ -1,11 +1,17 @@
+import { useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import FloatingCard from "../controls/FloatingCard";
+import ImageGalleryContainer from "../controls/ImageGalleryContainer";
 import personalData from "../../resources/personalData";
 import GithubIcon from "@/resources/icons/github.svg?react";
 import LinkIcon from "@/resources/icons/link.svg?react";
 
 const Portfolio = () => {
   useTranslation();
+  const [galleryImages, setGalleryImages] = useState<{
+    images: string[];
+    index: number;
+  } | null>(null);
 
   return (
     <div id="portfolio" className="relative bg-dark py-8">
@@ -47,12 +53,24 @@ const Portfolio = () => {
                 {project.screenshots && project.screenshots.length > 0 && (
                   <div className="mb-4 grid grid-cols-2 gap-2">
                     {project.screenshots.map((screenshot, imgIdx) => (
-                      <img
+                      <button
                         key={imgIdx}
-                        src={screenshot}
-                        alt={`Screenshot ${imgIdx + 1}`}
-                        className="w-full h-32 object-cover rounded border border-primary/30 hover:border-primary transition-colors"
-                      />
+                        onClick={() =>
+                          setGalleryImages({ images: project.screenshots, index: imgIdx })
+                        }
+                        className="relative group cursor-pointer overflow-hidden rounded border border-primary/30 hover:border-primary transition-colors"
+                      >
+                        <img
+                          src={screenshot}
+                          alt={`Screenshot ${imgIdx + 1}`}
+                          className="w-full h-32 object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+                          <span className="text-light opacity-0 group-hover:opacity-100 transition-opacity text-sm">
+                            <Trans i18nKey="portfolio.clickToView" />
+                          </span>
+                        </div>
+                      </button>
                     ))}
                   </div>
                 )}
@@ -91,6 +109,15 @@ const Portfolio = () => {
           ))}
         </div>
       </div>
+
+      {/* Image Gallery Modal */}
+      {galleryImages && (
+        <ImageGalleryContainer
+          images={galleryImages.images}
+          initialIndex={galleryImages.index}
+          onClose={() => setGalleryImages(null)}
+        />
+      )}
     </div>
   );
 };
