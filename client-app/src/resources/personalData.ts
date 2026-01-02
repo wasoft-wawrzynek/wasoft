@@ -167,6 +167,26 @@ const personalData = {
       repositoryUrl: "https://github.com/wasoft-wawrzynek/wasoft",
       productionUrl: "https://wasoft.pl",
     },
+    {
+      nameId: "portfolio.poptokach.name",
+      subtitleId: "portfolio.poptokach.subtitle",
+      descriptionId: "portfolio.poptokach.description",
+      technologies: [
+        "React 19",
+        "TypeScript",
+        "Vite",
+        "TailwindCSS 4",
+        "i18next",
+        "Motion (Framer Motion)",
+        "Radix UI",
+        "shadcn/ui",
+        "Lucide React",
+        "Azure Static Web Apps"
+      ],
+      screenshots: ["/img/portfolio/poptokach-1.png", "/img/portfolio/poptokach-2.png", "/img/portfolio/poptokach-3.png", "/img/portfolio/poptokach-4.png", "/img/portfolio/poptokach-5.png"],
+      repositoryUrl: "https://github.com/wasoft-wawrzynek/po-ptokach",
+      productionUrl: "https://po-ptokach-info",
+    }
   ],
   hobby: [
     {
