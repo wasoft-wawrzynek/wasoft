@@ -156,7 +156,7 @@ const personalData = {
       titleId: "hobby.brewing-title",
       descriptionId: "hobby.brewing-description",
       icon: BreweryIcon,
-      image: "/img/resume/brewing.png",
+      image: "/img/resume/brewery.png",
     },
     {
       titleId: "hobby.squash-title",
