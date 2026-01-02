@@ -26,14 +26,6 @@ const Footer = () => {
             >
               <GitHubIcon className="transition-transform duration-200 fill-medium-light hover:fill-primary hover:scale-125" />
             </a>
-            {/* <a
-              href="https://www.wawrzelnia.pl/"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="w-10 h-10 flex items-center justify-center m-4"
-            >
-              <WawrzelniaIcon className="transition-transform duration-200 stroke-medium-light hover:stroke-primary hover:scale-125" />
-            </a> */}
           </div>
           <p className="text-medium-light text-center leading-6">
             v.{packageJson.version} | {new Date().getFullYear()} &copy;{' '}

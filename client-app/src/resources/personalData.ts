@@ -1,3 +1,7 @@
+import TravelIcon from "./icons/travel.svg?react";
+import SquashIcon from "./icons/squash.svg?react";
+import BreweryIcon from "./icons/brewery.svg?react";
+
 const personalData = {
   dateOfBirth: new Date("1991-07-01"),
   contact: {
@@ -145,19 +149,19 @@ const personalData = {
     {
       titleId: "hobby.traveling-title",
       descriptionId: "hobby.traveling-description",
-      icon: "/img/icons/travel.svg",
+      icon: TravelIcon,
       image: "/img/resume/travel.png",
     },
     {
       titleId: "hobby.brewing-title",
       descriptionId: "hobby.brewing-description",
-      icon: "/img/icons/wawrzelnia.svg",
+      icon: BreweryIcon,
       image: "/img/resume/brewing.png",
     },
     {
       titleId: "hobby.squash-title",
       descriptionId: "hobby.squash-description",
-      icon: "/img/icons/squash.svg",
+      icon: SquashIcon,
       image: "/img/resume/squash.png",
     },
   ],
