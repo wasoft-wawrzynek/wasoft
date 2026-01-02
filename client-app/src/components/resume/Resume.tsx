@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { jsPDF } from "jspdf";
 // @ts-ignore
@@ -12,6 +12,10 @@ const PAGE_HEIGHT = PAGE_WIDTH * 1.414285714285714;
 const Resume = () => {
   const { i18n } = useTranslation();
   const [pdfExport, setPdfExport] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const generatePdf = () => {
     setPdfExport(true);
