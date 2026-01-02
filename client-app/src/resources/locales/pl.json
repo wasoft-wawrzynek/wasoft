@@ -47,11 +47,13 @@
   "hobby": {
     "title": "Po pracy",
     "brewing-title": "Piwowarstwo",
-    "brewing-description": "Warzenie własnego piwa na pierwszy rzut oka może wydawać się skomplikowane i wymagające. I takie właśnie jest... Po kilkudziesięcu warkach nadal mam wrażenie, że nie poznałem nawet wierzchołka góry chmielowej.<br><br>Niezależnie od efektów, uwielbiam eksperymentować z kolejnymi stylami - planować, warzyć i doglądać fermentacji. Gorzej z myciem butelek, etykietowaniem i sprzątaniem. Ale bez pracy nie ma kołaczy...",
+    "brewing-description": "Warzenie własnego piwa na pierwszy rzut oka może wydawać się skomplikowane i wymagające. I takie właśnie jest... Po kilkudziesięciu warkach nadal mam wrażenie, że nie poznałem nawet wierzchołka góry chmielowej.<br><br>Niezależnie od efektów, uwielbiam eksperymentować z kolejnymi stylami - planować, warzyć i doglądać fermentacji. Gorzej z myciem butelek, etykietowaniem i sprzątaniem. Ale bez pracy nie ma kołaczy...",
     "squash-title": "Squash",
-    "squash-description": "Dla zdrowotności, zarówno tej fizycznej, jak i psychicznej, potrzebuję czasem wylać z siebie trochę potu.<br><br>Zdecydowanie nie należę do tych, którzy potafią stawiać wyzwania sami sobie, śrubując wyniki. Ja potrzebuję żywego, wymagającego przeciwnika po drugiej stronie kortu. Czasem wygram, czasem przegram, ale najważniejszy jest ten dreszcz emocji między początkiem a końcem meczu.",
+    "squash-description": "Dla zdrowotności, zarówno tej fizycznej, jak i psychicznej, potrzebuję czasem wylać z siebie trochę potu.<br><br>Zdecydowanie nie należę do tych, którzy potrafią stawiać wyzwania sami sobie, śrubując wyniki. Ja potrzebuję żywego, wymagającego przeciwnika po drugiej stronie kortu. Czasem wygram, czasem przegram, ale najważniejszy jest ten dreszcz emocji między początkiem a końcem meczu.",
     "traveling-title": "Podróże",
-    "traveling-description": "Nic w tym oryginalnego, ale tak jak wielu innych - uwielbiam podróżować. Im dalszy i bardziej egzotyczny kierunek - tym lepiej. I nie chodzi tylko o widoki czy architekturę. Bardzo lubię obserwować osobliwości innych miejsc i kultur.<br><br>Najciekawsze są zawsze... sklepy spożywcze. To właśnie tam najlepiej widać jak bardzo dany kraj różni się od naszego - po smakach, zapachach i upodobaniach tubylców."
+    "traveling-description": "Nic w tym oryginalnego, ale tak jak wielu innych - uwielbiam podróżować. Im dalszy i bardziej egzotyczny kierunek - tym lepiej. I nie chodzi tylko o widoki czy architekturę. Bardzo lubię obserwować osobliwości innych miejsc i kultur.<br><br>Najciekawsze są zawsze... sklepy spożywcze. To właśnie tam najlepiej widać jak bardzo dany kraj różni się od naszego - po smakach, zapachach i upodobaniach tubylców.",
+    "drumming-title": "Perkusja",
+    "drumming-description": "Nauka i ćwiczenie gry na perkusji sprawia mi ogromną radość. Nie twierdzę, że jestem w tym szczególnie dobry, ale każda sesja za zestawem to dla mnie czysta przyjemność. To sposób na wyrażenie siebie i wczucie się w ulubioną muzykę na zupełnie innym poziomie.<br><br>Nawet gdy nie gram żadnego konkretnego utworu, tylko ćwiczę same techniki i rytmy, świetnie się przy tym bawię. To medytacja w ruchu, która pozwala mi odciąć się od codzienności."
   },
   "contact": {
     "title": "Kontakt",

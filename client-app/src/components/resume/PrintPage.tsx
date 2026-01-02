@@ -303,7 +303,7 @@ const PrintPage = ({ width, height, isPdf }: IPageProps) => {
         {/* Hobbies Section */}
         <div className="bg-light p-4">
           <Title textId="header.hobby" isPdf={isPdf} />
-          <div className="grid grid-cols-3 mt-4 justify-center">
+          <div className="grid grid-cols-4 mt-4 justify-center">
             {personalData.hobby.map((hobby) => (
               <div
                 key={hobby.titleId}
