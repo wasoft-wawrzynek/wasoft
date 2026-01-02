@@ -82,7 +82,8 @@
     "production": "Demo",
     "clickToView": "Kliknij, aby wyświetlić",
     "wasoft": {
-      "title": "WaSoft - Strona osobista i API",
+      "name": "WaSoft",
+      "subtitle": "Strona osobista i API",
       "description": "Kompleksowa aplikacja full-stack służąca jako cyfrowe portfolio prezentujące doświadczenie zawodowe, umiejętności i projekty w interaktywny i angażujący sposób. Projekt pełni funkcję zarówno cyfrowego CV, jak i demonstracji nowoczesnych praktyk programistycznych, oferując responsywny design dostosowujący się płynnie do wszystkich urządzeń i rozmiarów ekranów.<br><br>Front-end zbudowany w React 18 i TypeScript, wykorzystuje Vite do błyskawicznie szybkiego środowiska deweloperskiego i zoptymalizowanych buildów produkcyjnych. Aplikacja wykorzystuje TailwindCSS do nowoczesnej stylizacji, niestandardowe animacje dla lepszego UX oraz i18next zapewniający pełne wsparcie wielojęzyczne w trzech językach (angielski, polski, śląski). Strona oferuje płynną nawigację ze scrollowaniem, interaktywne karty z efektami parallax oraz dedykowany widok CV z możliwością generowania PDF.<br><br>Backend zaimplementowany jako bezserwerowe API wykorzystujące Azure Functions z C# i .NET 8. Dostarcza RESTful endpoint dla formularza kontaktowego, przetwarzając zgłoszenia i wysyłając powiadomienia email przez SendGrid. Architektura serverless zapewnia opłacalność, automatyczne skalowanie i minimalny narzut utrzymania przy zachowaniu wysokiej niezawodności i wydajności.<br><br>Oba komponenty hostowane są na platformie chmurowej Azure - front-end na Azure Static Web Apps, a API na Azure Functions. Cały proces wdrożeniowy jest w pełni zautomatyzowany przez GitHub Actions, implementując kompletny pipeline CI/CD obejmujący automatyczne testowanie, budowanie i deployment uruchamiany przez commity do repozytorium. Gwarantuje to szybkie cykle iteracyjne oraz spójne i niezawodne wdrożenia na produkcję."
     }
   },

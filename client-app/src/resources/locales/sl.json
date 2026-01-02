@@ -82,7 +82,8 @@
     "production": "Demo",
     "clickToView": "Kliknij, coby ôbejzdrzeć",
     "wasoft": {
-      "title": "WaSoft - Strōna ôsobisto i API",
+      "name": "WaSoft",
+      "subtitle": "Strōna ôsobisto i API",
       "description": "Kōmpleksowo aplikacyjo full-stack co służy za cyfrowe portfolio i prezyntuje doświadczynie zawodowe, umiejętności i projekty we interaktywny i angażujōncy sposōb. Projekt funguje zarōwno za cyfrowe CV, jak i demonstracyjo nowoczesnych praktyk programistycznych, ôferujōnc responsywny design dopasowujōncy sie płynnie do wszyskich urządzyń i wielkości ekranōw.<br><br>Front-end zbudowany we React 18 i TypeScript, używo Vite do błyskawicznego środowiska deweloperskiego i zoptymalizowanych buildōw produkcyjnych. Aplikacyjo używo TailwindCSS do nowoczesnyj stylizacyje, niystandardowe animacyje dlo lepszygo UX i i18next zapewniajōncy pełne wsparcie wielojynzyczne we trzech jynzykach (angielski, polski, ślōnski). Strōna ôferujo płynno nawigacyjo ze scrollowaniym, interaktywne karty z efektami parallax i dedykowany widok CV z możliwościōm generowanio PDF.<br><br>Backend zaimplementowany za bezserwerowe API używo Azure Functions ze C# i .NET 8. Dostarczo RESTful endpoint dlo fōrmulŏrza kōntaktowego, przetwŏrzajōnc zgłoszynie i wysyłajōnc powiadōmiynia email przez SendGrid. Architektura serverless zapewnio ôpłacalność, autōmatyczne skalowanie i minimalne nakłady utrzymanio przi zachowaniu wysokij niyzowoduości i wydajności.<br><br>Oba kōmponynty hostowane sōm na platformie chmurowej Azure - front-end na Azure Static Web Apps, a API na Azure Functions. Cołki proces wdrożyniowy je we pełni zautōmatyzowany przez GitHub Actions, implementujōnc kōmpletny pipeline CI/CD ôbyjmujōncy autōmatyczne testowanie, budowanie i deployment uruchōmiany przez commity do repozytorijum. To garantujo szybkie cykle iteracyjne i spōjne, niyzowodue wdrożynia na produkcyjo."
     }
   },

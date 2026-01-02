@@ -82,7 +82,8 @@
     "production": "Live demo",
     "clickToView": "Click to view",
     "wasoft": {
-      "title": "WaSoft - Personal Website & API",
+      "name": "WaSoft",
+      "subtitle": "Personal Website & API",
       "description": "A comprehensive full-stack personal portfolio application designed to showcase professional experience, skills, and projects in an interactive and engaging way. The project serves as both a digital resume and a demonstration of modern web development practices, featuring a responsive design that adapts seamlessly across all devices and screen sizes.<br><br>The front-end is built with React 18 and TypeScript, leveraging Vite for lightning-fast development experience and optimized production builds. It incorporates TailwindCSS for modern styling, custom animations for enhanced user experience, and i18next for complete multilingual support across three languages (English, Polish, and Silesian dialect). The application features smooth scrolling navigation, interactive floating cards with parallax effects, and a dedicated resume view with PDF generation capabilities.<br><br>The backend infrastructure is implemented as a serverless API using Azure Functions with C# and .NET 8. It provides a RESTful endpoint for the contact form, processing submissions and sending email notifications through SendGrid. This serverless architecture ensures cost-effectiveness, automatic scaling, and minimal maintenance overhead while maintaining high reliability and performance.<br><br>Both components are hosted on Azure cloud platform - the front-end on Azure Static Web Apps and the API on Azure Functions. The entire deployment process is fully automated through GitHub Actions, implementing a complete CI/CD pipeline that includes automated testing, building, and deployment triggered by code commits. This ensures rapid iteration cycles and consistent, reliable deployments to production."
     }
   },

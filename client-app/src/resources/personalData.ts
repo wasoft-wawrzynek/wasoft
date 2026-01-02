@@ -148,7 +148,8 @@ const personalData = {
   },
   portfolio: [
     {
-      titleId: "portfolio.wasoft.title",
+      nameId: "portfolio.wasoft.name",
+      subtitleId: "portfolio.wasoft.subtitle",
       descriptionId: "portfolio.wasoft.description",
       technologies: [
         "React 18",
