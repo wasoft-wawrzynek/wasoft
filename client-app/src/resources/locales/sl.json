@@ -90,6 +90,11 @@
       "name": "Po Ptokach",
       "subtitle": "Interaktywne zaproszyni ślubne",
       "description": "Aplikacyjo webowa służōnca za cyfrowe zaproszyni na ôroczysto­ć ślubnom, prezyntujōnca wszyske informacyje logistyczne we przystympny i wizualnie atrakcyjny sposōb. Projekt rozwijnzuje problem ôbsugi dwōch rōżnych grup go­ćij (rodzino i przyjaciela) przi użyciu jednyj aplikacyje i jednyj dōmeny - rozrōżnyni­ następuje autōmatycznie na podstawie prefiksu w URL (np. rodzinko.dōmeno.pl vs. dōmeno.pl), bez kōniyczeno­ci implementacyje przełōnczyk­w w interfejsie.<br><br>Front-end zbudowany we React 19 ze TypeScript używo Vite dlo szybkigo –r­dwisko deweloperskiego. Stylizacyjo ôparto na TailwindCSS 4, animacyje zrealizowane ze pomoc­m biblioteki Motion, a kōmponynty UI używaj­m shadcn/ui oraz Radix UI. Wsparcie wielojynzyczne we trzech jynzykach (polski, angielski, ślōnski) zapewnione przez i18next. Aplikacyjo ôferujo responsywny design, dynamiczny countdown do daty zd­rzenia, płynno nawigacyjo mi­dzy sekcjami i interaktywne animacyje.<br><br>Routing ôparty na subd­menach ôbsugiwoany je po str­nie klijynta - aplikacyjo sprawdzo hostname i autōmatycznie renderujo ôdpowiednio wersyjo tre­ci. Takie rozwijnzanie powoli­o na ôbsugi­ dwōch rōżnych 'zapotrzebowa­ biznesowych' przi użyciu jednygo projektu, jednyj bazy k­du i jednygo wdrożynia. Hosting na Azure Static Web Apps zapewnio globalnom dostympno­ć i autōmatyczne certyfikaty SSL."
+    },
+    "wawrzelnia": {
+      "name": "Wawrzelnia",
+      "subtitle": "Portal dōmowego piwoŏrza",
+      "description": "Aplikacyjo webowo do prezyntacyje postympōw produkcyje dōmowego piwa. Umożliwio rejestrowanie partii piwa z pełnom historijōm produkcyje, śledzynie poszczyególnych etapōw fermentacyje, przechowywanie fōtek i autōmatyczne ôbliczanie statystyk browaru.<br><br>Front-end zbudowany we React 17 ze TypeScript i MobX do zarządzanio stanym. Backend we C# i .NET 5 ze Entity Framework Core i bazōm SQL Server. System zawiyro fōrmulŏrz kōntaktowy ze ôchronōm przed spamym i API dōkumyntowane przez Swagger. Projekt deployowany autōmatycznie przez Azure DevOps."
     }
   },
   "gliwice": "Gliwice, Ślōnsk",

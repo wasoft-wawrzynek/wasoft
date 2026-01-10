@@ -89,6 +89,11 @@
       "name": "Po Ptokach",
       "subtitle": "Interaktywne zaproszenie ślubne",
       "description": "Aplikacja webowa służąca jako cyfrowe zaproszenie na uroczystość ślubną, prezentująca wszystkie informacje logistyczne w przystępny i wizualnie atrakcyjny sposób. Projekt rozwiązuje problem obsługi dwóch różnych grup gości (rodzina i przyjaciele) przy użyciu jednej aplikacji i jednej domeny - rozróżnienie następuje automatycznie na podstawie prefiksu w URL (np. rodzinka.domena.pl vs. domena.pl), bez konieczności implementacji przełączników w interfejsie.<br><br>Front-end zbudowany w React 19 z TypeScript wykorzystuje Vite dla szybkiego środowiska deweloperskiego. Stylizacja oparta na TailwindCSS 4, animacje zrealizowane za pomocą biblioteki Motion, a komponenty UI wykorzystują shadcn/ui oraz Radix UI. Wsparcie wielojęzyczne w trzech językach (polski, angielski, śląski) zapewnione przez i18next. Aplikacja oferuje responsywny design, dynamiczny countdown do daty wydarzenia, płynną nawigację między sekcjami oraz interaktywne animacje.<br><br>Routing oparty na subdomenach obsługiwany jest po stronie klienta - aplikacja sprawdza hostname i automatycznie renderuje odpowiednią wersję treści. Takie rozwiązanie pozwoliło na obsłużenie dwóch różnych \"zapotrzebowań biznesowych\" przy użyciu jednego projektu, jednej bazy kodu i jednego wdrożenia. Hosting na Azure Static Web Apps zapewnia globalną dostępność i automatyczne certyfikaty SSL."
+    },
+    "wawrzelnia": {
+      "name": "Wawrzelnia",
+      "subtitle": "Portal domowego piwowara",
+      "description": "Aplikacja webowa do prezentacji postępów produkcji domowego piwa. Umożliwia rejestrowanie partii piwa z pełną historią produkcji, śledzenie poszczególnych etapów fermentacji, przechowywanie zdjęć i automatyczne obliczanie statystyk browarni.<br><br>Front-end zbudowany w React 17 z TypeScript i MobX do zarządzania stanem. Backend w C# i .NET 5 z Entity Framework Core i bazą SQL Server. System zawiera formularz kontaktowy z ochroną przed spamem oraz API dokumentowane przez Swagger. Projekt deployowany automatycznie poprzez Azure DevOps."
     }
   },
   "gliwice": "Gliwice, Polska",

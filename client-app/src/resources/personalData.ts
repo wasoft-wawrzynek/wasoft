@@ -190,6 +190,31 @@ const personalData = {
       screenshots: ["/img/portfolio/poptokach-1.png", "/img/portfolio/poptokach-2.png", "/img/portfolio/poptokach-3.png", "/img/portfolio/poptokach-4.png", "/img/portfolio/poptokach-5.png"],
       repositoryUrl: "https://github.com/wasoft-wawrzynek/po-ptokach",
       productionUrl: "https://po-ptokach-info",
+    }, {
+      nameId: "portfolio.wawrzelnia.name",
+      subtitleId: "portfolio.wawrzelnia.subtitle",
+      descriptionId: "portfolio.wawrzelnia.description",
+      startDate: new Date("2020-05"),
+      endDate: new Date("2021-10"),
+      technologies: [
+        "React 17",
+        "TypeScript",
+        "MobX",
+        "SCSS",
+        "React Router",
+        "Semantic UI",
+        "Axios",
+        "C#/.NET 5",
+        "Entity Framework Core",
+        "SQL Server",
+        "AutoMapper",
+        "MailKit",
+        "Swagger/Swashbuckle",
+        "Serilog",
+        "GitHub Actions"
+      ],
+      screenshots: ["/img/portfolio/wawrzelnia-1.png", "/img/portfolio/wawrzelnia-2.png", "/img/portfolio/wawrzelnia-3.png", "/img/portfolio/wawrzelnia-4.png", "/img/portfolio/wawrzelnia-5.png", "/img/portfolio/wawrzelnia-6.png"],
+      repositoryUrl: "https://github.com/wasoft-wawrzynek/wawrzelnia"
     }
   ],
   hobby: [
