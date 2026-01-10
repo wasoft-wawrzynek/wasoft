@@ -1,10 +1,12 @@
 import { ReactNode, useState } from "react";
+import { Calendar } from "lucide-react";
 import ChevronLeftIcon from "@/resources/icons/chevron-left.svg?react";
 import ChevronRightIcon from "@/resources/icons/chevron-right.svg?react";
 
 interface ScreenshotsPreviewProps {
   name: ReactNode;
   subtitle: ReactNode;
+  dateRange?: string;
   screenshots: string[];
   onThumbnailClick: (index: number) => void;
 }
@@ -12,6 +14,7 @@ interface ScreenshotsPreviewProps {
 const ScreenshotsPreview = ({
   name,
   subtitle,
+  dateRange,
   screenshots,
   onThumbnailClick,
 }: ScreenshotsPreviewProps) => {
@@ -38,6 +41,12 @@ const ScreenshotsPreview = ({
       <div className="text-center">
         <h3 className="text-primary text-4xl font-bold mb-1">{name}</h3>
         <p className="text-light text-lg">{subtitle}</p>
+        {dateRange && (
+          <div className="flex items-center justify-center gap-2 mt-2 text-light/80 text-sm">
+            <Calendar className="w-4 h-4" />
+            <span>{dateRange}</span>
+          </div>
+        )}
       </div>
 
       <div className="w-[80%] flex items-center justify-center gap-3">

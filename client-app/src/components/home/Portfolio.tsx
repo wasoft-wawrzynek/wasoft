@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
+import { Calendar } from "lucide-react";
 import FloatingCard from "../controls/FloatingCard";
 import ImageGalleryContainer from "../controls/ImageGalleryContainer";
 import ScreenshotsPreview from "../controls/ScreenshotsPreview";
 import personalData from "../../resources/personalData";
+import { getDateRangeString } from "../../helpers/stringHelpers";
 import GithubIcon from "@/resources/icons/github.svg?react";
 import LinkIcon from "@/resources/icons/link.svg?react";
 
@@ -36,6 +38,7 @@ const Portfolio = () => {
                     <ScreenshotsPreview
                       name={<Trans i18nKey={project.nameId} />}
                       subtitle={<Trans i18nKey={project.subtitleId} />}
+                      dateRange={getDateRangeString(project.startDate, project.endDate)}
                       screenshots={project.screenshots}
                       onThumbnailClick={(index) =>
                         setGalleryImages({ images: project.screenshots, index })
@@ -56,6 +59,10 @@ const Portfolio = () => {
                         <p className="text-light text-base">
                           <Trans i18nKey={project.subtitleId} />
                         </p>
+                        <div className="flex items-center justify-center gap-2 mt-2 text-light/80 text-sm">
+                          <Calendar className="w-4 h-4" />
+                          <span>{getDateRangeString(project.startDate, project.endDate)}</span>
+                        </div>
                       </div>
                     )}
 

@@ -151,6 +151,8 @@ const personalData = {
       nameId: "portfolio.wasoft.name",
       subtitleId: "portfolio.wasoft.subtitle",
       descriptionId: "portfolio.wasoft.description",
+      startDate: new Date("2021-11"),
+      endDate: undefined,
       technologies: [
         "React 18",
         "TypeScript",
@@ -171,6 +173,8 @@ const personalData = {
       nameId: "portfolio.poptokach.name",
       subtitleId: "portfolio.poptokach.subtitle",
       descriptionId: "portfolio.poptokach.description",
+      startDate: new Date("2025-03"),
+      endDate: new Date("2025-09"),
       technologies: [
         "React 19",
         "TypeScript",
