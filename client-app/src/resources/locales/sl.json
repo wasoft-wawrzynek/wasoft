@@ -18,16 +18,16 @@
   "experience": {
     "title": "Moje doświadczenie",
     "endava": {
-      "description": "Migracyjo i rozwōj platformy webowej dlo spōłek akcyjnych do zarządzanio przydzielonymi akcjami, akcjonarujūszy, dywidendami i raportami.<br>Kierowanie zespołiym w kwestiach technicznych i cołkowito nadzōr nad projektem. Projektowanie rozwiōnzań architektonicznych, mōdelōw kōmunikacyji między serwisami i strategii radzenia se ze wyzwaniami technicznymi.<br>Zarządzanie długiym technicznym, bezproblemowe wdrażanio na produkcyjo, implementacyjo i utrzimanie pipeline'ōw CI/CD oraz mōdelu wspōłpracy zespołōw dev i QA.<br>Wspōłpraca z działym biznesu przy planowaniyu rozwoju produktu i definiowaniu technicznych aspektōw funkcyji."
+      "description": "/ Migracyjo i rozwōj platformy webowej dlo spōłek akcyjnych, przeznaczōnej do zarządzanio przydzielōnymi akcjami, akcjonarujūsami, dywidendami i raportami.<br>/ Nadzōr techniczny nad projektym i kōrdynacyjo pracy zespołu.<br>/ Projektowanie architektury systemu, mōdelōw kōmunikacyje miyndzy serwisami i strategii radzenia se ze wyzwaniami technicznymi.<br>/ Zarządzanie długiym technicznym i wdrożyniami na produkcyjo; przygotowaniy, utrzimaniy i autōmatyzacyjo pipeline'ōw CI/CD oraz zasad współpracy zespołōw deweloperskich i QA.<br>/ Wspōłpraca z biznesym przy planowaniy rozwoju produktu i definiowaniu technicznych aspektōw funkcyji."
     },
     "eqtek": {
-      "description": "Rozwōj i utrzimanie platformy case management do kōnfigurowanio formularzy i zarządzanio przepływym danych. Poza platformōm realizowano projekty dostosowanio i wdrożeń indywidualnych rozwiōnzań dlo klijyntōw z brytyjskigo sektora publicznego i finansowego.<br>Kierowanie zespołym technicznych (kilkanoście ôsōb w zespołach scrumowych), planowanie i koordynacyjo, wspōłpraca z biznesym przy dopasowaniu zasobōw i priorytetyzacjŏch wdrożeń. Projektowanie i implementacyjo dedykowanych rozwiōnzań, analiza przyszłych wymagań i strategie ich realizacyje."
+      "description": "/ Rozwōj i utrzimanie platformy case management do kōnfigurowanio formularzy i zarządzanio przepływym danych. Poza platformōm realizowano projekty dostosowanio i wdrożeń indywidualnych rozwiōnzań dlo klijyntōw z brytyjskigo sektora publicznego i finansowego.<br>/ Kierowanie zespołym technicznych (kilkanoście ôsōb w zespołach scrumowych), planowanie i koordynacyjo, wspōłpraca z biznesym przy dopasowaniu zasobōw i priorytetyzacjŏch wdrożeń.<br>/ Projektowanie i implementacyjo dedykowanych rozwiōnzań, analiza przyszłych wymagań i strategie ich realizacyje."
     },
     "vsoft": {
       "description": "Utrzimowanie aplikacyje webowej do obsugi sprzedoży kōmbinacyji ubezpieczeŏń kōmunikacyjnych (OC/AC), dostarczanej dlo polskich towarzistw ubezpieczeniowych."
     },
     "flightscope": {
-      "pm-description": "Szacunek, planowanie i projektowanie architektury kilku projektōw technicznych na roz. <br>Łōnczenie kōmunikacyje miyndzy ôddziałami (Polska, RPA i USA) i miyndzy ekipami (grafiki, inżyniery, sprzedŏwcy itp.).<br>Ustawiōnie pierszeństwa zadań i projektōw podług zasobōw i potrzeb klijyntōw.<br>Zarządzanie mniejszymi ekipami programistōw.",
+      "pm-description": "/ Szacunek, planowanie i projektowanie architektury kilku projektōw technicznych na roz.<br>/ Łōnczenie kōmunikacyje miyndzy ôddziałami (Polska, RPA i USA) i miyndzy ekipami (grafiki, inżyniery, sprzedŏwcy itp.).<br>/ Ustawiōnie pierszeństwa zadań i projektōw podług zasobōw i potrzeb klijyntōw.<br>/ Zarządzanie mniejszymi ekipami programistōw.",
       "leader-description": "Nad to co już robiōłech, wciōng siech do projektowanio architektury nowych rozwiōnzań, planowanio rozwoju projektu i przodowaniŏ mniejszymu zespołowi programistōw.",
       "dev-description": "Rozwōj i utrzimowanie aplikacyje desktopowej, co używajōm jŏgolfiści (zawodowi i amatorscy), coby polepszali swoje umiejętności na bazie danych ôd radaru sportowego o locie gańbola."
     }
@@ -104,13 +104,12 @@
       "title": "Ô mnie",
       "content": [
         "Ôd zawdy mie ekscytowało rozwiōnzywanie złożonych problemōw technicznych, co daje programowanie. Wymyślanie odpowiedniego algorytmu i stopniowe wcielanie go w życie daje mi moc radości.",
-        "Jednakoż budowanie zaawansowanych systemōw to dużo więcej niż samo kodowanie. To świadome wybory dotyczōnce architektury, przewidywanie przyszłych wymagań i potencjalnych węskich gardel. Wymaga to dobrego zrozumienia niy ino kwestyji technicznych, ale też celōw biznesowych i ograniczeń zespołu. Wiele ôsōb z rozmaitymi umiejętnościami i perspektywami musi pracować w zgodzie, coby osiōngnōńć wspólny cel – a nadzorowanie tego procesu, identyfikowanie ryzyk zanim się zmaterializujōm i pomaganie ekipie w efektywnym działaniu, to dlo mie równie ekscytujōnce co sam kod.",
-        "Niy mogōm przejść obojętnie obok sytuacyji, w keryj widza nieoptymalne podejście, rozwiōnzanie krótkowzroczne czy brak planu. Starams się być konstruktywny, ale niy beda milczōł, gdy uważam, że cosik zagraża projektowi abo ekipie. Jeśli to ôd czasu czasem sprawia mi opinijō nieustympliwego, akceptuja to – bo wierzā, że to odpowiedzialno lidera."
+        "Jednakoż budowanie zaawansowanych systemōw to dużo więcej niż samo kodowanie. To świadome wybory dotyczōnce architektury, przewidywanie przyszłych wymagań i potencjalnych węskich gardel. Wymaga to dobrego zrozumienia niy ino kwestyji technicznych, ale też celōw biznesowych i ograniczeń zespołu. Wiele ôsōb z rozmaitymi umiejętnościami i perspektywami musi pracować w zgodzie, coby osiōngnōńć wspólny cel – a nadzorowanie tego procesu, identyfikowanie ryzyk zanim się zmaterializujōm i pomaganie ekipie w efektywnym działaniu, to dlo mie równie ekscytujōnce co sam kod."
       ]
     },
     "lang-polish": "polski",
     "lang-english": "angielski",
     "lang-native": "ôjcysty",
-    "lang-communicative": "biegły"
+    "lang-communicative": "profesjonalny"
   }
 }

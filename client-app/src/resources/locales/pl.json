@@ -18,16 +18,16 @@
   "experience": {
     "title": "Moje doświadczenie",
     "endava": {
-      "description": "Migracja i rozwój platformy webowej dla spółek akcyjnych do zarządzania przydzielonymi akcjami, akcjonariuszami, dywidendami i raportami.<br>Kierowanie zespołem w aspektach technicznych oraz całościowy nadzór nad projektem. Projektowanie rozwiązań architektonicznych, modeli komunikacji między serwisami i strategii rozwiązywania wyzwań technicznych.<br>Zarządzanie długiem technicznym, wdrożenia na produkcję, implementacja i utrzymanie pipeline'ów CI/CD oraz modelu współpracy zespołów dev i QA.<br>Współpraca z biznesem przy planowaniu rozwoju produktu i definiowaniu technicznych aspektów funkcjonalności."
+      "description": "/ Migracja i rozwój platformy webowej dla spółek akcyjnych, przeznaczonej do zarządzania przydzielonymi akcjami, akcjonariuszami, dywidendami i raportami.<br>/ Nadzór techniczny nad projektem oraz koordynacja prac zespołu.<br>/ Projektowanie architektury systemu, modeli komunikacji między serwisami i strategii rozwiązywania wyzwań technicznych.<br>/ Zarządzanie długiem technicznym i wdrożeniami na produkcję; przygotowanie, utrzymanie i automatyzacja pipeline'ów CI/CD oraz zasad współpracy zespołów deweloperskich i QA.<br>/ Współpraca z biznesem przy planowaniu rozwoju produktu i definiowaniu technicznych aspektów funkcjonalności."
     },
     "eqtek": {
-      "description": "Rozwój i utrzymanie platformy typu \"case management system\" do konfigurowania formularzy i zarządzania przepływem danych. Poza platformą realizowane były projekty dostosowania i wdrożeń indywidualnych rozwiązań dla klientów z brytyjskiego sektora publicznego i finansowego.<br>Kierowanie zespołem technicznym (kilkanaście osób w zespołach scrumowych), planowanie i koordynacja prac, współpraca z biznesem przy dopasowaniu zasobów i priorytetyzacji wdrożeń. Projektowanie i implementacja dedykowanych rozwiązań, analiza przyszłych wymagań i strategia ich realizacji."
+      "description": "/ Rozwój i utrzymanie platformy typu \"case management system\" do konfigurowania formularzy i zarządzania przepływem danych. Poza platformą realizowane były projekty dostosowania i wdrożeń indywidualnych rozwiązań dla klientów z brytyjskiego sektora publicznego i finansowego.<br>/ Kierowanie zespołem technicznym (kilkanaście osób w zespołach scrumowych), planowanie i koordynacja prac, współpraca z biznesem przy dopasowaniu zasobów i priorytetyzacji wdrożeń.<br>/ Projektowanie i implementacja dedykowanych rozwiązań, analiza przyszłych wymagań i strategia ich realizacji."
     },
     "vsoft": {
       "description": "Utrzymywanie aplikacji webowej do obsługi sprzedaży złożonych konfiguracji ubezpieczeń komunikacyjnych (OC/AC), dostarczanej dla ogólnopolskich towarzystw ubezpieczeniowych."
     },
     "flightscope": {
-      "pm-description": "Ocena, planowanie i projektowanie architektury kilku równoległych projektów technicznych.<br>Wspomaganie komunikacji pomiędzy oddziałami (Polska, RPA i USA) oraz wspomaganie współpracy między zespołami zadaniowymi (grafikami, inżynierami, sprzedawcami, itd.).<br>Ustalanie priorytetów zadań i projektów z uwzględnieniem aktualnych zasobów i zapotrzebowania klientów.",
+      "pm-description": "/ Ocena, planowanie i projektowanie architektury kilku równoległych projektów technicznych.<br>/ Wspomaganie komunikacji pomiędzy oddziałami (Polska, RPA i USA) oraz wspomaganie współpracy między zespołami zadaniowymi (grafikami, inżynierami, sprzedawcami, itd.).<br>/ Ustalanie priorytetów zadań i projektów z uwzględnieniem aktualnych zasobów i zapotrzebowania klientów.",
       "leader-description": "Ponad dotychczasowe obowiązki, włączyłem się w projektowanie architektury nowych rozwiązań, planowanie rozwoju projektu i przewodzenie niewielkiemu zespołowi programistów.",
       "dev-description": "Rozwój i utrzymanie aplikacji desktopowej, używanej przez golfistów (profesjonalistów i amatorów) do doskonalenia swoich umiejętności, na podstawie danych analitycznych dotyczących lotu piłki, dostarczonych przez radar sportowy."
     }
@@ -104,13 +104,12 @@
       "title": "O mnie",
       "content": [
         "Zawsze ekscytowało mnie rozwiązywanie złożonych problemów technicznych, jakie daje programowanie. Wymyślanie odpowiedniego algorytmu i stopniowe wcielanie go w życie daje mi mnóstwo satysfakcji.",
-        "Jednak budowanie zaawansowanych systemów to znacznie więcej niż sama implementacja. To świadome wybory dotyczące architektury, przewidywanie przyszłych wymagań i potencjalnych wąskich gardeł. Wymaga to dobrego zrozumienia nie tylko kwestii technicznych, ale również celów biznesowych i ograniczeń zespołu. Wiele osób z różnymi umiejętnościami i perspektywami musi pracować w zgodzie, by osiągnąć wspólny cel – a nadzorowanie tego procesu, identyfikowanie ryzyk zanim się zmaterializują i pomaganie zespołowi w efektywnym działaniu, to dla mnie równie ekscytujące co sam kod.",
-        "Nie mogę przejść obojętnie obok sytuacji, w której widzę nieoptymalne podejście, rozwiązanie krótkowzroczne czy brak planu. Staram się być konstruktywny, ale nie będę milczał, gdy uważam, że coś zagraża projektowi lub zespołowi. Jeśli to czasami sprawia mi opinię nieustępliwego, akceptuję to – bo wierzę, że to odpowiedzialność lidera."
+        "Jednak budowanie zaawansowanych systemów to znacznie więcej niż sama implementacja. To świadome wybory dotyczące architektury, przewidywanie przyszłych wymagań i potencjalnych \"wąskich gardeł\". Wymaga to dobrego zrozumienia nie tylko kwestii technicznych, ale również celów biznesowych i ograniczeń zespołu. Wiele osób z różnymi umiejętnościami i perspektywami musi pracować w zgodzie, by osiągnąć wspólny cel – a nadzorowanie tego procesu, identyfikowanie ryzyk zanim się zmaterializują i pomaganie zespołowi w efektywnym działaniu, to dla mnie równie ekscytujące co sam kod."
       ]
     },
     "lang-polish": "polski",
     "lang-english": "angielski",
     "lang-native": "ojczysty",
-    "lang-communicative": "biegły"
+    "lang-communicative": "profesjonalny"
   }
 }
