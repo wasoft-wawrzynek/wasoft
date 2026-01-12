@@ -1,7 +1,7 @@
-import { useEffect } from "react";
 import ChevronLeftIcon from "@/resources/icons/chevron-left.svg?react";
 import ChevronRightIcon from "@/resources/icons/chevron-right.svg?react";
 import CloseIcon from "@/resources/icons/close.svg?react";
+import { useImageGallery } from "./useImageGallery";
 
 interface ImageGalleryProps {
   images: string[];
@@ -12,25 +12,7 @@ interface ImageGalleryProps {
 }
 
 const ImageGallery = ({ images, currentIndex, onClose, onNext, onPrevious }: ImageGalleryProps) => {
-  // Handle keyboard navigation
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-      if (e.key === "ArrowLeft") onPrevious();
-      if (e.key === "ArrowRight") onNext();
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [onClose, onNext, onPrevious]);
-
-  // Prevent body scroll when gallery is open
-  useEffect(() => {
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, []);
+  useImageGallery({ onClose, onNext, onPrevious });
 
   return (
     <div
