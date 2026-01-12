@@ -1,18 +1,48 @@
+import { useState, useEffect } from "react";
 import ChevronLeftIcon from "@/resources/icons/chevron-left.svg?react";
 import ChevronRightIcon from "@/resources/icons/chevron-right.svg?react";
 import CloseIcon from "@/resources/icons/close.svg?react";
-import { useImageGallery } from "./useImageGallery";
 
 interface ImageGalleryProps {
   images: string[];
-  currentIndex: number;
+  initialIndex?: number;
   onClose: () => void;
-  onNext: () => void;
-  onPrevious: () => void;
 }
 
-const ImageGallery = ({ images, currentIndex, onClose, onNext, onPrevious }: ImageGalleryProps) => {
-  useImageGallery({ onClose, onNext, onPrevious });
+const ImageGallery = ({
+  images,
+  initialIndex = 0,
+  onClose,
+}: ImageGalleryProps) => {
+  const [currentIndex, setCurrentIndex] = useState(initialIndex);
+
+  const onNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const onPrevious = () => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  // Handle keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft") onPrevious();
+      if (e.key === "ArrowRight") onNext();
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [onClose, onNext, onPrevious]);
+
+  // Prevent body scroll when gallery is open
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, []);
 
   return (
     <div
@@ -52,7 +82,7 @@ const ImageGallery = ({ images, currentIndex, onClose, onNext, onPrevious }: Ima
           alt={`Screenshot ${currentIndex + 1}`}
           className="max-w-full max-h-[90vh] object-contain rounded border-2 border-primary/50"
         />
-        
+
         {/* Image counter */}
         {images.length > 1 && (
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-black/70 text-light rounded-full">

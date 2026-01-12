@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { Calendar } from "lucide-react";
 import FloatingCard from "../controls/FloatingCard";
-import ImageGalleryContainer from "../controls/ImageGalleryContainer";
+import ImageGallery from "../controls/ImageGallery";
 import ScreenshotsPreview from "../controls/ScreenshotsPreview";
 import personalData from "../../resources/personalData";
 import { getDateRangeString } from "../../helpers/stringHelpers";
@@ -38,7 +38,10 @@ const Portfolio = () => {
                     <ScreenshotsPreview
                       name={<Trans i18nKey={project.nameId} />}
                       subtitle={<Trans i18nKey={project.subtitleId} />}
-                      dateRange={getDateRangeString(project.startDate, project.endDate)}
+                      dateRange={getDateRangeString(
+                        project.startDate,
+                        project.endDate
+                      )}
                       screenshots={project.screenshots}
                       onThumbnailClick={(index) =>
                         setGalleryImages({ images: project.screenshots, index })
@@ -48,7 +51,10 @@ const Portfolio = () => {
                 )}
 
                 {/* Content Card */}
-                <FloatingCard className="w-full md:w-[60%] flex flex-col" maxMove={[0, 0]}>
+                <FloatingCard
+                  className="w-full md:w-[60%] flex flex-col"
+                  maxMove={[0, 0]}
+                >
                   <div className="flex flex-col h-full">
                     {/* Mobile Title - Only when screenshots exist */}
                     {project.screenshots && project.screenshots.length > 0 && (
@@ -61,7 +67,12 @@ const Portfolio = () => {
                         </p>
                         <div className="flex items-center justify-center gap-2 mt-2 text-light/80 text-sm">
                           <Calendar className="w-4 h-4" />
-                          <span>{getDateRangeString(project.startDate, project.endDate)}</span>
+                          <span>
+                            {getDateRangeString(
+                              project.startDate,
+                              project.endDate
+                            )}
+                          </span>
                         </div>
                       </div>
                     )}
@@ -126,7 +137,7 @@ const Portfolio = () => {
 
       {/* Image Gallery Modal */}
       {galleryImages && (
-        <ImageGalleryContainer
+        <ImageGallery
           images={galleryImages.images}
           initialIndex={galleryImages.index}
           onClose={() => setGalleryImages(null)}

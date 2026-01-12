@@ -190,7 +190,8 @@ const personalData = {
       screenshots: ["/img/portfolio/poptokach-1.png", "/img/portfolio/poptokach-2.png", "/img/portfolio/poptokach-3.png", "/img/portfolio/poptokach-4.png", "/img/portfolio/poptokach-5.png"],
       repositoryUrl: "https://github.com/wasoft-wawrzynek/po-ptokach",
       productionUrl: "https://po-ptokach.info",
-    }, {
+    },
+    {
       nameId: "portfolio.wawrzelnia.name",
       subtitleId: "portfolio.wawrzelnia.subtitle",
       descriptionId: "portfolio.wawrzelnia.description",
