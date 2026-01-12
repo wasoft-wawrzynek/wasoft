@@ -3,6 +3,7 @@ import Education from "./Education";
 import Experience from "./Experience";
 import Hero from "./Hero";
 import Hobby from "./Hobby";
+import Portfolio from "./Portfolio";
 import Skills from "./Skills";
 import Footer from "./Footer";
 import Navigation from "./Navigation";
@@ -14,6 +15,7 @@ const Home = () => {
       <Navigation />
       <Hero />
       <Experience />
+      <Portfolio />
       <Skills />
       <Education />
       <Hobby />

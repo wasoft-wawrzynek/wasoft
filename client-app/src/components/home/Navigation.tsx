@@ -6,6 +6,7 @@ import LanguageSelector from "../controls/LanguageSelector";
 
 export const sections = [
   "experience",
+  "portfolio",
   "skills",
   "education",
   "hobby",

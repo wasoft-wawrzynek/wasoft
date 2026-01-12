@@ -2,6 +2,7 @@
   "header": {
     "skills": "Skills",
     "experience": "Experience",
+    "portfolio": "Portfolio",
     "education": "Education",
     "hobby": "After work",
     "contact": "Contact"
@@ -17,16 +18,16 @@
   "experience": {
     "title": "My professional experience",
     "endava": {
-      "description": "Migration and development of a web platform for public companies to manage allocated shares, shareholders, dividends, and reports.<br>Direction of the team on technical matters and overall project oversight. Designing architectural solutions, inter-service communication models, and strategies for technical challenges.<br>Management of technical debt, smooth production deployments, implementation and maintenance of CI/CD pipelines, and collaboration models between development and QA teams.<br>Collaboration with the business unit on product roadmap planning and defining technical aspects of features."
+      "description": "/ Migration and development of a web platform for public companies, designed to manage allocated shares, shareholders, dividends, and reports.<br>/ Technical oversight of the project and coordination of team work.<br>/ Designing system architecture, service-to-service communication models, and strategies to resolve technical challenges.<br>/ Managing technical debt and production releases; preparing, maintaining, and automating CI/CD pipelines; defining collaboration practices for development and QA teams.<br>/ Collaboration with the business on product roadmap planning and defining technical aspects of features."
     },
     "eqtek": {
-      "description": "Development and maintenance of a case management system for configuring forms and managing data workflows. Beyond platform work, projects focused on customizing and implementing individual solutions for clients in the British public and financial sectors.<br>Leadership of a technical team (about a dozen people in Scrum teams), planning and coordination, collaboration with the business unit on resource allocation and deployment priorities. Design and implementation of dedicated solutions, analysis of future requirements, and implementation strategies."
+      "description": "/ Development and maintenance of a case management system for configuring forms and managing data workflows. Beyond platform work, projects focused on customizing and implementing individual solutions for clients in the British public and financial sectors.<br>/ Leadership of a technical team (about a dozen people in Scrum teams), planning and coordination, collaboration with the business unit on resource allocation and deployment priorities.<br>/ Design and implementation of dedicated solutions, analysis of future requirements, and implementation strategies."
     },
     "vsoft": {
       "description": "Maintaining web application used by sales representatives to evaluate complex insurance configurations."
     },
     "flightscope": {
-      "pm-description": "Evaluating, planning and designing architecture for multiple software projects.<br>Coordinating communication between offices (Poland, South Africa and USA) and synchronizing co-operation of teams (project owners, UI designers, engineers, etc.).<br>Prioritizing tasks and projects in regard to the available resources and the market demand.<br>Managing a few small software teams on all levels.",
+      "pm-description": "/ Evaluating, planning and designing architecture for multiple software projects.<br>/ Coordinating communication between offices (Poland, South Africa and USA) and synchronizing co-operation of teams (project owners, UI designers, engineers, etc.).<br>/ Prioritizing tasks and projects in regard to the available resources and the market demand.<br>/ Managing a few small software teams on all levels.",
       "leader-description": "I kept the previous duties. On top of that, I started designing software architecture, planning project development and overseeing the process, as well as managing a team of a few developers.",
       "dev-description": "Developing and maintaining applications used by golfers (both professional and amateur) to improve their skills by analyzing ball flight data provided by multiple sport radars."
     }
@@ -75,6 +76,26 @@
     "promising": "Promising",
     "basic": "Basic"
   },
+  "portfolio": {
+    "title": "My projects",
+    "repository": "Repository",
+    "production": "Live demo",
+    "wasoft": {
+      "name": "WaSoft",
+      "subtitle": "Personal Website & API",
+      "description": "A comprehensive full-stack personal portfolio application designed to showcase professional experience, skills, and projects in an interactive and engaging way. The project serves as both a digital resume and a demonstration of modern web development practices, featuring a responsive design that adapts seamlessly across all devices and screen sizes.<br><br>The front-end is built with React 18 and TypeScript, leveraging Vite for lightning-fast development experience and optimized production builds. It incorporates TailwindCSS for modern styling, custom animations for enhanced user experience, and i18next for complete multilingual support across three languages (English, Polish, and Silesian dialect). The application features smooth scrolling navigation, interactive floating cards with parallax effects, and a dedicated resume view with PDF generation capabilities.<br><br>The backend infrastructure is implemented as a serverless API using Azure Functions with C# and .NET 8. It provides a RESTful endpoint for the contact form, processing submissions and sending email notifications through SendGrid. This serverless architecture ensures cost-effectiveness, automatic scaling, and minimal maintenance overhead while maintaining high reliability and performance.<br><br>Both components are hosted on Azure cloud platform - the front-end on Azure Static Web Apps and the API on Azure Functions. The entire deployment process is fully automated through GitHub Actions, implementing a complete CI/CD pipeline that includes automated testing, building, and deployment triggered by code commits. This ensures rapid iteration cycles and consistent, reliable deployments to production."
+    },
+    "poptokach": {
+      "name": "Po Ptokach",
+      "subtitle": "Interactive Wedding Invitation",
+      "description": "A web application serving as a digital wedding invitation, presenting all logistical information in an accessible and visually attractive manner. The project addresses the challenge of managing two different guest groups (family and friends) using a single application and domain - differentiation occurs automatically based on URL prefixes (e.g., family.domain.pl vs. domain.pl), without needing to implement toggles in the interface.<br><br>The front-end is built with React 19 and TypeScript, using Vite for fast development environment. Styling is based on TailwindCSS 4, animations implemented with the Motion library, and UI components leverage shadcn/ui and Radix UI. Multilingual support in three languages (Polish, English, Silesian) is provided by i18next. The application offers responsive design, dynamic countdown to event date, smooth navigation between sections, and interactive animations.<br><br>Routing based on subdomains is handled on the client side - the application checks the hostname and automatically renders the appropriate content version. This solution allowed for handling two different 'business requirements' using a single project, one codebase, and one deployment. Hosting on Azure Static Web Apps ensures global availability and automatic SSL certificates."
+    },
+    "wawrzelnia": {
+      "name": "Wawrzelnia",
+      "subtitle": "Homebrewer's Portal",
+      "description": "A web application for tracking homebrewing progress and production. It enables logging beer batches with complete production history, monitoring individual fermentation stages, storing photos, and automatic calculation of brewery statistics.<br><br>The front-end is built with React 17, TypeScript, and MobX for state management. The backend is implemented in C# and .NET 5 with Entity Framework Core and SQL Server database. The system includes a contact form with spam protection and API documented with Swagger. The project is automatically deployed via Azure DevOps."
+    }
+  },
   "gliwice": "Gliwice, Poland",
   "krakow": "Kraków, Poland",
   "now": "now",
@@ -87,13 +108,12 @@
       "title": "About me",
       "content": [
         "Solving complex technical problems that programming offers has always excited me. Figuring out the right algorithm and bringing it to life step by step gives me immense satisfaction.",
-        "However, building advanced systems is far more than just implementation. It involves conscious architectural choices, anticipating future requirements and potential bottlenecks. This requires deep understanding not only of technical aspects but also business goals and team constraints. Many people with diverse skills and perspectives must work in harmony to reach a common objective – and overseeing this process, identifying risks before they materialize, and supporting efficient team execution is as compelling to me as the code itself.",
-        "I cannot remain indifferent when I see suboptimal approaches, short-sighted solutions, or lack of planning. I strive to be constructive, but I won't stay silent when I believe something threatens the project or team. If this occasionally gives me a reputation for being stubborn, I accept it – because I believe it's a leader's responsibility."
+        "However, building advanced systems is far more than just implementation. It involves conscious architectural choices, anticipating future requirements and potential bottlenecks. This requires deep understanding not only of technical aspects but also business goals and team constraints. Many people with diverse skills and perspectives must work in harmony to reach a common objective – and overseeing this process, identifying risks before they materialize, and supporting efficient team execution is as compelling to me as the code itself."
       ]
     },
     "lang-polish": "polish",
     "lang-english": "english",
     "lang-native": "native",
-    "lang-communicative": "fluent"
+    "lang-communicative": "professional"
   }
 }

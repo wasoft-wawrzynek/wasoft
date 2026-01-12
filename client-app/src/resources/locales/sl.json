@@ -2,6 +2,7 @@
   "header": {
     "skills": "Umiejętności",
     "experience": "Doświadczenie",
+    "portfolio": "Portfolio",
     "education": "Wykształcenie",
     "hobby": "Po robocie",
     "contact": "Kōntakt"
@@ -17,16 +18,16 @@
   "experience": {
     "title": "Moje doświadczenie",
     "endava": {
-      "description": "Migracyjo i rozwōj platformy webowej dlo spōłek akcyjnych do zarządzanio przydzielonymi akcjami, akcjonarujūszy, dywidendami i raportami.<br>Kierowanie zespołiym w kwestiach technicznych i cołkowito nadzōr nad projektem. Projektowanie rozwiōnzań architektonicznych, mōdelōw kōmunikacyji między serwisami i strategii radzenia se ze wyzwaniami technicznymi.<br>Zarządzanie długiym technicznym, bezproblemowe wdrażanio na produkcyjo, implementacyjo i utrzimanie pipeline'ōw CI/CD oraz mōdelu wspōłpracy zespołōw dev i QA.<br>Wspōłpraca z działym biznesu przy planowaniyu rozwoju produktu i definiowaniu technicznych aspektōw funkcyji."
+      "description": "/ Migracyjo i rozwōj platformy webowej dlo spōłek akcyjnych, przeznaczōnej do zarządzanio przydzielōnymi akcjami, akcjonarujūsami, dywidendami i raportami.<br>/ Nadzōr techniczny nad projektym i kōrdynacyjo pracy zespołu.<br>/ Projektowanie architektury systemu, mōdelōw kōmunikacyje miyndzy serwisami i strategii radzenia se ze wyzwaniami technicznymi.<br>/ Zarządzanie długiym technicznym i wdrożyniami na produkcyjo; przygotowaniy, utrzimaniy i autōmatyzacyjo pipeline'ōw CI/CD oraz zasad współpracy zespołōw deweloperskich i QA.<br>/ Wspōłpraca z biznesym przy planowaniy rozwoju produktu i definiowaniu technicznych aspektōw funkcyji."
     },
     "eqtek": {
-      "description": "Rozwōj i utrzimanie platformy case management do kōnfigurowanio formularzy i zarządzanio przepływym danych. Poza platformōm realizowano projekty dostosowanio i wdrożeń indywidualnych rozwiōnzań dlo klijyntōw z brytyjskigo sektora publicznego i finansowego.<br>Kierowanie zespołym technicznych (kilkanoście ôsōb w zespołach scrumowych), planowanie i koordynacyjo, wspōłpraca z biznesym przy dopasowaniu zasobōw i priorytetyzacjŏch wdrożeń. Projektowanie i implementacyjo dedykowanych rozwiōnzań, analiza przyszłych wymagań i strategie ich realizacyje."
+      "description": "/ Rozwōj i utrzimanie platformy case management do kōnfigurowanio formularzy i zarządzanio przepływym danych. Poza platformōm realizowano projekty dostosowanio i wdrożeń indywidualnych rozwiōnzań dlo klijyntōw z brytyjskigo sektora publicznego i finansowego.<br>/ Kierowanie zespołym technicznych (kilkanoście ôsōb w zespołach scrumowych), planowanie i koordynacyjo, wspōłpraca z biznesym przy dopasowaniu zasobōw i priorytetyzacjŏch wdrożeń.<br>/ Projektowanie i implementacyjo dedykowanych rozwiōnzań, analiza przyszłych wymagań i strategie ich realizacyje."
     },
     "vsoft": {
       "description": "Utrzimowanie aplikacyje webowej do obsugi sprzedoży kōmbinacyji ubezpieczeŏń kōmunikacyjnych (OC/AC), dostarczanej dlo polskich towarzistw ubezpieczeniowych."
     },
     "flightscope": {
-      "pm-description": "Szacunek, planowanie i projektowanie architektury kilku projektōw technicznych na roz. <br>Łōnczenie kōmunikacyje miyndzy ôddziałami (Polska, RPA i USA) i miyndzy ekipami (grafiki, inżyniery, sprzedŏwcy itp.).<br>Ustawiōnie pierszeństwa zadań i projektōw podług zasobōw i potrzeb klijyntōw.<br>Zarządzanie mniejszymi ekipami programistōw.",
+      "pm-description": "/ Szacunek, planowanie i projektowanie architektury kilku projektōw technicznych na roz.<br>/ Łōnczenie kōmunikacyje miyndzy ôddziałami (Polska, RPA i USA) i miyndzy ekipami (grafiki, inżyniery, sprzedŏwcy itp.).<br>/ Ustawiōnie pierszeństwa zadań i projektōw podług zasobōw i potrzeb klijyntōw.<br>/ Zarządzanie mniejszymi ekipami programistōw.",
       "leader-description": "Nad to co już robiōłech, wciōng siech do projektowanio architektury nowych rozwiōnzań, planowanio rozwoju projektu i przodowaniŏ mniejszymu zespołowi programistōw.",
       "dev-description": "Rozwōj i utrzimowanie aplikacyje desktopowej, co używajōm jŏgolfiści (zawodowi i amatorscy), coby polepszali swoje umiejętności na bazie danych ôd radaru sportowego o locie gańbola."
     }
@@ -75,6 +76,26 @@
     "promising": "Dobrze rokujōnce",
     "basic": "Podstawowe"
   },
+  "portfolio": {
+    "title": "Moje projekty",
+    "repository": "Repozytorijum",
+    "production": "Demo",
+    "wasoft": {
+      "name": "WaSoft",
+      "subtitle": "Strōna ôsobisto i API",
+      "description": "Kōmpleksowo aplikacyjo full-stack co służy za cyfrowe portfolio i prezyntuje doświadczynie zawodowe, umiejętności i projekty we interaktywny i angażujōncy sposōb. Projekt funguje zarōwno za cyfrowe CV, jak i demonstracyjo nowoczesnych praktyk programistycznych, ôferujōnc responsywny design dopasowujōncy sie płynnie do wszyskich urządzyń i wielkości ekranōw.<br><br>Front-end zbudowany we React 18 i TypeScript, używo Vite do błyskawicznego środowiska deweloperskiego i zoptymalizowanych buildōw produkcyjnych. Aplikacyjo używo TailwindCSS do nowoczesnyj stylizacyje, niystandardowe animacyje dlo lepszygo UX i i18next zapewniajōncy pełne wsparcie wielojynzyczne we trzech jynzykach (angielski, polski, ślōnski). Strōna ôferujo płynno nawigacyjo ze scrollowaniym, interaktywne karty z efektami parallax i dedykowany widok CV z możliwościōm generowanio PDF.<br><br>Backend zaimplementowany za bezserwerowe API używo Azure Functions ze C# i .NET 8. Dostarczo RESTful endpoint dlo fōrmulŏrza kōntaktowego, przetwŏrzajōnc zgłoszynie i wysyłajōnc powiadōmiynia email przez SendGrid. Architektura serverless zapewnio ôpłacalność, autōmatyczne skalowanie i minimalne nakłady utrzymanio przi zachowaniu wysokij niyzowoduości i wydajności.<br><br>Abo kōmponynty hostowane sōm na platformie chmurowej Azure - front-end na Azure Static Web Apps, a API na Azure Functions. Cołki proces wdrożyniowy je we pełni zautōmatyzowany przez GitHub Actions, implementujōnc kōmpletny pipeline CI/CD ôbyjmujōncy autōmatyczne testowanie, budowanie i deployment uruchōmiany przez commity do repozytorijum. To garantujo szybkie cykle iteracyjne i spōjne, niyzowodue wdrożynia na produkcyjo."
+    },
+    "poptokach": {
+      "name": "Po Ptokach",
+      "subtitle": "Interaktywne zaproszyni ślubne",
+      "description": "Aplikacyjo webowa służōnca za cyfrowe zaproszyni na ôroczysto­ć ślubnom, prezyntujōnca wszyske informacyje logistyczne we przystympny i wizualnie atrakcyjny sposōb. Projekt rozwijnzuje problem ôbsugi dwōch rōżnych grup go­ćij (rodzino i przyjaciela) przi użyciu jednyj aplikacyje i jednyj dōmeny - rozrōżnyni­ następuje autōmatycznie na podstawie prefiksu w URL (np. rodzinko.dōmeno.pl vs. dōmeno.pl), bez kōniyczeno­ci implementacyje przełōnczyk­w w interfejsie.<br><br>Front-end zbudowany we React 19 ze TypeScript używo Vite dlo szybkigo –r­dwisko deweloperskiego. Stylizacyjo ôparto na TailwindCSS 4, animacyje zrealizowane ze pomoc­m biblioteki Motion, a kōmponynty UI używaj­m shadcn/ui oraz Radix UI. Wsparcie wielojynzyczne we trzech jynzykach (polski, angielski, ślōnski) zapewnione przez i18next. Aplikacyjo ôferujo responsywny design, dynamiczny countdown do daty zd­rzenia, płynno nawigacyjo mi­dzy sekcjami i interaktywne animacyje.<br><br>Routing ôparty na subd­menach ôbsugiwoany je po str­nie klijynta - aplikacyjo sprawdzo hostname i autōmatycznie renderujo ôdpowiednio wersyjo tre­ci. Takie rozwijnzanie powoli­o na ôbsugi­ dwōch rōżnych 'zapotrzebowa­ biznesowych' przi użyciu jednygo projektu, jednyj bazy k­du i jednygo wdrożynia. Hosting na Azure Static Web Apps zapewnio globalnom dostympno­ć i autōmatyczne certyfikaty SSL."
+    },
+    "wawrzelnia": {
+      "name": "Wawrzelnia",
+      "subtitle": "Portal dōmowego piwoŏrza",
+      "description": "Aplikacyjo webowo do prezyntacyje postympōw produkcyje dōmowego piwa. Umożliwio rejestrowanie partii piwa z pełnom historijōm produkcyje, śledzynie poszczyególnych etapōw fermentacyje, przechowywanie fōtek i autōmatyczne ôbliczanie statystyk browaru.<br><br>Front-end zbudowany we React 17 ze TypeScript i MobX do zarządzanio stanym. Backend we C# i .NET 5 ze Entity Framework Core i bazōm SQL Server. System zawiyro fōrmulŏrz kōntaktowy ze ôchronōm przed spamym i API dōkumyntowane przez Swagger. Projekt deployowany autōmatycznie przez Azure DevOps."
+    }
+  },
   "gliwice": "Gliwice, Ślōnsk",
   "krakow": "Krakōw, Polska",
   "now": "terŏzki",
@@ -87,13 +108,12 @@
       "title": "Ô mnie",
       "content": [
         "Ôd zawdy mie ekscytowało rozwiōnzywanie złożonych problemōw technicznych, co daje programowanie. Wymyślanie odpowiedniego algorytmu i stopniowe wcielanie go w życie daje mi moc radości.",
-        "Jednakoż budowanie zaawansowanych systemōw to dużo więcej niż samo kodowanie. To świadome wybory dotyczōnce architektury, przewidywanie przyszłych wymagań i potencjalnych węskich gardel. Wymaga to dobrego zrozumienia niy ino kwestyji technicznych, ale też celōw biznesowych i ograniczeń zespołu. Wiele ôsōb z rozmaitymi umiejętnościami i perspektywami musi pracować w zgodzie, coby osiōngnōńć wspólny cel – a nadzorowanie tego procesu, identyfikowanie ryzyk zanim się zmaterializujōm i pomaganie ekipie w efektywnym działaniu, to dlo mie równie ekscytujōnce co sam kod.",
-        "Niy mogōm przejść obojętnie obok sytuacyji, w keryj widza nieoptymalne podejście, rozwiōnzanie krótkowzroczne czy brak planu. Starams się być konstruktywny, ale niy beda milczōł, gdy uważam, że cosik zagraża projektowi abo ekipie. Jeśli to ôd czasu czasem sprawia mi opinijō nieustympliwego, akceptuja to – bo wierzā, że to odpowiedzialno lidera."
+        "Jednakoż budowanie zaawansowanych systemōw to dużo więcej niż samo kodowanie. To świadome wybory dotyczōnce architektury, przewidywanie przyszłych wymagań i potencjalnych węskich gardel. Wymaga to dobrego zrozumienia niy ino kwestyji technicznych, ale też celōw biznesowych i ograniczeń zespołu. Wiele ôsōb z rozmaitymi umiejętnościami i perspektywami musi pracować w zgodzie, coby osiōngnōńć wspólny cel – a nadzorowanie tego procesu, identyfikowanie ryzyk zanim się zmaterializujōm i pomaganie ekipie w efektywnym działaniu, to dlo mie równie ekscytujōnce co sam kod."
       ]
     },
     "lang-polish": "polski",
     "lang-english": "angielski",
     "lang-native": "ôjcysty",
-    "lang-communicative": "biegły"
+    "lang-communicative": "profesjonalny"
   }
 }
