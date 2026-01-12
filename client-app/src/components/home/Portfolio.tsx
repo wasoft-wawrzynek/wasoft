@@ -118,13 +118,6 @@ const Portfolio = () => {
                     </div>
                   </div>
                 </FloatingCard>
-
-                {/* Mobile Screenshots Grid - Only when no gallery card shown */}
-                {(!project.screenshots || project.screenshots.length === 0) && (
-                  <div className="md:hidden w-full mt-6 grid grid-cols-2 gap-2">
-                    {/* This would only show if somehow we have no screenshots but want to show grid */}
-                  </div>
-                )}
               </div>
             );
           })}
