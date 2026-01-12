@@ -189,7 +189,7 @@ const personalData = {
       ],
       screenshots: ["/img/portfolio/poptokach-1.png", "/img/portfolio/poptokach-2.png", "/img/portfolio/poptokach-3.png", "/img/portfolio/poptokach-4.png", "/img/portfolio/poptokach-5.png"],
       repositoryUrl: "https://github.com/wasoft-wawrzynek/po-ptokach",
-      productionUrl: "https://po-ptokach-info",
+      productionUrl: "https://po-ptokach.info",
     }, {
       nameId: "portfolio.wawrzelnia.name",
       subtitleId: "portfolio.wawrzelnia.subtitle",
@@ -214,7 +214,8 @@ const personalData = {
         "GitHub Actions"
       ],
       screenshots: ["/img/portfolio/wawrzelnia-1.png", "/img/portfolio/wawrzelnia-2.png", "/img/portfolio/wawrzelnia-3.png", "/img/portfolio/wawrzelnia-4.png", "/img/portfolio/wawrzelnia-5.png", "/img/portfolio/wawrzelnia-6.png"],
-      repositoryUrl: "https://github.com/wasoft-wawrzynek/wawrzelnia"
+      repositoryUrl: "https://github.com/wasoft-wawrzynek/wawrzelnia",
+      productionUrl: "https://wawrzelnia.pl",
     }
   ],
   hobby: [
