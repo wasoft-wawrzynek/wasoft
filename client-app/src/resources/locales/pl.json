@@ -93,7 +93,7 @@
     "wawrzelnia": {
       "name": "Wawrzelnia",
       "subtitle": "Portal domowego piwowara",
-      "description": "Aplikacja webowa do prezentacji postępów produkcji domowego piwa. Umożliwia rejestrowanie partii piwa z pełną historią produkcji, śledzenie poszczególnych etapów fermentacji, przechowywanie zdjęć i automatyczne obliczanie statystyk browarni.<br><br>Front-end zbudowany w React 17 z TypeScript i MobX do zarządzania stanem. Backend w C# i .NET 5 z Entity Framework Core i bazą SQL Server. System zawiera formularz kontaktowy z ochroną przed spamem oraz API dokumentowane przez Swagger. Projekt deployowany automatycznie poprzez Azure DevOps."
+      "description": "Aplikacja do katalogowania i oglądu partii piwa domowego wraz ze statystykami procesu. Front-end w React 17 z TypeScript, MobX i SCSS zapewnia prostą nawigację po historii warzeń oraz podgląd etapów fermentacji i galerii zdjęć.<br><br>Backend przebudowany na Azure Functions (isolated, .NET 9) z funkcjami HTTP dla listy partii, statystyk i wersji oraz formularza kontaktowego z cooldownem. Dane serwowane z lekkiej bazy SQLite (read-only) przez EF Core 8 i AutoMapper; logowanie realizuje Serilog, e-maile wysyła MailKit. Rozwiązanie zoptymalizowane kosztowo dzięki serverless i lokalnej bazie plikowej."
     }
   },
   "gliwice": "Gliwice, Polska",
