@@ -93,7 +93,7 @@
     "wawrzelnia": {
       "name": "Wawrzelnia",
       "subtitle": "Portal dōmowego piwoŏrza",
-      "description": "Aplikacyjo webowo do prezyntacyje postympōw produkcyje dōmowego piwa. Umożliwio rejestrowanie partii piwa z pełnom historijōm produkcyje, śledzynie poszczyególnych etapōw fermentacyje, przechowywanie fōtek i autōmatyczne ôbliczanie statystyk browaru.<br><br>Front-end zbudowany we React 17 ze TypeScript i MobX do zarządzanio stanym. Backend we C# i .NET 5 ze Entity Framework Core i bazōm SQL Server. System zawiyro fōrmulŏrz kōntaktowy ze ôchronōm przed spamym i API dōkumyntowane przez Swagger. Projekt deployowany autōmatycznie przez Azure DevOps."
+      "description": "Aplikacyjo webowo do katalogowanio i ôglōndanio warek domowygo piwa społym ze statystykami procesu. Front-end we React 17 z TypeScript, MobX i SCSS umożliwio prosto nawigacyjo po historyji warzyń, a tyż podglōnd etapōw fermentacyje i galeryjo zdjyń.<br><br>Backend bōł przebudowany na Azure Functions (isolated, .NET 9) z funkcyjami HTTP do listy warek, statystyk i wersyje, a tyż formularza kontaktowygo z mechanizmem cooldown. Dane sōm serwowane z lekkij bazy SQLite (ino do ôdczytu) bez EF Core 8 i AutoMapper; logowanie je realizowane bez Serilog, a e-maile sōm wysyłane bez MailKit. Rozwiōnzanie je zoptymalizowane kosztowo bez architektura serverless i lokalno plikowo baza danych."
     }
   },
   "gliwice": "Gliwice, Ślōnsk",

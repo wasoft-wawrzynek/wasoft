@@ -93,7 +93,7 @@
     "wawrzelnia": {
       "name": "Wawrzelnia",
       "subtitle": "Homebrewer's Portal",
-      "description": "A web application for tracking homebrewing progress and production. It enables logging beer batches with complete production history, monitoring individual fermentation stages, storing photos, and automatic calculation of brewery statistics.<br><br>The front-end is built with React 17, TypeScript, and MobX for state management. The backend is implemented in C# and .NET 5 with Entity Framework Core and SQL Server database. The system includes a contact form with spam protection and API documented with Swagger. The project is automatically deployed via Azure DevOps."
+      "description": "A web application for cataloging and viewing homebrew beer batches along with process statistics. The front end, built with React 17 using TypeScript, MobX, and SCSS, provides simple navigation through the brewing history as well as previews of fermentation stages and a photo gallery.<br><br>The backend was rebuilt on Azure Functions (isolated, .NET 9) with HTTP functions for the batch list, statistics, versioning, and a contact form with a cooldown mechanism. Data is served from a lightweight SQLite database (read-only) via EF Core 8 and AutoMapper; logging is handled by Serilog, and emails are sent using MailKit. The solution is cost-optimized through a serverless architecture and a local file-based database."
     }
   },
   "gliwice": "Gliwice, Poland",
