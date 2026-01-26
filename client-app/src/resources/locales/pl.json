@@ -5,7 +5,8 @@
     "portfolio": "Portfolio",
     "education": "Wykształcenie",
     "hobby": "Po pracy",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "certificates": "Certyfikaty"
   },
   "hero": {
     "introduction-start": "Nazywam się ",
@@ -80,6 +81,8 @@
     "title": "Moje projekty",
     "repository": "Repozytorium",
     "production": "Demo",
+    "website": "Strona internetowa",
+    "profile": "Profil GitHub",
     "wasoft": {
       "name": "WaSoft",
       "subtitle": "Strona osobista i API",
@@ -94,6 +97,12 @@
       "name": "Wawrzelnia",
       "subtitle": "Portal domowego piwowara",
       "description": "Aplikacja do katalogowania i oglądu partii piwa domowego wraz ze statystykami procesu. Front-end w React 17 z TypeScript, MobX i SCSS zapewnia prostą nawigację po historii warzeń oraz podgląd etapów fermentacji i galerii zdjęć.<br><br>Backend przebudowany na Azure Functions (isolated, .NET 9) z funkcjami HTTP dla listy partii, statystyk i wersji oraz formularza kontaktowego z cooldownem. Dane serwowane z lekkiej bazy SQLite (read-only) przez EF Core 8 i AutoMapper; logowanie realizuje Serilog, e-maile wysyła MailKit. Rozwiązanie zoptymalizowane kosztowo dzięki serverless i lokalnej bazie plikowej."
+    }
+  },
+  "certificates":{
+    "software-fundamentals": {
+      "issuer": "Mark Richards (dla Endava)",
+      "title": "Software Architecture Fundamentals"
     }
   },
   "gliwice": "Gliwice, Polska",

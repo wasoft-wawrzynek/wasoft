@@ -52,7 +52,7 @@ const PrintPage = ({ width, height, isPdf }: IPageProps) => {
           <div className="flex items-center gap-2 my-2">
             <img className="h-6" src="/img/resume/birth.png" alt="birthday" />
             <p className="text-dark text-sm">
-              {personalData.dateOfBirth.toLocaleDateString("en-GB", {
+              {personalData.dateOfBirth.toLocaleDateString(i18n.language, {
                 year: "numeric",
                 month: "2-digit",
                 day: "2-digit",
@@ -102,7 +102,7 @@ const PrintPage = ({ width, height, isPdf }: IPageProps) => {
                   <p className="text-center text-dark text-sm">
                     {getDateRangeString(
                       job.roles[job.roles.length - 1]?.startDate,
-                      job.roles[0].endDate
+                      job.roles[0].endDate,
                     )}
                   </p>
                 </div>
@@ -116,7 +116,7 @@ const PrintPage = ({ width, height, isPdf }: IPageProps) => {
                       <h3 className="text-dark text-lg">
                         {`${role.title} - ${getPeriodSting(
                           role.startDate,
-                          role.endDate
+                          role.endDate,
                         )}`}
                       </h3>
                       {role.technologies && role.technologies.length > 0 && (
@@ -172,7 +172,7 @@ const PrintPage = ({ width, height, isPdf }: IPageProps) => {
           height: `${Math.floor(height)}px`,
         }}
       >
-        <div className="bg-medium-light p-4 row-span-3"/>
+        <div className="bg-medium-light p-4 row-span-3" />
         {/* Education Section */}
         <div className="bg-light p-4">
           <Title textId="header.education" isPdf={isPdf} />
@@ -221,16 +221,16 @@ const PrintPage = ({ width, height, isPdf }: IPageProps) => {
                   <Trans i18nKey="skills.key" />
                 </h2>
               </div>
-                <div className="flex flex-wrap justify-center gap-2 text-center">
-                  {personalData.skills.key.map((skill) => (
-                    <p
-                      className="text-dark text-base whitespace-nowrap basis-1/4"
-                      key={skill}
-                    >
-                      {skill}
-                    </p>
-                  ))}
-                </div>
+              <div className="flex flex-wrap justify-center gap-2 text-center">
+                {personalData.skills.key.map((skill) => (
+                  <p
+                    className="text-dark text-base whitespace-nowrap basis-1/4"
+                    key={skill}
+                  >
+                    {skill}
+                  </p>
+                ))}
+              </div>
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="flex flex-row items-center">
@@ -243,16 +243,16 @@ const PrintPage = ({ width, height, isPdf }: IPageProps) => {
                   <Trans i18nKey="skills.solid" />
                 </h2>
               </div>
-                <div className="flex flex-wrap justify-center gap-2 text-center">
-                  {personalData.skills.solid.map((skill) => (
-                    <p
-                      className="text-dark text-base whitespace-nowrap basis-1/4"
-                      key={skill}
-                    >
-                      {skill}
-                    </p>
-                  ))}
-                </div>
+              <div className="flex flex-wrap justify-center gap-2 text-center">
+                {personalData.skills.solid.map((skill) => (
+                  <p
+                    className="text-dark text-base whitespace-nowrap basis-1/4"
+                    key={skill}
+                  >
+                    {skill}
+                  </p>
+                ))}
+              </div>
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="flex flex-row items-center">
@@ -265,16 +265,16 @@ const PrintPage = ({ width, height, isPdf }: IPageProps) => {
                   <Trans i18nKey="skills.promising" />
                 </h2>
               </div>
-                <div className="flex flex-wrap justify-center gap-2 text-center">
-                  {personalData.skills.promising.map((skill) => (
-                    <p
-                      className="text-dark text-base whitespace-nowrap basis-1/4"
-                      key={skill}
-                    >
-                      {skill}
-                    </p>
-                  ))}
-                </div>
+              <div className="flex flex-wrap justify-center gap-2 text-center">
+                {personalData.skills.promising.map((skill) => (
+                  <p
+                    className="text-dark text-base whitespace-nowrap basis-1/4"
+                    key={skill}
+                  >
+                    {skill}
+                  </p>
+                ))}
+              </div>
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="flex flex-row items-center">
@@ -287,19 +287,19 @@ const PrintPage = ({ width, height, isPdf }: IPageProps) => {
                   <Trans i18nKey="skills.basic" />
                 </h2>
               </div>
-                <div className="flex flex-wrap justify-center gap-2 text-center">
-                  {personalData.skills.basic.map((skill) => (
-                    <p
-                      className="text-dark text-base whitespace-nowrap basis-1/4"
-                      key={skill}
-                    >
-                      {skill}
-                    </p>
-                  ))}
-                </div>
+              <div className="flex flex-wrap justify-center gap-2 text-center">
+                {personalData.skills.basic.map((skill) => (
+                  <p
+                    className="text-dark text-base whitespace-nowrap basis-1/4"
+                    key={skill}
+                  >
+                    {skill}
+                  </p>
+                ))}
+              </div>
             </div>
           </div>
-        </div>        
+        </div>
         {/* Hobbies Section */}
         <div className="bg-light p-4">
           <Title textId="header.hobby" isPdf={isPdf} />
@@ -321,6 +321,50 @@ const PrintPage = ({ width, height, isPdf }: IPageProps) => {
                 </p>
               </div>
             ))}
+          </div>
+          {/* Certificates Section */}
+          <div className="mt-6">
+            <Title textId="header.certificates" isPdf={isPdf} />
+            <div className="pt-4">
+              {personalData.certificates.map((cert) => (
+                <div key={cert.titleId} className="mb-4">
+                  <h3 className="text-dark text-lg font-semibold">
+                    <Trans i18nKey={cert.titleId} />
+                  </h3>
+                  <p className="text-dark text-sm">
+                    <Trans i18nKey={cert.issuerId} />
+                  </p>
+                  <p className="text-dark text-xs italic mt-1">
+                    {cert.issuedDate.toLocaleDateString(i18n.language, {
+                      year: "numeric",
+                      month: "long",
+                    })}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+          {/* Portfolio Section */}
+          <div className="mt-6">
+            <Title textId="header.portfolio" isPdf={isPdf} />
+            <div className="pt-4 grid grid-cols-2 gap-4">
+              <div className="text-center">
+                <p className="text-dark text-sm font-semibold">
+                  <Trans i18nKey="portfolio.website" />
+                </p>
+                <p className="text-dark text-sm break-words">
+                  {personalData.contact.website}
+                </p>
+              </div>
+              <div className="text-center">
+                <p className="text-dark text-sm font-semibold">
+                  <Trans i18nKey="portfolio.profile" />
+                </p>
+                <p className="text-dark text-sm break-words">
+                  https://github.com/{personalData.contact.gitHub}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

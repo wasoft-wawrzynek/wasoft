@@ -8,7 +8,7 @@ const personalData = {
   contact: {
     telephone: "(+48) 691-262-330",
     mail: "pawel.wawrzynek@gmail.com",
-    website: "https://www.wasoft.pl",
+    website: "https://wasoft.pl",
     linkedIn: "pawel-wawrzynek",
     gitHub: "wasoft-wawrzynek",
   },
@@ -244,6 +244,13 @@ const personalData = {
       descriptionId: "hobby.brewing-description",
       icon: BreweryIcon,
       image: "/img/resume/brewery.png",
+    },
+  ],
+  certificates: [
+    {
+      titleId: "certificates.software-fundamentals.title",
+      issuerId: "certificates.software-fundamentals.issuer",
+      issuedDate: new Date("2025-02-22"),
     },
   ],
 };

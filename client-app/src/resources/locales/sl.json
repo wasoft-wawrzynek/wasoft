@@ -5,7 +5,8 @@
     "portfolio": "Portfolio",
     "education": "Wykształcenie",
     "hobby": "Po robocie",
-    "contact": "Kōntakt"
+    "contact": "Kōntakt",
+    "certificates": "Certyfikaty"
   },
   "hero": {
     "introduction-start": "Mianujom mie ",
@@ -80,6 +81,8 @@
     "title": "Moje projekty",
     "repository": "Repozytorijum",
     "production": "Demo",
+    "website": "Strōna internetowa",
+    "profile": "Profil GitHub",
     "wasoft": {
       "name": "WaSoft",
       "subtitle": "Strōna ôsobisto i API",
@@ -94,6 +97,12 @@
       "name": "Wawrzelnia",
       "subtitle": "Portal dōmowego piwoŏrza",
       "description": "Aplikacyjo webowo do katalogowanio i ôglōndanio warek domowygo piwa społym ze statystykami procesu. Front-end we React 17 z TypeScript, MobX i SCSS umożliwio prosto nawigacyjo po historyji warzyń, a tyż podglōnd etapōw fermentacyje i galeryjo zdjyń.<br><br>Backend bōł przebudowany na Azure Functions (isolated, .NET 9) z funkcyjami HTTP do listy warek, statystyk i wersyje, a tyż formularza kontaktowygo z mechanizmem cooldown. Dane sōm serwowane z lekkij bazy SQLite (ino do ôdczytu) bez EF Core 8 i AutoMapper; logowanie je realizowane bez Serilog, a e-maile sōm wysyłane bez MailKit. Rozwiōnzanie je zoptymalizowane kosztowo bez architektura serverless i lokalno plikowo baza danych."
+    }
+  },
+  "certificates": {
+    "software-fundamentals": {
+      "issuer": "Mark Richards (dlo Endava)",
+      "title": "Software Architecture Fundamentals"
     }
   },
   "gliwice": "Gliwice, Ślōnsk",
