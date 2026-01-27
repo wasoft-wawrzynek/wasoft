@@ -5,7 +5,8 @@
     "portfolio": "Portfolio",
     "education": "Education",
     "hobby": "After work",
-    "contact": "Contact"
+    "contact": "Contact",
+    "certificates": "Certificates"
   },
   "hero": {
     "introduction-start": "My name is ",
@@ -80,6 +81,8 @@
     "title": "My projects",
     "repository": "Repository",
     "production": "Live demo",
+    "website": "Website",
+    "profile": "GitHub Profile",
     "wasoft": {
       "name": "WaSoft",
       "subtitle": "Personal Website & API",
@@ -94,6 +97,12 @@
       "name": "Wawrzelnia",
       "subtitle": "Homebrewer's Portal",
       "description": "A web application for cataloging and viewing homebrew beer batches along with process statistics. The front end, built with React 17 using TypeScript, MobX, and SCSS, provides simple navigation through the brewing history as well as previews of fermentation stages and a photo gallery.<br><br>The backend was rebuilt on Azure Functions (isolated, .NET 9) with HTTP functions for the batch list, statistics, versioning, and a contact form with a cooldown mechanism. Data is served from a lightweight SQLite database (read-only) via EF Core 8 and AutoMapper; logging is handled by Serilog, and emails are sent using MailKit. The solution is cost-optimized through a serverless architecture and a local file-based database."
+    }
+  },
+  "certificates":{
+    "software-fundamentals": {
+      "issuer": "Mark Richards (for Endava)",
+      "title": "Software Architecture Fundamentals"
     }
   },
   "gliwice": "Gliwice, Poland",
